@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\frmMenuChucNang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMenuChucNang.Designer.cs">
+      <DependentUpon>frmMenuChucNang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmTaoHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\frmMenuChucNang.resx">
+      <DependentUpon>frmMenuChucNang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmTaoHoaDon.resx">
       <DependentUpon>frmTaoHoaDon.cs</DependentUpon>
     </EmbeddedResource>
@@ -317,6 +326,66 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\password-change.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\tao-moi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\login-logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\tao-hoa-don.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\cap-nhat-gia-ban.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\cap-nhat-gia-mua.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\phieu-xuat-kho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\phieu-nhap-kho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\tao-phieu-theo-yc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\luong-nhan-vien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\hang-ton-kho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\doanh-thu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\tim-kiem-hang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\tim-kiem-nhan-vien.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\user-guide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\gioi-thieu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\don-mua-hang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\san-pham-ds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\khach-hang-ds.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

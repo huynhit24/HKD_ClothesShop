@@ -258,6 +258,12 @@ namespace HKD_ClothesShop
             Reset();
         }
 
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            hideSubmenu();
+            openChildForm(new frmMenuChucNang());
+        }
+
         private void Reset()
         {
             DisableButton();
@@ -282,6 +288,6 @@ namespace HKD_ClothesShop
             childForm.Show();
         }
 
-        
+       
     }
 }
