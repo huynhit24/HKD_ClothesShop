@@ -59,10 +59,10 @@ namespace HKD_ClothesShop.Forms
             this.panelLapPhieuYC = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.panelLapPhieuNhapKho = new System.Windows.Forms.Panel();
+            this.panelLapPhieuXuatHang = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.panelLapPhieuXuatKho = new System.Windows.Forms.Panel();
+            this.panelLapPhieuNhapHang = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.groupQLTC = new System.Windows.Forms.GroupBox();
@@ -127,9 +127,9 @@ namespace HKD_ClothesShop.Forms
             this.groupQLKho.SuspendLayout();
             this.panelLapPhieuYC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            this.panelLapPhieuNhapKho.SuspendLayout();
+            this.panelLapPhieuXuatHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            this.panelLapPhieuXuatKho.SuspendLayout();
+            this.panelLapPhieuNhapHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.groupQLTC.SuspendLayout();
             this.panelThuChi.SuspendLayout();
@@ -447,8 +447,8 @@ namespace HKD_ClothesShop.Forms
             this.groupQLKho.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupQLKho.BackColor = System.Drawing.Color.White;
             this.groupQLKho.Controls.Add(this.panelLapPhieuYC);
-            this.groupQLKho.Controls.Add(this.panelLapPhieuNhapKho);
-            this.groupQLKho.Controls.Add(this.panelLapPhieuXuatKho);
+            this.groupQLKho.Controls.Add(this.panelLapPhieuXuatHang);
+            this.groupQLKho.Controls.Add(this.panelLapPhieuNhapHang);
             this.groupQLKho.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupQLKho.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.groupQLKho.Location = new System.Drawing.Point(403, 84);
@@ -456,7 +456,7 @@ namespace HKD_ClothesShop.Forms
             this.groupQLKho.Size = new System.Drawing.Size(183, 460);
             this.groupQLKho.TabIndex = 5;
             this.groupQLKho.TabStop = false;
-            this.groupQLKho.Text = "Quản lý kho";
+            this.groupQLKho.Text = "Quản lý sản phẩm";
             // 
             // panelLapPhieuYC
             // 
@@ -489,17 +489,17 @@ namespace HKD_ClothesShop.Forms
             this.pictureBox10.TabIndex = 0;
             this.pictureBox10.TabStop = false;
             // 
-            // panelLapPhieuNhapKho
+            // panelLapPhieuXuatHang
             // 
-            this.panelLapPhieuNhapKho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(255)))), ((int)(((byte)(51)))));
-            this.panelLapPhieuNhapKho.Controls.Add(this.label9);
-            this.panelLapPhieuNhapKho.Controls.Add(this.pictureBox9);
-            this.panelLapPhieuNhapKho.ForeColor = System.Drawing.Color.White;
-            this.panelLapPhieuNhapKho.Location = new System.Drawing.Point(6, 145);
-            this.panelLapPhieuNhapKho.Name = "panelLapPhieuNhapKho";
-            this.panelLapPhieuNhapKho.Size = new System.Drawing.Size(163, 84);
-            this.panelLapPhieuNhapKho.TabIndex = 6;
-            this.panelLapPhieuNhapKho.Click += new System.EventHandler(this.panelLapPhieuNhapKho_Click);
+            this.panelLapPhieuXuatHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(255)))), ((int)(((byte)(51)))));
+            this.panelLapPhieuXuatHang.Controls.Add(this.label9);
+            this.panelLapPhieuXuatHang.Controls.Add(this.pictureBox9);
+            this.panelLapPhieuXuatHang.ForeColor = System.Drawing.Color.White;
+            this.panelLapPhieuXuatHang.Location = new System.Drawing.Point(6, 145);
+            this.panelLapPhieuXuatHang.Name = "panelLapPhieuXuatHang";
+            this.panelLapPhieuXuatHang.Size = new System.Drawing.Size(163, 84);
+            this.panelLapPhieuXuatHang.TabIndex = 6;
+            this.panelLapPhieuXuatHang.Click += new System.EventHandler(this.panelLapPhieuNhapKho_Click);
             // 
             // label9
             // 
@@ -520,17 +520,17 @@ namespace HKD_ClothesShop.Forms
             this.pictureBox9.TabIndex = 0;
             this.pictureBox9.TabStop = false;
             // 
-            // panelLapPhieuXuatKho
+            // panelLapPhieuNhapHang
             // 
-            this.panelLapPhieuXuatKho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(255)))), ((int)(((byte)(51)))));
-            this.panelLapPhieuXuatKho.Controls.Add(this.label8);
-            this.panelLapPhieuXuatKho.Controls.Add(this.pictureBox8);
-            this.panelLapPhieuXuatKho.ForeColor = System.Drawing.Color.White;
-            this.panelLapPhieuXuatKho.Location = new System.Drawing.Point(6, 43);
-            this.panelLapPhieuXuatKho.Name = "panelLapPhieuXuatKho";
-            this.panelLapPhieuXuatKho.Size = new System.Drawing.Size(157, 84);
-            this.panelLapPhieuXuatKho.TabIndex = 5;
-            this.panelLapPhieuXuatKho.Click += new System.EventHandler(this.panelLapPhieuXuatKho_Click);
+            this.panelLapPhieuNhapHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(255)))), ((int)(((byte)(51)))));
+            this.panelLapPhieuNhapHang.Controls.Add(this.label8);
+            this.panelLapPhieuNhapHang.Controls.Add(this.pictureBox8);
+            this.panelLapPhieuNhapHang.ForeColor = System.Drawing.Color.White;
+            this.panelLapPhieuNhapHang.Location = new System.Drawing.Point(6, 43);
+            this.panelLapPhieuNhapHang.Name = "panelLapPhieuNhapHang";
+            this.panelLapPhieuNhapHang.Size = new System.Drawing.Size(157, 84);
+            this.panelLapPhieuNhapHang.TabIndex = 5;
+            this.panelLapPhieuNhapHang.Click += new System.EventHandler(this.panelLapPhieuXuatKho_Click);
             // 
             // label8
             // 
@@ -538,9 +538,9 @@ namespace HKD_ClothesShop.Forms
             this.label8.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(3, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(133, 19);
+            this.label8.Size = new System.Drawing.Size(145, 19);
             this.label8.TabIndex = 1;
-            this.label8.Text = "Lập phiếu xuất kho";
+            this.label8.Text = "Lập phiếu nhập hàng";
             // 
             // pictureBox8
             // 
@@ -1041,11 +1041,11 @@ namespace HKD_ClothesShop.Forms
             this.panelLapPhieuYC.ResumeLayout(false);
             this.panelLapPhieuYC.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            this.panelLapPhieuNhapKho.ResumeLayout(false);
-            this.panelLapPhieuNhapKho.PerformLayout();
+            this.panelLapPhieuXuatHang.ResumeLayout(false);
+            this.panelLapPhieuXuatHang.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            this.panelLapPhieuXuatKho.ResumeLayout(false);
-            this.panelLapPhieuXuatKho.PerformLayout();
+            this.panelLapPhieuNhapHang.ResumeLayout(false);
+            this.panelLapPhieuNhapHang.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.groupQLTC.ResumeLayout(false);
             this.panelThuChi.ResumeLayout(false);
@@ -1123,10 +1123,10 @@ namespace HKD_ClothesShop.Forms
         private System.Windows.Forms.Panel panelLapPhieuYC;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.Panel panelLapPhieuNhapKho;
+        private System.Windows.Forms.Panel panelLapPhieuXuatHang;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.Panel panelLapPhieuXuatKho;
+        private System.Windows.Forms.Panel panelLapPhieuNhapHang;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Panel panelThuChi;

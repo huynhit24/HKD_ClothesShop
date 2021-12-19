@@ -300,7 +300,7 @@ namespace HKD_ClothesShop
             // 
             // panelKhachSubmenu
             // 
-            this.panelKhachSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelKhachSubmenu.BackColor = System.Drawing.Color.White;
             this.panelKhachSubmenu.Controls.Add(this.btnNhomKH);
             this.panelKhachSubmenu.Controls.Add(this.btnDSKH);
             this.panelKhachSubmenu.Dock = System.Windows.Forms.DockStyle.Top;

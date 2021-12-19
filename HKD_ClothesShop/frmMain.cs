@@ -34,6 +34,8 @@ namespace HKD_ClothesShop
             btnTracking.Visible = false;
             btnFeedback.Enabled = false;
             btnFeedback.Visible = false;
+            btnNhomKH.Enabled = false;
+            btnNhomKH.Visible = false;
 
             #endregion
         }
@@ -195,7 +197,7 @@ namespace HKD_ClothesShop
         {
             hideSubmenu();
             ActivateButton(sender, RGBColors.mau5);
-            openChildForm(new frmNhaCungCap());
+            openChildForm(new frmThuongHieu());
         }
 
         private void btnReport_Click(object sender, EventArgs e)

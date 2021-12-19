@@ -15,6 +15,20 @@ namespace HKD_ClothesShop.Forms
         public frmMenuChucNang()
         {
             InitializeComponent();
+
+            #region Tắt các chức năng chưa hoàn thiện
+            groupQLTC.Enabled = false;
+            groupQLTC.Visible = false;
+            panelLapDonMuaHang.Enabled = false;
+            panelLapDonMuaHang.Visible = false;
+            panelUpdateGiaMua.Enabled = false;
+            panelUpdateGiaMua.Visible = false;
+            panelLapPhieuYC.Enabled = false;
+            panelLapPhieuYC.Visible = false;
+            panelLapPhieuXuatHang.Enabled = false;
+            panelLapPhieuXuatHang.Visible = false;
+
+            #endregion
         }
 
         private void btnClose_Click(object sender, EventArgs e)

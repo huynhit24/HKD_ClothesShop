@@ -51,6 +51,7 @@ namespace HKD_ClothesShop.Forms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1209, 634);
             this.Controls.Add(this.btnClose);
+            this.Enabled = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmVanChuyen";
             this.Text = "Form14";

@@ -1,7 +1,7 @@
 ﻿
 namespace HKD_ClothesShop.Forms
 {
-    partial class frmNhaCungCap
+    partial class frmThuongHieu
     {
         /// <summary>
         /// Required designer variable.
@@ -45,14 +45,14 @@ namespace HKD_ClothesShop.Forms
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // frmNhaCungCap
+            // frmThuongHieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1209, 634);
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmNhaCungCap";
+            this.Name = "frmThuongHieu";
             this.Text = "Form9";
             this.ResumeLayout(false);
 

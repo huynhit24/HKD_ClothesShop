@@ -154,11 +154,11 @@
     <Compile Include="Forms\frmLoaiSanPham.Designer.cs">
       <DependentUpon>frmLoaiSanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmNhaCungCap.cs">
+    <Compile Include="Forms\frmThuongHieu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmNhaCungCap.Designer.cs">
-      <DependentUpon>frmNhaCungCap.cs</DependentUpon>
+    <Compile Include="Forms\frmThuongHieu.Designer.cs">
+      <DependentUpon>frmThuongHieu.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -222,8 +222,8 @@
     <EmbeddedResource Include="Forms\frmLoaiSanPham.resx">
       <DependentUpon>frmLoaiSanPham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmNhaCungCap.resx">
-      <DependentUpon>frmNhaCungCap.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmThuongHieu.resx">
+      <DependentUpon>frmThuongHieu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

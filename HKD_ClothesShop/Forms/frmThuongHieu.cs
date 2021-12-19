@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HKD_ClothesShop.Forms
 {
-    public partial class frmNhaCungCap : Form
+    public partial class frmThuongHieu : Form
     {
-        public frmNhaCungCap()
+        public frmThuongHieu()
         {
             InitializeComponent();
         }
