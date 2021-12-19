@@ -31,46 +31,46 @@ namespace HKD_ClothesShop
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.panelShopImage = new System.Windows.Forms.Panel();
-            this.panelSpSubmenu = new System.Windows.Forms.Panel();
-            this.btnLoaiSP = new System.Windows.Forms.Button();
-            this.btnDSSP = new System.Windows.Forms.Button();
-            this.panelKhachSubmenu = new System.Windows.Forms.Panel();
-            this.btnNhomKH = new System.Windows.Forms.Button();
-            this.btnDSKH = new System.Windows.Forms.Button();
-            this.panelKhoSubmenu = new System.Windows.Forms.Panel();
-            this.btnTonKho = new System.Windows.Forms.Button();
-            this.btnNhapKho = new System.Windows.Forms.Button();
-            this.panelHoaDonSubmenu = new System.Windows.Forms.Panel();
-            this.btnTraHang = new System.Windows.Forms.Button();
-            this.btnTaoHoaDon = new System.Windows.Forms.Button();
-            this.panelImageHKD = new System.Windows.Forms.Panel();
-            this.panelMenuNgang = new System.Windows.Forms.Panel();
-            this.panelChildForm = new System.Windows.Forms.Panel();
             this.btnFeedback = new System.Windows.Forms.Button();
             this.btnTracking = new System.Windows.Forms.Button();
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.btnMoney = new System.Windows.Forms.Button();
             this.btnCoupon = new System.Windows.Forms.Button();
             this.btnReport = new System.Windows.Forms.Button();
+            this.panelSpSubmenu = new System.Windows.Forms.Panel();
+            this.btnLoaiSP = new System.Windows.Forms.Button();
+            this.btnDSSP = new System.Windows.Forms.Button();
             this.btnSanPham = new System.Windows.Forms.Button();
-            this.btnNhaCungCap = new System.Windows.Forms.Button();
+            this.btnThuongHieu = new System.Windows.Forms.Button();
+            this.panelKhachSubmenu = new System.Windows.Forms.Panel();
+            this.btnNhomKH = new System.Windows.Forms.Button();
+            this.btnDSKH = new System.Windows.Forms.Button();
             this.btnKhach = new System.Windows.Forms.Button();
+            this.panelKhoSubmenu = new System.Windows.Forms.Panel();
+            this.btnTonKho = new System.Windows.Forms.Button();
+            this.btnNhapKho = new System.Windows.Forms.Button();
             this.btnKho = new System.Windows.Forms.Button();
+            this.panelHoaDonSubmenu = new System.Windows.Forms.Panel();
+            this.btnGhiNo = new System.Windows.Forms.Button();
+            this.btnTaoHoaDon = new System.Windows.Forms.Button();
             this.btnHoaDon = new System.Windows.Forms.Button();
+            this.panelImageHKD = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panelMenuNgang = new System.Windows.Forms.Panel();
             this.btnMenu = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnTaiKhoan = new System.Windows.Forms.Button();
+            this.panelChildForm = new System.Windows.Forms.Panel();
             this.panelShopImage.SuspendLayout();
             this.panelSpSubmenu.SuspendLayout();
             this.panelKhachSubmenu.SuspendLayout();
             this.panelKhoSubmenu.SuspendLayout();
             this.panelHoaDonSubmenu.SuspendLayout();
             this.panelImageHKD.SuspendLayout();
-            this.panelMenuNgang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelMenuNgang.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelShopImage
@@ -87,7 +87,7 @@ namespace HKD_ClothesShop
             this.panelShopImage.Controls.Add(this.btnReport);
             this.panelShopImage.Controls.Add(this.panelSpSubmenu);
             this.panelShopImage.Controls.Add(this.btnSanPham);
-            this.panelShopImage.Controls.Add(this.btnNhaCungCap);
+            this.panelShopImage.Controls.Add(this.btnThuongHieu);
             this.panelShopImage.Controls.Add(this.panelKhachSubmenu);
             this.panelShopImage.Controls.Add(this.btnKhach);
             this.panelShopImage.Controls.Add(this.panelKhoSubmenu);
@@ -100,222 +100,6 @@ namespace HKD_ClothesShop
             this.panelShopImage.Name = "panelShopImage";
             this.panelShopImage.Size = new System.Drawing.Size(251, 755);
             this.panelShopImage.TabIndex = 0;
-            // 
-            // panelSpSubmenu
-            // 
-            this.panelSpSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelSpSubmenu.Controls.Add(this.btnLoaiSP);
-            this.panelSpSubmenu.Controls.Add(this.btnDSSP);
-            this.panelSpSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSpSubmenu.Location = new System.Drawing.Point(0, 613);
-            this.panelSpSubmenu.Name = "panelSpSubmenu";
-            this.panelSpSubmenu.Size = new System.Drawing.Size(234, 73);
-            this.panelSpSubmenu.TabIndex = 10;
-            // 
-            // btnLoaiSP
-            // 
-            this.btnLoaiSP.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLoaiSP.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLoaiSP.FlatAppearance.BorderSize = 0;
-            this.btnLoaiSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoaiSP.ForeColor = System.Drawing.Color.Indigo;
-            this.btnLoaiSP.Location = new System.Drawing.Point(0, 36);
-            this.btnLoaiSP.Name = "btnLoaiSP";
-            this.btnLoaiSP.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btnLoaiSP.Size = new System.Drawing.Size(234, 36);
-            this.btnLoaiSP.TabIndex = 1;
-            this.btnLoaiSP.Text = "Loại Sản phẩm";
-            this.btnLoaiSP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLoaiSP.UseVisualStyleBackColor = false;
-            this.btnLoaiSP.Click += new System.EventHandler(this.btnLoaiSP_Click);
-            // 
-            // btnDSSP
-            // 
-            this.btnDSSP.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDSSP.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDSSP.FlatAppearance.BorderSize = 0;
-            this.btnDSSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDSSP.ForeColor = System.Drawing.Color.Indigo;
-            this.btnDSSP.Location = new System.Drawing.Point(0, 0);
-            this.btnDSSP.Name = "btnDSSP";
-            this.btnDSSP.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btnDSSP.Size = new System.Drawing.Size(234, 36);
-            this.btnDSSP.TabIndex = 0;
-            this.btnDSSP.Text = "Danh sách Sản phẩm";
-            this.btnDSSP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDSSP.UseVisualStyleBackColor = false;
-            this.btnDSSP.Click += new System.EventHandler(this.btnDSSP_Click);
-            // 
-            // panelKhachSubmenu
-            // 
-            this.panelKhachSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelKhachSubmenu.Controls.Add(this.btnNhomKH);
-            this.panelKhachSubmenu.Controls.Add(this.btnDSKH);
-            this.panelKhachSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelKhachSubmenu.Location = new System.Drawing.Point(0, 461);
-            this.panelKhachSubmenu.Name = "panelKhachSubmenu";
-            this.panelKhachSubmenu.Size = new System.Drawing.Size(234, 72);
-            this.panelKhachSubmenu.TabIndex = 7;
-            // 
-            // btnNhomKH
-            // 
-            this.btnNhomKH.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNhomKH.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNhomKH.FlatAppearance.BorderSize = 0;
-            this.btnNhomKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNhomKH.ForeColor = System.Drawing.Color.Indigo;
-            this.btnNhomKH.Location = new System.Drawing.Point(0, 36);
-            this.btnNhomKH.Name = "btnNhomKH";
-            this.btnNhomKH.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btnNhomKH.Size = new System.Drawing.Size(234, 36);
-            this.btnNhomKH.TabIndex = 1;
-            this.btnNhomKH.Text = "Nhóm khách hàng";
-            this.btnNhomKH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhomKH.UseVisualStyleBackColor = false;
-            this.btnNhomKH.Click += new System.EventHandler(this.btnNhomKH_Click);
-            // 
-            // btnDSKH
-            // 
-            this.btnDSKH.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDSKH.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDSKH.FlatAppearance.BorderSize = 0;
-            this.btnDSKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDSKH.ForeColor = System.Drawing.Color.Indigo;
-            this.btnDSKH.Location = new System.Drawing.Point(0, 0);
-            this.btnDSKH.Name = "btnDSKH";
-            this.btnDSKH.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btnDSKH.Size = new System.Drawing.Size(234, 36);
-            this.btnDSKH.TabIndex = 0;
-            this.btnDSKH.Text = "Danh sách Khách hàng";
-            this.btnDSKH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDSKH.UseVisualStyleBackColor = false;
-            this.btnDSKH.Click += new System.EventHandler(this.btnDSKH_Click);
-            // 
-            // panelKhoSubmenu
-            // 
-            this.panelKhoSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelKhoSubmenu.Controls.Add(this.btnTonKho);
-            this.panelKhoSubmenu.Controls.Add(this.btnNhapKho);
-            this.panelKhoSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelKhoSubmenu.Location = new System.Drawing.Point(0, 348);
-            this.panelKhoSubmenu.Name = "panelKhoSubmenu";
-            this.panelKhoSubmenu.Size = new System.Drawing.Size(234, 73);
-            this.panelKhoSubmenu.TabIndex = 5;
-            // 
-            // btnTonKho
-            // 
-            this.btnTonKho.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTonKho.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTonKho.FlatAppearance.BorderSize = 0;
-            this.btnTonKho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTonKho.ForeColor = System.Drawing.Color.Indigo;
-            this.btnTonKho.Location = new System.Drawing.Point(0, 36);
-            this.btnTonKho.Name = "btnTonKho";
-            this.btnTonKho.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btnTonKho.Size = new System.Drawing.Size(234, 36);
-            this.btnTonKho.TabIndex = 1;
-            this.btnTonKho.Text = "Tồn kho";
-            this.btnTonKho.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTonKho.UseVisualStyleBackColor = false;
-            this.btnTonKho.Click += new System.EventHandler(this.btnTonKho_Click);
-            // 
-            // btnNhapKho
-            // 
-            this.btnNhapKho.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNhapKho.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNhapKho.FlatAppearance.BorderSize = 0;
-            this.btnNhapKho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNhapKho.ForeColor = System.Drawing.Color.Indigo;
-            this.btnNhapKho.Location = new System.Drawing.Point(0, 0);
-            this.btnNhapKho.Name = "btnNhapKho";
-            this.btnNhapKho.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btnNhapKho.Size = new System.Drawing.Size(234, 36);
-            this.btnNhapKho.TabIndex = 0;
-            this.btnNhapKho.Text = "Nhập/Xuất kho";
-            this.btnNhapKho.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhapKho.UseVisualStyleBackColor = false;
-            this.btnNhapKho.Click += new System.EventHandler(this.btnNhapKho_Click);
-            // 
-            // panelHoaDonSubmenu
-            // 
-            this.panelHoaDonSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelHoaDonSubmenu.Controls.Add(this.btnTraHang);
-            this.panelHoaDonSubmenu.Controls.Add(this.btnTaoHoaDon);
-            this.panelHoaDonSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelHoaDonSubmenu.Location = new System.Drawing.Point(0, 237);
-            this.panelHoaDonSubmenu.Name = "panelHoaDonSubmenu";
-            this.panelHoaDonSubmenu.Size = new System.Drawing.Size(234, 71);
-            this.panelHoaDonSubmenu.TabIndex = 3;
-            // 
-            // btnTraHang
-            // 
-            this.btnTraHang.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTraHang.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTraHang.FlatAppearance.BorderSize = 0;
-            this.btnTraHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTraHang.ForeColor = System.Drawing.Color.Indigo;
-            this.btnTraHang.Location = new System.Drawing.Point(0, 36);
-            this.btnTraHang.Name = "btnTraHang";
-            this.btnTraHang.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btnTraHang.Size = new System.Drawing.Size(234, 36);
-            this.btnTraHang.TabIndex = 1;
-            this.btnTraHang.Text = "Tạo HĐTT qua DĐH từ xa";
-            this.btnTraHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTraHang.UseVisualStyleBackColor = false;
-            this.btnTraHang.Click += new System.EventHandler(this.btnTraHang_Click);
-            // 
-            // btnTaoHoaDon
-            // 
-            this.btnTaoHoaDon.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnTaoHoaDon.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTaoHoaDon.FlatAppearance.BorderSize = 0;
-            this.btnTaoHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTaoHoaDon.ForeColor = System.Drawing.Color.Indigo;
-            this.btnTaoHoaDon.Location = new System.Drawing.Point(0, 0);
-            this.btnTaoHoaDon.Name = "btnTaoHoaDon";
-            this.btnTaoHoaDon.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btnTaoHoaDon.Size = new System.Drawing.Size(234, 36);
-            this.btnTaoHoaDon.TabIndex = 0;
-            this.btnTaoHoaDon.Text = "Tạo HĐTT tại Shop";
-            this.btnTaoHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTaoHoaDon.UseVisualStyleBackColor = false;
-            this.btnTaoHoaDon.Click += new System.EventHandler(this.btnTaoHoaDon_Click);
-            // 
-            // panelImageHKD
-            // 
-            this.panelImageHKD.Controls.Add(this.pictureBox1);
-            this.panelImageHKD.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelImageHKD.Location = new System.Drawing.Point(0, 0);
-            this.panelImageHKD.Name = "panelImageHKD";
-            this.panelImageHKD.Size = new System.Drawing.Size(234, 197);
-            this.panelImageHKD.TabIndex = 1;
-            // 
-            // panelMenuNgang
-            // 
-            this.panelMenuNgang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelMenuNgang.BackColor = System.Drawing.Color.White;
-            this.panelMenuNgang.Controls.Add(this.btnMenu);
-            this.panelMenuNgang.Controls.Add(this.btnHome);
-            this.panelMenuNgang.Controls.Add(this.btnDangXuat);
-            this.panelMenuNgang.Controls.Add(this.btnSettings);
-            this.panelMenuNgang.Controls.Add(this.btnTaiKhoan);
-            this.panelMenuNgang.Location = new System.Drawing.Point(242, 1);
-            this.panelMenuNgang.Name = "panelMenuNgang";
-            this.panelMenuNgang.Size = new System.Drawing.Size(1242, 88);
-            this.panelMenuNgang.TabIndex = 1;
-            // 
-            // panelChildForm
-            // 
-            this.panelChildForm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelChildForm.BackgroundImage = global::HKD_ClothesShop.Properties.Resources.giay;
-            this.panelChildForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelChildForm.Location = new System.Drawing.Point(259, 94);
-            this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1225, 667);
-            this.panelChildForm.TabIndex = 2;
             // 
             // btnFeedback
             // 
@@ -431,6 +215,51 @@ namespace HKD_ClothesShop
             this.btnReport.UseVisualStyleBackColor = true;
             this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
+            // panelSpSubmenu
+            // 
+            this.panelSpSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelSpSubmenu.Controls.Add(this.btnLoaiSP);
+            this.panelSpSubmenu.Controls.Add(this.btnDSSP);
+            this.panelSpSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSpSubmenu.Location = new System.Drawing.Point(0, 613);
+            this.panelSpSubmenu.Name = "panelSpSubmenu";
+            this.panelSpSubmenu.Size = new System.Drawing.Size(234, 73);
+            this.panelSpSubmenu.TabIndex = 10;
+            // 
+            // btnLoaiSP
+            // 
+            this.btnLoaiSP.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLoaiSP.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLoaiSP.FlatAppearance.BorderSize = 0;
+            this.btnLoaiSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoaiSP.ForeColor = System.Drawing.Color.Indigo;
+            this.btnLoaiSP.Location = new System.Drawing.Point(0, 36);
+            this.btnLoaiSP.Name = "btnLoaiSP";
+            this.btnLoaiSP.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnLoaiSP.Size = new System.Drawing.Size(234, 36);
+            this.btnLoaiSP.TabIndex = 1;
+            this.btnLoaiSP.Text = "Loại Sản phẩm";
+            this.btnLoaiSP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLoaiSP.UseVisualStyleBackColor = false;
+            this.btnLoaiSP.Click += new System.EventHandler(this.btnLoaiSP_Click);
+            // 
+            // btnDSSP
+            // 
+            this.btnDSSP.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDSSP.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDSSP.FlatAppearance.BorderSize = 0;
+            this.btnDSSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDSSP.ForeColor = System.Drawing.Color.Indigo;
+            this.btnDSSP.Location = new System.Drawing.Point(0, 0);
+            this.btnDSSP.Name = "btnDSSP";
+            this.btnDSSP.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnDSSP.Size = new System.Drawing.Size(234, 36);
+            this.btnDSSP.TabIndex = 0;
+            this.btnDSSP.Text = "Danh sách Sản phẩm";
+            this.btnDSSP.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDSSP.UseVisualStyleBackColor = false;
+            this.btnDSSP.Click += new System.EventHandler(this.btnDSSP_Click);
+            // 
             // btnSanPham
             // 
             this.btnSanPham.Dock = System.Windows.Forms.DockStyle.Top;
@@ -450,24 +279,69 @@ namespace HKD_ClothesShop
             this.btnSanPham.UseVisualStyleBackColor = true;
             this.btnSanPham.Click += new System.EventHandler(this.btnSanPham_Click);
             // 
-            // btnNhaCungCap
+            // btnThuongHieu
             // 
-            this.btnNhaCungCap.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNhaCungCap.FlatAppearance.BorderSize = 0;
-            this.btnNhaCungCap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNhaCungCap.ForeColor = System.Drawing.Color.Black;
-            this.btnNhaCungCap.Image = global::HKD_ClothesShop.Properties.Resources.supplier;
-            this.btnNhaCungCap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhaCungCap.Location = new System.Drawing.Point(0, 533);
-            this.btnNhaCungCap.Name = "btnNhaCungCap";
-            this.btnNhaCungCap.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.btnNhaCungCap.Size = new System.Drawing.Size(234, 40);
-            this.btnNhaCungCap.TabIndex = 8;
-            this.btnNhaCungCap.Text = "Nhà cung cấp";
-            this.btnNhaCungCap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhaCungCap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNhaCungCap.UseVisualStyleBackColor = true;
-            this.btnNhaCungCap.Click += new System.EventHandler(this.btnNhaCungCap_Click);
+            this.btnThuongHieu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnThuongHieu.FlatAppearance.BorderSize = 0;
+            this.btnThuongHieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThuongHieu.ForeColor = System.Drawing.Color.Black;
+            this.btnThuongHieu.Image = global::HKD_ClothesShop.Properties.Resources.supplier;
+            this.btnThuongHieu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThuongHieu.Location = new System.Drawing.Point(0, 533);
+            this.btnThuongHieu.Name = "btnThuongHieu";
+            this.btnThuongHieu.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.btnThuongHieu.Size = new System.Drawing.Size(234, 40);
+            this.btnThuongHieu.TabIndex = 8;
+            this.btnThuongHieu.Text = "Thương hiệu";
+            this.btnThuongHieu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThuongHieu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThuongHieu.UseVisualStyleBackColor = true;
+            this.btnThuongHieu.Click += new System.EventHandler(this.btnThuongHieu_Click);
+            // 
+            // panelKhachSubmenu
+            // 
+            this.panelKhachSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelKhachSubmenu.Controls.Add(this.btnNhomKH);
+            this.panelKhachSubmenu.Controls.Add(this.btnDSKH);
+            this.panelKhachSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelKhachSubmenu.Location = new System.Drawing.Point(0, 461);
+            this.panelKhachSubmenu.Name = "panelKhachSubmenu";
+            this.panelKhachSubmenu.Size = new System.Drawing.Size(234, 72);
+            this.panelKhachSubmenu.TabIndex = 7;
+            // 
+            // btnNhomKH
+            // 
+            this.btnNhomKH.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnNhomKH.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNhomKH.FlatAppearance.BorderSize = 0;
+            this.btnNhomKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNhomKH.ForeColor = System.Drawing.Color.Indigo;
+            this.btnNhomKH.Location = new System.Drawing.Point(0, 36);
+            this.btnNhomKH.Name = "btnNhomKH";
+            this.btnNhomKH.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnNhomKH.Size = new System.Drawing.Size(234, 36);
+            this.btnNhomKH.TabIndex = 1;
+            this.btnNhomKH.Text = "Nhóm khách hàng";
+            this.btnNhomKH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNhomKH.UseVisualStyleBackColor = false;
+            this.btnNhomKH.Click += new System.EventHandler(this.btnNhomKH_Click);
+            // 
+            // btnDSKH
+            // 
+            this.btnDSKH.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDSKH.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDSKH.FlatAppearance.BorderSize = 0;
+            this.btnDSKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDSKH.ForeColor = System.Drawing.Color.Indigo;
+            this.btnDSKH.Location = new System.Drawing.Point(0, 0);
+            this.btnDSKH.Name = "btnDSKH";
+            this.btnDSKH.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnDSKH.Size = new System.Drawing.Size(234, 36);
+            this.btnDSKH.TabIndex = 0;
+            this.btnDSKH.Text = "Danh sách Khách hàng";
+            this.btnDSKH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDSKH.UseVisualStyleBackColor = false;
+            this.btnDSKH.Click += new System.EventHandler(this.btnDSKH_Click);
             // 
             // btnKhach
             // 
@@ -488,6 +362,51 @@ namespace HKD_ClothesShop
             this.btnKhach.UseVisualStyleBackColor = true;
             this.btnKhach.Click += new System.EventHandler(this.btnKhach_Click);
             // 
+            // panelKhoSubmenu
+            // 
+            this.panelKhoSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelKhoSubmenu.Controls.Add(this.btnTonKho);
+            this.panelKhoSubmenu.Controls.Add(this.btnNhapKho);
+            this.panelKhoSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelKhoSubmenu.Location = new System.Drawing.Point(0, 348);
+            this.panelKhoSubmenu.Name = "panelKhoSubmenu";
+            this.panelKhoSubmenu.Size = new System.Drawing.Size(234, 73);
+            this.panelKhoSubmenu.TabIndex = 5;
+            // 
+            // btnTonKho
+            // 
+            this.btnTonKho.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnTonKho.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTonKho.FlatAppearance.BorderSize = 0;
+            this.btnTonKho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTonKho.ForeColor = System.Drawing.Color.Indigo;
+            this.btnTonKho.Location = new System.Drawing.Point(0, 36);
+            this.btnTonKho.Name = "btnTonKho";
+            this.btnTonKho.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnTonKho.Size = new System.Drawing.Size(234, 36);
+            this.btnTonKho.TabIndex = 1;
+            this.btnTonKho.Text = "Tồn kho";
+            this.btnTonKho.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTonKho.UseVisualStyleBackColor = false;
+            this.btnTonKho.Click += new System.EventHandler(this.btnTonKho_Click);
+            // 
+            // btnNhapKho
+            // 
+            this.btnNhapKho.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnNhapKho.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNhapKho.FlatAppearance.BorderSize = 0;
+            this.btnNhapKho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNhapKho.ForeColor = System.Drawing.Color.Indigo;
+            this.btnNhapKho.Location = new System.Drawing.Point(0, 0);
+            this.btnNhapKho.Name = "btnNhapKho";
+            this.btnNhapKho.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnNhapKho.Size = new System.Drawing.Size(234, 36);
+            this.btnNhapKho.TabIndex = 0;
+            this.btnNhapKho.Text = "Nhập hàng";
+            this.btnNhapKho.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNhapKho.UseVisualStyleBackColor = false;
+            this.btnNhapKho.Click += new System.EventHandler(this.btnNhapKho_Click);
+            // 
             // btnKho
             // 
             this.btnKho.Dock = System.Windows.Forms.DockStyle.Top;
@@ -501,11 +420,56 @@ namespace HKD_ClothesShop
             this.btnKho.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
             this.btnKho.Size = new System.Drawing.Size(234, 40);
             this.btnKho.TabIndex = 4;
-            this.btnKho.Text = "Nhập/Tồn kho";
+            this.btnKho.Text = "Nhập hàng mới";
             this.btnKho.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKho.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnKho.UseVisualStyleBackColor = true;
             this.btnKho.Click += new System.EventHandler(this.btnKho_Click);
+            // 
+            // panelHoaDonSubmenu
+            // 
+            this.panelHoaDonSubmenu.BackColor = System.Drawing.Color.White;
+            this.panelHoaDonSubmenu.Controls.Add(this.btnGhiNo);
+            this.panelHoaDonSubmenu.Controls.Add(this.btnTaoHoaDon);
+            this.panelHoaDonSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelHoaDonSubmenu.Location = new System.Drawing.Point(0, 237);
+            this.panelHoaDonSubmenu.Name = "panelHoaDonSubmenu";
+            this.panelHoaDonSubmenu.Size = new System.Drawing.Size(234, 71);
+            this.panelHoaDonSubmenu.TabIndex = 3;
+            // 
+            // btnGhiNo
+            // 
+            this.btnGhiNo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnGhiNo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGhiNo.FlatAppearance.BorderSize = 0;
+            this.btnGhiNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGhiNo.ForeColor = System.Drawing.Color.Indigo;
+            this.btnGhiNo.Location = new System.Drawing.Point(0, 36);
+            this.btnGhiNo.Name = "btnGhiNo";
+            this.btnGhiNo.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnGhiNo.Size = new System.Drawing.Size(234, 36);
+            this.btnGhiNo.TabIndex = 1;
+            this.btnGhiNo.Text = "Ghi nợ";
+            this.btnGhiNo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGhiNo.UseVisualStyleBackColor = false;
+            this.btnGhiNo.Click += new System.EventHandler(this.btnTraHang_Click);
+            // 
+            // btnTaoHoaDon
+            // 
+            this.btnTaoHoaDon.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnTaoHoaDon.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTaoHoaDon.FlatAppearance.BorderSize = 0;
+            this.btnTaoHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTaoHoaDon.ForeColor = System.Drawing.Color.Indigo;
+            this.btnTaoHoaDon.Location = new System.Drawing.Point(0, 0);
+            this.btnTaoHoaDon.Name = "btnTaoHoaDon";
+            this.btnTaoHoaDon.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnTaoHoaDon.Size = new System.Drawing.Size(234, 36);
+            this.btnTaoHoaDon.TabIndex = 0;
+            this.btnTaoHoaDon.Text = "Tạo hóa đơn, thanh toán";
+            this.btnTaoHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTaoHoaDon.UseVisualStyleBackColor = false;
+            this.btnTaoHoaDon.Click += new System.EventHandler(this.btnTaoHoaDon_Click);
             // 
             // btnHoaDon
             // 
@@ -526,6 +490,15 @@ namespace HKD_ClothesShop
             this.btnHoaDon.UseVisualStyleBackColor = true;
             this.btnHoaDon.Click += new System.EventHandler(this.btnHoaDon_Click);
             // 
+            // panelImageHKD
+            // 
+            this.panelImageHKD.Controls.Add(this.pictureBox1);
+            this.panelImageHKD.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelImageHKD.Location = new System.Drawing.Point(0, 0);
+            this.panelImageHKD.Name = "panelImageHKD";
+            this.panelImageHKD.Size = new System.Drawing.Size(234, 197);
+            this.panelImageHKD.TabIndex = 1;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::HKD_ClothesShop.Properties.Resources.HKD_icon;
@@ -535,6 +508,21 @@ namespace HKD_ClothesShop
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // panelMenuNgang
+            // 
+            this.panelMenuNgang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelMenuNgang.BackColor = System.Drawing.Color.White;
+            this.panelMenuNgang.Controls.Add(this.btnMenu);
+            this.panelMenuNgang.Controls.Add(this.btnHome);
+            this.panelMenuNgang.Controls.Add(this.btnDangXuat);
+            this.panelMenuNgang.Controls.Add(this.btnSettings);
+            this.panelMenuNgang.Controls.Add(this.btnTaiKhoan);
+            this.panelMenuNgang.Location = new System.Drawing.Point(242, 1);
+            this.panelMenuNgang.Name = "panelMenuNgang";
+            this.panelMenuNgang.Size = new System.Drawing.Size(1242, 88);
+            this.panelMenuNgang.TabIndex = 1;
             // 
             // btnMenu
             // 
@@ -636,6 +624,18 @@ namespace HKD_ClothesShop
             this.btnTaiKhoan.UseVisualStyleBackColor = false;
             this.btnTaiKhoan.Click += new System.EventHandler(this.btnTaiKhoan_Click);
             // 
+            // panelChildForm
+            // 
+            this.panelChildForm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelChildForm.BackgroundImage = global::HKD_ClothesShop.Properties.Resources.giay;
+            this.panelChildForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelChildForm.Location = new System.Drawing.Point(259, 94);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(1225, 667);
+            this.panelChildForm.TabIndex = 2;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -655,8 +655,8 @@ namespace HKD_ClothesShop
             this.panelKhoSubmenu.ResumeLayout(false);
             this.panelHoaDonSubmenu.ResumeLayout(false);
             this.panelImageHKD.ResumeLayout(false);
-            this.panelMenuNgang.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelMenuNgang.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -667,7 +667,7 @@ namespace HKD_ClothesShop
         private System.Windows.Forms.Button btnHoaDon;
         private System.Windows.Forms.Panel panelImageHKD;
         private System.Windows.Forms.Panel panelHoaDonSubmenu;
-        private System.Windows.Forms.Button btnTraHang;
+        private System.Windows.Forms.Button btnGhiNo;
         private System.Windows.Forms.Button btnTaoHoaDon;
         private System.Windows.Forms.Panel panelKhachSubmenu;
         private System.Windows.Forms.Button btnNhomKH;
@@ -681,7 +681,7 @@ namespace HKD_ClothesShop
         private System.Windows.Forms.Button btnLoaiSP;
         private System.Windows.Forms.Button btnDSSP;
         private System.Windows.Forms.Button btnSanPham;
-        private System.Windows.Forms.Button btnNhaCungCap;
+        private System.Windows.Forms.Button btnThuongHieu;
         private System.Windows.Forms.Button btnCoupon;
         private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Button btnNhanVien;

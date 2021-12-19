@@ -24,6 +24,18 @@ namespace HKD_ClothesShop
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 40);
             panelShopImage.Controls.Add(leftBorderBtn);
+
+            #region Tắt các chức năng chưa hoàn thiện
+            btnCoupon.Enabled = false;
+            btnCoupon.Visible = false;
+            btnMoney.Enabled = false;
+            btnMoney.Visible = false;
+            btnTracking.Enabled = false;
+            btnTracking.Visible = false;
+            btnFeedback.Enabled = false;
+            btnFeedback.Visible = false;
+
+            #endregion
         }
 
         #region Menu, Submenu sự kiện click
@@ -69,16 +81,11 @@ namespace HKD_ClothesShop
                 DisableButton();
                 //Button
                 currentBtn = (Button)senderBtn;
-                //currentBtn.BackColor = Color.FromArgb(37, 36, 81);
-                //currentBtn.ForeColor = color;
                 currentBtn.TextAlign = ContentAlignment.MiddleCenter;
                 currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
                 currentBtn.ImageAlign = ContentAlignment.MiddleRight;
-                //left border button
                 leftBorderBtn.BackColor = color;
-                //leftBorderBtn.Location = new Point(0, currentBtn.Location.X);
                 leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
-                //leftBorderBtn.Location.Y = new Point(currentBtn.Location.X,currentBtn.Location.Y);
                 leftBorderBtn.Visible = true;
                 leftBorderBtn.BringToFront();
             }
@@ -88,8 +95,6 @@ namespace HKD_ClothesShop
         {
             if(currentBtn != null)
             {
-                //currentBtn.BackColor = Color.White;
-                //currentBtn.ForeColor = Color.Black;
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
                 currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
@@ -186,7 +191,7 @@ namespace HKD_ClothesShop
             hideSubmenu();
         }
 
-        private void btnNhaCungCap_Click(object sender, EventArgs e)
+        private void btnThuongHieu_Click(object sender, EventArgs e)
         {
             hideSubmenu();
             ActivateButton(sender, RGBColors.mau5);
@@ -288,6 +293,6 @@ namespace HKD_ClothesShop
             childForm.Show();
         }
 
-       
+        
     }
 }
