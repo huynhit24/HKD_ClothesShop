@@ -36,15 +36,16 @@ namespace HKD_ClothesShop.Forms
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.lbDoiPass = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDangNhap
@@ -123,6 +124,7 @@ namespace HKD_ClothesShop.Forms
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Blue;
             this.label3.Location = new System.Drawing.Point(975, 430);
@@ -130,6 +132,37 @@ namespace HKD_ClothesShop.Forms
             this.label3.Size = new System.Drawing.Size(108, 18);
             this.label3.TabIndex = 8;
             this.label3.Text = "Quên mật khẩu";
+            // 
+            // lbDoiPass
+            // 
+            this.lbDoiPass.AutoSize = true;
+            this.lbDoiPass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbDoiPass.Font = new System.Drawing.Font("Roboto", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDoiPass.ForeColor = System.Drawing.Color.Blue;
+            this.lbDoiPass.Location = new System.Drawing.Point(807, 430);
+            this.lbDoiPass.Name = "lbDoiPass";
+            this.lbDoiPass.Size = new System.Drawing.Size(96, 18);
+            this.lbDoiPass.TabIndex = 12;
+            this.lbDoiPass.Text = "Đổi mật khẩu";
+            this.lbDoiPass.Click += new System.EventHandler(this.lbDoiPass_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::HKD_ClothesShop.Properties.Resources.password;
+            this.pictureBox4.Location = new System.Drawing.Point(1053, 386);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox4.TabIndex = 11;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::HKD_ClothesShop.Properties.Resources.user_1;
+            this.pictureBox3.Location = new System.Drawing.Point(1053, 265);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox3.TabIndex = 10;
+            this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -162,30 +195,13 @@ namespace HKD_ClothesShop.Forms
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::HKD_ClothesShop.Properties.Resources.user_1;
-            this.pictureBox3.Location = new System.Drawing.Point(1053, 265);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox3.TabIndex = 10;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::HKD_ClothesShop.Properties.Resources.password;
-            this.pictureBox4.Location = new System.Drawing.Point(1053, 386);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox4.TabIndex = 11;
-            this.pictureBox4.TabStop = false;
-            // 
             // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1190, 634);
+            this.Controls.Add(this.lbDoiPass);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -202,10 +218,10 @@ namespace HKD_ClothesShop.Forms
             this.Name = "frmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form18";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,5 +241,6 @@ namespace HKD_ClothesShop.Forms
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label lbDoiPass;
     }
 }

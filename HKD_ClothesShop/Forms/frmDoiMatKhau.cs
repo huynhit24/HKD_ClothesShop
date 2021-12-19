@@ -10,21 +10,21 @@ using System.Windows.Forms;
 
 namespace HKD_ClothesShop.Forms
 {
-    public partial class frmDangNhap : Form
+    public partial class frmDoiMatKhau : Form
     {
-        public frmDangNhap()
+        public frmDoiMatKhau()
         {
             InitializeComponent();
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void frmDoiMatKhau_Load(object sender, EventArgs e)
         {
-            Application.Exit();
+
         }
 
-        private void lbDoiPass_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-            new frmDoiMatKhau().ShowDialog();
+            this.Close();
         }
     }
 }
