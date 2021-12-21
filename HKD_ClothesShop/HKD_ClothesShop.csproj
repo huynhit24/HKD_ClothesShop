@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\frmDacDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDacDiem.Designer.cs">
+      <DependentUpon>frmDacDiem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,11 +130,11 @@
     <Compile Include="Forms\frmKhachTraHang.Designer.cs">
       <DependentUpon>frmKhachTraHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmNhapKho.cs">
+    <Compile Include="Forms\frmNhapHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmNhapKho.Designer.cs">
-      <DependentUpon>frmNhapKho.cs</DependentUpon>
+    <Compile Include="Forms\frmNhapHang.Designer.cs">
+      <DependentUpon>frmNhapHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmTonKho.cs">
       <SubType>Form</SubType>
@@ -174,6 +180,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\frmDacDiem.resx">
+      <DependentUpon>frmDacDiem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDoiMatKhau.resx">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,8 +222,8 @@
     <EmbeddedResource Include="Forms\frmKhachTraHang.resx">
       <DependentUpon>frmKhachTraHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmNhapKho.resx">
-      <DependentUpon>frmNhapKho.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmNhapHang.resx">
+      <DependentUpon>frmNhapHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmTonKho.resx">
       <DependentUpon>frmTonKho.cs</DependentUpon>

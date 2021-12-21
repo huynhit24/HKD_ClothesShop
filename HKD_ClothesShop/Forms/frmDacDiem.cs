@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace HKD_ClothesShop.Forms
 {
-    public partial class frmNhapKho : Form
+    public partial class frmDacDiem : Form
     {
-        public frmNhapKho()
+        public frmDacDiem()
         {
             InitializeComponent();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }

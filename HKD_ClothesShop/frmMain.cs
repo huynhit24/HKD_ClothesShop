@@ -159,7 +159,7 @@ namespace HKD_ClothesShop
 
         private void btnNhapKho_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmNhapKho());
+            openChildForm(new frmNhapHang());
             hideSubmenu();
         }
 
@@ -172,12 +172,6 @@ namespace HKD_ClothesShop
         private void btnDSKH_Click(object sender, EventArgs e)
         {
             openChildForm(new frmDSKhachHang());
-            hideSubmenu();
-        }
-
-        private void btnNhomKH_Click(object sender, EventArgs e)
-        {
-            openChildForm(new frmNhomKhachHang());
             hideSubmenu();
         }
 
@@ -295,6 +289,9 @@ namespace HKD_ClothesShop
             childForm.Show();
         }
 
-        
+        private void btnNhomKH_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

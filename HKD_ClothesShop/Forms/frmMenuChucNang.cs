@@ -106,12 +106,12 @@ namespace HKD_ClothesShop.Forms
 
         private void panelLapPhieuXuatKho_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmNhapKho());
+            openChildForm(new frmNhapHang());
         }
 
         private void panelLapPhieuNhapKho_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmNhapKho());
+            openChildForm(new frmNhapHang());
         }
 
         private void panelLapPhieuYC_Click(object sender, EventArgs e)
