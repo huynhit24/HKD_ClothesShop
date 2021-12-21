@@ -26,7 +26,7 @@ namespace HKD_ClothesShop
             panelShopImage.Controls.Add(leftBorderBtn);
 
             #region Tắt các chức năng chưa hoàn thiện
-            btnCoupon.Enabled = false;
+            /*btnCoupon.Enabled = false;
             btnCoupon.Visible = false;
             btnMoney.Enabled = false;
             btnMoney.Visible = false;
@@ -35,7 +35,7 @@ namespace HKD_ClothesShop
             btnFeedback.Enabled = false;
             btnFeedback.Visible = false;
             btnNhomKH.Enabled = false;
-            btnNhomKH.Visible = false;
+            btnNhomKH.Visible = false;*/
 
             #endregion
         }

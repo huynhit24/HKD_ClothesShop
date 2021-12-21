@@ -104,6 +104,7 @@ namespace HKD_ClothesShop
             // btnFeedback
             // 
             this.btnFeedback.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFeedback.Enabled = false;
             this.btnFeedback.FlatAppearance.BorderSize = 0;
             this.btnFeedback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFeedback.ForeColor = System.Drawing.Color.Black;
@@ -118,11 +119,13 @@ namespace HKD_ClothesShop
             this.btnFeedback.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFeedback.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnFeedback.UseVisualStyleBackColor = true;
+            this.btnFeedback.Visible = false;
             this.btnFeedback.Click += new System.EventHandler(this.btnFeedback_Click);
             // 
             // btnTracking
             // 
             this.btnTracking.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTracking.Enabled = false;
             this.btnTracking.FlatAppearance.BorderSize = 0;
             this.btnTracking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTracking.ForeColor = System.Drawing.Color.Black;
@@ -137,6 +140,7 @@ namespace HKD_ClothesShop
             this.btnTracking.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTracking.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTracking.UseVisualStyleBackColor = true;
+            this.btnTracking.Visible = false;
             this.btnTracking.Click += new System.EventHandler(this.btnTracking_Click);
             // 
             // btnNhanVien
@@ -161,6 +165,7 @@ namespace HKD_ClothesShop
             // btnMoney
             // 
             this.btnMoney.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMoney.Enabled = false;
             this.btnMoney.FlatAppearance.BorderSize = 0;
             this.btnMoney.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMoney.ForeColor = System.Drawing.Color.Black;
@@ -175,11 +180,13 @@ namespace HKD_ClothesShop
             this.btnMoney.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMoney.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMoney.UseVisualStyleBackColor = true;
+            this.btnMoney.Visible = false;
             this.btnMoney.Click += new System.EventHandler(this.btnMoney_Click);
             // 
             // btnCoupon
             // 
             this.btnCoupon.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCoupon.Enabled = false;
             this.btnCoupon.FlatAppearance.BorderSize = 0;
             this.btnCoupon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCoupon.ForeColor = System.Drawing.Color.Black;
@@ -194,6 +201,7 @@ namespace HKD_ClothesShop
             this.btnCoupon.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCoupon.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCoupon.UseVisualStyleBackColor = true;
+            this.btnCoupon.Visible = false;
             this.btnCoupon.Click += new System.EventHandler(this.btnCoupon_Click);
             // 
             // btnReport
@@ -313,6 +321,7 @@ namespace HKD_ClothesShop
             // 
             this.btnNhomKH.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnNhomKH.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNhomKH.Enabled = false;
             this.btnNhomKH.FlatAppearance.BorderSize = 0;
             this.btnNhomKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNhomKH.ForeColor = System.Drawing.Color.Indigo;
@@ -324,6 +333,7 @@ namespace HKD_ClothesShop
             this.btnNhomKH.Text = "Nhóm khách hàng";
             this.btnNhomKH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNhomKH.UseVisualStyleBackColor = false;
+            this.btnNhomKH.Visible = false;
             this.btnNhomKH.Click += new System.EventHandler(this.btnNhomKH_Click);
             // 
             // btnDSKH
