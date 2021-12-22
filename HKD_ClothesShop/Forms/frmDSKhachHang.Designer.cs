@@ -33,6 +33,8 @@ namespace HKD_ClothesShop.Forms
             this.radKhac = new System.Windows.Forms.RadioButton();
             this.radNu = new System.Windows.Forms.RadioButton();
             this.radNam = new System.Windows.Forms.RadioButton();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnCreate = new System.Windows.Forms.Button();
             this.cbStatus = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -46,8 +48,6 @@ namespace HKD_ClothesShop.Forms
             this.txtMKH = new System.Windows.Forms.TextBox();
             this.dgvKhachHang = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnCreate = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -96,10 +96,10 @@ namespace HKD_ClothesShop.Forms
             this.radKhac.AutoSize = true;
             this.radKhac.Location = new System.Drawing.Point(237, 156);
             this.radKhac.Name = "radKhac";
-            this.radKhac.Size = new System.Drawing.Size(67, 23);
+            this.radKhac.Size = new System.Drawing.Size(63, 23);
             this.radKhac.TabIndex = 24;
             this.radKhac.TabStop = true;
-            this.radKhac.Text = "Other";
+            this.radKhac.Text = "Khác";
             this.radKhac.UseVisualStyleBackColor = true;
             // 
             // radNu
@@ -107,10 +107,10 @@ namespace HKD_ClothesShop.Forms
             this.radNu.AutoSize = true;
             this.radNu.Location = new System.Drawing.Point(140, 156);
             this.radNu.Name = "radNu";
-            this.radNu.Size = new System.Drawing.Size(81, 23);
+            this.radNu.Size = new System.Drawing.Size(48, 23);
             this.radNu.TabIndex = 23;
             this.radNu.TabStop = true;
-            this.radNu.Text = "Female";
+            this.radNu.Text = "Nữ";
             this.radNu.UseVisualStyleBackColor = true;
             // 
             // radNam
@@ -118,20 +118,52 @@ namespace HKD_ClothesShop.Forms
             this.radNam.AutoSize = true;
             this.radNam.Location = new System.Drawing.Point(53, 156);
             this.radNam.Name = "radNam";
-            this.radNam.Size = new System.Drawing.Size(63, 23);
+            this.radNam.Size = new System.Drawing.Size(61, 23);
             this.radNam.TabIndex = 22;
             this.radNam.TabStop = true;
-            this.radNam.Text = "Male";
+            this.radNam.Text = "Nam";
             this.radNam.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
+            this.btnUpdate.FlatAppearance.BorderSize = 3;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Image = global::HKD_ClothesShop.Properties.Resources.update;
+            this.btnUpdate.Location = new System.Drawing.Point(203, 358);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(120, 48);
+            this.btnUpdate.TabIndex = 21;
+            this.btnUpdate.Text = "Sửa";
+            this.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.MouseLeave += new System.EventHandler(this.btnUpdate_MouseLeave);
+            this.btnUpdate.MouseHover += new System.EventHandler(this.btnUpdate_MouseHover);
+            // 
+            // btnCreate
+            // 
+            this.btnCreate.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btnCreate.FlatAppearance.BorderSize = 3;
+            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreate.Image = global::HKD_ClothesShop.Properties.Resources.create;
+            this.btnCreate.Location = new System.Drawing.Point(53, 358);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(125, 48);
+            this.btnCreate.TabIndex = 20;
+            this.btnCreate.Text = "Thêm";
+            this.btnCreate.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.MouseLeave += new System.EventHandler(this.btnCreate_MouseLeave);
+            this.btnCreate.MouseHover += new System.EventHandler(this.btnCreate_MouseHover);
             // 
             // cbStatus
             // 
             this.cbStatus.AutoSize = true;
-            this.cbStatus.Location = new System.Drawing.Point(249, 319);
+            this.cbStatus.Location = new System.Drawing.Point(206, 314);
             this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(74, 23);
+            this.cbStatus.Size = new System.Drawing.Size(136, 23);
             this.cbStatus.TabIndex = 16;
-            this.cbStatus.Text = "Status";
+            this.cbStatus.Text = "Không sử dụng";
             this.cbStatus.UseVisualStyleBackColor = true;
             // 
             // label5
@@ -223,6 +255,8 @@ namespace HKD_ClothesShop.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvKhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvKhachHang.BackgroundColor = System.Drawing.Color.White;
+            this.dgvKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvKhachHang.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dgvKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKhachHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -232,7 +266,7 @@ namespace HKD_ClothesShop.Forms
             this.Column5,
             this.Column6,
             this.Column7});
-            this.dgvKhachHang.GridColor = System.Drawing.Color.Chocolate;
+            this.dgvKhachHang.GridColor = System.Drawing.Color.DodgerBlue;
             this.dgvKhachHang.Location = new System.Drawing.Point(403, 145);
             this.dgvKhachHang.Name = "dgvKhachHang";
             this.dgvKhachHang.Size = new System.Drawing.Size(803, 471);
@@ -250,38 +284,6 @@ namespace HKD_ClothesShop.Forms
             this.label6.Size = new System.Drawing.Size(347, 33);
             this.label6.TabIndex = 6;
             this.label6.Text = "DANH SÁCH KHÁCH HÀNG";
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
-            this.btnUpdate.FlatAppearance.BorderSize = 3;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Image = global::HKD_ClothesShop.Properties.Resources.update;
-            this.btnUpdate.Location = new System.Drawing.Point(203, 358);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(120, 48);
-            this.btnUpdate.TabIndex = 21;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.MouseLeave += new System.EventHandler(this.btnUpdate_MouseLeave);
-            this.btnUpdate.MouseHover += new System.EventHandler(this.btnUpdate_MouseHover);
-            // 
-            // btnCreate
-            // 
-            this.btnCreate.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-            this.btnCreate.FlatAppearance.BorderSize = 3;
-            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCreate.Image = global::HKD_ClothesShop.Properties.Resources.create;
-            this.btnCreate.Location = new System.Drawing.Point(53, 358);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(125, 48);
-            this.btnCreate.TabIndex = 20;
-            this.btnCreate.Text = "Create";
-            this.btnCreate.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnCreate.UseVisualStyleBackColor = true;
-            this.btnCreate.MouseLeave += new System.EventHandler(this.btnCreate_MouseLeave);
-            this.btnCreate.MouseHover += new System.EventHandler(this.btnCreate_MouseHover);
             // 
             // btnClose
             // 
@@ -347,7 +349,7 @@ namespace HKD_ClothesShop.Forms
             // 
             // Column7
             // 
-            this.Column7.HeaderText = "Status";
+            this.Column7.HeaderText = "Trạng thái";
             this.Column7.Name = "Column7";
             // 
             // frmDSKhachHang

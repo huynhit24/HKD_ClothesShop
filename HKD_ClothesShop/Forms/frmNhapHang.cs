@@ -21,10 +21,5 @@ namespace HKD_ClothesShop.Forms
         {
             this.Close();
         }
-
-        private void btnDacDiem_Click(object sender, EventArgs e)
-        {
-            new frmDacDiem().ShowDialog();
-        }
     }
 }

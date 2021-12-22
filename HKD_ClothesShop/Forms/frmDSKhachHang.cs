@@ -36,8 +36,8 @@ namespace HKD_ClothesShop.Forms
                 dgvKhachHang.Rows[index].Cells[3].Value = item.DiaChi;
                 dgvKhachHang.Rows[index].Cells[4].Value = item.SDT;
                 dgvKhachHang.Rows[index].Cells[5].Value = item.Email;
-                if(item.Status == false)
-                    dgvKhachHang.Rows[index].Cells[6].Value = "Đang hoạt động";
+                if(item.Status == true)
+                    dgvKhachHang.Rows[index].Cells[6].Value = "Còn sử dụng";
             }
         }
 
@@ -59,6 +59,8 @@ namespace HKD_ClothesShop.Forms
             this.Close();
         }
 
+
+        #region Hiệu ứng hover màu mè
         private void btnCreate_MouseHover(object sender, EventArgs e)
         {
             btnCreate.BackColor = Color.Coral;
@@ -82,5 +84,6 @@ namespace HKD_ClothesShop.Forms
             btnUpdate.BackColor = Color.White;
             btnUpdate.ForeColor = Color.Black;
         }
+        #endregion
     }
 }
