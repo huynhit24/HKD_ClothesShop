@@ -30,6 +30,12 @@ namespace HKD_ClothesShop.Forms
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button11 = new System.Windows.Forms.Button();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -56,16 +62,10 @@ namespace HKD_ClothesShop.Forms
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.dgvSanPham = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button11 = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -102,6 +102,100 @@ namespace HKD_ClothesShop.Forms
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập thông tin sản phẩm";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.button11);
+            this.groupBox2.Controls.Add(this.comboBox3);
+            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.comboBox4);
+            this.groupBox2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(24, 368);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(303, 164);
+            this.groupBox2.TabIndex = 32;
+            this.groupBox2.TabStop = false;
+            // 
+            // button11
+            // 
+            this.button11.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.Location = new System.Drawing.Point(100, 105);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(106, 42);
+            this.button11.TabIndex = 34;
+            this.button11.Text = "Lưu";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46"});
+            this.comboBox3.Location = new System.Drawing.Point(167, 22);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(129, 27);
+            this.comboBox3.TabIndex = 50;
+            this.comboBox3.Text = "Chọn màu";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox7.Location = new System.Drawing.Point(167, 66);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(67, 27);
+            this.textBox7.TabIndex = 49;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(77, 66);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(73, 19);
+            this.label10.TabIndex = 48;
+            this.label10.Text = "Số lượng";
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46"});
+            this.comboBox4.Location = new System.Drawing.Point(6, 22);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(129, 27);
+            this.comboBox4.TabIndex = 46;
+            this.comboBox4.Text = "Chọn size";
             // 
             // comboBox2
             // 
@@ -201,7 +295,7 @@ namespace HKD_ClothesShop.Forms
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(238, 762);
+            this.checkBox1.Location = new System.Drawing.Point(232, 761);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(136, 23);
             this.checkBox1.TabIndex = 16;
@@ -326,100 +420,6 @@ namespace HKD_ClothesShop.Forms
             this.dgvSanPham.Size = new System.Drawing.Size(787, 817);
             this.dgvSanPham.TabIndex = 3;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.button11);
-            this.groupBox2.Controls.Add(this.comboBox3);
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.comboBox4);
-            this.groupBox2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(24, 368);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(303, 164);
-            this.groupBox2.TabIndex = 32;
-            this.groupBox2.TabStop = false;
-            // 
-            // button11
-            // 
-            this.button11.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(100, 105);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(106, 42);
-            this.button11.TabIndex = 34;
-            this.button11.Text = "Lưu";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "32",
-            "33",
-            "34",
-            "35",
-            "36",
-            "37",
-            "38",
-            "39",
-            "40",
-            "41",
-            "42",
-            "43",
-            "44",
-            "45",
-            "46"});
-            this.comboBox3.Location = new System.Drawing.Point(167, 22);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(129, 27);
-            this.comboBox3.TabIndex = 50;
-            this.comboBox3.Text = "Chọn màu";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(167, 66);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(67, 27);
-            this.textBox7.TabIndex = 49;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(77, 66);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(73, 19);
-            this.label10.TabIndex = 48;
-            this.label10.Text = "Số lượng";
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "32",
-            "33",
-            "34",
-            "35",
-            "36",
-            "37",
-            "38",
-            "39",
-            "40",
-            "41",
-            "42",
-            "43",
-            "44",
-            "45",
-            "46"});
-            this.comboBox4.Location = new System.Drawing.Point(6, 22);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(129, 27);
-            this.comboBox4.TabIndex = 46;
-            this.comboBox4.Text = "Chọn size";
-            // 
             // frmNhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -434,10 +434,10 @@ namespace HKD_ClothesShop.Forms
             this.Text = "Form3";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).EndInit();
             this.ResumeLayout(false);
 
         }
