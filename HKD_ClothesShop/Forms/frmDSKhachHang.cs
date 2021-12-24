@@ -120,7 +120,7 @@ namespace HKD_ClothesShop.Forms
                         int index = dgvKhachHang.CurrentCell.RowIndex;
                         DataGridViewRow row = dgvKhachHang.Rows[index];
                         string temp = row.Cells[0].Value.ToString();
-                        var khachhang = db.KhachHangs.FirstOrDefault(p => p.MaKhachHang == temp);
+                        var khachhang = db.KhachHangs.FirstOrDefault(p => p.MaKhachHang == txtMKH.Text);
                         if(khachhang == null) // chưa có khách hàng có mã này
                         {
                             var kh = new KhachHang()
@@ -135,11 +135,19 @@ namespace HKD_ClothesShop.Forms
                                 Email = txtEmail.Text,
                                 Status = (cbStatus.Checked == true) ? false : true
                             };
-                            db.KhachHangs.Add(kh);
-                            db.SaveChanges();
-                            frmDSKhachHang_Load(sender, e);
-                            MessageBox.Show($"Thêm mới Khách hàng {txtHoTen.Text} thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Xoatt();
+                            if (MessageBox.Show($"Bạn có chắc chắn muốn thêm khách hàng {txtMKH.Text} có họ tên {txtHoTen.Text} này!", "YES/NO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                                db.KhachHangs.Add(kh);
+                                db.SaveChanges();
+                                frmDSKhachHang_Load(sender, e);
+                                MessageBox.Show($"Thêm mới Khách hàng {txtHoTen.Text} thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Xoatt();
+                            }
+                            else
+                            {
+                                Xoatt();
+                            }
+                                
                         }
                         else
                         {
@@ -186,10 +194,17 @@ namespace HKD_ClothesShop.Forms
                             khachhang.SDT = txtSDT.Text;
                             khachhang.Email = txtEmail.Text;
                             khachhang.Status = (cbStatus.Checked == true) ? false : true;
-                            db.SaveChanges();
-                            frmDSKhachHang_Load(sender, e);
-                            MessageBox.Show($"Cập nhật thông tin Khách hàng {txtHoTen.Text} thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Xoatt();
+                            if (MessageBox.Show($"Bạn có chắc chắn muốn lưu cập nhật khách hàng {txtMKH.Text} có họ tên {txtHoTen.Text} này!", "YES/NO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                                db.SaveChanges();
+                                frmDSKhachHang_Load(sender, e);
+                                MessageBox.Show($"Cập nhật thông tin Khách hàng {txtHoTen.Text} thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Xoatt();
+                            }
+                            else
+                            {
+                                Xoatt();
+                            }
                         }
                         else
                         {
@@ -247,7 +262,7 @@ namespace HKD_ClothesShop.Forms
             }
             if (KiemTra_HoTen_HopLe() == false)
             {
-                MessageBox.Show("Họ tên không hợp lệ - Mời nhập lại!", "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                MessageBox.Show("Họ tên không hợp lệ - Mời nhập lại!\n\n(Không được chứa !@#$%^&*()_+-={}[]|...)", "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
                 return;
             }
             if (KiemTra_Limited_DiaChi() == false)
