@@ -58,6 +58,7 @@ namespace HKD_ClothesShop.Forms
             this.btnClose = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnHidden = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang)).BeginInit();
             this.SuspendLayout();
@@ -273,6 +274,7 @@ namespace HKD_ClothesShop.Forms
             this.dgvKhachHang.Name = "dgvKhachHang";
             this.dgvKhachHang.Size = new System.Drawing.Size(803, 471);
             this.dgvKhachHang.TabIndex = 5;
+            this.dgvKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachHang_CellClick);
             // 
             // Column1
             // 
@@ -354,6 +356,19 @@ namespace HKD_ClothesShop.Forms
             this.txtSearch.Size = new System.Drawing.Size(219, 27);
             this.txtSearch.TabIndex = 8;
             // 
+            // btnHidden
+            // 
+            this.btnHidden.BackColor = System.Drawing.Color.GreenYellow;
+            this.btnHidden.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHidden.ForeColor = System.Drawing.Color.Red;
+            this.btnHidden.Location = new System.Drawing.Point(403, 104);
+            this.btnHidden.Name = "btnHidden";
+            this.btnHidden.Size = new System.Drawing.Size(83, 28);
+            this.btnHidden.TabIndex = 9;
+            this.btnHidden.Text = "Ẩn";
+            this.btnHidden.UseVisualStyleBackColor = false;
+            this.btnHidden.Click += new System.EventHandler(this.btnHidden_Click);
+            // 
             // frmDSKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -361,6 +376,7 @@ namespace HKD_ClothesShop.Forms
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1228, 638);
+            this.Controls.Add(this.btnHidden);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -410,5 +426,6 @@ namespace HKD_ClothesShop.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.Button btnHidden;
     }
 }

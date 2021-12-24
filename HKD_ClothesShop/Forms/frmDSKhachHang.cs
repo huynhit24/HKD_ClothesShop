@@ -39,7 +39,14 @@ namespace HKD_ClothesShop.Forms
                 dgvKhachHang.Rows[index].Cells[4].Value = item.SDT;
                 dgvKhachHang.Rows[index].Cells[5].Value = item.Email;
                 if(item.Status == true)
+                {
                     dgvKhachHang.Rows[index].Cells[6].Value = "Còn sử dụng";
+                }
+                else
+                {
+                    dgvKhachHang.Rows[index].Cells[6].Value = "Không sử dụng";
+                    dgvKhachHang.Rows[index].DefaultCellStyle.BackColor = Color.Black;
+                }
             }
         }
 
@@ -90,35 +97,54 @@ namespace HKD_ClothesShop.Forms
         #endregion
 
         #region Thêm, sửa khách hàng
+        //hàm xóa thông tin
+        private void Xoatt()
+        {
+            txtMKH.Text = "";
+            txtHoTen.Text = "";
+            txtDiaChi.Text = "";
+            txtSDT.Text = "";
+            txtEmail.Text = "";
+            radNam.Checked = true;
+        }
         private void btnCreate_Click(object sender, EventArgs e)
         {
             try
             {
                 // kiểm tra dữ liệu nhập vào ở các Textbox
-                bool isValidated = KiemTra_BlankEmpty() == true && KiemTra_Limited_MKH() == true 
-                                    && KiemTra_Limited_HoTen() == true && KiemTra_Limited_DiaChi() == true 
-                                    && KiemTra_Limited_SDT() == true && KiemTra_Limited_Email() == true
-                                    && KiemTra_Email_HopLe() == true;
+                bool isValidated = isValidateData();
                 if (isValidated)// dữ liệu được xác thực đúng thỏa database
                 {
                     using (var db = new QLBanHangHKDEntities())
                     {
-                        var khachhang = new KhachHang()
+                        int index = dgvKhachHang.CurrentCell.RowIndex;
+                        DataGridViewRow row = dgvKhachHang.Rows[index];
+                        string temp = row.Cells[0].Value.ToString();
+                        var khachhang = db.KhachHangs.FirstOrDefault(p => p.MaKhachHang == temp);
+                        if(khachhang == null) // chưa có khách hàng có mã này
                         {
-                            MaKhachHang = txtMKH.Text,
-                            HoTen = txtHoTen.Text,
-                            GioiTinh = (radNam.Checked == true && radNu.Checked == false && radKhac.Checked == false) ? "M" 
-                                        : (radNam.Checked == false && radNu.Checked == true && radKhac.Checked == false) ? "F" 
+                            var kh = new KhachHang()
+                            {
+                                MaKhachHang = txtMKH.Text,
+                                HoTen = txtHoTen.Text,
+                                GioiTinh = (radNam.Checked == true && radNu.Checked == false && radKhac.Checked == false) ? "M"
+                                        : (radNam.Checked == false && radNu.Checked == true && radKhac.Checked == false) ? "F"
                                         : "O",
-                            DiaChi = txtDiaChi.Text,
-                            SDT = txtSDT.Text,
-                            Email = txtEmail.Text,
-                            Status = (cbStatus.Checked == false) ? true : false
-                        };
-                        db.KhachHangs.Add(khachhang);
-                        db.SaveChanges();
-                        frmDSKhachHang_Load(sender, e);
-                        MessageBox.Show($"Thêm mới Khách hàng {txtHoTen.Text} thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                DiaChi = txtDiaChi.Text,
+                                SDT = txtSDT.Text,
+                                Email = txtEmail.Text,
+                                Status = (cbStatus.Checked == true) ? false : true
+                            };
+                            db.KhachHangs.Add(kh);
+                            db.SaveChanges();
+                            frmDSKhachHang_Load(sender, e);
+                            MessageBox.Show($"Thêm mới Khách hàng {txtHoTen.Text} thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Xoatt();
+                        }
+                        else
+                        {
+                            MessageBox.Show($"Mã khách hàng {txtMKH.Text} này đã tồn tại rồi!", "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                        }
                     }
                 }
                 else
@@ -136,9 +162,66 @@ namespace HKD_ClothesShop.Forms
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                using (var db = new QLBanHangHKDEntities())
+                {
+                    int index = dgvKhachHang.CurrentCell.RowIndex;
+                    DataGridViewRow row = dgvKhachHang.Rows[index];
+                    string temp = row.Cells[0].Value.ToString();
+                    var khachhang = db.KhachHangs.FirstOrDefault(p => p.MaKhachHang == temp);
+                    //var khachhang = db.KhachHangs.FirstOrDefault(p => p.MaKhachHang == txtMKH.Text);
+                    if(khachhang != null)
+                    {
+                        // kiểm tra dữ liệu lưu vào ở các Textbox
+                        bool isValidated = isValidateData();
+                        if (isValidated)// dữ liệu được xác thực đúng thỏa database
+                        {
+                            khachhang.MaKhachHang = txtMKH.Text;
+                            khachhang.HoTen = txtHoTen.Text;
+                            khachhang.GioiTinh = (radNam.Checked == true /*&& radNu.Checked == false && radKhac.Checked == false*/) ? "M"
+                                                : (/*radNam.Checked == false &&*/ radNu.Checked == true /*&& radKhac.Checked == false*/) ? "F"
+                                                : "O";
+                            khachhang.DiaChi = txtDiaChi.Text;
+                            khachhang.SDT = txtSDT.Text;
+                            khachhang.Email = txtEmail.Text;
+                            khachhang.Status = (cbStatus.Checked == true) ? false : true;
+                            db.SaveChanges();
+                            frmDSKhachHang_Load(sender, e);
+                            MessageBox.Show($"Cập nhật thông tin Khách hàng {txtHoTen.Text} thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Xoatt();
+                        }
+                        else
+                        {
+                            ThongBaoLoiDataInput();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không tìm thấy Thông tin Khách hàng cần sửa!", "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi Sửa Khách (có thể do trùng mã khác trong CSDL)! - Mời bạn thử lại", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                frmDSKhachHang_Load(sender, e);
+            }
         }
         #endregion
+
+        #region Kiểm tra lỗi nhập liệu
+
+        private bool isValidateData()
+        {
+            return KiemTra_BlankEmpty() == true
+                   && KiemTra_Limited_MKH() == true && KiemTra_ID_HopLe() == true
+                   && KiemTra_Limited_HoTen() == true && KiemTra_HoTen_HopLe() == true
+                   && KiemTra_Limited_DiaChi() == true
+                   && KiemTra_DiaChi_HopLe() == true && KiemTra_Limited_SDT() == true
+                   && KiemTra_SDT_HopLe() == true && KiemTra_Limited_Email() == true
+                   && KiemTra_Email_HopLe() == true;
+        }
 
         private void ThongBaoLoiDataInput()
         {
@@ -152,9 +235,19 @@ namespace HKD_ClothesShop.Forms
                 MessageBox.Show("Mã khách hàng phải đủ 5 kí tự - Mời nhập lại!", "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
                 return;
             }
+            if (KiemTra_ID_HopLe() == false)
+            {
+                MessageBox.Show("Mã không hợp lệ - Mời nhập lại!\n\n(Không được chứa !@#$%^&*()_+-={}[]|...)", "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                return;
+            }
             if (KiemTra_Limited_HoTen() == false)
             {
                 MessageBox.Show("Họ tên khách hàng không quá 40 kí tự - Mời nhập lại!", "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                return;
+            }
+            if (KiemTra_HoTen_HopLe() == false)
+            {
+                MessageBox.Show("Họ tên không hợp lệ - Mời nhập lại!", "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
                 return;
             }
             if (KiemTra_Limited_DiaChi() == false)
@@ -162,9 +255,19 @@ namespace HKD_ClothesShop.Forms
                 MessageBox.Show("Địa chỉ khách hàng không quá 200 kí tự - Mời nhập lại!", "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
                 return;
             }
+            if (KiemTra_DiaChi_HopLe() == false)
+            {
+                MessageBox.Show("Địa chỉ không hợp lệ - Mời nhập lại!", "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                return;
+            }
             if (KiemTra_Limited_SDT() == false)
             {
                 MessageBox.Show("Số ĐT khách hàng không quá 15 số - Mời nhập lại!", "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                return;
+            }
+            if (KiemTra_SDT_HopLe() == false)
+            {
+                MessageBox.Show("SĐT không hợp lệ!\n\nMời bạn tham khảo:\nViettel: 09xxx, 03xxx\nMobiFone: 09xxx, 07xxx\nVinaPhone: 09xxx, 08xxx\nVietnamobile và Gmobile: 09xxx, 05xxx\nSĐT cũ 11 chữ số: 01xxx", "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
                 return;
             }
             if (KiemTra_Limited_Email() == false)
@@ -177,11 +280,12 @@ namespace HKD_ClothesShop.Forms
                 MessageBox.Show("Email không hợp lệ!", "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
                 return;
             }
+            
         }
 
         private bool KiemTra_BlankEmpty()
         {
-            if (txtMKH.Text != "" || txtHoTen.Text != "" && txtDiaChi.Text != "" && txtSDT.Text != "" && txtEmail.Text != "")
+            if (txtMKH.Text != "" && txtHoTen.Text != "" && txtDiaChi.Text != "" && txtSDT.Text != "" && txtEmail.Text != "")
             {
                 return true;
             }
@@ -203,9 +307,37 @@ namespace HKD_ClothesShop.Forms
            }
         }
 
+        private bool KiemTra_ID_HopLe()
+        {
+            Regex reg = new Regex(XacthucRegex.Regex_ID);
+            Match mat = reg.Match(txtMKH.Text);
+            if (mat.Success)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         private bool KiemTra_Limited_HoTen()
         {
             if (txtHoTen.Text.Length <= 40)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private bool KiemTra_HoTen_HopLe()
+        {
+            Regex reg = new Regex(XacthucRegex.Regex_HoTen);
+            Match mat = reg.Match(txtHoTen.Text);
+            if (mat.Success)
             {
                 return true;
             }
@@ -227,6 +359,20 @@ namespace HKD_ClothesShop.Forms
             }
         }
 
+        private bool KiemTra_DiaChi_HopLe()
+        {
+            Regex reg = new Regex(XacthucRegex.Regex_DiaChi);
+            Match mat = reg.Match(txtDiaChi.Text);
+            if (mat.Success)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         private bool KiemTra_Limited_SDT()
         {
             if (txtSDT.Text.Length <= 15)
@@ -239,6 +385,19 @@ namespace HKD_ClothesShop.Forms
             }
         }
 
+        private bool KiemTra_SDT_HopLe()
+        {
+            Regex reg = new Regex(XacthucRegex.Regex_SDT);
+            Match mat = reg.Match(txtSDT.Text);
+            if (mat.Success)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         private bool KiemTra_Limited_Email()
         {
             if (txtEmail.Text.Length <= 254)
@@ -265,9 +424,81 @@ namespace HKD_ClothesShop.Forms
             }
         }
 
-        private bool KiemTra_SDT_HopLe()
+        #endregion
+        private void dgvKhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            return true;
+            try
+            {
+                if (dgvKhachHang.Rows.Count != 0)
+                {
+                    DataGridViewRow row = dgvKhachHang.Rows[dgvKhachHang.CurrentCell.RowIndex];
+                    QLBanHangHKDEntities context = new QLBanHangHKDEntities();
+
+                    txtMKH.Text = row.Cells[0].Value.ToString();
+                    txtHoTen.Text = row.Cells[1].Value.ToString();
+                    if (row.Cells[2].Value.ToString().Trim() == "Nam")
+                    {
+                        radNam.Checked = true;
+                    }
+                    else
+                    {
+                        if (row.Cells[2].Value.ToString().Trim() == "Nữ")
+                        {
+                            radNu.Checked = true;
+                        }
+                        else
+                        {
+                            radKhac.Checked = true;
+                        }
+                    }
+                    txtDiaChi.Text = row.Cells[3].Value.ToString();
+                    txtSDT.Text = row.Cells[4].Value.ToString();
+                    txtEmail.Text = row.Cells[5].Value.ToString();
+                    cbStatus.Checked = (row.Cells[6].Value.ToString() == "Còn sử dụng") ? false : true;
+                }
+                else
+                {
+                    MessageBox.Show("Không có dữ liệu để chọn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnHidden_Click(object sender, EventArgs e)
+        {
+            QLBanHangHKDEntities db = new QLBanHangHKDEntities();
+            List<KhachHang> listKhachHang = db.KhachHangs.ToList();
+            if(btnHidden.Text == "Ẩn")
+            {
+                foreach (DataGridViewRow item in dgvKhachHang.Rows)
+                {
+                    if (item.DefaultCellStyle.BackColor == Color.Black)
+                    {
+                        item.Visible = false;
+                    }
+                }
+                btnHidden.Text = "Hiện";
+                btnHidden.BackColor = Color.Blue;
+                btnHidden.ForeColor = Color.Yellow;
+            }
+            else
+            {
+
+                foreach (DataGridViewRow item in dgvKhachHang.Rows)
+                {
+                    if (item.DefaultCellStyle.BackColor == Color.Black)
+                    {
+                        item.Visible = true;
+                    }
+                }
+                btnHidden.Text = "Ẩn";
+                btnHidden.BackColor = Color.GreenYellow;
+                btnHidden.ForeColor = Color.Red;
+            }
+            
         }
     }
 }
