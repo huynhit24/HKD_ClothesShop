@@ -31,24 +31,31 @@ namespace HKD_ClothesShop.Forms
         {
             this.btnClose = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.btnChonLogo = new System.Windows.Forms.Button();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.cbStatus = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.txtDiaChi = new System.Windows.Forms.TextBox();
+            this.txtTenTH = new System.Windows.Forms.TextBox();
+            this.txtMTH = new System.Windows.Forms.TextBox();
+            this.dgvThuongHieu = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnHidden = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvThuongHieu)).BeginInit();
             this.SuspendLayout();
             // 
             // btnClose
@@ -66,81 +73,89 @@ namespace HKD_ClothesShop.Forms
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.btnChonLogo);
+            this.groupBox1.Controls.Add(this.picLogo);
+            this.groupBox1.Controls.Add(this.btnSua);
+            this.groupBox1.Controls.Add(this.btnThem);
+            this.groupBox1.Controls.Add(this.cbStatus);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtSDT);
+            this.groupBox1.Controls.Add(this.txtDiaChi);
+            this.groupBox1.Controls.Add(this.txtTenTH);
+            this.groupBox1.Controls.Add(this.txtMTH);
             this.groupBox1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 72);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(374, 476);
+            this.groupBox1.Size = new System.Drawing.Size(374, 521);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập thông tin nhân viên";
             // 
-            // button2
+            // btnChonLogo
             // 
-            this.button2.Location = new System.Drawing.Point(154, 288);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 29);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "Xóa logo";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnChonLogo.BackColor = System.Drawing.Color.Lime;
+            this.btnChonLogo.FlatAppearance.BorderSize = 0;
+            this.btnChonLogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChonLogo.Location = new System.Drawing.Point(201, 282);
+            this.btnChonLogo.Name = "btnChonLogo";
+            this.btnChonLogo.Size = new System.Drawing.Size(91, 29);
+            this.btnChonLogo.TabIndex = 28;
+            this.btnChonLogo.Text = "Chọn logo";
+            this.btnChonLogo.UseVisualStyleBackColor = false;
+            this.btnChonLogo.Click += new System.EventHandler(this.btnChonLogo_Click);
             // 
-            // button1
+            // picLogo
             // 
-            this.button1.Location = new System.Drawing.Point(154, 235);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 29);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "Chọn logo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.picLogo.Image = global::HKD_ClothesShop.Properties.Resources.HKD_icon;
+            this.picLogo.Location = new System.Drawing.Point(6, 207);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(180, 180);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogo.TabIndex = 27;
+            this.picLogo.TabStop = false;
             // 
-            // pictureBox1
+            // btnSua
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(20, 215);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 125);
-            this.pictureBox1.TabIndex = 27;
-            this.pictureBox1.TabStop = false;
+            this.btnSua.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnSua.FlatAppearance.BorderSize = 3;
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSua.Image = global::HKD_ClothesShop.Properties.Resources.update;
+            this.btnSua.Location = new System.Drawing.Point(255, 467);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(102, 48);
+            this.btnSua.TabIndex = 21;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // button4
+            // btnThem
             // 
-            this.button4.Location = new System.Drawing.Point(266, 411);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(102, 48);
-            this.button4.TabIndex = 21;
-            this.button4.Text = "Update";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnThem.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btnThem.FlatAppearance.BorderSize = 3;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.Image = global::HKD_ClothesShop.Properties.Resources.create;
+            this.btnThem.Location = new System.Drawing.Point(135, 467);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(110, 48);
+            this.btnThem.TabIndex = 20;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // button3
+            // cbStatus
             // 
-            this.button3.Location = new System.Drawing.Point(154, 411);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(110, 48);
-            this.button3.TabIndex = 20;
-            this.button3.Text = "Create";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(294, 364);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(74, 23);
-            this.checkBox1.TabIndex = 16;
-            this.checkBox1.Text = "Status";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbStatus.AutoSize = true;
+            this.cbStatus.Location = new System.Drawing.Point(232, 364);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(136, 23);
+            this.cbStatus.TabIndex = 16;
+            this.cbStatus.Text = "Không sử dụng";
+            this.cbStatus.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -178,59 +193,141 @@ namespace HKD_ClothesShop.Forms
             this.label1.TabIndex = 7;
             this.label1.Text = "Mã thương hiệu";
             // 
-            // textBox4
+            // txtSDT
             // 
-            this.textBox4.Location = new System.Drawing.Point(154, 156);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(203, 27);
-            this.textBox4.TabIndex = 3;
+            this.txtSDT.Location = new System.Drawing.Point(154, 156);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(203, 27);
+            this.txtSDT.TabIndex = 3;
             // 
-            // textBox3
+            // txtDiaChi
             // 
-            this.textBox3.Location = new System.Drawing.Point(154, 109);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(203, 27);
-            this.textBox3.TabIndex = 2;
+            this.txtDiaChi.Location = new System.Drawing.Point(154, 109);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(203, 27);
+            this.txtDiaChi.TabIndex = 2;
             // 
-            // textBox2
+            // txtTenTH
             // 
-            this.textBox2.Location = new System.Drawing.Point(154, 70);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(203, 27);
-            this.textBox2.TabIndex = 1;
+            this.txtTenTH.Location = new System.Drawing.Point(154, 70);
+            this.txtTenTH.Name = "txtTenTH";
+            this.txtTenTH.Size = new System.Drawing.Size(203, 27);
+            this.txtTenTH.TabIndex = 1;
             // 
-            // textBox1
+            // txtMTH
             // 
-            this.textBox1.Location = new System.Drawing.Point(154, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(203, 27);
-            this.textBox1.TabIndex = 0;
+            this.txtMTH.Location = new System.Drawing.Point(154, 31);
+            this.txtMTH.Name = "txtMTH";
+            this.txtMTH.Size = new System.Drawing.Size(203, 27);
+            this.txtMTH.TabIndex = 0;
             // 
-            // dataGridView1
+            // dgvThuongHieu
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(403, 72);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(782, 550);
-            this.dataGridView1.TabIndex = 7;
+            this.dgvThuongHieu.AllowUserToAddRows = false;
+            this.dgvThuongHieu.AllowUserToDeleteRows = false;
+            this.dgvThuongHieu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvThuongHieu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvThuongHieu.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dgvThuongHieu.BackgroundColor = System.Drawing.Color.White;
+            this.dgvThuongHieu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvThuongHieu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
+            this.dgvThuongHieu.GridColor = System.Drawing.Color.Gold;
+            this.dgvThuongHieu.Location = new System.Drawing.Point(403, 72);
+            this.dgvThuongHieu.Name = "dgvThuongHieu";
+            this.dgvThuongHieu.Size = new System.Drawing.Size(806, 550);
+            this.dgvThuongHieu.TabIndex = 7;
+            this.dgvThuongHieu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThuongHieu_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Logo";
+            this.Column1.Name = "Column1";
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Mã thương hiệu";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Tên thương hiệu";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Địa chỉ";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "SĐT";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Trạng thái";
+            this.Column6.Name = "Column6";
+            // 
+            // btnHidden
+            // 
+            this.btnHidden.BackColor = System.Drawing.Color.GreenYellow;
+            this.btnHidden.FlatAppearance.BorderSize = 0;
+            this.btnHidden.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHidden.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHidden.ForeColor = System.Drawing.Color.Red;
+            this.btnHidden.Location = new System.Drawing.Point(403, 38);
+            this.btnHidden.Name = "btnHidden";
+            this.btnHidden.Size = new System.Drawing.Size(83, 28);
+            this.btnHidden.TabIndex = 11;
+            this.btnHidden.Text = "Ẩn";
+            this.btnHidden.UseVisualStyleBackColor = false;
+            this.btnHidden.Click += new System.EventHandler(this.btnHidden_Click);
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label7.Location = new System.Drawing.Point(646, 15);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(352, 33);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "DANH SÁCH THƯƠNG HIỆU";
             // 
             // frmThuongHieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1209, 634);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.btnHidden);
+            this.Controls.Add(this.dgvThuongHieu);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmThuongHieu";
             this.Text = "Form9";
+            this.Load += new System.EventHandler(this.frmThuongHieu_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvThuongHieu)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -238,20 +335,27 @@ namespace HKD_ClothesShop.Forms
 
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button btnChonLogo;
+        private System.Windows.Forms.PictureBox picLogo;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.CheckBox cbStatus;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtSDT;
+        private System.Windows.Forms.TextBox txtDiaChi;
+        private System.Windows.Forms.TextBox txtTenTH;
+        private System.Windows.Forms.TextBox txtMTH;
+        private System.Windows.Forms.DataGridView dgvThuongHieu;
+        private System.Windows.Forms.DataGridViewImageColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.Button btnHidden;
+        private System.Windows.Forms.Label label7;
     }
 }

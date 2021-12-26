@@ -30,12 +30,6 @@ namespace HKD_ClothesShop.Forms
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button11 = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -45,7 +39,6 @@ namespace HKD_ClothesShop.Forms
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -63,14 +56,12 @@ namespace HKD_ClothesShop.Forms
             this.btnClose = new System.Windows.Forms.Button();
             this.dgvSanPham = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.comboBox2);
             this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.textBox6);
@@ -80,7 +71,6 @@ namespace HKD_ClothesShop.Forms
             this.groupBox1.Controls.Add(this.button4);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.checkBox1);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
@@ -103,100 +93,6 @@ namespace HKD_ClothesShop.Forms
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập thông tin sản phẩm";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.button11);
-            this.groupBox2.Controls.Add(this.comboBox3);
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.comboBox4);
-            this.groupBox2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(24, 368);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(303, 164);
-            this.groupBox2.TabIndex = 32;
-            this.groupBox2.TabStop = false;
-            // 
-            // button11
-            // 
-            this.button11.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(100, 105);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(106, 42);
-            this.button11.TabIndex = 34;
-            this.button11.Text = "Lưu";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "32",
-            "33",
-            "34",
-            "35",
-            "36",
-            "37",
-            "38",
-            "39",
-            "40",
-            "41",
-            "42",
-            "43",
-            "44",
-            "45",
-            "46"});
-            this.comboBox3.Location = new System.Drawing.Point(167, 22);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(129, 27);
-            this.comboBox3.TabIndex = 50;
-            this.comboBox3.Text = "Chọn màu";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(167, 66);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(67, 27);
-            this.textBox7.TabIndex = 49;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(77, 66);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(73, 19);
-            this.label10.TabIndex = 48;
-            this.label10.Text = "Số lượng";
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "32",
-            "33",
-            "34",
-            "35",
-            "36",
-            "37",
-            "38",
-            "39",
-            "40",
-            "41",
-            "42",
-            "43",
-            "44",
-            "45",
-            "46"});
-            this.comboBox4.Location = new System.Drawing.Point(6, 22);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(129, 27);
-            this.comboBox4.TabIndex = 46;
-            this.comboBox4.Text = "Chọn size";
-            // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
@@ -215,7 +111,7 @@ namespace HKD_ClothesShop.Forms
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(154, 549);
+            this.textBox6.Location = new System.Drawing.Point(154, 380);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(203, 52);
@@ -233,7 +129,7 @@ namespace HKD_ClothesShop.Forms
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(20, 549);
+            this.label6.Location = new System.Drawing.Point(16, 380);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(125, 19);
             this.label6.TabIndex = 12;
@@ -268,24 +164,15 @@ namespace HKD_ClothesShop.Forms
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(20, 614);
+            this.pictureBox1.Location = new System.Drawing.Point(20, 465);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(125, 125);
+            this.pictureBox1.Size = new System.Drawing.Size(210, 210);
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(154, 688);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 29);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "Xóa ảnh";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(154, 638);
+            this.button1.Location = new System.Drawing.Point(257, 646);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 29);
             this.button1.TabIndex = 17;
@@ -434,8 +321,6 @@ namespace HKD_ClothesShop.Forms
             this.Text = "Form3";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).EndInit();
             this.ResumeLayout(false);
@@ -462,7 +347,6 @@ namespace HKD_ClothesShop.Forms
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
@@ -471,11 +355,5 @@ namespace HKD_ClothesShop.Forms
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox4;
     }
 }

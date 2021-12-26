@@ -27,19 +27,21 @@ namespace HKD_ClothesShop.Forms
             foreach (var item in listNhanVien)
             {
                 int index = dgvNhanVien.Rows.Add();
-                dgvNhanVien.Rows[index].Cells[0].Value = item.MaNhanVien;
-                dgvNhanVien.Rows[index].Cells[1].Value = item.HoTen;
+                dgvNhanVien.Rows[index].Cells[1].Value = item.MaNhanVien;
+                dgvNhanVien.Rows[index].Cells[2].Value = item.HoTen;
                 if (item.GioiTinh == "M")
-                    dgvNhanVien.Rows[index].Cells[2].Value = "Nam";
+                    dgvNhanVien.Rows[index].Cells[3].Value = "Nam";
                 else
                     if (item.GioiTinh == "F")
-                    dgvNhanVien.Rows[index].Cells[2].Value = "Nữ";
+                    dgvNhanVien.Rows[index].Cells[3].Value = "Nữ";
                 else
-                    dgvNhanVien.Rows[index].Cells[2].Value = "Khác";
-                dgvNhanVien.Rows[index].Cells[3].Value = item.NgaySinh.ToString("dd/MM/yyyy");
-                dgvNhanVien.Rows[index].Cells[4].Value = item.SDT;
-                dgvNhanVien.Rows[index].Cells[5].Value = item.Email;
-                dgvNhanVien.Rows[index].Cells[6].Value = item.AnhThe;
+                    dgvNhanVien.Rows[index].Cells[3].Value = "Khác";
+                dgvNhanVien.Rows[index].Cells[4].Value = item.NgaySinh.ToString("dd/MM/yyyy");
+                dgvNhanVien.Rows[index].Cells[5].Value = item.SDT;
+                dgvNhanVien.Rows[index].Cells[6].Value = item.Email;
+
+                dgvNhanVien.Rows[index].Cells[0].Value = item.AnhThe;
+
                 if (item.Status == true)
                 {
                     dgvNhanVien.Rows[index].Cells[7].Value = "Còn sử dụng";
@@ -93,12 +95,12 @@ namespace HKD_ClothesShop.Forms
                 {
                     using (var db = new QLBanHangHKDEntities())
                     {
-                        /*int index = dgvNhanVien.CurrentCell.RowIndex;
+                        int index = dgvNhanVien.CurrentCell.RowIndex;
                         DataGridViewRow row = dgvNhanVien.Rows[index];
-                        string temp = row.Cells[0].Value.ToString();
+                        string temp = row.Cells[1].Value.ToString();
                         var nhanvien = db.NhanVienBanHangs.FirstOrDefault(p => p.MaNhanVien == txtMNV.Text);
-                        if (nhanvien == null) // chưa có khách hàng có mã này
-                        {*/
+                        if (nhanvien == null) // chưa có nhân viên có mã này
+                        {
                             var hinhanh = (byte[])new ImageConverter().ConvertTo(picAnhNV.Image, typeof(byte[]));
                             var nv = new NhanVienBanHang()
                             {
@@ -125,12 +127,11 @@ namespace HKD_ClothesShop.Forms
                             {
                                 Xoatt();
                             }
-
-                        /*}
+                        }
                         else
                         {
                             MessageBox.Show($"Mã nhân viên {txtMNV.Text} này đã tồn tại rồi!", "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
-                        }*/
+                        }
                     }
                 }
                 else
@@ -154,8 +155,8 @@ namespace HKD_ClothesShop.Forms
                 {
                     int index = dgvNhanVien.CurrentCell.RowIndex;
                     DataGridViewRow row = dgvNhanVien.Rows[index];
-                    string temp = row.Cells[0].Value.ToString();
-                    var nhanvien = db.NhanVienBanHangs.FirstOrDefault(p => p.MaNhanVien == temp);
+                    string temp = row.Cells[1].Value.ToString();
+                    var nhanvien = db.NhanVienBanHangs.FirstOrDefault(p => p.MaNhanVien == txtMNV.Text);
                     //var khachhang = db.KhachHangs.FirstOrDefault(p => p.MaKhachHang == txtMKH.Text);
                     if (nhanvien != null)
                     {
@@ -393,15 +394,15 @@ namespace HKD_ClothesShop.Forms
                     DataGridViewRow row = dgvNhanVien.Rows[dgvNhanVien.CurrentCell.RowIndex];
                     QLBanHangHKDEntities context = new QLBanHangHKDEntities();
 
-                    txtMNV.Text = row.Cells[0].Value.ToString();
-                    txtHoTen.Text = row.Cells[1].Value.ToString();
-                    if (row.Cells[2].Value.ToString().Trim() == "Nam")
+                    txtMNV.Text = row.Cells[1].Value.ToString();
+                    txtHoTen.Text = row.Cells[2].Value.ToString();
+                    if (row.Cells[3].Value.ToString().Trim() == "Nam")
                     {
                         radNam.Checked = true;
                     }
                     else
                     {
-                        if (row.Cells[2].Value.ToString().Trim() == "Nữ")
+                        if (row.Cells[3].Value.ToString().Trim() == "Nữ")
                         {
                             radNu.Checked = true;
                         }
@@ -413,14 +414,14 @@ namespace HKD_ClothesShop.Forms
                     QLBanHangHKDEntities db = new QLBanHangHKDEntities();
                     foreach (var i in db.NhanVienBanHangs)
                     {
-                        if (row.Cells[3].Value.ToString() == i.NgaySinh.ToString("dd/MM/yyyy"))
+                        if (row.Cells[4].Value.ToString() == i.NgaySinh.ToString("dd/MM/yyyy"))
                         {
                             dtpNgaySinh.Value = i.NgaySinh;
                         }
                     }
-                    txtSDT.Text = row.Cells[4].Value.ToString();
-                    txtEmail.Text = row.Cells[5].Value.ToString();
-                    Image logo = (Bitmap)((new ImageConverter()).ConvertFrom(row.Cells[6].Value));
+                    txtSDT.Text = row.Cells[5].Value.ToString();
+                    txtEmail.Text = row.Cells[6].Value.ToString();
+                    Image logo = (Bitmap)((new ImageConverter()).ConvertFrom(row.Cells[0].Value));
                     picAnhNV.Image = logo;
                     cbStatus.Checked = (row.Cells[7].Value.ToString() == "Còn sử dụng") ? false : true;
                 }
@@ -478,11 +479,6 @@ namespace HKD_ClothesShop.Forms
             {
                 picAnhNV.ImageLocation = openFile.FileName;
             }
-        }
-
-        private void btnXoaAnh_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
