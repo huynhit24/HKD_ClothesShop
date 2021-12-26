@@ -31,9 +31,9 @@ namespace HKD_ClothesShop.Forms
         {
             this.btnClose = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabDacDiem = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cbStatus = new System.Windows.Forms.CheckBox();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.txtColor = new System.Windows.Forms.TextBox();
             this.btnCreate = new System.Windows.Forms.Button();
@@ -44,7 +44,8 @@ namespace HKD_ClothesShop.Forms
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabCTSP = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -53,14 +54,15 @@ namespace HKD_ClothesShop.Forms
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnHidden = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabDacDiem.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDacDiem)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.tabCTSP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnClose
@@ -78,113 +80,122 @@ namespace HKD_ClothesShop.Forms
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabDacDiem);
+            this.tabControl1.Controls.Add(this.tabCTSP);
             this.tabControl1.Location = new System.Drawing.Point(2, 62);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1209, 667);
             this.tabControl1.TabIndex = 34;
             // 
-            // tabPage1
+            // tabDacDiem
             // 
-            this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Controls.Add(this.dgvDacDiem);
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1201, 639);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Đặc điểm chung";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabDacDiem.Controls.Add(this.label7);
+            this.tabDacDiem.Controls.Add(this.btnHidden);
+            this.tabDacDiem.Controls.Add(this.groupBox1);
+            this.tabDacDiem.Controls.Add(this.dgvDacDiem);
+            this.tabDacDiem.Font = new System.Drawing.Font("Roboto Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabDacDiem.Location = new System.Drawing.Point(4, 24);
+            this.tabDacDiem.Name = "tabDacDiem";
+            this.tabDacDiem.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabDacDiem.Size = new System.Drawing.Size(1201, 639);
+            this.tabDacDiem.TabIndex = 0;
+            this.tabDacDiem.Text = "Đặc điểm chung";
+            this.tabDacDiem.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
-            this.groupBox1.Controls.Add(this.checkBox1);
+            this.groupBox1.Controls.Add(this.cbStatus);
             this.groupBox1.Controls.Add(this.btnUpdate);
             this.groupBox1.Controls.Add(this.txtColor);
             this.groupBox1.Controls.Add(this.btnCreate);
             this.groupBox1.Controls.Add(this.txtSize);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(8, 80);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(236, 269);
+            this.groupBox1.Size = new System.Drawing.Size(360, 334);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Đặc điểm";
             // 
-            // checkBox1
+            // cbStatus
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(119, 143);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(111, 22);
-            this.checkBox1.TabIndex = 54;
-            this.checkBox1.Text = "Không sử dụng";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbStatus.AutoSize = true;
+            this.cbStatus.Location = new System.Drawing.Point(196, 207);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(136, 23);
+            this.cbStatus.TabIndex = 54;
+            this.cbStatus.Text = "Không sử dụng";
+            this.cbStatus.UseVisualStyleBackColor = true;
             // 
             // btnUpdate
             // 
             this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btnUpdate.FlatAppearance.BorderSize = 2;
+            this.btnUpdate.FlatAppearance.BorderSize = 3;
             this.btnUpdate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.btnUpdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(131, 188);
+            this.btnUpdate.Image = global::HKD_ClothesShop.Properties.Resources.update;
+            this.btnUpdate.Location = new System.Drawing.Point(208, 236);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 58);
+            this.btnUpdate.Size = new System.Drawing.Size(124, 58);
             this.btnUpdate.TabIndex = 34;
             this.btnUpdate.Text = "Sửa";
+            this.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // txtColor
             // 
-            this.txtColor.Location = new System.Drawing.Point(115, 88);
+            this.txtColor.Location = new System.Drawing.Point(217, 88);
             this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(115, 23);
+            this.txtColor.Size = new System.Drawing.Size(115, 27);
             this.txtColor.TabIndex = 53;
             // 
             // btnCreate
             // 
             this.btnCreate.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.btnCreate.FlatAppearance.BorderSize = 2;
+            this.btnCreate.FlatAppearance.BorderSize = 3;
             this.btnCreate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnCreate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreate.Location = new System.Drawing.Point(29, 188);
+            this.btnCreate.Image = global::HKD_ClothesShop.Properties.Resources.create;
+            this.btnCreate.Location = new System.Drawing.Point(69, 236);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(75, 58);
+            this.btnCreate.Size = new System.Drawing.Size(124, 58);
             this.btnCreate.TabIndex = 33;
             this.btnCreate.Text = "Thêm";
+            this.btnCreate.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // txtSize
             // 
-            this.txtSize.Location = new System.Drawing.Point(115, 38);
+            this.txtSize.Location = new System.Drawing.Point(217, 35);
             this.txtSize.Name = "txtSize";
-            this.txtSize.Size = new System.Drawing.Size(115, 23);
+            this.txtSize.Size = new System.Drawing.Size(115, 27);
             this.txtSize.TabIndex = 52;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 88);
+            this.label3.Location = new System.Drawing.Point(76, 91);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 15);
+            this.label3.Size = new System.Drawing.Size(70, 19);
             this.label3.TabIndex = 51;
             this.label3.Text = "Màu sắc";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 35);
+            this.label1.Location = new System.Drawing.Point(76, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 15);
+            this.label1.Size = new System.Drawing.Size(85, 19);
             this.label1.TabIndex = 50;
             this.label1.Text = "Kích thước";
             // 
@@ -199,10 +210,11 @@ namespace HKD_ClothesShop.Forms
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dgvDacDiem.Location = new System.Drawing.Point(259, 80);
+            this.dgvDacDiem.Location = new System.Drawing.Point(407, 80);
             this.dgvDacDiem.Name = "dgvDacDiem";
-            this.dgvDacDiem.Size = new System.Drawing.Size(932, 481);
+            this.dgvDacDiem.Size = new System.Drawing.Size(753, 539);
             this.dgvDacDiem.TabIndex = 32;
+            this.dgvDacDiem.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDacDiem_CellClick);
             // 
             // Column1
             // 
@@ -219,17 +231,25 @@ namespace HKD_ClothesShop.Forms
             this.Column3.HeaderText = "Trạng thái";
             this.Column3.Name = "Column3";
             // 
-            // tabPage2
+            // tabCTSP
             // 
-            this.tabPage2.Controls.Add(this.dataGridView1);
-            this.tabPage2.Controls.Add(this.groupBox2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1201, 639);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Đặc điểm số lượng sản phẩm";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabCTSP.Controls.Add(this.dataGridView1);
+            this.tabCTSP.Controls.Add(this.groupBox2);
+            this.tabCTSP.Location = new System.Drawing.Point(4, 24);
+            this.tabCTSP.Name = "tabCTSP";
+            this.tabCTSP.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabCTSP.Size = new System.Drawing.Size(1201, 639);
+            this.tabCTSP.TabIndex = 1;
+            this.tabCTSP.Text = "Đặc điểm số lượng sản phẩm";
+            this.tabCTSP.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(207, 44);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(994, 575);
+            this.dataGridView1.TabIndex = 34;
             // 
             // groupBox2
             // 
@@ -243,14 +263,14 @@ namespace HKD_ClothesShop.Forms
             this.groupBox2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(18, 35);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(183, 598);
+            this.groupBox2.Size = new System.Drawing.Size(183, 562);
             this.groupBox2.TabIndex = 33;
             this.groupBox2.TabStop = false;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(33, 229);
+            this.button1.Location = new System.Drawing.Point(33, 251);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 48);
             this.button1.TabIndex = 52;
@@ -286,7 +306,7 @@ namespace HKD_ClothesShop.Forms
             // button11
             // 
             this.button11.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(33, 295);
+            this.button11.Location = new System.Drawing.Point(33, 322);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(106, 48);
             this.button11.TabIndex = 34;
@@ -363,34 +383,57 @@ namespace HKD_ClothesShop.Forms
             this.comboBox4.TabIndex = 46;
             this.comboBox4.Text = "Chọn size";
             // 
-            // dataGridView1
+            // btnHidden
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(207, 44);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(994, 589);
-            this.dataGridView1.TabIndex = 34;
+            this.btnHidden.BackColor = System.Drawing.Color.GreenYellow;
+            this.btnHidden.FlatAppearance.BorderSize = 0;
+            this.btnHidden.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHidden.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHidden.ForeColor = System.Drawing.Color.Red;
+            this.btnHidden.Location = new System.Drawing.Point(407, 46);
+            this.btnHidden.Name = "btnHidden";
+            this.btnHidden.Size = new System.Drawing.Size(83, 28);
+            this.btnHidden.TabIndex = 33;
+            this.btnHidden.Text = "Ẩn";
+            this.btnHidden.UseVisualStyleBackColor = false;
+            this.btnHidden.Click += new System.EventHandler(this.btnHidden_Click);
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label7.Location = new System.Drawing.Point(584, 21);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(400, 33);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "DANH SÁCH ĐẶC ĐIỂM CHUNG";
             // 
             // frmTonKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1209, 732);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1209, 717);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnClose);
             this.Font = new System.Drawing.Font("Roboto Condensed", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmTonKho";
             this.Text = "Form4";
+            this.Load += new System.EventHandler(this.frmTonKho_Load);
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.tabDacDiem.ResumeLayout(false);
+            this.tabDacDiem.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDacDiem)).EndInit();
-            this.tabPage2.ResumeLayout(false);
+            this.tabCTSP.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -399,9 +442,9 @@ namespace HKD_ClothesShop.Forms
 
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabDacDiem;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cbStatus;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.TextBox txtColor;
         private System.Windows.Forms.Button btnCreate;
@@ -412,7 +455,7 @@ namespace HKD_ClothesShop.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabCTSP;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox comboBox1;
@@ -422,5 +465,7 @@ namespace HKD_ClothesShop.Forms
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnHidden;
+        private System.Windows.Forms.Label label7;
     }
 }
