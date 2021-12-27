@@ -55,7 +55,6 @@ namespace HKD_ClothesShop.Forms
             this.txtMSP = new System.Windows.Forms.TextBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.dgvSanPham = new System.Windows.Forms.DataGridView();
-            this.btnHidden = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,6 +66,10 @@ namespace HKD_ClothesShop.Forms
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnHidden = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.lbLSP = new System.Windows.Forms.Label();
+            this.lbMTH = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAnhSP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
@@ -74,6 +77,8 @@ namespace HKD_ClothesShop.Forms
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lbMTH);
+            this.groupBox1.Controls.Add(this.lbLSP);
             this.groupBox1.Controls.Add(this.cmbDVT);
             this.groupBox1.Controls.Add(this.cmbMTH);
             this.groupBox1.Controls.Add(this.cmbLSP);
@@ -121,7 +126,7 @@ namespace HKD_ClothesShop.Forms
             // cmbMTH
             // 
             this.cmbMTH.FormattingEnabled = true;
-            this.cmbMTH.Location = new System.Drawing.Point(154, 282);
+            this.cmbMTH.Location = new System.Drawing.Point(154, 320);
             this.cmbMTH.Name = "cmbMTH";
             this.cmbMTH.Size = new System.Drawing.Size(121, 27);
             this.cmbMTH.TabIndex = 25;
@@ -136,16 +141,16 @@ namespace HKD_ClothesShop.Forms
             // 
             // txtMoTa
             // 
-            this.txtMoTa.Location = new System.Drawing.Point(154, 380);
+            this.txtMoTa.Location = new System.Drawing.Point(102, 449);
             this.txtMoTa.Multiline = true;
             this.txtMoTa.Name = "txtMoTa";
-            this.txtMoTa.Size = new System.Drawing.Size(203, 52);
+            this.txtMoTa.Size = new System.Drawing.Size(266, 52);
             this.txtMoTa.TabIndex = 5;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(16, 282);
+            this.label9.Location = new System.Drawing.Point(19, 320);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(122, 19);
             this.label9.TabIndex = 23;
@@ -154,11 +159,11 @@ namespace HKD_ClothesShop.Forms
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 380);
+            this.label6.Location = new System.Drawing.Point(16, 449);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(125, 19);
+            this.label6.Size = new System.Drawing.Size(80, 38);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Mô tả sản phẩm";
+            this.label6.Text = "Mô tả \r\nsản phẩm";
             // 
             // label8
             // 
@@ -206,7 +211,7 @@ namespace HKD_ClothesShop.Forms
             // picAnhSP
             // 
             this.picAnhSP.Image = global::HKD_ClothesShop.Properties.Resources.HKD_icon;
-            this.picAnhSP.Location = new System.Drawing.Point(20, 465);
+            this.picAnhSP.Location = new System.Drawing.Point(20, 517);
             this.picAnhSP.Name = "picAnhSP";
             this.picAnhSP.Size = new System.Drawing.Size(210, 210);
             this.picAnhSP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -215,12 +220,17 @@ namespace HKD_ClothesShop.Forms
             // 
             // btnChonAnh
             // 
-            this.btnChonAnh.Location = new System.Drawing.Point(254, 552);
+            this.btnChonAnh.BackColor = System.Drawing.Color.Yellow;
+            this.btnChonAnh.FlatAppearance.BorderSize = 0;
+            this.btnChonAnh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChonAnh.ForeColor = System.Drawing.Color.Blue;
+            this.btnChonAnh.Location = new System.Drawing.Point(252, 611);
             this.btnChonAnh.Name = "btnChonAnh";
             this.btnChonAnh.Size = new System.Drawing.Size(91, 29);
             this.btnChonAnh.TabIndex = 17;
             this.btnChonAnh.Text = "Chọn ảnh";
-            this.btnChonAnh.UseVisualStyleBackColor = true;
+            this.btnChonAnh.UseVisualStyleBackColor = false;
+            this.btnChonAnh.Click += new System.EventHandler(this.btnChonAnh_Click);
             // 
             // cbStatus
             // 
@@ -235,7 +245,7 @@ namespace HKD_ClothesShop.Forms
             // dtpDayUpdate
             // 
             this.dtpDayUpdate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDayUpdate.Location = new System.Drawing.Point(154, 326);
+            this.dtpDayUpdate.Location = new System.Drawing.Point(154, 397);
             this.dtpDayUpdate.Name = "dtpDayUpdate";
             this.dtpDayUpdate.Size = new System.Drawing.Size(121, 27);
             this.dtpDayUpdate.TabIndex = 15;
@@ -243,7 +253,7 @@ namespace HKD_ClothesShop.Forms
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 326);
+            this.label7.Location = new System.Drawing.Point(16, 397);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(112, 19);
             this.label7.TabIndex = 14;
@@ -339,6 +349,11 @@ namespace HKD_ClothesShop.Forms
             // 
             this.dgvSanPham.AllowUserToAddRows = false;
             this.dgvSanPham.AllowUserToDeleteRows = false;
+            this.dgvSanPham.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvSanPham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvSanPham.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.dgvSanPham.BackgroundColor = System.Drawing.Color.White;
             this.dgvSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSanPham.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -356,8 +371,88 @@ namespace HKD_ClothesShop.Forms
             this.dgvSanPham.GridColor = System.Drawing.Color.White;
             this.dgvSanPham.Location = new System.Drawing.Point(410, 108);
             this.dgvSanPham.Name = "dgvSanPham";
-            this.dgvSanPham.Size = new System.Drawing.Size(1000, 817);
+            this.dgvSanPham.Size = new System.Drawing.Size(782, 817);
             this.dgvSanPham.TabIndex = 3;
+            this.dgvSanPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSanPham_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 148.8498F;
+            this.Column1.HeaderText = "Ảnh sản phẩm";
+            this.Column1.Name = "Column1";
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column1.Width = 92;
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 134.6008F;
+            this.Column2.HeaderText = "Mã sản phẩm";
+            this.Column2.Name = "Column2";
+            this.Column2.Width = 88;
+            // 
+            // Column3
+            // 
+            this.Column3.FillWeight = 122.28F;
+            this.Column3.HeaderText = "Tên sản phẩm";
+            this.Column3.Name = "Column3";
+            this.Column3.Width = 92;
+            // 
+            // Column4
+            // 
+            this.Column4.FillWeight = 111.6264F;
+            this.Column4.HeaderText = "Đơn vị tính";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 78;
+            // 
+            // Column5
+            // 
+            this.Column5.FillWeight = 102.4144F;
+            this.Column5.HeaderText = "Đơn giá";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 64;
+            // 
+            // Column6
+            // 
+            this.Column6.FillWeight = 94.44894F;
+            this.Column6.HeaderText = "Chất liệu";
+            this.Column6.Name = "Column6";
+            this.Column6.Width = 68;
+            // 
+            // Column7
+            // 
+            this.Column7.FillWeight = 87.56138F;
+            this.Column7.HeaderText = "Mã loại Sản phẩm";
+            this.Column7.Name = "Column7";
+            this.Column7.Width = 84;
+            // 
+            // Column8
+            // 
+            this.Column8.FillWeight = 81.60582F;
+            this.Column8.HeaderText = "Mã thương hiệu";
+            this.Column8.Name = "Column8";
+            this.Column8.Width = 97;
+            // 
+            // Column9
+            // 
+            this.Column9.FillWeight = 76.45616F;
+            this.Column9.HeaderText = "Ngày cập nhật";
+            this.Column9.Name = "Column9";
+            this.Column9.Width = 75;
+            // 
+            // Column10
+            // 
+            this.Column10.FillWeight = 72.00334F;
+            this.Column10.HeaderText = "Mô tả sản phẩm";
+            this.Column10.Name = "Column10";
+            this.Column10.Width = 99;
+            // 
+            // Column11
+            // 
+            this.Column11.FillWeight = 68.15305F;
+            this.Column11.HeaderText = "Trạng thái";
+            this.Column11.Name = "Column11";
+            this.Column11.Width = 74;
             // 
             // btnHidden
             // 
@@ -374,62 +469,36 @@ namespace HKD_ClothesShop.Forms
             this.btnHidden.UseVisualStyleBackColor = false;
             this.btnHidden.Click += new System.EventHandler(this.btnHidden_Click);
             // 
-            // Column1
+            // label10
             // 
-            this.Column1.HeaderText = "Ảnh sản phẩm";
-            this.Column1.Name = "Column1";
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label10.Location = new System.Drawing.Point(589, 15);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(314, 33);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "DANH SÁCH SẢN PHẨM";
             // 
-            // Column2
+            // lbLSP
             // 
-            this.Column2.HeaderText = "Mã sản phẩm";
-            this.Column2.Name = "Column2";
+            this.lbLSP.AutoSize = true;
+            this.lbLSP.Location = new System.Drawing.Point(150, 283);
+            this.lbLSP.Name = "lbLSP";
+            this.lbLSP.Size = new System.Drawing.Size(14, 19);
+            this.lbLSP.TabIndex = 27;
+            this.lbLSP.Text = ".";
             // 
-            // Column3
+            // lbMTH
             // 
-            this.Column3.HeaderText = "Tên sản phẩm";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Đơn vị tính";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Đơn giá";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Chất liệu";
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Mã loại Sản phẩm";
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Mã thương hiệu";
-            this.Column8.Name = "Column8";
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "Ngày cập nhật";
-            this.Column9.Name = "Column9";
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Mô tả sản phẩm";
-            this.Column10.Name = "Column10";
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Trạng thái";
-            this.Column11.Name = "Column11";
+            this.lbMTH.AutoSize = true;
+            this.lbMTH.Location = new System.Drawing.Point(150, 365);
+            this.lbMTH.Name = "lbMTH";
+            this.lbMTH.Size = new System.Drawing.Size(14, 19);
+            this.lbMTH.TabIndex = 28;
+            this.lbMTH.Text = ".";
             // 
             // frmNhapHang
             // 
@@ -438,6 +507,7 @@ namespace HKD_ClothesShop.Forms
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1209, 634);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.btnHidden);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnClose);
@@ -451,6 +521,7 @@ namespace HKD_ClothesShop.Forms
             ((System.ComponentModel.ISupportInitialize)(this.picAnhSP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -494,5 +565,8 @@ namespace HKD_ClothesShop.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lbMTH;
+        private System.Windows.Forms.Label lbLSP;
     }
 }

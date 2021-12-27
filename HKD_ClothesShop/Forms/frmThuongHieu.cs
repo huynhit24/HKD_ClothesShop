@@ -38,7 +38,7 @@ namespace HKD_ClothesShop.Forms
                 else
                 {
                     dgvThuongHieu.Rows[index].Cells[5].Value = "Không sử dụng";
-                    dgvThuongHieu.Rows[index].DefaultCellStyle.BackColor = Color.Black;
+                    dgvThuongHieu.Rows[index].DefaultCellStyle.BackColor = Color.Orange;
                 }
             }
         }
@@ -410,7 +410,7 @@ namespace HKD_ClothesShop.Forms
             {
                 foreach (DataGridViewRow item in dgvThuongHieu.Rows)
                 {
-                    if (item.DefaultCellStyle.BackColor == Color.GreenYellow)
+                    if (item.DefaultCellStyle.BackColor == Color.Orange)
                     {
                         item.Visible = false;
                     }
@@ -424,7 +424,7 @@ namespace HKD_ClothesShop.Forms
 
                 foreach (DataGridViewRow item in dgvThuongHieu.Rows)
                 {
-                    if (item.DefaultCellStyle.BackColor == Color.GreenYellow)
+                    if (item.DefaultCellStyle.BackColor == Color.Orange)
                     {
                         item.Visible = true;
                     }

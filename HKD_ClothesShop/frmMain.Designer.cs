@@ -43,6 +43,7 @@ namespace HKD_ClothesShop
             this.btnSanPham = new System.Windows.Forms.Button();
             this.btnThuongHieu = new System.Windows.Forms.Button();
             this.panelKhachSubmenu = new System.Windows.Forms.Panel();
+            this.btnNhomKH = new System.Windows.Forms.Button();
             this.btnDSKH = new System.Windows.Forms.Button();
             this.btnKhach = new System.Windows.Forms.Button();
             this.panelKhoSubmenu = new System.Windows.Forms.Panel();
@@ -62,7 +63,6 @@ namespace HKD_ClothesShop
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnTaiKhoan = new System.Windows.Forms.Button();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.btnNhomKH = new System.Windows.Forms.Button();
             this.panelShopImage.SuspendLayout();
             this.panelSpSubmenu.SuspendLayout();
             this.panelKhachSubmenu.SuspendLayout();
@@ -317,6 +317,25 @@ namespace HKD_ClothesShop
             this.panelKhachSubmenu.Size = new System.Drawing.Size(234, 72);
             this.panelKhachSubmenu.TabIndex = 7;
             // 
+            // btnNhomKH
+            // 
+            this.btnNhomKH.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnNhomKH.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNhomKH.Enabled = false;
+            this.btnNhomKH.FlatAppearance.BorderSize = 0;
+            this.btnNhomKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNhomKH.ForeColor = System.Drawing.Color.Indigo;
+            this.btnNhomKH.Location = new System.Drawing.Point(0, 36);
+            this.btnNhomKH.Name = "btnNhomKH";
+            this.btnNhomKH.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
+            this.btnNhomKH.Size = new System.Drawing.Size(234, 36);
+            this.btnNhomKH.TabIndex = 1;
+            this.btnNhomKH.Text = "Nhóm khách hàng";
+            this.btnNhomKH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNhomKH.UseVisualStyleBackColor = false;
+            this.btnNhomKH.Visible = false;
+            this.btnNhomKH.Click += new System.EventHandler(this.btnNhomKH_Click);
+            // 
             // btnDSKH
             // 
             this.btnDSKH.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -376,7 +395,7 @@ namespace HKD_ClothesShop
             this.btnTonKho.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
             this.btnTonKho.Size = new System.Drawing.Size(234, 36);
             this.btnTonKho.TabIndex = 1;
-            this.btnTonKho.Text = "Tồn hàng";
+            this.btnTonKho.Text = "Thêm đặc điểm, số lượng";
             this.btnTonKho.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTonKho.UseVisualStyleBackColor = false;
             this.btnTonKho.Click += new System.EventHandler(this.btnTonKho_Click);
@@ -626,25 +645,6 @@ namespace HKD_ClothesShop
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(1225, 667);
             this.panelChildForm.TabIndex = 2;
-            // 
-            // btnNhomKH
-            // 
-            this.btnNhomKH.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNhomKH.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnNhomKH.Enabled = false;
-            this.btnNhomKH.FlatAppearance.BorderSize = 0;
-            this.btnNhomKH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNhomKH.ForeColor = System.Drawing.Color.Indigo;
-            this.btnNhomKH.Location = new System.Drawing.Point(0, 36);
-            this.btnNhomKH.Name = "btnNhomKH";
-            this.btnNhomKH.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
-            this.btnNhomKH.Size = new System.Drawing.Size(234, 36);
-            this.btnNhomKH.TabIndex = 1;
-            this.btnNhomKH.Text = "Nhóm khách hàng";
-            this.btnNhomKH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhomKH.UseVisualStyleBackColor = false;
-            this.btnNhomKH.Visible = false;
-            this.btnNhomKH.Click += new System.EventHandler(this.btnNhomKH_Click);
             // 
             // frmMain
             // 
