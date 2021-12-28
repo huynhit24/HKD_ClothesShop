@@ -30,6 +30,8 @@ namespace HKD_ClothesShop.Forms
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbMTH = new System.Windows.Forms.Label();
+            this.lbLSP = new System.Windows.Forms.Label();
             this.cmbDVT = new System.Windows.Forms.ComboBox();
             this.cmbMTH = new System.Windows.Forms.ComboBox();
             this.cmbLSP = new System.Windows.Forms.ComboBox();
@@ -68,8 +70,6 @@ namespace HKD_ClothesShop.Forms
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnHidden = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.lbLSP = new System.Windows.Forms.Label();
-            this.lbMTH = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAnhSP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
@@ -109,6 +109,24 @@ namespace HKD_ClothesShop.Forms
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập thông tin sản phẩm";
+            // 
+            // lbMTH
+            // 
+            this.lbMTH.AutoSize = true;
+            this.lbMTH.Location = new System.Drawing.Point(150, 365);
+            this.lbMTH.Name = "lbMTH";
+            this.lbMTH.Size = new System.Drawing.Size(14, 19);
+            this.lbMTH.TabIndex = 28;
+            this.lbMTH.Text = ".";
+            // 
+            // lbLSP
+            // 
+            this.lbLSP.AutoSize = true;
+            this.lbLSP.Location = new System.Drawing.Point(150, 283);
+            this.lbLSP.Name = "lbLSP";
+            this.lbLSP.Size = new System.Drawing.Size(14, 19);
+            this.lbLSP.TabIndex = 27;
+            this.lbLSP.Text = ".";
             // 
             // cmbDVT
             // 
@@ -371,7 +389,7 @@ namespace HKD_ClothesShop.Forms
             this.dgvSanPham.GridColor = System.Drawing.Color.White;
             this.dgvSanPham.Location = new System.Drawing.Point(410, 108);
             this.dgvSanPham.Name = "dgvSanPham";
-            this.dgvSanPham.Size = new System.Drawing.Size(782, 817);
+            this.dgvSanPham.Size = new System.Drawing.Size(731, 1690);
             this.dgvSanPham.TabIndex = 3;
             this.dgvSanPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSanPham_CellClick);
             // 
@@ -481,24 +499,6 @@ namespace HKD_ClothesShop.Forms
             this.label10.Size = new System.Drawing.Size(314, 33);
             this.label10.TabIndex = 12;
             this.label10.Text = "DANH SÁCH SẢN PHẨM";
-            // 
-            // lbLSP
-            // 
-            this.lbLSP.AutoSize = true;
-            this.lbLSP.Location = new System.Drawing.Point(150, 283);
-            this.lbLSP.Name = "lbLSP";
-            this.lbLSP.Size = new System.Drawing.Size(14, 19);
-            this.lbLSP.TabIndex = 27;
-            this.lbLSP.Text = ".";
-            // 
-            // lbMTH
-            // 
-            this.lbMTH.AutoSize = true;
-            this.lbMTH.Location = new System.Drawing.Point(150, 365);
-            this.lbMTH.Name = "lbMTH";
-            this.lbMTH.Size = new System.Drawing.Size(14, 19);
-            this.lbMTH.TabIndex = 28;
-            this.lbMTH.Text = ".";
             // 
             // frmNhapHang
             // 

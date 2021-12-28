@@ -32,12 +32,12 @@ namespace HKD_ClothesShop.Forms
             this.btnClose = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabDacDiem = new System.Windows.Forms.TabPage();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnHidden = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbStatus = new System.Windows.Forms.CheckBox();
             this.btnUpdate = new System.Windows.Forms.Button();
-            this.txtColor = new System.Windows.Forms.TextBox();
             this.btnCreate = new System.Windows.Forms.Button();
-            this.txtSize = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvDacDiem = new System.Windows.Forms.DataGridView();
@@ -45,23 +45,29 @@ namespace HKD_ClothesShop.Forms
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabCTSP = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnAn = new System.Windows.Forms.Button();
+            this.dgvCTDD = new System.Windows.Forms.DataGridView();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button11 = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.btnThemCT = new System.Windows.Forms.Button();
+            this.cmbMaSP = new System.Windows.Forms.ComboBox();
+            this.btnSuaCT = new System.Windows.Forms.Button();
+            this.cmbColor = new System.Windows.Forms.ComboBox();
+            this.txtSLSP = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.btnHidden = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
+            this.cmbSize = new System.Windows.Forms.ComboBox();
+            this.comboBoxSize = new System.Windows.Forms.ComboBox();
+            this.comboBoxColor = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabDacDiem.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDacDiem)).BeginInit();
             this.tabCTSP.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCTDD)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -97,20 +103,48 @@ namespace HKD_ClothesShop.Forms
             this.tabDacDiem.Font = new System.Drawing.Font("Roboto Condensed", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabDacDiem.Location = new System.Drawing.Point(4, 24);
             this.tabDacDiem.Name = "tabDacDiem";
-            this.tabDacDiem.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabDacDiem.Padding = new System.Windows.Forms.Padding(3);
             this.tabDacDiem.Size = new System.Drawing.Size(1201, 639);
             this.tabDacDiem.TabIndex = 0;
             this.tabDacDiem.Text = "Đặc điểm chung";
             this.tabDacDiem.UseVisualStyleBackColor = true;
             // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label7.Location = new System.Drawing.Point(584, 21);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(400, 33);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "DANH SÁCH ĐẶC ĐIỂM CHUNG";
+            // 
+            // btnHidden
+            // 
+            this.btnHidden.BackColor = System.Drawing.Color.GreenYellow;
+            this.btnHidden.FlatAppearance.BorderSize = 0;
+            this.btnHidden.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHidden.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHidden.ForeColor = System.Drawing.Color.Red;
+            this.btnHidden.Location = new System.Drawing.Point(407, 46);
+            this.btnHidden.Name = "btnHidden";
+            this.btnHidden.Size = new System.Drawing.Size(83, 28);
+            this.btnHidden.TabIndex = 33;
+            this.btnHidden.Text = "Ẩn";
+            this.btnHidden.UseVisualStyleBackColor = false;
+            this.btnHidden.Click += new System.EventHandler(this.btnHidden_Click);
+            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.comboBoxColor);
+            this.groupBox1.Controls.Add(this.comboBoxSize);
             this.groupBox1.Controls.Add(this.cbStatus);
             this.groupBox1.Controls.Add(this.btnUpdate);
-            this.groupBox1.Controls.Add(this.txtColor);
             this.groupBox1.Controls.Add(this.btnCreate);
-            this.groupBox1.Controls.Add(this.txtSize);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -149,13 +183,6 @@ namespace HKD_ClothesShop.Forms
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
-            // txtColor
-            // 
-            this.txtColor.Location = new System.Drawing.Point(217, 88);
-            this.txtColor.Name = "txtColor";
-            this.txtColor.Size = new System.Drawing.Size(115, 27);
-            this.txtColor.TabIndex = 53;
-            // 
             // btnCreate
             // 
             this.btnCreate.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
@@ -173,13 +200,6 @@ namespace HKD_ClothesShop.Forms
             this.btnCreate.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
-            // 
-            // txtSize
-            // 
-            this.txtSize.Location = new System.Drawing.Point(217, 35);
-            this.txtSize.Name = "txtSize";
-            this.txtSize.Size = new System.Drawing.Size(115, 27);
-            this.txtSize.TabIndex = 52;
             // 
             // label3
             // 
@@ -233,33 +253,86 @@ namespace HKD_ClothesShop.Forms
             // 
             // tabCTSP
             // 
-            this.tabCTSP.Controls.Add(this.dataGridView1);
+            this.tabCTSP.Controls.Add(this.btnAn);
+            this.tabCTSP.Controls.Add(this.dgvCTDD);
             this.tabCTSP.Controls.Add(this.groupBox2);
             this.tabCTSP.Location = new System.Drawing.Point(4, 24);
             this.tabCTSP.Name = "tabCTSP";
-            this.tabCTSP.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabCTSP.Padding = new System.Windows.Forms.Padding(3);
             this.tabCTSP.Size = new System.Drawing.Size(1201, 639);
             this.tabCTSP.TabIndex = 1;
             this.tabCTSP.Text = "Đặc điểm số lượng sản phẩm";
             this.tabCTSP.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // btnAn
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(207, 44);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(994, 575);
-            this.dataGridView1.TabIndex = 34;
+            this.btnAn.BackColor = System.Drawing.Color.GreenYellow;
+            this.btnAn.FlatAppearance.BorderSize = 0;
+            this.btnAn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAn.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAn.ForeColor = System.Drawing.Color.Red;
+            this.btnAn.Location = new System.Drawing.Point(207, 6);
+            this.btnAn.Name = "btnAn";
+            this.btnAn.Size = new System.Drawing.Size(83, 28);
+            this.btnAn.TabIndex = 35;
+            this.btnAn.Text = "Ẩn";
+            this.btnAn.UseVisualStyleBackColor = false;
+            this.btnAn.Click += new System.EventHandler(this.btnAn_Click);
+            // 
+            // dgvCTDD
+            // 
+            this.dgvCTDD.AllowUserToAddRows = false;
+            this.dgvCTDD.AllowUserToDeleteRows = false;
+            this.dgvCTDD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvCTDD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCTDD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8});
+            this.dgvCTDD.Location = new System.Drawing.Point(207, 44);
+            this.dgvCTDD.Name = "dgvCTDD";
+            this.dgvCTDD.Size = new System.Drawing.Size(994, 575);
+            this.dgvCTDD.TabIndex = 34;
+            this.dgvCTDD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTDD_CellClick);
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Mã sản phẩm";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Kích thước";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Màu sắc";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Số lượng tồn";
+            this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Tên sản phẩm";
+            this.Column8.Name = "Column8";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.button11);
-            this.groupBox2.Controls.Add(this.comboBox3);
-            this.groupBox2.Controls.Add(this.textBox7);
+            this.groupBox2.Controls.Add(this.btnThemCT);
+            this.groupBox2.Controls.Add(this.cmbMaSP);
+            this.groupBox2.Controls.Add(this.btnSuaCT);
+            this.groupBox2.Controls.Add(this.cmbColor);
+            this.groupBox2.Controls.Add(this.txtSLSP);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.comboBox4);
+            this.groupBox2.Controls.Add(this.cmbSize);
             this.groupBox2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(18, 35);
             this.groupBox2.Name = "groupBox2";
@@ -267,85 +340,70 @@ namespace HKD_ClothesShop.Forms
             this.groupBox2.TabIndex = 33;
             this.groupBox2.TabStop = false;
             // 
-            // button1
+            // btnThemCT
             // 
-            this.button1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(33, 251);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(106, 48);
-            this.button1.TabIndex = 52;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnThemCT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThemCT.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemCT.Location = new System.Drawing.Point(33, 251);
+            this.btnThemCT.Name = "btnThemCT";
+            this.btnThemCT.Size = new System.Drawing.Size(106, 48);
+            this.btnThemCT.TabIndex = 52;
+            this.btnThemCT.Text = "Thêm";
+            this.btnThemCT.UseVisualStyleBackColor = true;
+            this.btnThemCT.Click += new System.EventHandler(this.btnThemCT_Click);
             // 
-            // comboBox1
+            // cmbMaSP
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "32",
-            "33",
-            "34",
-            "35",
-            "36",
-            "37",
-            "38",
-            "39",
-            "40",
-            "41",
-            "42",
-            "43",
-            "44",
-            "45",
-            "46"});
-            this.comboBox1.Location = new System.Drawing.Point(21, 25);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(129, 27);
-            this.comboBox1.TabIndex = 51;
-            this.comboBox1.Text = "Mã sản phẩm";
+            this.cmbMaSP.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMaSP.FormattingEnabled = true;
+            this.cmbMaSP.Location = new System.Drawing.Point(21, 25);
+            this.cmbMaSP.Name = "cmbMaSP";
+            this.cmbMaSP.Size = new System.Drawing.Size(129, 27);
+            this.cmbMaSP.TabIndex = 51;
             // 
-            // button11
+            // btnSuaCT
             // 
-            this.button11.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(33, 322);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(106, 48);
-            this.button11.TabIndex = 34;
-            this.button11.Text = "Sửa";
-            this.button11.UseVisualStyleBackColor = true;
+            this.btnSuaCT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSuaCT.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaCT.Location = new System.Drawing.Point(33, 322);
+            this.btnSuaCT.Name = "btnSuaCT";
+            this.btnSuaCT.Size = new System.Drawing.Size(106, 48);
+            this.btnSuaCT.TabIndex = 34;
+            this.btnSuaCT.Text = "Sửa";
+            this.btnSuaCT.UseVisualStyleBackColor = true;
+            this.btnSuaCT.Click += new System.EventHandler(this.btnSuaCT_Click);
             // 
-            // comboBox3
+            // cmbColor
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "32",
-            "33",
-            "34",
-            "35",
-            "36",
-            "37",
-            "38",
-            "39",
-            "40",
-            "41",
-            "42",
-            "43",
-            "44",
-            "45",
-            "46"});
-            this.comboBox3.Location = new System.Drawing.Point(21, 130);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(129, 27);
-            this.comboBox3.TabIndex = 50;
-            this.comboBox3.Text = "Chọn màu";
+            this.cmbColor.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbColor.FormattingEnabled = true;
+            this.cmbColor.Items.AddRange(new object[] {
+            "White",
+            "Blue",
+            "Green",
+            "Yellow",
+            "Orange",
+            "Pink",
+            "Gray",
+            "Red",
+            "Black",
+            "Brown",
+            "Beige",
+            "Violet",
+            "Purple"});
+            this.cmbColor.Location = new System.Drawing.Point(21, 130);
+            this.cmbColor.Name = "cmbColor";
+            this.cmbColor.Size = new System.Drawing.Size(129, 27);
+            this.cmbColor.TabIndex = 50;
+            this.cmbColor.Text = "Chọn màu";
             // 
-            // textBox7
+            // txtSLSP
             // 
-            this.textBox7.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(85, 184);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(67, 27);
-            this.textBox7.TabIndex = 49;
+            this.txtSLSP.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSLSP.Location = new System.Drawing.Point(85, 184);
+            this.txtSLSP.Name = "txtSLSP";
+            this.txtSLSP.Size = new System.Drawing.Size(67, 27);
+            this.txtSLSP.TabIndex = 49;
             // 
             // label10
             // 
@@ -357,59 +415,61 @@ namespace HKD_ClothesShop.Forms
             this.label10.TabIndex = 48;
             this.label10.Text = "Số lượng";
             // 
-            // comboBox4
+            // cmbSize
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
-            "32",
-            "33",
-            "34",
-            "35",
-            "36",
-            "37",
-            "38",
-            "39",
-            "40",
-            "41",
-            "42",
-            "43",
-            "44",
-            "45",
-            "46"});
-            this.comboBox4.Location = new System.Drawing.Point(21, 76);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(129, 27);
-            this.comboBox4.TabIndex = 46;
-            this.comboBox4.Text = "Chọn size";
+            this.cmbSize.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSize.FormattingEnabled = true;
+            this.cmbSize.Items.AddRange(new object[] {
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"});
+            this.cmbSize.Location = new System.Drawing.Point(21, 76);
+            this.cmbSize.Name = "cmbSize";
+            this.cmbSize.Size = new System.Drawing.Size(129, 27);
+            this.cmbSize.TabIndex = 46;
+            this.cmbSize.Text = "Chọn size";
             // 
-            // btnHidden
+            // comboBoxSize
             // 
-            this.btnHidden.BackColor = System.Drawing.Color.GreenYellow;
-            this.btnHidden.FlatAppearance.BorderSize = 0;
-            this.btnHidden.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHidden.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHidden.ForeColor = System.Drawing.Color.Red;
-            this.btnHidden.Location = new System.Drawing.Point(407, 46);
-            this.btnHidden.Name = "btnHidden";
-            this.btnHidden.Size = new System.Drawing.Size(83, 28);
-            this.btnHidden.TabIndex = 33;
-            this.btnHidden.Text = "Ẩn";
-            this.btnHidden.UseVisualStyleBackColor = false;
-            this.btnHidden.Click += new System.EventHandler(this.btnHidden_Click);
+            this.comboBoxSize.FormattingEnabled = true;
+            this.comboBoxSize.Items.AddRange(new object[] {
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"});
+            this.comboBoxSize.Location = new System.Drawing.Point(200, 40);
+            this.comboBoxSize.Name = "comboBoxSize";
+            this.comboBoxSize.Size = new System.Drawing.Size(121, 27);
+            this.comboBoxSize.TabIndex = 55;
+            this.comboBoxSize.Text = "Chọn size";
             // 
-            // label7
+            // comboBoxColor
             // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label7.Location = new System.Drawing.Point(584, 21);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(400, 33);
-            this.label7.TabIndex = 34;
-            this.label7.Text = "DANH SÁCH ĐẶC ĐIỂM CHUNG";
+            this.comboBoxColor.FormattingEnabled = true;
+            this.comboBoxColor.Items.AddRange(new object[] {
+            "White",
+            "Blue",
+            "Green",
+            "Yellow",
+            "Orange",
+            "Pink",
+            "Gray",
+            "Red",
+            "Black",
+            "Brown",
+            "Beige",
+            "Violet",
+            "Purple"});
+            this.comboBoxColor.Location = new System.Drawing.Point(200, 91);
+            this.comboBoxColor.Name = "comboBoxColor";
+            this.comboBoxColor.Size = new System.Drawing.Size(121, 27);
+            this.comboBoxColor.TabIndex = 56;
+            this.comboBoxColor.Text = "Chọn màu";
             // 
             // frmTonKho
             // 
@@ -431,7 +491,7 @@ namespace HKD_ClothesShop.Forms
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDacDiem)).EndInit();
             this.tabCTSP.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCTDD)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -446,9 +506,7 @@ namespace HKD_ClothesShop.Forms
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox cbStatus;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.TextBox txtColor;
         private System.Windows.Forms.Button btnCreate;
-        private System.Windows.Forms.TextBox txtSize;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvDacDiem;
@@ -457,15 +515,23 @@ namespace HKD_ClothesShop.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.TabPage tabCTSP;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Button btnThemCT;
+        private System.Windows.Forms.ComboBox cmbMaSP;
+        private System.Windows.Forms.Button btnSuaCT;
+        private System.Windows.Forms.ComboBox cmbColor;
+        private System.Windows.Forms.TextBox txtSLSP;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox cmbSize;
+        private System.Windows.Forms.DataGridView dgvCTDD;
         private System.Windows.Forms.Button btnHidden;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnAn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.ComboBox comboBoxColor;
+        private System.Windows.Forms.ComboBox comboBoxSize;
     }
 }
