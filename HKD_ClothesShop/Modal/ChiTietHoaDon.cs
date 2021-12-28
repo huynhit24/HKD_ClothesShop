@@ -16,7 +16,6 @@ namespace HKD_ClothesShop.Modal
     {
         public string MaSanPham { get; set; }
         public string SoHoaDon { get; set; }
-        public string MaNhanVien { get; set; }
         public int SoLuongMua { get; set; }
         public decimal DonGiaBan { get; set; }
     
