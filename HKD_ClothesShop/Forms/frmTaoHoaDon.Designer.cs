@@ -62,6 +62,8 @@ namespace HKD_ClothesShop.Forms
             this.buttonAn = new System.Windows.Forms.Button();
             this.dgvCTHD = new System.Windows.Forms.DataGridView();
             this.groupBoxCTHD = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.picAnhSP = new System.Windows.Forms.PictureBox();
             this.labelGiaGoc = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.labelDGB = new System.Windows.Forms.Label();
@@ -75,10 +77,7 @@ namespace HKD_ClothesShop.Forms
             this.comboBoxSHD = new System.Windows.Forms.ComboBox();
             this.buttonSua = new System.Windows.Forms.Button();
             this.buttonThem = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.picAnhSP = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.Column9 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,6 +92,8 @@ namespace HKD_ClothesShop.Forms
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labelThanhToan = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.tabChiTietHoaDon.SuspendLayout();
             this.tabHoaDon.SuspendLayout();
@@ -291,7 +292,7 @@ namespace HKD_ClothesShop.Forms
             this.tabHoaDon.Location = new System.Drawing.Point(4, 22);
             this.tabHoaDon.Name = "tabHoaDon";
             this.tabHoaDon.Padding = new System.Windows.Forms.Padding(3);
-            this.tabHoaDon.Size = new System.Drawing.Size(1185, 549);
+            this.tabHoaDon.Size = new System.Drawing.Size(1197, 551);
             this.tabHoaDon.TabIndex = 0;
             this.tabHoaDon.Text = "Hóa đơn";
             this.tabHoaDon.UseVisualStyleBackColor = true;
@@ -320,9 +321,9 @@ namespace HKD_ClothesShop.Forms
             this.label7.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.label7.Location = new System.Drawing.Point(634, 17);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(400, 33);
+            this.label7.Size = new System.Drawing.Size(294, 33);
             this.label7.TabIndex = 35;
-            this.label7.Text = "DANH SÁCH ĐẶC ĐIỂM CHUNG";
+            this.label7.Text = "DANH SÁCH HÓA ĐƠN";
             // 
             // dgvHoaDon
             // 
@@ -409,9 +410,9 @@ namespace HKD_ClothesShop.Forms
             this.label12.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.label12.Location = new System.Drawing.Point(583, 41);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(400, 33);
+            this.label12.Size = new System.Drawing.Size(654, 33);
             this.label12.TabIndex = 38;
-            this.label12.Text = "DANH SÁCH ĐẶC ĐIỂM CHUNG";
+            this.label12.Text = "DANH SÁCH CHI TIẾT HÓA ĐƠN KHÁCH MUA HÀNG";
             // 
             // buttonAn
             // 
@@ -432,9 +433,6 @@ namespace HKD_ClothesShop.Forms
             // 
             this.dgvCTHD.AllowUserToAddRows = false;
             this.dgvCTHD.AllowUserToDeleteRows = false;
-            this.dgvCTHD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCTHD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvCTHD.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvCTHD.BackgroundColor = System.Drawing.Color.White;
@@ -453,16 +451,18 @@ namespace HKD_ClothesShop.Forms
             this.Column13,
             this.Column14,
             this.Column15,
-            this.Column16});
+            this.Column16,
+            this.Column17});
             this.dgvCTHD.Location = new System.Drawing.Point(386, 80);
             this.dgvCTHD.Name = "dgvCTHD";
-            this.dgvCTHD.Size = new System.Drawing.Size(803, 465);
+            this.dgvCTHD.Size = new System.Drawing.Size(926, 559);
             this.dgvCTHD.TabIndex = 8;
             this.dgvCTHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTHD_CellClick);
             // 
             // groupBoxCTHD
             // 
             this.groupBoxCTHD.BackColor = System.Drawing.Color.White;
+            this.groupBoxCTHD.Controls.Add(this.labelThanhToan);
             this.groupBoxCTHD.Controls.Add(this.button1);
             this.groupBoxCTHD.Controls.Add(this.picAnhSP);
             this.groupBoxCTHD.Controls.Add(this.labelGiaGoc);
@@ -478,16 +478,41 @@ namespace HKD_ClothesShop.Forms
             this.groupBoxCTHD.Controls.Add(this.comboBoxSHD);
             this.groupBoxCTHD.Controls.Add(this.buttonSua);
             this.groupBoxCTHD.Controls.Add(this.buttonThem);
-            this.groupBoxCTHD.Controls.Add(this.checkBox1);
             this.groupBoxCTHD.Controls.Add(this.label11);
             this.groupBoxCTHD.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxCTHD.Location = new System.Drawing.Point(6, 6);
             this.groupBoxCTHD.Name = "groupBoxCTHD";
-            this.groupBoxCTHD.Size = new System.Drawing.Size(374, 525);
+            this.groupBoxCTHD.Size = new System.Drawing.Size(374, 639);
             this.groupBoxCTHD.TabIndex = 7;
             this.groupBoxCTHD.TabStop = false;
             this.groupBoxCTHD.Text = "Thông tin hóa đơn";
             this.groupBoxCTHD.Enter += new System.EventHandler(this.buttonAn_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.GreenYellow;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.button1.FlatAppearance.BorderSize = 3;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Navy;
+            this.button1.Image = global::HKD_ClothesShop.Properties.Resources.tao_phieu_theo_yc;
+            this.button1.Location = new System.Drawing.Point(184, 558);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(184, 73);
+            this.button1.TabIndex = 44;
+            this.button1.Text = "Thanh toán tổng tiền";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // picAnhSP
+            // 
+            this.picAnhSP.Image = global::HKD_ClothesShop.Properties.Resources.HKD_icon;
+            this.picAnhSP.Location = new System.Drawing.Point(19, 276);
+            this.picAnhSP.Name = "picAnhSP";
+            this.picAnhSP.Size = new System.Drawing.Size(150, 150);
+            this.picAnhSP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picAnhSP.TabIndex = 43;
+            this.picAnhSP.TabStop = false;
             // 
             // labelGiaGoc
             // 
@@ -592,7 +617,7 @@ namespace HKD_ClothesShop.Forms
             this.buttonSua.FlatAppearance.BorderSize = 3;
             this.buttonSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSua.Image = global::HKD_ClothesShop.Properties.Resources.update;
-            this.buttonSua.Location = new System.Drawing.Point(244, 365);
+            this.buttonSua.Location = new System.Drawing.Point(20, 545);
             this.buttonSua.Name = "buttonSua";
             this.buttonSua.Size = new System.Drawing.Size(113, 61);
             this.buttonSua.TabIndex = 21;
@@ -607,7 +632,7 @@ namespace HKD_ClothesShop.Forms
             this.buttonThem.FlatAppearance.BorderSize = 3;
             this.buttonThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonThem.Image = global::HKD_ClothesShop.Properties.Resources.create;
-            this.buttonThem.Location = new System.Drawing.Point(244, 285);
+            this.buttonThem.Location = new System.Drawing.Point(19, 464);
             this.buttonThem.Name = "buttonThem";
             this.buttonThem.Size = new System.Drawing.Size(113, 64);
             this.buttonThem.TabIndex = 20;
@@ -615,16 +640,6 @@ namespace HKD_ClothesShop.Forms
             this.buttonThem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonThem.UseVisualStyleBackColor = true;
             this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(20, 435);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(136, 23);
-            this.checkBox1.TabIndex = 16;
-            this.checkBox1.Text = "Không sử dụng";
-            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // label11
             // 
@@ -634,32 +649,6 @@ namespace HKD_ClothesShop.Forms
             this.label11.Size = new System.Drawing.Size(91, 19);
             this.label11.TabIndex = 7;
             this.label11.Text = "Số hóa đơn";
-            // 
-            // picAnhSP
-            // 
-            this.picAnhSP.Image = global::HKD_ClothesShop.Properties.Resources.HKD_icon;
-            this.picAnhSP.Location = new System.Drawing.Point(19, 276);
-            this.picAnhSP.Name = "picAnhSP";
-            this.picAnhSP.Size = new System.Drawing.Size(150, 150);
-            this.picAnhSP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picAnhSP.TabIndex = 43;
-            this.picAnhSP.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.GreenYellow;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.Navy;
-            this.button1.Image = global::HKD_ClothesShop.Properties.Resources.tao_phieu_theo_yc;
-            this.button1.Location = new System.Drawing.Point(173, 446);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(184, 73);
-            this.button1.TabIndex = 44;
-            this.button1.Text = "Thanh toán tổng";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // Column9
             // 
@@ -708,9 +697,9 @@ namespace HKD_ClothesShop.Forms
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.FillWeight = 93.95325F;
-            this.dataGridViewTextBoxColumn6.HeaderText = "Đơn giá bán";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Giá bán";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 67;
+            this.dataGridViewTextBoxColumn6.Width = 64;
             // 
             // Column10
             // 
@@ -761,11 +750,27 @@ namespace HKD_ClothesShop.Forms
             this.Column16.Name = "Column16";
             this.Column16.Width = 68;
             // 
+            // Column17
+            // 
+            this.Column17.HeaderText = "Tình trạng";
+            this.Column17.Name = "Column17";
+            this.Column17.Width = 74;
+            // 
+            // labelThanhToan
+            // 
+            this.labelThanhToan.AutoSize = true;
+            this.labelThanhToan.Location = new System.Drawing.Point(193, 478);
+            this.labelThanhToan.Name = "labelThanhToan";
+            this.labelThanhToan.Size = new System.Drawing.Size(164, 19);
+            this.labelThanhToan.TabIndex = 45;
+            this.labelThanhToan.Text = "Tình trạng thanh toán";
+            // 
             // frmTaoHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1209, 634);
             this.Controls.Add(this.tabChiTietHoaDon);
@@ -819,7 +824,6 @@ namespace HKD_ClothesShop.Forms
         private System.Windows.Forms.GroupBox groupBoxCTHD;
         private System.Windows.Forms.Button buttonSua;
         private System.Windows.Forms.Button buttonThem;
-        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -856,5 +860,7 @@ namespace HKD_ClothesShop.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
+        private System.Windows.Forms.Label labelThanhToan;
     }
 }

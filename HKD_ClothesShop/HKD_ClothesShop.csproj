@@ -484,6 +484,9 @@
     <None Include="Assets\update.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\diagram.png" />
+    <None Include="Assets\tong-doanh-thu.png" />
+    <None Include="Assets\monitor.png" />
     <Content Include="Modal\Database.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Database.Context.cs</LastGenOutput>

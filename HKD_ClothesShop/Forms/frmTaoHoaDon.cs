@@ -138,6 +138,8 @@ namespace HKD_ClothesShop.Forms
         private void Xoatt()
         {
             txtSHD.Text = "";
+            txtSLMua.Text = "";
+            txtKM.Text = "";
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -393,22 +395,24 @@ namespace HKD_ClothesShop.Forms
                     dgvCTHD.Rows[index].Cells[11].Value = item.SanPham.DonGia; // Đơn giá gốc
                     dgvCTHD.Rows[index].Cells[12].Value = item.SanPham.DonViTinh; // Đợn vị tính
                     dgvCTHD.Rows[index].Cells[13].Value = item.SanPham.ChatLieu; // Chất liệu
-                    /*if (item.TinhTrang == "T")
+                    //dgvCTHD.Rows[index].Cells[14].Value = item.HoaDon.TinhTrang; // Tình trạng
+
+                    if (item.HoaDon.TinhTrang == "T")
                     {
-                        dgvCTHD.Rows[index].Cells[4].Value = "Đã thanh toán";
+                        dgvCTHD.Rows[index].Cells[14].Value = "Đã thanh toán";
                     }
                     else
                     {
-                        if (item.TinhTrang == "C")
+                        if (item.HoaDon.TinhTrang == "C")
                         {
-                            dgvCTHD.Rows[index].Cells[4].Value = "Chưa thanh toán";
+                            dgvCTHD.Rows[index].Cells[14].Value = "Chưa thanh toán";
                         }
                         else
                         {
-                            dgvCTHD.Rows[index].Cells[4].Value = "Ghi nợ";
+                            dgvCTHD.Rows[index].Cells[14].Value = "Ghi nợ";
                         }
                         //dgvHoaDon.Rows[index].DefaultCellStyle.BackColor = Color.GreenYellow;
-                    }*/
+                    }
                     /*if (item.Status == true)
                     {
                         dgvCTHD.Rows[index].Cells[5].Value = "Còn sử dụng";
@@ -697,7 +701,7 @@ namespace HKD_ClothesShop.Forms
                     txtSLMua.Text = row.Cells[5].Value.ToString();
                     labelGiaGoc.Text = row.Cells[11].Value.ToString();
                     labelDGB.Text = row.Cells[6].Value.ToString();
-
+                    labelThanhToan.Text = row.Cells[14].Value.ToString();
                     /*cmbMKH.Text = row.Cells[2].Value.ToString();
                     QLBanHangHKDEntities db = new QLBanHangHKDEntities();
                     foreach (var i in db.HoaDons)
