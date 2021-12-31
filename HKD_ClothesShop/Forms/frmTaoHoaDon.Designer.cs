@@ -61,7 +61,23 @@ namespace HKD_ClothesShop.Forms
             this.label12 = new System.Windows.Forms.Label();
             this.buttonAn = new System.Windows.Forms.Button();
             this.dgvCTHD = new System.Windows.Forms.DataGridView();
+            this.Column9 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxCTHD = new System.Windows.Forms.GroupBox();
+            this.labelThanhToan = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.picAnhSP = new System.Windows.Forms.PictureBox();
             this.labelGiaGoc = new System.Windows.Forms.Label();
@@ -78,22 +94,6 @@ namespace HKD_ClothesShop.Forms
             this.buttonSua = new System.Windows.Forms.Button();
             this.buttonThem = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.Column9 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.labelThanhToan = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.tabChiTietHoaDon.SuspendLayout();
             this.tabHoaDon.SuspendLayout();
@@ -459,6 +459,112 @@ namespace HKD_ClothesShop.Forms
             this.dgvCTHD.TabIndex = 8;
             this.dgvCTHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTHD_CellClick);
             // 
+            // Column9
+            // 
+            this.Column9.FillWeight = 183.727F;
+            this.Column9.HeaderText = "Ảnh sản phẩm mua";
+            this.Column9.Name = "Column9";
+            this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column9.Width = 95;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.FillWeight = 163.0598F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Số hóa đơn";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 81;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.FillWeight = 145.1049F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tên nhân viên";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 93;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.FillWeight = 129.5062F;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Tên khách hàng";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 102;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.FillWeight = 115.9546F;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Tên sản phẩm";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 92;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.FillWeight = 104.1814F;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Số lượng mua";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 89;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.FillWeight = 93.95325F;
+            this.dataGridViewTextBoxColumn6.HeaderText = "Giá bán";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 64;
+            // 
+            // Column10
+            // 
+            this.Column10.FillWeight = 85.06741F;
+            this.Column10.HeaderText = "Thành tiền";
+            this.Column10.Name = "Column10";
+            this.Column10.Width = 77;
+            // 
+            // Column11
+            // 
+            this.Column11.FillWeight = 77.34766F;
+            this.Column11.HeaderText = "Mã nhân viên";
+            this.Column11.Name = "Column11";
+            this.Column11.Width = 89;
+            // 
+            // Column12
+            // 
+            this.Column12.FillWeight = 70.64101F;
+            this.Column12.HeaderText = "Mã khách hàng";
+            this.Column12.Name = "Column12";
+            this.Column12.Width = 98;
+            // 
+            // Column13
+            // 
+            this.Column13.FillWeight = 64.8145F;
+            this.Column13.HeaderText = "Mã sản phẩm";
+            this.Column13.Name = "Column13";
+            this.Column13.Width = 88;
+            // 
+            // Column14
+            // 
+            this.Column14.FillWeight = 59.75262F;
+            this.Column14.HeaderText = "Đơn giá gốc";
+            this.Column14.Name = "Column14";
+            this.Column14.Width = 67;
+            // 
+            // Column15
+            // 
+            this.Column15.FillWeight = 55.35503F;
+            this.Column15.HeaderText = "Đơn vị tính";
+            this.Column15.Name = "Column15";
+            this.Column15.Width = 78;
+            // 
+            // Column16
+            // 
+            this.Column16.FillWeight = 51.53455F;
+            this.Column16.HeaderText = "Chất liệu";
+            this.Column16.Name = "Column16";
+            this.Column16.Width = 68;
+            // 
+            // Column17
+            // 
+            this.Column17.HeaderText = "Tình trạng";
+            this.Column17.Name = "Column17";
+            this.Column17.Width = 74;
+            // 
             // groupBoxCTHD
             // 
             this.groupBoxCTHD.BackColor = System.Drawing.Color.White;
@@ -486,7 +592,15 @@ namespace HKD_ClothesShop.Forms
             this.groupBoxCTHD.TabIndex = 7;
             this.groupBoxCTHD.TabStop = false;
             this.groupBoxCTHD.Text = "Thông tin hóa đơn";
-            this.groupBoxCTHD.Enter += new System.EventHandler(this.buttonAn_Click);
+            // 
+            // labelThanhToan
+            // 
+            this.labelThanhToan.AutoSize = true;
+            this.labelThanhToan.Location = new System.Drawing.Point(193, 478);
+            this.labelThanhToan.Name = "labelThanhToan";
+            this.labelThanhToan.Size = new System.Drawing.Size(164, 19);
+            this.labelThanhToan.TabIndex = 45;
+            this.labelThanhToan.Text = "Tình trạng thanh toán";
             // 
             // button1
             // 
@@ -649,121 +763,6 @@ namespace HKD_ClothesShop.Forms
             this.label11.Size = new System.Drawing.Size(91, 19);
             this.label11.TabIndex = 7;
             this.label11.Text = "Số hóa đơn";
-            // 
-            // Column9
-            // 
-            this.Column9.FillWeight = 183.727F;
-            this.Column9.HeaderText = "Ảnh sản phẩm mua";
-            this.Column9.Name = "Column9";
-            this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column9.Width = 95;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.FillWeight = 163.0598F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Số hóa đơn";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 81;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.FillWeight = 145.1049F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Tên nhân viên";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 93;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.FillWeight = 129.5062F;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Tên khách hàng";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 102;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.FillWeight = 115.9546F;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Tên sản phẩm";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 92;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.FillWeight = 104.1814F;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Số lượng mua";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 89;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.FillWeight = 93.95325F;
-            this.dataGridViewTextBoxColumn6.HeaderText = "Giá bán";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 64;
-            // 
-            // Column10
-            // 
-            this.Column10.FillWeight = 85.06741F;
-            this.Column10.HeaderText = "Thành tiền";
-            this.Column10.Name = "Column10";
-            this.Column10.Width = 77;
-            // 
-            // Column11
-            // 
-            this.Column11.FillWeight = 77.34766F;
-            this.Column11.HeaderText = "Mã nhân viên";
-            this.Column11.Name = "Column11";
-            this.Column11.Width = 89;
-            // 
-            // Column12
-            // 
-            this.Column12.FillWeight = 70.64101F;
-            this.Column12.HeaderText = "Mã khách hàng";
-            this.Column12.Name = "Column12";
-            this.Column12.Width = 98;
-            // 
-            // Column13
-            // 
-            this.Column13.FillWeight = 64.8145F;
-            this.Column13.HeaderText = "Mã sản phẩm";
-            this.Column13.Name = "Column13";
-            this.Column13.Width = 88;
-            // 
-            // Column14
-            // 
-            this.Column14.FillWeight = 59.75262F;
-            this.Column14.HeaderText = "Đơn giá gốc";
-            this.Column14.Name = "Column14";
-            this.Column14.Width = 67;
-            // 
-            // Column15
-            // 
-            this.Column15.FillWeight = 55.35503F;
-            this.Column15.HeaderText = "Đơn vị tính";
-            this.Column15.Name = "Column15";
-            this.Column15.Width = 78;
-            // 
-            // Column16
-            // 
-            this.Column16.FillWeight = 51.53455F;
-            this.Column16.HeaderText = "Chất liệu";
-            this.Column16.Name = "Column16";
-            this.Column16.Width = 68;
-            // 
-            // Column17
-            // 
-            this.Column17.HeaderText = "Tình trạng";
-            this.Column17.Name = "Column17";
-            this.Column17.Width = 74;
-            // 
-            // labelThanhToan
-            // 
-            this.labelThanhToan.AutoSize = true;
-            this.labelThanhToan.Location = new System.Drawing.Point(193, 478);
-            this.labelThanhToan.Name = "labelThanhToan";
-            this.labelThanhToan.Size = new System.Drawing.Size(164, 19);
-            this.labelThanhToan.TabIndex = 45;
-            this.labelThanhToan.Text = "Tình trạng thanh toán";
             // 
             // frmTaoHoaDon
             // 

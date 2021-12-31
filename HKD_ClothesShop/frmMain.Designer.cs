@@ -145,6 +145,7 @@ namespace HKD_ClothesShop
             // 
             // btnNhanVien
             // 
+            this.btnNhanVien.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNhanVien.FlatAppearance.BorderSize = 0;
             this.btnNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -206,6 +207,7 @@ namespace HKD_ClothesShop
             // 
             // btnReport
             // 
+            this.btnReport.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnReport.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReport.FlatAppearance.BorderSize = 0;
             this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -270,6 +272,7 @@ namespace HKD_ClothesShop
             // 
             // btnSanPham
             // 
+            this.btnSanPham.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSanPham.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSanPham.FlatAppearance.BorderSize = 0;
             this.btnSanPham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -289,6 +292,7 @@ namespace HKD_ClothesShop
             // 
             // btnThuongHieu
             // 
+            this.btnThuongHieu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThuongHieu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnThuongHieu.FlatAppearance.BorderSize = 0;
             this.btnThuongHieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -355,6 +359,7 @@ namespace HKD_ClothesShop
             // 
             // btnKhach
             // 
+            this.btnKhach.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKhach.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnKhach.FlatAppearance.BorderSize = 0;
             this.btnKhach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -419,6 +424,7 @@ namespace HKD_ClothesShop
             // 
             // btnKho
             // 
+            this.btnKho.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKho.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnKho.FlatAppearance.BorderSize = 0;
             this.btnKho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -483,6 +489,7 @@ namespace HKD_ClothesShop
             // 
             // btnHoaDon
             // 
+            this.btnHoaDon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHoaDon.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHoaDon.FlatAppearance.BorderSize = 0;
             this.btnHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -538,6 +545,7 @@ namespace HKD_ClothesShop
             // 
             this.btnMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMenu.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMenu.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
             this.btnMenu.FlatAppearance.BorderSize = 2;
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -559,6 +567,7 @@ namespace HKD_ClothesShop
             // 
             this.btnHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHome.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHome.FlatAppearance.BorderColor = System.Drawing.Color.Aqua;
             this.btnHome.FlatAppearance.BorderSize = 2;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -580,6 +589,7 @@ namespace HKD_ClothesShop
             // 
             this.btnDangXuat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDangXuat.BackColor = System.Drawing.Color.Red;
+            this.btnDangXuat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangXuat.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangXuat.ForeColor = System.Drawing.Color.White;
@@ -598,6 +608,7 @@ namespace HKD_ClothesShop
             // 
             this.btnSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSettings.BackColor = System.Drawing.Color.Honeydew;
+            this.btnSettings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSettings.FlatAppearance.BorderColor = System.Drawing.Color.Fuchsia;
             this.btnSettings.FlatAppearance.BorderSize = 2;
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -618,6 +629,7 @@ namespace HKD_ClothesShop
             // 
             this.btnTaiKhoan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTaiKhoan.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnTaiKhoan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTaiKhoan.FlatAppearance.BorderColor = System.Drawing.Color.DarkViolet;
             this.btnTaiKhoan.FlatAppearance.BorderSize = 2;
             this.btnTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

@@ -128,5 +128,40 @@ namespace HKD_ClothesShop.Forms
         {
             openChildForm(new frmTaiChinh());
         }
+
+        private void panelUpdateTTSanPham_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmNhapHang());
+        }
+
+        private void panelDoanhThu_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmThongKeBaoCao());
+        }
+
+        private void panelTimSanPham_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmNhapHang());
+        }
+
+        private void panelTimNhanVien_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmNhanVienShop());
+        }
+
+        private void panelTimKiemKH_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmDSKhachHang());
+        }
+
+        private void panelIntroduce_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelGuide_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

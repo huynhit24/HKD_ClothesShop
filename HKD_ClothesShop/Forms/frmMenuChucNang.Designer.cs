@@ -182,6 +182,7 @@ namespace HKD_ClothesShop.Forms
             this.panelDangXuatTK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.panelDangXuatTK.Controls.Add(this.label24);
             this.panelDangXuatTK.Controls.Add(this.pictureBox23);
+            this.panelDangXuatTK.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelDangXuatTK.ForeColor = System.Drawing.Color.White;
             this.panelDangXuatTK.Location = new System.Drawing.Point(6, 352);
             this.panelDangXuatTK.Name = "panelDangXuatTK";
@@ -213,6 +214,7 @@ namespace HKD_ClothesShop.Forms
             this.panelThayDoiQuyen.BackColor = System.Drawing.Color.Aqua;
             this.panelThayDoiQuyen.Controls.Add(this.label3);
             this.panelThayDoiQuyen.Controls.Add(this.pictureBox3);
+            this.panelThayDoiQuyen.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelThayDoiQuyen.ForeColor = System.Drawing.Color.White;
             this.panelThayDoiQuyen.Location = new System.Drawing.Point(6, 251);
             this.panelThayDoiQuyen.Name = "panelThayDoiQuyen";
@@ -244,6 +246,7 @@ namespace HKD_ClothesShop.Forms
             this.panelTaoMoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.panelTaoMoi.Controls.Add(this.label2);
             this.panelTaoMoi.Controls.Add(this.pictureBox2);
+            this.panelTaoMoi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelTaoMoi.ForeColor = System.Drawing.Color.White;
             this.panelTaoMoi.Location = new System.Drawing.Point(6, 145);
             this.panelTaoMoi.Name = "panelTaoMoi";
@@ -275,6 +278,7 @@ namespace HKD_ClothesShop.Forms
             this.panelThayDoiMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.panelThayDoiMatKhau.Controls.Add(this.label1);
             this.panelThayDoiMatKhau.Controls.Add(this.pictureBox1);
+            this.panelThayDoiMatKhau.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelThayDoiMatKhau.ForeColor = System.Drawing.Color.White;
             this.panelThayDoiMatKhau.Location = new System.Drawing.Point(6, 43);
             this.panelThayDoiMatKhau.Name = "panelThayDoiMatKhau";
@@ -354,6 +358,7 @@ namespace HKD_ClothesShop.Forms
             this.panelUpdateGiaBan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.panelUpdateGiaBan.Controls.Add(this.label6);
             this.panelUpdateGiaBan.Controls.Add(this.pictureBox6);
+            this.panelUpdateGiaBan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelUpdateGiaBan.ForeColor = System.Drawing.Color.White;
             this.panelUpdateGiaBan.Location = new System.Drawing.Point(6, 251);
             this.panelUpdateGiaBan.Name = "panelUpdateGiaBan";
@@ -416,6 +421,7 @@ namespace HKD_ClothesShop.Forms
             this.panelLapHDBanHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.panelLapHDBanHang.Controls.Add(this.label4);
             this.panelLapHDBanHang.Controls.Add(this.pictureBox4);
+            this.panelLapHDBanHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelLapHDBanHang.ForeColor = System.Drawing.Color.White;
             this.panelLapHDBanHang.Location = new System.Drawing.Point(6, 43);
             this.panelLapHDBanHang.Name = "panelLapHDBanHang";
@@ -525,6 +531,7 @@ namespace HKD_ClothesShop.Forms
             this.panelLapPhieuNhapHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(255)))), ((int)(((byte)(51)))));
             this.panelLapPhieuNhapHang.Controls.Add(this.label8);
             this.panelLapPhieuNhapHang.Controls.Add(this.pictureBox8);
+            this.panelLapPhieuNhapHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelLapPhieuNhapHang.ForeColor = System.Drawing.Color.White;
             this.panelLapPhieuNhapHang.Location = new System.Drawing.Point(6, 43);
             this.panelLapPhieuNhapHang.Name = "panelLapPhieuNhapHang";
@@ -650,11 +657,13 @@ namespace HKD_ClothesShop.Forms
             this.panelTimNhanVien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.panelTimNhanVien.Controls.Add(this.label16);
             this.panelTimNhanVien.Controls.Add(this.pictureBox16);
+            this.panelTimNhanVien.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelTimNhanVien.ForeColor = System.Drawing.Color.White;
             this.panelTimNhanVien.Location = new System.Drawing.Point(6, 370);
             this.panelTimNhanVien.Name = "panelTimNhanVien";
             this.panelTimNhanVien.Size = new System.Drawing.Size(159, 84);
             this.panelTimNhanVien.TabIndex = 8;
+            this.panelTimNhanVien.Click += new System.EventHandler(this.panelTimNhanVien_Click);
             // 
             // label16
             // 
@@ -680,11 +689,13 @@ namespace HKD_ClothesShop.Forms
             this.panelTimSanPham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.panelTimSanPham.Controls.Add(this.label15);
             this.panelTimSanPham.Controls.Add(this.pictureBox15);
+            this.panelTimSanPham.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelTimSanPham.ForeColor = System.Drawing.Color.White;
             this.panelTimSanPham.Location = new System.Drawing.Point(6, 268);
             this.panelTimSanPham.Name = "panelTimSanPham";
             this.panelTimSanPham.Size = new System.Drawing.Size(159, 84);
             this.panelTimSanPham.TabIndex = 7;
+            this.panelTimSanPham.Click += new System.EventHandler(this.panelTimSanPham_Click);
             // 
             // label15
             // 
@@ -710,11 +721,13 @@ namespace HKD_ClothesShop.Forms
             this.panelDoanhThu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(199)))), ((int)(((byte)(0)))));
             this.panelDoanhThu.Controls.Add(this.label14);
             this.panelDoanhThu.Controls.Add(this.pictureBox14);
+            this.panelDoanhThu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelDoanhThu.ForeColor = System.Drawing.Color.White;
             this.panelDoanhThu.Location = new System.Drawing.Point(6, 166);
             this.panelDoanhThu.Name = "panelDoanhThu";
             this.panelDoanhThu.Size = new System.Drawing.Size(159, 84);
             this.panelDoanhThu.TabIndex = 6;
+            this.panelDoanhThu.Click += new System.EventHandler(this.panelDoanhThu_Click);
             // 
             // label14
             // 
@@ -741,11 +754,13 @@ namespace HKD_ClothesShop.Forms
             this.panelHangTonKho.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.panelHangTonKho.Controls.Add(this.label13);
             this.panelHangTonKho.Controls.Add(this.pictureBox13);
+            this.panelHangTonKho.Enabled = false;
             this.panelHangTonKho.ForeColor = System.Drawing.Color.White;
             this.panelHangTonKho.Location = new System.Drawing.Point(6, 64);
             this.panelHangTonKho.Name = "panelHangTonKho";
             this.panelHangTonKho.Size = new System.Drawing.Size(159, 84);
             this.panelHangTonKho.TabIndex = 5;
+            this.panelHangTonKho.Visible = false;
             // 
             // label13
             // 
@@ -772,11 +787,13 @@ namespace HKD_ClothesShop.Forms
             this.panelIntroduce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.panelIntroduce.Controls.Add(this.label17);
             this.panelIntroduce.Controls.Add(this.pictureBox17);
+            this.panelIntroduce.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelIntroduce.ForeColor = System.Drawing.Color.White;
             this.panelIntroduce.Location = new System.Drawing.Point(803, 3);
             this.panelIntroduce.Name = "panelIntroduce";
             this.panelIntroduce.Size = new System.Drawing.Size(182, 60);
             this.panelIntroduce.TabIndex = 9;
+            this.panelIntroduce.Click += new System.EventHandler(this.panelIntroduce_Click);
             // 
             // label17
             // 
@@ -803,11 +820,13 @@ namespace HKD_ClothesShop.Forms
             this.panelGuide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.panelGuide.Controls.Add(this.label18);
             this.panelGuide.Controls.Add(this.pictureBox18);
+            this.panelGuide.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelGuide.ForeColor = System.Drawing.Color.White;
             this.panelGuide.Location = new System.Drawing.Point(999, 3);
             this.panelGuide.Name = "panelGuide";
             this.panelGuide.Size = new System.Drawing.Size(182, 60);
             this.panelGuide.TabIndex = 10;
+            this.panelGuide.Click += new System.EventHandler(this.panelGuide_Click);
             // 
             // label18
             // 
@@ -850,11 +869,13 @@ namespace HKD_ClothesShop.Forms
             this.panelTimKiemKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.panelTimKiemKH.Controls.Add(this.label19);
             this.panelTimKiemKH.Controls.Add(this.pictureBox19);
+            this.panelTimKiemKH.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelTimKiemKH.ForeColor = System.Drawing.Color.White;
             this.panelTimKiemKH.Location = new System.Drawing.Point(6, 370);
             this.panelTimKiemKH.Name = "panelTimKiemKH";
             this.panelTimKiemKH.Size = new System.Drawing.Size(159, 84);
             this.panelTimKiemKH.TabIndex = 8;
+            this.panelTimKiemKH.Click += new System.EventHandler(this.panelTimKiemKH_Click);
             // 
             // label19
             // 
@@ -880,11 +901,13 @@ namespace HKD_ClothesShop.Forms
             this.panelUpdateTTSanPham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.panelUpdateTTSanPham.Controls.Add(this.label20);
             this.panelUpdateTTSanPham.Controls.Add(this.pictureBox20);
+            this.panelUpdateTTSanPham.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelUpdateTTSanPham.ForeColor = System.Drawing.Color.White;
             this.panelUpdateTTSanPham.Location = new System.Drawing.Point(6, 268);
             this.panelUpdateTTSanPham.Name = "panelUpdateTTSanPham";
             this.panelUpdateTTSanPham.Size = new System.Drawing.Size(159, 84);
             this.panelUpdateTTSanPham.TabIndex = 7;
+            this.panelUpdateTTSanPham.Click += new System.EventHandler(this.panelUpdateTTSanPham_Click);
             // 
             // label20
             // 
@@ -910,6 +933,7 @@ namespace HKD_ClothesShop.Forms
             this.panelXemDSKhachHang.BackColor = System.Drawing.Color.Aquamarine;
             this.panelXemDSKhachHang.Controls.Add(this.label21);
             this.panelXemDSKhachHang.Controls.Add(this.pictureBox21);
+            this.panelXemDSKhachHang.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelXemDSKhachHang.ForeColor = System.Drawing.Color.White;
             this.panelXemDSKhachHang.Location = new System.Drawing.Point(6, 166);
             this.panelXemDSKhachHang.Name = "panelXemDSKhachHang";
@@ -942,6 +966,7 @@ namespace HKD_ClothesShop.Forms
             this.panelXemDSSanPham.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(132)))), ((int)(((byte)(255)))));
             this.panelXemDSSanPham.Controls.Add(this.label22);
             this.panelXemDSSanPham.Controls.Add(this.pictureBox22);
+            this.panelXemDSSanPham.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelXemDSSanPham.ForeColor = System.Drawing.Color.White;
             this.panelXemDSSanPham.Location = new System.Drawing.Point(6, 64);
             this.panelXemDSSanPham.Name = "panelXemDSSanPham";
