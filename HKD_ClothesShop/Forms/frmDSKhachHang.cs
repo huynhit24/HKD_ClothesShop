@@ -20,6 +20,7 @@ namespace HKD_ClothesShop.Forms
         }
 
         #region Binding dữ liệu lên các control + datagridview
+
         private void BindGrid(List<KhachHang> listKhachHang)
         {
             dgvKhachHang.Rows.Clear();

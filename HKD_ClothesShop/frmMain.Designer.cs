@@ -671,6 +671,7 @@ namespace HKD_ClothesShop
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HKD Clothes Shop";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.panelShopImage.ResumeLayout(false);
             this.panelSpSubmenu.ResumeLayout(false);
             this.panelKhachSubmenu.ResumeLayout(false);

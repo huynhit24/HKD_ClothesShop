@@ -293,5 +293,17 @@ namespace HKD_ClothesShop
         {
 
         }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            switch (ThongTinDangNhap.Quyenhan)
+            {
+                case "ad":
+                    break;
+                case "bh":
+                    btnTaiKhoan.Enabled = false;
+                    break;
+            }
+        }
     }
 }
