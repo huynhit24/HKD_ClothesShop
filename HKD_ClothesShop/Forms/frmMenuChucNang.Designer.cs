@@ -1036,6 +1036,7 @@ namespace HKD_ClothesShop.Forms
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMenuChucNang";
             this.Text = "frmMenuChucNang";
+            this.Load += new System.EventHandler(this.frmMenuChucNang_Load);
             this.groupQLND.ResumeLayout(false);
             this.panelDangXuatTK.ResumeLayout(false);
             this.panelDangXuatTK.PerformLayout();

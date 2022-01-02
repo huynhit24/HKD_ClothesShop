@@ -31,8 +31,11 @@ namespace HKD_ClothesShop.Forms
         {
             this.btnClose = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbVaiTro = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.cbStatus = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,12 +46,7 @@ namespace HKD_ClothesShop.Forms
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtHoTen = new System.Windows.Forms.TextBox();
-            this.txtUsername = new System.Windows.Forms.TextBox();
             this.dgvTaiKhoan = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnHidden = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cmbVaiTro = new System.Windows.Forms.ComboBox();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +54,8 @@ namespace HKD_ClothesShop.Forms
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnHidden = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).BeginInit();
             this.SuspendLayout();
@@ -101,6 +101,23 @@ namespace HKD_ClothesShop.Forms
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập thông tin tài khoản";
             // 
+            // cmbVaiTro
+            // 
+            this.cmbVaiTro.FormattingEnabled = true;
+            this.cmbVaiTro.Location = new System.Drawing.Point(154, 232);
+            this.cmbVaiTro.Name = "cmbVaiTro";
+            this.cmbVaiTro.Size = new System.Drawing.Size(203, 27);
+            this.cmbVaiTro.TabIndex = 23;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(18, 232);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(56, 19);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "Vai trò";
+            // 
             // btnUpdate
             // 
             this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
@@ -130,6 +147,13 @@ namespace HKD_ClothesShop.Forms
             this.btnCreate.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnCreate.UseVisualStyleBackColor = true;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Location = new System.Drawing.Point(154, 65);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(203, 27);
+            this.txtUsername.TabIndex = 0;
             // 
             // cbStatus
             // 
@@ -215,13 +239,6 @@ namespace HKD_ClothesShop.Forms
             this.txtHoTen.Size = new System.Drawing.Size(203, 27);
             this.txtHoTen.TabIndex = 1;
             // 
-            // txtUsername
-            // 
-            this.txtUsername.Location = new System.Drawing.Point(154, 65);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(203, 27);
-            this.txtUsername.TabIndex = 0;
-            // 
             // dgvTaiKhoan
             // 
             this.dgvTaiKhoan.AllowUserToAddRows = false;
@@ -248,49 +265,6 @@ namespace HKD_ClothesShop.Forms
             this.dgvTaiKhoan.Size = new System.Drawing.Size(803, 471);
             this.dgvTaiKhoan.TabIndex = 6;
             this.dgvTaiKhoan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTaiKhoan_CellClick);
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label6.Location = new System.Drawing.Point(447, 15);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(347, 33);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "DANH SÁCH KHÁCH HÀNG";
-            // 
-            // btnHidden
-            // 
-            this.btnHidden.BackColor = System.Drawing.Color.GreenYellow;
-            this.btnHidden.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHidden.ForeColor = System.Drawing.Color.Red;
-            this.btnHidden.Location = new System.Drawing.Point(394, 117);
-            this.btnHidden.Name = "btnHidden";
-            this.btnHidden.Size = new System.Drawing.Size(83, 28);
-            this.btnHidden.TabIndex = 10;
-            this.btnHidden.Text = "Ẩn";
-            this.btnHidden.UseVisualStyleBackColor = false;
-            this.btnHidden.Click += new System.EventHandler(this.btnHidden_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(18, 232);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 19);
-            this.label7.TabIndex = 22;
-            this.label7.Text = "Vai trò";
-            // 
-            // cmbVaiTro
-            // 
-            this.cmbVaiTro.FormattingEnabled = true;
-            this.cmbVaiTro.Location = new System.Drawing.Point(154, 232);
-            this.cmbVaiTro.Name = "cmbVaiTro";
-            this.cmbVaiTro.Size = new System.Drawing.Size(203, 27);
-            this.cmbVaiTro.TabIndex = 23;
             // 
             // Column2
             // 
@@ -326,6 +300,32 @@ namespace HKD_ClothesShop.Forms
             // 
             this.Column7.HeaderText = "Trạng thái";
             this.Column7.Name = "Column7";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label6.Location = new System.Drawing.Point(447, 15);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(314, 33);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "DANH SÁCH TÀI KHOẢN";
+            // 
+            // btnHidden
+            // 
+            this.btnHidden.BackColor = System.Drawing.Color.GreenYellow;
+            this.btnHidden.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHidden.ForeColor = System.Drawing.Color.Red;
+            this.btnHidden.Location = new System.Drawing.Point(394, 117);
+            this.btnHidden.Name = "btnHidden";
+            this.btnHidden.Size = new System.Drawing.Size(83, 28);
+            this.btnHidden.TabIndex = 10;
+            this.btnHidden.Text = "Ẩn";
+            this.btnHidden.UseVisualStyleBackColor = false;
+            this.btnHidden.Click += new System.EventHandler(this.btnHidden_Click);
             // 
             // frmTaiKhoan
             // 

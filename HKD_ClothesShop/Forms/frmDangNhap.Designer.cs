@@ -31,7 +31,6 @@ namespace HKD_ClothesShop.Forms
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDangNhap));
             this.btnDangNhap = new System.Windows.Forms.Button();
-            this.btnDangKy = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
@@ -57,28 +56,13 @@ namespace HKD_ClothesShop.Forms
             this.btnDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangNhap.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.ForeColor = System.Drawing.Color.Red;
-            this.btnDangNhap.Location = new System.Drawing.Point(806, 475);
+            this.btnDangNhap.Location = new System.Drawing.Point(889, 479);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(123, 42);
             this.btnDangNhap.TabIndex = 1;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.UseVisualStyleBackColor = false;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
-            // 
-            // btnDangKy
-            // 
-            this.btnDangKy.BackColor = System.Drawing.Color.White;
-            this.btnDangKy.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btnDangKy.FlatAppearance.BorderSize = 4;
-            this.btnDangKy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangKy.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangKy.ForeColor = System.Drawing.Color.Black;
-            this.btnDangKy.Location = new System.Drawing.Point(962, 475);
-            this.btnDangKy.Name = "btnDangKy";
-            this.btnDangKy.Size = new System.Drawing.Size(123, 42);
-            this.btnDangKy.TabIndex = 2;
-            this.btnDangKy.Text = "Đăng ký";
-            this.btnDangKy.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -211,7 +195,6 @@ namespace HKD_ClothesShop.Forms
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnDangKy);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -233,7 +216,6 @@ namespace HKD_ClothesShop.Forms
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnDangNhap;
-        private System.Windows.Forms.Button btnDangKy;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

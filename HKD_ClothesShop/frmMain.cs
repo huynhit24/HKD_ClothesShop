@@ -251,6 +251,8 @@ namespace HKD_ClothesShop
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
             hideSubmenu();
+            this.Close();
+            new frmDangNhap().Show();
             //code đăng xuất
         }
 
@@ -299,8 +301,10 @@ namespace HKD_ClothesShop
             switch (ThongTinDangNhap.Quyenhan)
             {
                 case "ad":
+                    //ThongTinDangNhap.flag = false;
                     break;
                 case "bh":
+                    //ThongTinDangNhap.flag = false;
                     btnTaiKhoan.Enabled = false;
                     break;
             }

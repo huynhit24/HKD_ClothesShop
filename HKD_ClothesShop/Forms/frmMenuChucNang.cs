@@ -12,6 +12,7 @@ namespace HKD_ClothesShop.Forms
 {
     public partial class frmMenuChucNang : Form
     {
+        public static bool flag = false; // cờ đăng xuất
         public frmMenuChucNang()
         {
             InitializeComponent();
@@ -80,8 +81,10 @@ namespace HKD_ClothesShop.Forms
 
         private void panelDangXuatTK_Click(object sender, EventArgs e)
         {
-            this.Close();
-            openChildForm(new frmDangNhap());
+            //this.Close();
+            //flag = true;
+            this.ParentForm.Close();
+            new frmDangNhap().Show();
         }
 
         private void panelLapHDBanHang_Click(object sender, EventArgs e)
@@ -162,6 +165,25 @@ namespace HKD_ClothesShop.Forms
         private void panelGuide_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmMenuChucNang_Load(object sender, EventArgs e)
+        {
+            switch (ThongTinDangNhap.Quyenhan)
+            {
+                case "ad":
+                    //ThongTinDangNhap.flag = false;
+                    break;
+                case "bh":
+                    //ThongTinDangNhap.flag = false;
+                    panelThayDoiMatKhau.Enabled = false;
+                    panelTaoMoi.Enabled = false;
+                    panelThayDoiQuyen.Enabled = false;
+                    panelThayDoiMatKhau.BackColor = Color.DarkGray;
+                    panelTaoMoi.BackColor = Color.DarkGray;
+                    panelThayDoiQuyen.BackColor = Color.DarkGray;
+                    break;
+            }
         }
     }
 }

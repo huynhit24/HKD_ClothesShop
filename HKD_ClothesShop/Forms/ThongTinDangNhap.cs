@@ -8,6 +8,7 @@ namespace HKD_ClothesShop.Forms
 {
     class ThongTinDangNhap
     {
+        //public static bool flag { get; set; }
         public static string Username { get; set; }
         public static string Password { get; set; }
         public static string Quyenhan { get; set; }
