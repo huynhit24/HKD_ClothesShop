@@ -15,7 +15,7 @@ namespace HKD_ClothesShop.Forms
 {
     public partial class frmDangNhap : Form
     {
-
+        // dùng để chứa username, password để xác minh quyền sử dụng
         string username;
         string password;
         string quyenhan;
@@ -37,7 +37,8 @@ namespace HKD_ClothesShop.Forms
 
         private void lbDoiPass_Click(object sender, EventArgs e)
         {
-            new frmDoiMatKhau().ShowDialog();
+            this.Hide();
+            new frmDoiMatKhau().Show();
         }
 
         public bool KiemTraDangNhap(string TenDangNhap, string MatKhau)
@@ -183,10 +184,6 @@ namespace HKD_ClothesShop.Forms
                 return false;
             }
         }
-
-        
-
-        
 
         private bool KiemTra_Limited_Pass()
         {

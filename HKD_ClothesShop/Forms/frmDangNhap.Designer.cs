@@ -29,6 +29,7 @@ namespace HKD_ClothesShop.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDangNhap));
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.btnDangKy = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -108,7 +109,6 @@ namespace HKD_ClothesShop.Forms
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(278, 32);
             this.txtUsername.TabIndex = 6;
-            this.txtUsername.Text = "Username";
             // 
             // txtPassword
             // 
@@ -120,7 +120,6 @@ namespace HKD_ClothesShop.Forms
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(278, 32);
             this.txtPassword.TabIndex = 7;
-            this.txtPassword.Text = "123456";
             // 
             // label3
             // 
@@ -216,6 +215,7 @@ namespace HKD_ClothesShop.Forms
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form18";
