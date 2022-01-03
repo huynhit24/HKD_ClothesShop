@@ -510,5 +510,15 @@ namespace HKD_ClothesShop.Forms
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            Xoatt();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

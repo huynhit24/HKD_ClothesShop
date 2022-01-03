@@ -343,5 +343,15 @@ namespace HKD_ClothesShop.Forms
                 btnHidden.ForeColor = Color.Red;
             }
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            Xoatt();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

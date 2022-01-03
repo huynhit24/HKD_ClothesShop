@@ -477,5 +477,27 @@ namespace HKD_ClothesShop.Forms
                 btnHidden.ForeColor = Color.Red;
             }
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            comboBoxSize.Text = "Chọn size";
+            comboBoxColor.Text = "Chọn màu";
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void buttonReset_Click(object sender, EventArgs e)
+        {
+            comboBoxSize.Text = "Chọn size";
+            comboBoxColor.Text = "Chọn màu";
+        }
+
+        private void buttonThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

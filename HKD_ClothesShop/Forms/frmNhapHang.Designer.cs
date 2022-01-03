@@ -70,6 +70,8 @@ namespace HKD_ClothesShop.Forms
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnHidden = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAnhSP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
@@ -77,6 +79,8 @@ namespace HKD_ClothesShop.Forms
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnThoat);
+            this.groupBox1.Controls.Add(this.btnReset);
             this.groupBox1.Controls.Add(this.lbMTH);
             this.groupBox1.Controls.Add(this.lbLSP);
             this.groupBox1.Controls.Add(this.cmbDVT);
@@ -105,7 +109,7 @@ namespace HKD_ClothesShop.Forms
             this.groupBox1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 54);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(374, 871);
+            this.groupBox1.Size = new System.Drawing.Size(374, 926);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập thông tin sản phẩm";
@@ -200,9 +204,9 @@ namespace HKD_ClothesShop.Forms
             this.btnSua.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Image = global::HKD_ClothesShop.Properties.Resources.update;
-            this.btnSua.Location = new System.Drawing.Point(266, 805);
+            this.btnSua.Location = new System.Drawing.Point(243, 786);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(102, 54);
+            this.btnSua.Size = new System.Drawing.Size(125, 54);
             this.btnSua.TabIndex = 21;
             this.btnSua.Text = "Sửa";
             this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -217,9 +221,9 @@ namespace HKD_ClothesShop.Forms
             this.btnThem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Image = global::HKD_ClothesShop.Properties.Resources.create;
-            this.btnThem.Location = new System.Drawing.Point(145, 807);
+            this.btnThem.Location = new System.Drawing.Point(102, 784);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(102, 52);
+            this.btnThem.Size = new System.Drawing.Size(128, 52);
             this.btnThem.TabIndex = 20;
             this.btnThem.Text = "Thêm";
             this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -253,7 +257,7 @@ namespace HKD_ClothesShop.Forms
             // cbStatus
             // 
             this.cbStatus.AutoSize = true;
-            this.cbStatus.Location = new System.Drawing.Point(232, 761);
+            this.cbStatus.Location = new System.Drawing.Point(238, 751);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(136, 23);
             this.cbStatus.TabIndex = 16;
@@ -389,7 +393,7 @@ namespace HKD_ClothesShop.Forms
             this.dgvSanPham.GridColor = System.Drawing.Color.White;
             this.dgvSanPham.Location = new System.Drawing.Point(410, 108);
             this.dgvSanPham.Name = "dgvSanPham";
-            this.dgvSanPham.Size = new System.Drawing.Size(646, 3145);
+            this.dgvSanPham.Size = new System.Drawing.Size(629, 3491);
             this.dgvSanPham.TabIndex = 3;
             this.dgvSanPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSanPham_CellClick);
             // 
@@ -500,6 +504,44 @@ namespace HKD_ClothesShop.Forms
             this.label10.TabIndex = 12;
             this.label10.Text = "DANH SÁCH SẢN PHẨM";
             // 
+            // btnThoat
+            // 
+            this.btnThoat.BackColor = System.Drawing.Color.Red;
+            this.btnThoat.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnThoat.FlatAppearance.BorderSize = 3;
+            this.btnThoat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnThoat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThoat.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.ForeColor = System.Drawing.Color.White;
+            this.btnThoat.Image = global::HKD_ClothesShop.Properties.Resources.cancel;
+            this.btnThoat.Location = new System.Drawing.Point(241, 856);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(124, 58);
+            this.btnThoat.TabIndex = 64;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnReset.FlatAppearance.BorderSize = 3;
+            this.btnReset.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnReset.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReset.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.Image = global::HKD_ClothesShop.Properties.Resources.monitor;
+            this.btnReset.Location = new System.Drawing.Point(102, 856);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(124, 58);
+            this.btnReset.TabIndex = 63;
+            this.btnReset.Text = "Reset";
+            this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // frmNhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -568,5 +610,7 @@ namespace HKD_ClothesShop.Forms
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lbMTH;
         private System.Windows.Forms.Label lbLSP;
+        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Button btnReset;
     }
 }

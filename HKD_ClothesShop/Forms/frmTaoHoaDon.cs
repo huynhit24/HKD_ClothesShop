@@ -746,5 +746,25 @@ namespace HKD_ClothesShop.Forms
                 dgvCTHD.Dock = DockStyle.None;
             }
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            Xoatt();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void buttonThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void buttonReset_Click(object sender, EventArgs e)
+        {
+            Xoatt();
+        }
     }
 }
