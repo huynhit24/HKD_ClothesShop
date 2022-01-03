@@ -144,10 +144,10 @@ namespace HKD_ClothesShop.Forms
                     if (thuonghieu != null)
                     {
                         // kiểm tra dữ liệu lưu vào ở các Textbox
-                        bool isValidated = isValidateData();
+                        bool isValidated = isValidateDataUpdate();
                         if (isValidated)// dữ liệu được xác thực đúng thỏa database
                         {
-                            thuonghieu.MaThuongHieu = txtMTH.Text;
+                            //thuonghieu.MaThuongHieu = txtMTH.Text;
                             thuonghieu.TenThuongHieu = txtTenTH.Text;
                             thuonghieu.DienThoai = txtSDT.Text;
                             var hinhanh = (byte[])new ImageConverter().ConvertTo(picLogo.Image, typeof(byte[]));
@@ -190,6 +190,15 @@ namespace HKD_ClothesShop.Forms
         {
             return KiemTra_BlankEmpty() == true
                    && KiemTra_Limited_MTH() == true && KiemTra_ID_HopLe() == true
+                   && KiemTra_Limited_HoTen() == true && KiemTra_HoTen_HopLe() == true
+                   && KiemTra_Limited_DiaChi() == true && KiemTra_DiaChi_HopLe() == true
+                   && KiemTra_Limited_SDT() == true && KiemTra_SDT_HopLe() == true;
+        }
+
+        private bool isValidateDataUpdate()
+        {
+            return KiemTra_BlankEmpty() == true
+                   //&& KiemTra_Limited_MTH() == true && KiemTra_ID_HopLe() == true
                    && KiemTra_Limited_HoTen() == true && KiemTra_HoTen_HopLe() == true
                    && KiemTra_Limited_DiaChi() == true && KiemTra_DiaChi_HopLe() == true
                    && KiemTra_Limited_SDT() == true && KiemTra_SDT_HopLe() == true;

@@ -509,8 +509,8 @@ namespace HKD_ClothesShop.Forms
                         bool isValidated = isValidateDataCTHD();
                         if (isValidated)// dữ liệu được xác thực đúng thỏa database
                         {
-                            dacdiem.SoHoaDon = comboBoxSHD.Text;
-                            dacdiem.MaSanPham = comboBoxMSP.Text;
+                            //dacdiem.SoHoaDon = comboBoxSHD.Text;
+                            //dacdiem.MaSanPham = comboBoxMSP.Text;
                             dacdiem.SoLuongMua = Convert.ToInt32(txtSLMua.Text);
                             dacdiem.DonGiaBan = Convert.ToDecimal(labelDGB.Text);
                             /* dacdiem.TinhTrang = (cmbTinhTrang.Text.ToString() == "Đã thanh toán") ? "T" : (cmbTinhTrang.Text.ToString() == "Chưa thanh toán") ? "C" : "N";

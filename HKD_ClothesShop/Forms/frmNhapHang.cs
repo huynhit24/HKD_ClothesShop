@@ -176,10 +176,10 @@ namespace HKD_ClothesShop.Forms
                     if (sanpham != null)
                     {
                         // kiểm tra dữ liệu lưu vào ở các Textbox
-                        bool isValidated = isValidateData();
+                        bool isValidated = isValidateDataUpdate();
                         if (isValidated)// dữ liệu được xác thực đúng thỏa database
                         {
-                            sanpham.MaSanPham = txtMSP.Text;
+                            //sanpham.MaSanPham = txtMSP.Text;
                             sanpham.TenSanPham = txtTenSP.Text;
                             sanpham.MaLoaiSP = cmbLSP.SelectedItem.ToString();
                             sanpham.MaThuongHieu = cmbMTH.SelectedItem.ToString();
@@ -227,6 +227,16 @@ namespace HKD_ClothesShop.Forms
         {
             return KiemTra_BlankEmpty() == true
                    && KiemTra_Limited_MSP() == true && KiemTra_MSP_HopLe() == true
+                   && KiemTra_Limited_TenSP() == true && KiemTra_TenSP_HopLe() == true
+                   && KiemTra_Limited_DonGia() == true
+                   && KiemTra_DonGia_HopLe() == true && KiemTra_Limited_ChatLieu() == true
+                   && KiemTra_ChatLieu_HopLe() == true;
+        }
+
+        private bool isValidateDataUpdate()
+        {
+            return KiemTra_BlankEmpty() == true
+                   //&& KiemTra_Limited_MSP() == true && KiemTra_MSP_HopLe() == true
                    && KiemTra_Limited_TenSP() == true && KiemTra_TenSP_HopLe() == true
                    && KiemTra_Limited_DonGia() == true
                    && KiemTra_DonGia_HopLe() == true && KiemTra_Limited_ChatLieu() == true

@@ -161,10 +161,10 @@ namespace HKD_ClothesShop.Forms
                     if (nhanvien != null)
                     {
                         // kiểm tra dữ liệu lưu vào ở các Textbox
-                        bool isValidated = isValidateData();
+                        bool isValidated = isValidateDataUpdate();
                         if (isValidated)// dữ liệu được xác thực đúng thỏa database
                         {
-                            nhanvien.MaNhanVien = txtMNV.Text;
+                            //nhanvien.MaNhanVien = txtMNV.Text;
                             nhanvien.HoTen = txtHoTen.Text;
                             nhanvien.GioiTinh = (radNam.Checked == true /*&& radNu.Checked == false && radKhac.Checked == false*/) ? "M"
                                                 : (/*radNam.Checked == false &&*/ radNu.Checked == true /*&& radKhac.Checked == false*/) ? "F"
@@ -212,6 +212,16 @@ namespace HKD_ClothesShop.Forms
         {
             return KiemTra_BlankEmpty() == true
                    && KiemTra_Limited_MKH() == true && KiemTra_ID_HopLe() == true
+                   && KiemTra_Limited_HoTen() == true && KiemTra_HoTen_HopLe() == true
+                   && KiemTra_Limited_SDT() == true
+                   && KiemTra_SDT_HopLe() == true && KiemTra_Limited_Email() == true
+                   && KiemTra_Email_HopLe() == true;
+        }
+
+        private bool isValidateDataUpdate()
+        {
+            return KiemTra_BlankEmpty() == true
+                   //&& KiemTra_Limited_MKH() == true && KiemTra_ID_HopLe() == true
                    && KiemTra_Limited_HoTen() == true && KiemTra_HoTen_HopLe() == true
                    && KiemTra_Limited_SDT() == true
                    && KiemTra_SDT_HopLe() == true && KiemTra_Limited_Email() == true

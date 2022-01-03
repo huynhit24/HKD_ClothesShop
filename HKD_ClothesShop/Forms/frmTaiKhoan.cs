@@ -114,10 +114,11 @@ namespace HKD_ClothesShop.Forms
                         int index = dgvTaiKhoan.CurrentCell.RowIndex;
                         DataGridViewRow row = dgvTaiKhoan.Rows[index];
                         string temp = row.Cells[0].Value.ToString();
-                        var khachhang = db.ThongTinTaiKhoans.FirstOrDefault(p => p.TenDangNhap == txtUsername.Text && p.MatKhau == txtPassword.Text);
+                        string sha265 = getStringSHA256Hash(txtPassword.Text).ToLower();
+                        var khachhang = db.ThongTinTaiKhoans.FirstOrDefault(p => p.TenDangNhap == txtUsername.Text.Trim() && p.MatKhau == sha265.Substring(0,15));
                         if (khachhang == null) // chưa có khách hàng có mã này
                         {
-                            string sha265 = getStringSHA256Hash(txtPassword.Text).ToLower();
+                            
                             var kh = new ThongTinTaiKhoan()
                             {
                                 TenDangNhap = txtUsername.Text,
@@ -170,20 +171,24 @@ namespace HKD_ClothesShop.Forms
                     int index = dgvTaiKhoan.CurrentCell.RowIndex;
                     DataGridViewRow row = dgvTaiKhoan.Rows[index];
                     string temp = row.Cells[0].Value.ToString();
-                    var khachhang = db.ThongTinTaiKhoans.FirstOrDefault(p => p.TenDangNhap == txtUsername.Text && p.MatKhau == txtPassword.Text);
+                    string tempu = row.Cells[1].Value.ToString();
+                    string tempp = row.Cells[2].Value.ToString();
+                    //var khachhang = db.ThongTinTaiKhoans.FirstOrDefault(p => p.TenDangNhap == txtUsername.Text && p.MatKhau == txtPassword.Text);
+                    var khachhang = db.ThongTinTaiKhoans.FirstOrDefault(p => p.TenDangNhap == tempu && p.MatKhau == tempp);
+
                     //var khachhang = db.KhachHangs.FirstOrDefault(p => p.MaKhachHang == txtMKH.Text);
                     if (khachhang != null)
                     {
                         // kiểm tra dữ liệu lưu vào ở các Textbox
-                        bool isValidated = isValidateData();
+                        bool isValidated = isValidateDataUpdate();
                         if (isValidated)// dữ liệu được xác thực đúng thỏa database
                         {
-                            khachhang.TenDangNhap = txtUsername.Text;
+                            //khachhang.TenDangNhap = txtUsername.Text;
                             khachhang.HoTen = txtHoTen.Text;
                             /*khachhang.GioiTinh = (radNam.Checked == true *//*&& radNu.Checked == false && radKhac.Checked == false*//*) ? "M"
                                                 : (*//*radNam.Checked == false &&*//* radNu.Checked == true *//*&& radKhac.Checked == false*//*) ? "F"
                                                 : "O";*/
-                            khachhang.MatKhau = txtPassword.Text;
+                            //khachhang.MatKhau = txtPassword.Text;
                             khachhang.SDT = txtSDT.Text;
                             khachhang.Email = txtEmail.Text;
                             khachhang.VaiTroID = (cmbVaiTro.Text == "Admin") ? "ad" : "bh";
@@ -227,6 +232,17 @@ namespace HKD_ClothesShop.Forms
                    && KiemTra_Limited_HoTen() == true && KiemTra_HoTen_HopLe() == true
                    && KiemTra_Limited_Pass() == true
                    && KiemTra_Pass_HopLe() == true && KiemTra_Limited_SDT() == true
+                   && KiemTra_SDT_HopLe() == true && KiemTra_Limited_Email() == true
+                   && KiemTra_Email_HopLe() == true;
+        }
+
+        private bool isValidateDataUpdate()
+        {
+            return KiemTra_BlankEmpty() == true
+                   //&& KiemTra_Limited_Username() == true && KiemTra_Username_HopLe() == true
+                   && KiemTra_Limited_HoTen() == true && KiemTra_HoTen_HopLe() == true
+                   //&& KiemTra_Limited_Pass() == true && KiemTra_Pass_HopLe() == true 
+                   && KiemTra_Limited_SDT() == true
                    && KiemTra_SDT_HopLe() == true && KiemTra_Limited_Email() == true
                    && KiemTra_Email_HopLe() == true;
         }
@@ -437,7 +453,35 @@ namespace HKD_ClothesShop.Forms
 
         private void btnHidden_Click(object sender, EventArgs e)
         {
+            QLBanHangHKDEntities db = new QLBanHangHKDEntities();
+            List<ThongTinTaiKhoan> listAcc = db.ThongTinTaiKhoans.ToList();
+            if (btnHidden.Text == "Ẩn")
+            {
+                foreach (DataGridViewRow item in dgvTaiKhoan.Rows)
+                {
+                    if (item.DefaultCellStyle.BackColor == Color.Black)
+                    {
+                        item.Visible = false;
+                    }
+                }
+                btnHidden.Text = "Hiện";
+                btnHidden.BackColor = Color.Blue;
+                btnHidden.ForeColor = Color.Yellow;
+            }
+            else
+            {
 
+                foreach (DataGridViewRow item in dgvTaiKhoan.Rows)
+                {
+                    if (item.DefaultCellStyle.BackColor == Color.Black)
+                    {
+                        item.Visible = true;
+                    }
+                }
+                btnHidden.Text = "Ẩn";
+                btnHidden.BackColor = Color.GreenYellow;
+                btnHidden.ForeColor = Color.Red;
+            }
         }
 
         private void dgvTaiKhoan_CellClick(object sender, DataGridViewCellEventArgs e)

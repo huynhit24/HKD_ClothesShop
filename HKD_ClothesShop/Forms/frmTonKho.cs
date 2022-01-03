@@ -358,7 +358,7 @@ namespace HKD_ClothesShop.Forms
                         bool isValidated = isValidateDataCT();
                         if (isValidated)// dữ liệu được xác thực đúng thỏa database
                         {
-                            dacdiem.MaSanPham = cmbMaSP.Text;
+                            //dacdiem.MaSanPham = cmbMaSP.Text;
                             dacdiem.Size = cmbSize.Text;
                             dacdiem.Color = cmbColor.Text;
                             dacdiem.SoLuong = Convert.ToInt32(txtSLSP.Text);
