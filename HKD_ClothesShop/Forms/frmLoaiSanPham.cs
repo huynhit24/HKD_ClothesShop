@@ -90,7 +90,7 @@ namespace HKD_ClothesShop.Forms
                                     TenLoaiSP = txtTenLoai.Text,
                                     Status = (cbStatus.Checked == true) ? false : true
                                 };
-                                if (MessageBox.Show($"Bạn có chắc chắn muốn thêm {txtML.Text},{txtTenLoai.Text} này!", "YES/NO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                                if (MessageBox.Show($"Bạn có muốn lưu thêm loại sản phẩm này!", "Lưu/Hủy", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                                 {
                                     db.LoaiSanPhams.Add(lsp);
                                     db.SaveChanges();
@@ -149,7 +149,7 @@ namespace HKD_ClothesShop.Forms
                             loaisp.MaLoaiSP = txtML.Text;
                             loaisp.TenLoaiSP = txtTenLoai.Text;
                             loaisp.Status = (cbStatus.Checked == true) ? false : true;
-                            if (MessageBox.Show($"Bạn có chắc chắn muốn lưu cập nhật Loại SP {txtML.Text} có tên {txtTenLoai.Text} này!", "YES/NO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            if (MessageBox.Show($"Bạn có muốn lưu sửa loại sản phẩm này!", "Lưu/Hủy", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                             {
                                 db.SaveChanges();
                                 frmLoaiSanPham_Load(sender, e);

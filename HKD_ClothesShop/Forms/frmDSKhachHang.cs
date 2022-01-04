@@ -55,6 +55,7 @@ namespace HKD_ClothesShop.Forms
         {
             try
             {
+                
                 QLBanHangHKDEntities db = new QLBanHangHKDEntities();
                 List<KhachHang> listKhachHang = db.KhachHangs.ToList();
                 BindGrid(listKhachHang);
@@ -110,6 +111,7 @@ namespace HKD_ClothesShop.Forms
         }
         private void btnCreate_Click(object sender, EventArgs e)
         {
+            
             try
             {
                 // kiểm tra dữ liệu nhập vào ở các Textbox
@@ -136,7 +138,7 @@ namespace HKD_ClothesShop.Forms
                                 Email = txtEmail.Text,
                                 Status = (cbStatus.Checked == true) ? false : true
                             };
-                            if (MessageBox.Show($"Bạn có chắc chắn muốn thêm khách hàng {txtMKH.Text} có họ tên {txtHoTen.Text} này!", "YES/NO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            if (MessageBox.Show($"Bạn có muốn lưu thêm khách hàng này!", "Lưu/Hủy", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                             {
                                 db.KhachHangs.Add(kh);
                                 db.SaveChanges();
@@ -169,8 +171,43 @@ namespace HKD_ClothesShop.Forms
             }
         }
 
+        private void Tat()
+        {
+            groupBoxDSKH.Visible = false;
+        }
+
+        private void Mo()
+        {
+            groupBoxDSKH.Visible = true;
+        }
+
+        public bool flag = false;
+        private void delete()
+        {
+            try
+            {
+                using (var db = new QLBanHangHKDEntities())
+                {
+                    int index = dgvKhachHang.CurrentCell.RowIndex;
+                    DataGridViewRow row = dgvKhachHang.Rows[index];
+                    string temp = row.Cells[0].Value.ToString();
+                    var search = db.KhachHangs.SingleOrDefault(p => p.MaKhachHang == temp);
+                    if (search != null)
+                    {
+                        db.KhachHangs.Remove(search); //Remove trong Database QLSinhvienDB bảng Sinh viên
+                        db.SaveChanges();// lưu thay đổi
+                        flag = true;
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Đã xảy ra lỗi gì đó!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            //delete();
             try
             {
                 using (var db = new QLBanHangHKDEntities())
@@ -195,7 +232,7 @@ namespace HKD_ClothesShop.Forms
                             khachhang.SDT = txtSDT.Text;
                             khachhang.Email = txtEmail.Text;
                             khachhang.Status = (cbStatus.Checked == true) ? false : true;
-                            if (MessageBox.Show($"Bạn có chắc chắn muốn lưu cập nhật khách hàng {txtMKH.Text} có họ tên {txtHoTen.Text} này!", "YES/NO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            if (MessageBox.Show($"Bạn có muốn lưu sửa khách hàng này!", "Lưu/Hủy", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                             {
                                 db.SaveChanges();
                                 frmDSKhachHang_Load(sender, e);
