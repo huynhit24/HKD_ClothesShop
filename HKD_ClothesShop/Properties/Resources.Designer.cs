@@ -183,6 +183,16 @@ namespace HKD_ClothesShop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap exit {
+            get {
+                object obj = ResourceManager.GetObject("exit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap giay {
             get {
                 object obj = ResourceManager.GetObject("giay", resourceCulture);
@@ -376,6 +386,16 @@ namespace HKD_ClothesShop.Properties {
         internal static System.Drawing.Bitmap san_pham_ds {
             get {
                 object obj = ResourceManager.GetObject("san-pham-ds", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap save_file {
+            get {
+                object obj = ResourceManager.GetObject("save-file", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

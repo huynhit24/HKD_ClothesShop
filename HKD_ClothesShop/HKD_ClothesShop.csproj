@@ -488,6 +488,8 @@
     <None Include="Assets\diagram.png" />
     <None Include="Assets\tong-doanh-thu.png" />
     <None Include="Assets\monitor.png" />
+    <None Include="Assets\exit.png" />
+    <None Include="Assets\save-file.png" />
     <Content Include="Modal\Database.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Database.Context.cs</LastGenOutput>

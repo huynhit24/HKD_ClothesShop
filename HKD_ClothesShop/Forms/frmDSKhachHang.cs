@@ -59,7 +59,12 @@ namespace HKD_ClothesShop.Forms
                 QLBanHangHKDEntities db = new QLBanHangHKDEntities();
                 List<KhachHang> listKhachHang = db.KhachHangs.ToList();
                 BindGrid(listKhachHang);
+                Tat();
                 radNam.Checked = true;
+                buttonLuuT.Visible = false;
+                buttonHuyT.Visible = false;
+                buttonLuuS.Visible = false;
+                buttonHuyS.Visible = false;
             }
             catch (Exception ex)
             {
@@ -109,7 +114,7 @@ namespace HKD_ClothesShop.Forms
             txtEmail.Text = "";
             radNam.Checked = true;
         }
-        private void btnCreate_Click(object sender, EventArgs e)
+        private void btnLuuT_Click(object sender, EventArgs e)
         {
             
             try
@@ -145,10 +150,18 @@ namespace HKD_ClothesShop.Forms
                                 frmDSKhachHang_Load(sender, e);
                                 MessageBox.Show($"Thêm mới Khách hàng {txtHoTen.Text} thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 Xoatt();
+                                btnCreate.Enabled = true;
+                                btnUpdate.Enabled = true;
+                                btnUpdate.FlatAppearance.BorderColor = Color.Crimson;
+                                btnCreate.FlatAppearance.BorderColor = Color.Blue;
                             }
                             else
                             {
                                 Xoatt();
+                                btnCreate.Enabled = true;
+                                btnUpdate.Enabled = true;
+                                btnUpdate.FlatAppearance.BorderColor = Color.Crimson;
+                                btnCreate.FlatAppearance.BorderColor = Color.Blue;
                             }
                                 
                         }
@@ -173,12 +186,38 @@ namespace HKD_ClothesShop.Forms
 
         private void Tat()
         {
-            groupBoxDSKH.Visible = false;
+            labelMKH.Visible = false;
+            labelHoten.Visible = false;
+            labelDiachi.Visible = false;
+            labelSDT.Visible = false;
+            labelEmail.Visible = false;
+            txtMKH.Visible = false;
+            txtHoTen.Visible = false;
+            txtDiaChi.Visible = false;
+            txtSDT.Visible = false;
+            txtEmail.Visible = false;
+            radNam.Visible = false;
+            radNu.Visible = false;
+            radKhac.Visible = false;
+            cbStatus.Visible = false;
         }
 
         private void Mo()
         {
-            groupBoxDSKH.Visible = true;
+            labelMKH.Visible = true;
+            labelHoten.Visible = true;
+            labelDiachi.Visible = true;
+            labelSDT.Visible = true;
+            labelEmail.Visible = true;
+            txtMKH.Visible = true;
+            txtHoTen.Visible = true;
+            txtDiaChi.Visible = true;
+            txtSDT.Visible = true;
+            txtEmail.Visible = true;
+            radNam.Visible = true;
+            radNu.Visible = true;
+            radKhac.Visible = true;
+            cbStatus.Visible = true;
         }
 
         public bool flag = false;
@@ -205,7 +244,7 @@ namespace HKD_ClothesShop.Forms
                 MessageBox.Show(ex.Message, "Đã xảy ra lỗi gì đó!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void btnLuuS_Click(object sender, EventArgs e)
         {
             //delete();
             try
@@ -238,10 +277,18 @@ namespace HKD_ClothesShop.Forms
                                 frmDSKhachHang_Load(sender, e);
                                 MessageBox.Show($"Cập nhật thông tin Khách hàng {txtHoTen.Text} thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 Xoatt();
+                                btnCreate.Enabled = true;
+                                btnUpdate.Enabled = true;
+                                btnUpdate.FlatAppearance.BorderColor = Color.Crimson;
+                                btnCreate.FlatAppearance.BorderColor = Color.Blue;
                             }
                             else
                             {
                                 Xoatt();
+                                btnCreate.Enabled = true;
+                                btnUpdate.Enabled = true;
+                                btnUpdate.FlatAppearance.BorderColor = Color.Crimson;
+                                btnCreate.FlatAppearance.BorderColor = Color.Blue;
                             }
                         }
                         else
@@ -568,12 +615,69 @@ namespace HKD_ClothesShop.Forms
         private void btnReset_Click(object sender, EventArgs e)
         {
             Xoatt();
+            /*buttonLuuT.Visible = false;
+            buttonHuyT.Visible = false;
+            buttonLuuS.Visible = false;
+            buttonHuyS.Visible = false;*/
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
             
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            Mo();
+            btnCreate.FlatAppearance.BorderColor = Color.DarkGray;
+            btnUpdate.FlatAppearance.BorderColor = Color.DarkGray;
+            buttonLuuT.Visible = true;
+            buttonHuyT.Visible = true;
+            btnUpdate.Enabled = false;
+            btnCreate.Enabled = false;
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if(isValidateData() == false)
+            {
+                MessageBox.Show("Bạn phải chọn 1 dòng trong bảng rồi nhấn nút sửa!","Cảnh báo",MessageBoxButtons.RetryCancel,MessageBoxIcon.Hand);
+                return;
+            }
+            Mo();
+            btnUpdate.FlatAppearance.BorderColor = Color.DarkGray;
+            btnCreate.FlatAppearance.BorderColor = Color.DarkGray;
+            buttonLuuS.Visible = true;
+            buttonHuyS.Visible = true;
+            btnCreate.Enabled = false;
+            btnUpdate.Enabled = false;
+        }
+
+        private void buttonHuyT_Click(object sender, EventArgs e)
+        {
+            Tat();
+            buttonLuuT.Visible = false;
+            buttonHuyT.Visible = false;
+            buttonLuuS.Visible = false;
+            buttonHuyS.Visible = false;
+            btnUpdate.FlatAppearance.BorderColor = Color.Crimson;
+            btnCreate.FlatAppearance.BorderColor = Color.Blue;
+            btnCreate.Enabled = true;
+            btnUpdate.Enabled = true;
+        }
+
+        private void buttonHuyS_Click(object sender, EventArgs e)
+        {
+            Tat();
+            buttonLuuT.Visible = false;
+            buttonHuyT.Visible = false;
+            buttonLuuS.Visible = true;
+            buttonHuyS.Visible = true;
+            btnUpdate.FlatAppearance.BorderColor = Color.Crimson;
+            btnCreate.FlatAppearance.BorderColor = Color.Blue;
+            btnCreate.Enabled = true;
+            btnUpdate.Enabled = true;
         }
     }
 }
