@@ -78,6 +78,11 @@ namespace HKD_ClothesShop.Forms
                 FillLoaiCombobox(listLoaiSP);
                 FillThuongHieuCombobox(listThuongHieu);
                 BindGrid(listSanPham);
+                Tat();
+                buttonLuuT.Visible = false;
+                buttonHuyT.Visible = false;
+                buttonLuuS.Visible = false;
+                buttonHuyS.Visible = false;
             }
             catch (Exception ex)
             {
@@ -137,10 +142,18 @@ namespace HKD_ClothesShop.Forms
                                 frmNhapHang_Load(sender, e);
                                 MessageBox.Show($"Thêm mới sản phẩm {txtTenSP.Text} thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 Xoatt();
+                                btnCreate.Enabled = true;
+                                btnUpdate.Enabled = true;
+                                btnUpdate.FlatAppearance.BorderColor = Color.Crimson;
+                                btnCreate.FlatAppearance.BorderColor = Color.Blue;
                             }
                             else
                             {
                                 Xoatt();
+                                btnCreate.Enabled = true;
+                                btnUpdate.Enabled = true;
+                                btnUpdate.FlatAppearance.BorderColor = Color.Crimson;
+                                btnCreate.FlatAppearance.BorderColor = Color.Blue;
                             }
                         }
                         else
@@ -196,10 +209,20 @@ namespace HKD_ClothesShop.Forms
                                 frmNhapHang_Load(sender, e);
                                 MessageBox.Show($"Cập nhật thông tin Sản phẩm {txtTenSP.Text} thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 Xoatt();
+                                Xoatt();
+                                btnCreate.Enabled = true;
+                                btnUpdate.Enabled = true;
+                                btnUpdate.FlatAppearance.BorderColor = Color.Crimson;
+                                btnCreate.FlatAppearance.BorderColor = Color.Blue;
                             }
                             else
                             {
                                 Xoatt();
+                                Xoatt();
+                                btnCreate.Enabled = true;
+                                btnUpdate.Enabled = true;
+                                btnUpdate.FlatAppearance.BorderColor = Color.Crimson;
+                                btnCreate.FlatAppearance.BorderColor = Color.Blue;
                             }
                         }
                         else
@@ -520,6 +543,111 @@ namespace HKD_ClothesShop.Forms
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            Mo();
+            btnCreate.FlatAppearance.BorderColor = Color.DarkGray;
+            btnUpdate.FlatAppearance.BorderColor = Color.DarkGray;
+            buttonLuuT.Visible = true;
+            buttonHuyT.Visible = true;
+            btnUpdate.Enabled = false;
+            btnCreate.Enabled = false;
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (KiemTra_BlankEmpty() == false)
+            {
+                MessageBox.Show("Bạn phải chọn 1 dòng trong bảng rồi nhấn nút sửa!", "Cảnh báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Hand);
+                return;
+            }
+            Mo();
+            btnUpdate.FlatAppearance.BorderColor = Color.DarkGray;
+            btnCreate.FlatAppearance.BorderColor = Color.DarkGray;
+            buttonLuuS.Visible = true;
+            buttonHuyS.Visible = true;
+            btnCreate.Enabled = false;
+            btnUpdate.Enabled = false;
+        }
+
+        private void buttonHuyT_Click(object sender, EventArgs e)
+        {
+            Tat();
+            buttonLuuT.Visible = false;
+            buttonHuyT.Visible = false;
+            buttonLuuS.Visible = false;
+            buttonHuyS.Visible = false;
+            btnUpdate.FlatAppearance.BorderColor = Color.Crimson;
+            btnCreate.FlatAppearance.BorderColor = Color.Blue;
+            btnCreate.Enabled = true;
+            btnUpdate.Enabled = true;
+        }
+
+        private void buttonHuyS_Click(object sender, EventArgs e)
+        {
+            Tat();
+            buttonLuuT.Visible = false;
+            buttonHuyT.Visible = false;
+            buttonLuuS.Visible = false;
+            buttonHuyS.Visible = false;
+            btnUpdate.FlatAppearance.BorderColor = Color.Crimson;
+            btnCreate.FlatAppearance.BorderColor = Color.Blue;
+            btnCreate.Enabled = true;
+            btnUpdate.Enabled = true;
+        }
+
+        private void Tat()
+        {
+            labelMSP.Visible = false;
+            labelTSP.Visible = false;
+            labelDVT.Visible = false;
+            labelDongia.Visible = false;
+            labelChatlieu.Visible = false;
+            labelMaLoaiSP.Visible = false;
+            labelMaTH.Visible = false;
+            labelNgayupdate.Visible = false;
+            labelMotaSP.Visible = false;
+            txtMSP.Visible = false;
+            txtTenSP.Visible = false;
+            cmbDVT.Visible = false;
+            txtDonGia.Visible = false;
+            txtChatLieu.Visible = false;
+            cmbLSP.Visible = false;
+            cmbMTH.Visible = false;
+            dtpDayUpdate.Visible = false;
+            txtMoTa.Visible = false;
+            picAnhSP.Visible = false;
+            btnChonAnh.Visible = false;
+            cbStatus.Visible = false;
+            groupBoxSP.Text = "";
+        }
+
+        private void Mo()
+        {
+            labelMSP.Visible = true;
+            labelTSP.Visible = true;
+            labelDVT.Visible = true;
+            labelDongia.Visible = true;
+            labelChatlieu.Visible = true;
+            labelMaLoaiSP.Visible = true;
+            labelMaTH.Visible = true;
+            labelNgayupdate.Visible = true;
+            labelMotaSP.Visible = true;
+            txtMSP.Visible = true;
+            txtTenSP.Visible = true;
+            cmbDVT.Visible = true;
+            txtDonGia.Visible = true;
+            txtChatLieu.Visible = true;
+            cmbLSP.Visible = true;
+            cmbMTH.Visible = true;
+            dtpDayUpdate.Visible = true;
+            txtMoTa.Visible = true;
+            picAnhSP.Visible = true;
+            btnChonAnh.Visible = true;
+            cbStatus.Visible = true;
+            groupBoxSP.Text = "Nhập thông tin sản phẩm";
         }
     }
 }

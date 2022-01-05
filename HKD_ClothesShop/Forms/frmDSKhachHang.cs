@@ -200,6 +200,7 @@ namespace HKD_ClothesShop.Forms
             radNu.Visible = false;
             radKhac.Visible = false;
             cbStatus.Visible = false;
+            groupBoxDSKH.Text = "";
         }
 
         private void Mo()
@@ -218,6 +219,7 @@ namespace HKD_ClothesShop.Forms
             radNu.Visible = true;
             radKhac.Visible = true;
             cbStatus.Visible = true;
+            groupBoxDSKH.Text = "Nhập thông tin khách hàng";
         }
 
         public bool flag = false;
@@ -640,7 +642,7 @@ namespace HKD_ClothesShop.Forms
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if(isValidateData() == false)
+            if(KiemTra_BlankEmpty() == false)
             {
                 MessageBox.Show("Bạn phải chọn 1 dòng trong bảng rồi nhấn nút sửa!","Cảnh báo",MessageBoxButtons.RetryCancel,MessageBoxIcon.Hand);
                 return;
@@ -672,8 +674,8 @@ namespace HKD_ClothesShop.Forms
             Tat();
             buttonLuuT.Visible = false;
             buttonHuyT.Visible = false;
-            buttonLuuS.Visible = true;
-            buttonHuyS.Visible = true;
+            buttonLuuS.Visible = false;
+            buttonHuyS.Visible = false;
             btnUpdate.FlatAppearance.BorderColor = Color.Crimson;
             btnCreate.FlatAppearance.BorderColor = Color.Blue;
             btnCreate.Enabled = true;

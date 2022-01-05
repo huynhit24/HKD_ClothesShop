@@ -65,7 +65,12 @@ namespace HKD_ClothesShop.Forms
                 QLBanHangHKDEntities db = new QLBanHangHKDEntities();
                 List<NhanVienBanHang> listNhanVien = db.NhanVienBanHangs.ToList();
                 BindGrid(listNhanVien);
+                Tat();
                 radNam.Checked = true;
+                buttonLuuT.Visible = false;
+                buttonHuyT.Visible = false;
+                buttonLuuS.Visible = false;
+                buttonHuyS.Visible = false;
             }
             catch (Exception ex)
             {
@@ -122,10 +127,18 @@ namespace HKD_ClothesShop.Forms
                                 frmNhanVienShop_Load(sender, e);
                                 MessageBox.Show($"Thêm mới Nhân viên {txtHoTen.Text} thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 Xoatt();
+                                btnCreate.Enabled = true;
+                                btnUpdate.Enabled = true;
+                                btnUpdate.FlatAppearance.BorderColor = Color.Crimson;
+                                btnCreate.FlatAppearance.BorderColor = Color.Blue;
                             }
                             else
                             {
                                 Xoatt();
+                                btnCreate.Enabled = true;
+                                btnUpdate.Enabled = true;
+                                btnUpdate.FlatAppearance.BorderColor = Color.Crimson;
+                                btnCreate.FlatAppearance.BorderColor = Color.Blue;
                             }
                         }
                         else
@@ -181,10 +194,18 @@ namespace HKD_ClothesShop.Forms
                                 frmNhanVienShop_Load(sender, e);
                                 MessageBox.Show($"Cập nhật thông tin Nhân viên {txtHoTen.Text} thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 Xoatt();
+                                btnCreate.Enabled = true;
+                                btnUpdate.Enabled = true;
+                                btnUpdate.FlatAppearance.BorderColor = Color.Crimson;
+                                btnCreate.FlatAppearance.BorderColor = Color.Blue;
                             }
                             else
                             {
                                 Xoatt();
+                                btnCreate.Enabled = true;
+                                btnUpdate.Enabled = true;
+                                btnUpdate.FlatAppearance.BorderColor = Color.Crimson;
+                                btnCreate.FlatAppearance.BorderColor = Color.Blue;
                             }
                         }
                         else
@@ -499,6 +520,101 @@ namespace HKD_ClothesShop.Forms
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            Mo();
+            btnCreate.FlatAppearance.BorderColor = Color.DarkGray;
+            btnUpdate.FlatAppearance.BorderColor = Color.DarkGray;
+            buttonLuuT.Visible = true;
+            buttonHuyT.Visible = true;
+            btnUpdate.Enabled = false;
+            btnCreate.Enabled = false;
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (KiemTra_BlankEmpty() == false)
+            {
+                MessageBox.Show("Bạn phải chọn 1 dòng trong bảng rồi nhấn nút sửa!", "Cảnh báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Hand);
+                return;
+            }
+            Mo();
+            btnUpdate.FlatAppearance.BorderColor = Color.DarkGray;
+            btnCreate.FlatAppearance.BorderColor = Color.DarkGray;
+            buttonLuuS.Visible = true;
+            buttonHuyS.Visible = true;
+            btnCreate.Enabled = false;
+            btnUpdate.Enabled = false;
+        }
+
+        private void buttonHuyT_Click(object sender, EventArgs e)
+        {
+            Tat();
+            buttonLuuT.Visible = false;
+            buttonHuyT.Visible = false;
+            buttonLuuS.Visible = false;
+            buttonHuyS.Visible = false;
+            btnUpdate.FlatAppearance.BorderColor = Color.Crimson;
+            btnCreate.FlatAppearance.BorderColor = Color.Blue;
+            btnCreate.Enabled = true;
+            btnUpdate.Enabled = true;
+        }
+
+        private void buttonHuyS_Click(object sender, EventArgs e)
+        {
+            Tat();
+            buttonLuuT.Visible = false;
+            buttonHuyT.Visible = false;
+            buttonLuuS.Visible = false;
+            buttonHuyS.Visible = false;
+            btnUpdate.FlatAppearance.BorderColor = Color.Crimson;
+            btnCreate.FlatAppearance.BorderColor = Color.Blue;
+            btnCreate.Enabled = true;
+            btnUpdate.Enabled = true;
+        }
+
+        private void Tat()
+        {
+            labelMNV.Visible = false;
+            labelHoten.Visible = false;
+            labelNgaysinh.Visible = false;
+            labelSDT.Visible = false;
+            labelEmail.Visible = false;
+            txtMNV.Visible = false;
+            txtHoTen.Visible = false;
+            txtSDT.Visible = false;
+            txtEmail.Visible = false;
+            dtpNgaySinh.Visible = false;
+            picAnhNV.Visible = false;
+            btnChonAnh.Visible = false;
+            radNam.Visible = false;
+            radNu.Visible = false;
+            radKhac.Visible = false;
+            cbStatus.Visible = false;
+            groupBoxNVShop.Text = "";
+        }
+
+        private void Mo()
+        {
+            labelMNV.Visible = true;
+            labelHoten.Visible = true;
+            labelNgaysinh.Visible = true;
+            labelSDT.Visible = true;
+            labelEmail.Visible = true;
+            txtMNV.Visible = true;
+            txtHoTen.Visible = true;
+            txtSDT.Visible = true;
+            txtEmail.Visible = true;
+            dtpNgaySinh.Visible = true;
+            picAnhNV.Visible = true;
+            btnChonAnh.Visible = true;
+            radNam.Visible = true;
+            radNu.Visible = true;
+            radKhac.Visible = true;
+            cbStatus.Visible = true;
+            groupBoxNVShop.Text = "Nhập thông tin sản phẩm";
         }
     }
 }

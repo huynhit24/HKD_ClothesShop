@@ -30,16 +30,14 @@ namespace HKD_ClothesShop.Forms
         private void InitializeComponent()
         {
             this.btnClose = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBoxNV = new System.Windows.Forms.GroupBox();
             this.btnChonLogo = new System.Windows.Forms.Button();
             this.picLogo = new System.Windows.Forms.PictureBox();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
             this.cbStatus = new System.Windows.Forms.CheckBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelSDT = new System.Windows.Forms.Label();
+            this.labelDiachi = new System.Windows.Forms.Label();
+            this.labelTenTH = new System.Windows.Forms.Label();
+            this.labelMTH = new System.Windows.Forms.Label();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtTenTH = new System.Windows.Forms.TextBox();
@@ -53,11 +51,25 @@ namespace HKD_ClothesShop.Forms
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnHidden = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonLuuS = new System.Windows.Forms.Button();
+            this.buttonHuyS = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
+            this.panelThem = new System.Windows.Forms.Panel();
+            this.btnCreate = new System.Windows.Forms.Button();
+            this.panelLuuHuy = new System.Windows.Forms.Panel();
+            this.buttonLuuT = new System.Windows.Forms.Button();
+            this.buttonHuyT = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.groupBoxNV.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThuongHieu)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panelThem.SuspendLayout();
+            this.panelLuuHuy.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnClose
@@ -73,30 +85,28 @@ namespace HKD_ClothesShop.Forms
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // groupBox1
+            // groupBoxNV
             // 
-            this.groupBox1.Controls.Add(this.btnThoat);
-            this.groupBox1.Controls.Add(this.btnReset);
-            this.groupBox1.Controls.Add(this.btnChonLogo);
-            this.groupBox1.Controls.Add(this.picLogo);
-            this.groupBox1.Controls.Add(this.btnSua);
-            this.groupBox1.Controls.Add(this.btnThem);
-            this.groupBox1.Controls.Add(this.cbStatus);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtSDT);
-            this.groupBox1.Controls.Add(this.txtDiaChi);
-            this.groupBox1.Controls.Add(this.txtTenTH);
-            this.groupBox1.Controls.Add(this.txtMTH);
-            this.groupBox1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 72);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(374, 550);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Nhập thông tin nhân viên";
+            this.groupBoxNV.Controls.Add(this.panel1);
+            this.groupBoxNV.Controls.Add(this.panelThem);
+            this.groupBoxNV.Controls.Add(this.btnChonLogo);
+            this.groupBoxNV.Controls.Add(this.picLogo);
+            this.groupBoxNV.Controls.Add(this.cbStatus);
+            this.groupBoxNV.Controls.Add(this.labelSDT);
+            this.groupBoxNV.Controls.Add(this.labelDiachi);
+            this.groupBoxNV.Controls.Add(this.labelTenTH);
+            this.groupBoxNV.Controls.Add(this.labelMTH);
+            this.groupBoxNV.Controls.Add(this.txtSDT);
+            this.groupBoxNV.Controls.Add(this.txtDiaChi);
+            this.groupBoxNV.Controls.Add(this.txtTenTH);
+            this.groupBoxNV.Controls.Add(this.txtMTH);
+            this.groupBoxNV.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBoxNV.Location = new System.Drawing.Point(12, 72);
+            this.groupBoxNV.Name = "groupBoxNV";
+            this.groupBoxNV.Size = new System.Drawing.Size(374, 676);
+            this.groupBoxNV.TabIndex = 6;
+            this.groupBoxNV.TabStop = false;
+            this.groupBoxNV.Text = "Nhập thông tin nhân viên";
             // 
             // btnChonLogo
             // 
@@ -121,81 +131,51 @@ namespace HKD_ClothesShop.Forms
             this.picLogo.TabIndex = 27;
             this.picLogo.TabStop = false;
             // 
-            // btnSua
-            // 
-            this.btnSua.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btnSua.FlatAppearance.BorderSize = 3;
-            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSua.Image = global::HKD_ClothesShop.Properties.Resources.update;
-            this.btnSua.Location = new System.Drawing.Point(238, 410);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(124, 58);
-            this.btnSua.TabIndex = 21;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // btnThem
-            // 
-            this.btnThem.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
-            this.btnThem.FlatAppearance.BorderSize = 3;
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.Image = global::HKD_ClothesShop.Properties.Resources.create;
-            this.btnThem.Location = new System.Drawing.Point(99, 410);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(124, 58);
-            this.btnThem.TabIndex = 20;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
             // cbStatus
             // 
             this.cbStatus.AutoSize = true;
-            this.cbStatus.Location = new System.Drawing.Point(232, 364);
+            this.cbStatus.Location = new System.Drawing.Point(232, 388);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(136, 23);
             this.cbStatus.TabIndex = 16;
             this.cbStatus.Text = "Không sử dụng";
             this.cbStatus.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // labelSDT
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 156);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(39, 19);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "SĐT";
+            this.labelSDT.AutoSize = true;
+            this.labelSDT.Location = new System.Drawing.Point(16, 156);
+            this.labelSDT.Name = "labelSDT";
+            this.labelSDT.Size = new System.Drawing.Size(39, 19);
+            this.labelSDT.TabIndex = 10;
+            this.labelSDT.Text = "SĐT";
             // 
-            // label3
+            // labelDiachi
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 109);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 19);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Địa chỉ";
+            this.labelDiachi.AutoSize = true;
+            this.labelDiachi.Location = new System.Drawing.Point(16, 109);
+            this.labelDiachi.Name = "labelDiachi";
+            this.labelDiachi.Size = new System.Drawing.Size(58, 19);
+            this.labelDiachi.TabIndex = 9;
+            this.labelDiachi.Text = "Địa chỉ";
             // 
-            // label2
+            // labelTenTH
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 70);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 19);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Tên thương hiệu";
+            this.labelTenTH.AutoSize = true;
+            this.labelTenTH.Location = new System.Drawing.Point(16, 70);
+            this.labelTenTH.Name = "labelTenTH";
+            this.labelTenTH.Size = new System.Drawing.Size(126, 19);
+            this.labelTenTH.TabIndex = 8;
+            this.labelTenTH.Text = "Tên thương hiệu";
             // 
-            // label1
+            // labelMTH
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 19);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Mã thương hiệu";
+            this.labelMTH.AutoSize = true;
+            this.labelMTH.Location = new System.Drawing.Point(16, 31);
+            this.labelMTH.Name = "labelMTH";
+            this.labelMTH.Size = new System.Drawing.Size(122, 19);
+            this.labelMTH.TabIndex = 7;
+            this.labelMTH.Text = "Mã thương hiệu";
             // 
             // txtSDT
             // 
@@ -246,7 +226,7 @@ namespace HKD_ClothesShop.Forms
             this.dgvThuongHieu.GridColor = System.Drawing.Color.Gold;
             this.dgvThuongHieu.Location = new System.Drawing.Point(403, 72);
             this.dgvThuongHieu.Name = "dgvThuongHieu";
-            this.dgvThuongHieu.Size = new System.Drawing.Size(806, 550);
+            this.dgvThuongHieu.Size = new System.Drawing.Size(789, 664);
             this.dgvThuongHieu.TabIndex = 7;
             this.dgvThuongHieu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThuongHieu_CellClick);
             // 
@@ -310,39 +290,183 @@ namespace HKD_ClothesShop.Forms
             this.label7.TabIndex = 12;
             this.label7.Text = "DANH SÁCH THƯƠNG HIỆU";
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.Controls.Add(this.btnUpdate);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.btnThoat);
+            this.panel1.Location = new System.Drawing.Point(232, 430);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(134, 222);
+            this.panel1.TabIndex = 74;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.Crimson;
+            this.btnUpdate.FlatAppearance.BorderSize = 3;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Image = global::HKD_ClothesShop.Properties.Resources.update;
+            this.btnUpdate.Location = new System.Drawing.Point(0, 102);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(134, 55);
+            this.btnUpdate.TabIndex = 21;
+            this.btnUpdate.Text = "Sửa";
+            this.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.buttonLuuS);
+            this.panel2.Controls.Add(this.buttonHuyS);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(134, 102);
+            this.panel2.TabIndex = 70;
+            // 
+            // buttonLuuS
+            // 
+            this.buttonLuuS.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonLuuS.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonLuuS.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.buttonLuuS.FlatAppearance.BorderSize = 3;
+            this.buttonLuuS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLuuS.Image = global::HKD_ClothesShop.Properties.Resources.save_file;
+            this.buttonLuuS.Location = new System.Drawing.Point(0, 0);
+            this.buttonLuuS.Name = "buttonLuuS";
+            this.buttonLuuS.Size = new System.Drawing.Size(134, 48);
+            this.buttonLuuS.TabIndex = 66;
+            this.buttonLuuS.Text = "Lưu";
+            this.buttonLuuS.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonLuuS.UseVisualStyleBackColor = true;
+            this.buttonLuuS.Click += new System.EventHandler(this.btnSua_Click);
+            // 
+            // buttonHuyS
+            // 
+            this.buttonHuyS.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonHuyS.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonHuyS.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.buttonHuyS.FlatAppearance.BorderSize = 3;
+            this.buttonHuyS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHuyS.Image = global::HKD_ClothesShop.Properties.Resources.cancel;
+            this.buttonHuyS.Location = new System.Drawing.Point(0, 54);
+            this.buttonHuyS.Name = "buttonHuyS";
+            this.buttonHuyS.Size = new System.Drawing.Size(134, 48);
+            this.buttonHuyS.TabIndex = 65;
+            this.buttonHuyS.Text = "Hủy";
+            this.buttonHuyS.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonHuyS.UseVisualStyleBackColor = true;
+            this.buttonHuyS.Click += new System.EventHandler(this.buttonHuyS_Click);
+            // 
             // btnThoat
             // 
             this.btnThoat.BackColor = System.Drawing.Color.Red;
+            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThoat.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnThoat.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.btnThoat.FlatAppearance.BorderSize = 3;
-            this.btnThoat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnThoat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThoat.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.Image = global::HKD_ClothesShop.Properties.Resources.cancel;
-            this.btnThoat.Location = new System.Drawing.Point(238, 486);
+            this.btnThoat.Image = global::HKD_ClothesShop.Properties.Resources.exit;
+            this.btnThoat.Location = new System.Drawing.Point(0, 164);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(124, 58);
-            this.btnThoat.TabIndex = 60;
+            this.btnThoat.Size = new System.Drawing.Size(134, 58);
+            this.btnThoat.TabIndex = 64;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnThoat.UseVisualStyleBackColor = false;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
+            // panelThem
+            // 
+            this.panelThem.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panelThem.Controls.Add(this.btnCreate);
+            this.panelThem.Controls.Add(this.panelLuuHuy);
+            this.panelThem.Controls.Add(this.btnReset);
+            this.panelThem.Location = new System.Drawing.Point(77, 430);
+            this.panelThem.Name = "panelThem";
+            this.panelThem.Size = new System.Drawing.Size(136, 222);
+            this.panelThem.TabIndex = 73;
+            // 
+            // btnCreate
+            // 
+            this.btnCreate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCreate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCreate.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
+            this.btnCreate.FlatAppearance.BorderSize = 3;
+            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreate.Image = global::HKD_ClothesShop.Properties.Resources.create;
+            this.btnCreate.Location = new System.Drawing.Point(0, 102);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(136, 55);
+            this.btnCreate.TabIndex = 20;
+            this.btnCreate.Text = "Thêm";
+            this.btnCreate.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
+            // 
+            // panelLuuHuy
+            // 
+            this.panelLuuHuy.Controls.Add(this.buttonLuuT);
+            this.panelLuuHuy.Controls.Add(this.buttonHuyT);
+            this.panelLuuHuy.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLuuHuy.Location = new System.Drawing.Point(0, 0);
+            this.panelLuuHuy.Name = "panelLuuHuy";
+            this.panelLuuHuy.Size = new System.Drawing.Size(136, 102);
+            this.panelLuuHuy.TabIndex = 69;
+            // 
+            // buttonLuuT
+            // 
+            this.buttonLuuT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonLuuT.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonLuuT.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.buttonLuuT.FlatAppearance.BorderSize = 3;
+            this.buttonLuuT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonLuuT.Image = global::HKD_ClothesShop.Properties.Resources.save_file;
+            this.buttonLuuT.Location = new System.Drawing.Point(0, 0);
+            this.buttonLuuT.Name = "buttonLuuT";
+            this.buttonLuuT.Size = new System.Drawing.Size(136, 48);
+            this.buttonLuuT.TabIndex = 66;
+            this.buttonLuuT.Text = "Lưu";
+            this.buttonLuuT.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonLuuT.UseVisualStyleBackColor = true;
+            this.buttonLuuT.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // buttonHuyT
+            // 
+            this.buttonHuyT.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonHuyT.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonHuyT.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.buttonHuyT.FlatAppearance.BorderSize = 3;
+            this.buttonHuyT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHuyT.Image = global::HKD_ClothesShop.Properties.Resources.cancel;
+            this.buttonHuyT.Location = new System.Drawing.Point(0, 54);
+            this.buttonHuyT.Name = "buttonHuyT";
+            this.buttonHuyT.Size = new System.Drawing.Size(136, 48);
+            this.buttonHuyT.TabIndex = 65;
+            this.buttonHuyT.Text = "Hủy";
+            this.buttonHuyT.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonHuyT.UseVisualStyleBackColor = true;
+            this.buttonHuyT.Click += new System.EventHandler(this.buttonHuyT_Click);
+            // 
             // btnReset
             // 
+            this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReset.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnReset.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
             this.btnReset.FlatAppearance.BorderSize = 3;
-            this.btnReset.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnReset.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReset.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.Image = global::HKD_ClothesShop.Properties.Resources.monitor;
-            this.btnReset.Location = new System.Drawing.Point(99, 486);
+            this.btnReset.Location = new System.Drawing.Point(0, 164);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(124, 58);
-            this.btnReset.TabIndex = 59;
+            this.btnReset.Size = new System.Drawing.Size(136, 58);
+            this.btnReset.TabIndex = 63;
             this.btnReset.Text = "Reset";
             this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnReset.UseVisualStyleBackColor = true;
@@ -358,16 +482,20 @@ namespace HKD_ClothesShop.Forms
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnHidden);
             this.Controls.Add(this.dgvThuongHieu);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBoxNV);
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmThuongHieu";
             this.Text = "Form9";
             this.Load += new System.EventHandler(this.frmThuongHieu_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBoxNV.ResumeLayout(false);
+            this.groupBoxNV.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThuongHieu)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panelThem.ResumeLayout(false);
+            this.panelLuuHuy.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -376,16 +504,14 @@ namespace HKD_ClothesShop.Forms
         #endregion
 
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBoxNV;
         private System.Windows.Forms.Button btnChonLogo;
         private System.Windows.Forms.PictureBox picLogo;
-        private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.CheckBox cbStatus;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelSDT;
+        private System.Windows.Forms.Label labelDiachi;
+        private System.Windows.Forms.Label labelTenTH;
+        private System.Windows.Forms.Label labelMTH;
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.TextBox txtTenTH;
@@ -399,7 +525,17 @@ namespace HKD_ClothesShop.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.Button btnHidden;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button buttonLuuS;
+        private System.Windows.Forms.Button buttonHuyS;
         private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Panel panelThem;
+        private System.Windows.Forms.Button btnCreate;
+        private System.Windows.Forms.Panel panelLuuHuy;
+        private System.Windows.Forms.Button buttonLuuT;
+        private System.Windows.Forms.Button buttonHuyT;
         private System.Windows.Forms.Button btnReset;
     }
 }
