@@ -1,7 +1,7 @@
 ﻿
 namespace HKD_ClothesShop.Forms
 {
-    partial class frmDacDiem
+    partial class frmThanhToan
     {
         /// <summary>
         /// Required designer variable.
@@ -31,15 +31,15 @@ namespace HKD_ClothesShop.Forms
         {
             this.SuspendLayout();
             // 
-            // frmDacDiem
+            // frmThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(553, 520);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "frmDacDiem";
+            this.Name = "frmThanhToan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Đặc điểm";
+            this.Text = "Thanh toán hóa đơn";
             this.ResumeLayout(false);
 
         }

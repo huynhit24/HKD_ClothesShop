@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
+using HKD_ClothesShop.Modal;
 
 namespace HKD_ClothesShop.Forms
 {
-    public partial class frmDacDiem : Form
+    public partial class frmThanhToan : Form
     {
-        public frmDacDiem()
+        public frmThanhToan()
         {
             InitializeComponent();
         }

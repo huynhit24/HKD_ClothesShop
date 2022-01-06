@@ -471,7 +471,7 @@ namespace HKD_ClothesShop.Forms
             this.dgvNhanVien.GridColor = System.Drawing.Color.GreenYellow;
             this.dgvNhanVien.Location = new System.Drawing.Point(406, 101);
             this.dgvNhanVien.Name = "dgvNhanVien";
-            this.dgvNhanVien.Size = new System.Drawing.Size(723, 1436);
+            this.dgvNhanVien.Size = new System.Drawing.Size(808, 679);
             this.dgvNhanVien.TabIndex = 6;
             this.dgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellClick);
             // 

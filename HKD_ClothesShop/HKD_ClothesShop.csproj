@@ -55,11 +55,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\frmDacDiem.cs">
+    <Compile Include="Forms\frmThanhToan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmDacDiem.Designer.cs">
-      <DependentUpon>frmDacDiem.cs</DependentUpon>
+    <Compile Include="Forms\frmThanhToan.Designer.cs">
+      <DependentUpon>frmThanhToan.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmDoiMatKhau.cs">
       <SubType>Form</SubType>
@@ -245,8 +245,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\frmDacDiem.resx">
-      <DependentUpon>frmDacDiem.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmThanhToan.resx">
+      <DependentUpon>frmThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDoiMatKhau.resx">
       <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
