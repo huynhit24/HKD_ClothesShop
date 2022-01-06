@@ -648,54 +648,101 @@ namespace HKD_ClothesShop.Forms
             
         }
 
-        private void txtKM_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                QLBanHangHKDEntities db = new QLBanHangHKDEntities();
-                List<SanPham> listSanPham = db.SanPhams.ToList();
-                foreach (var item in listSanPham)
-                {
-                    if (item.MaSanPham.ToString() == comboBoxMSP.Text.ToString())
-                    {
-                        if (txtKM.Text != "")
-                        {
-                            labelDGB.Text = Convert.ToString((item.DonGia - Convert.ToInt32(txtKM.Text) * item.DonGia / 100) * Convert.ToInt32(txtSLMua.Text));
-                        }
-                        else
-                        {
-                            labelDGB.Text = Convert.ToString(item.DonGia * Convert.ToInt32(txtSLMua.Text));
-                        }
-                        return;
-                    }
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Xảy ra lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-        }
-
         private void txtSLMua_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                QLBanHangHKDEntities db = new QLBanHangHKDEntities();
-                List<SanPham> listSanPham = db.SanPhams.ToList();
-                foreach (var item in listSanPham)
+                int slmua = 0;
+                int km = 0;
+                /*
+                Regex reg = new Regex(XacthucRegex.Regex_Number);
+                Match mat = reg.Match(txtSLMua.Text);
+                Match matKM = reg.Match(txtKM.Text);
+                if (mat.Success && matKM.Success)
                 {
-                    if (item.MaSanPham.ToString() == comboBoxMSP.Text.ToString())
+                    slmua = Convert.ToInt32(txtSLMua.Text);
+                    km = Convert.ToInt32(txtKM.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Số lượng mua + Khuyến mãi khuyến mãi phải là số nguyên không âm!","Cảnh báo ⚠",MessageBoxButtons.RetryCancel,MessageBoxIcon.Warning);
+                }
+                */
+                
+                if(txtSLMua.Text == "" && txtKM.Text != "")
+                {
+                    slmua = 0;
+                    Regex reg = new Regex(XacthucRegex.Regex_Number);
+                    Match matKM = reg.Match(txtKM.Text);
+                    if (matKM.Success)
                     {
-                        if (txtKM.Text != "")
+                        km = Convert.ToInt32(txtKM.Text);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Số lượng mua + Khuyến mãi khuyến mãi phải là số nguyên không âm!", "Cảnh báo ⚠", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                    }
+                }
+                if (txtKM.Text == "" && txtSLMua.Text != "")
+                {
+                    Regex reg = new Regex(XacthucRegex.Regex_Number);
+                    Match mat = reg.Match(txtSLMua.Text);
+                    if (mat.Success)
+                    {
+                        slmua = Convert.ToInt32(txtSLMua.Text);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Số lượng mua + Khuyến mãi khuyến mãi phải là số nguyên không âm!", "Cảnh báo ⚠", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                    }
+                    km = 0;
+                }
+                if (txtKM.Text != "" && txtSLMua.Text != "")
+                {
+                    Regex reg = new Regex(XacthucRegex.Regex_Number);
+                    Match mat = reg.Match(txtSLMua.Text);
+                    Match matKM = reg.Match(txtKM.Text);
+                    if (mat.Success && matKM.Success)
+                    {
+                        slmua = Convert.ToInt32(txtSLMua.Text);
+                        km = Convert.ToInt32(txtKM.Text);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Số lượng mua + Khuyến mãi khuyến mãi phải là số nguyên không âm!", "Cảnh báo ⚠", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                    }
+                }
+                if (txtKM.Text == "" && txtSLMua.Text == "")
+                {
+                    slmua = 0;
+                    km = 0;
+                }
+                if (km < 0 || km > 100 || slmua < 0)
+                {
+                    MessageBox.Show("👉 0% <= Khuyến mãi <= 100%\n\n👉 Số lượng mua >= 0", "Cảnh cáo ❌❌❌!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    QLBanHangHKDEntities db = new QLBanHangHKDEntities();
+                    List<SanPham> listSanPham = db.SanPhams.ToList();
+                    foreach (var item in listSanPham)
+                    {
+                        if (item.MaSanPham.ToString() == comboBoxMSP.Text.ToString())
                         {
-                            labelDGB.Text = Convert.ToString((item.DonGia - Convert.ToInt32(txtKM.Text) * item.DonGia / 100) * Convert.ToInt32(txtSLMua.Text));
+                            if (km == 0)
+                            {
+                                labelDGB.Text = Convert.ToString(item.DonGia);
+                                labelThanhtien.Text = Convert.ToString(item.DonGia * slmua);
+                            }
+                            else
+                            {
+                                decimal dgb = item.DonGia - (km * item.DonGia / 100);
+                                decimal thanhtien = dgb * slmua;
+                                labelDGB.Text = Convert.ToString(dgb);
+                                labelThanhtien.Text = Convert.ToString(thanhtien);
+                            }
+                            return;
                         }
-                        else
-                        {
-                            labelDGB.Text = Convert.ToString(item.DonGia * Convert.ToInt32(txtSLMua.Text));
-                        }
-                        return;
                     }
                 }
             }
@@ -721,7 +768,9 @@ namespace HKD_ClothesShop.Forms
                     txtSLMua.Text = row.Cells[5].Value.ToString();
                     labelGiaGoc.Text = row.Cells[11].Value.ToString();
                     labelDGB.Text = row.Cells[6].Value.ToString();
+                    labelThanhtien.Text = row.Cells[7].Value.ToString();
                     labelThanhToan.Text = row.Cells[14].Value.ToString();
+                    
                     /*cmbMKH.Text = row.Cells[2].Value.ToString();
                     QLBanHangHKDEntities db = new QLBanHangHKDEntities();
                     foreach (var i in db.HoaDons)

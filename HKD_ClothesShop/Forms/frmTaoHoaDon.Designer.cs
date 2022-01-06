@@ -59,21 +59,6 @@ namespace HKD_ClothesShop.Forms
             this.label12 = new System.Windows.Forms.Label();
             this.buttonAn = new System.Windows.Forms.Button();
             this.dgvCTHD = new System.Windows.Forms.DataGridView();
-            this.Column9 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxCTHD = new System.Windows.Forms.GroupBox();
             this.buttonThoat = new System.Windows.Forms.Button();
             this.buttonReset = new System.Windows.Forms.Button();
@@ -107,6 +92,23 @@ namespace HKD_ClothesShop.Forms
             this.buttonHuyT = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.Column9 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labelTien = new System.Windows.Forms.Label();
+            this.labelThanhtien = new System.Windows.Forms.Label();
             this.groupBoxTTHD.SuspendLayout();
             this.tabChiTietHoaDon.SuspendLayout();
             this.tabHoaDon.SuspendLayout();
@@ -446,115 +448,11 @@ namespace HKD_ClothesShop.Forms
             this.dgvCTHD.TabIndex = 8;
             this.dgvCTHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTHD_CellClick);
             // 
-            // Column9
-            // 
-            this.Column9.FillWeight = 183.727F;
-            this.Column9.HeaderText = "Ảnh sản phẩm mua";
-            this.Column9.Name = "Column9";
-            this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column9.Width = 95;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.FillWeight = 163.0598F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Số hóa đơn";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 81;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.FillWeight = 145.1049F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Tên nhân viên";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 93;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.FillWeight = 129.5062F;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Tên khách hàng";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 102;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.FillWeight = 115.9546F;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Tên sản phẩm";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 92;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.FillWeight = 104.1814F;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Số lượng mua";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 89;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.FillWeight = 93.95325F;
-            this.dataGridViewTextBoxColumn6.HeaderText = "Giá bán";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 64;
-            // 
-            // Column10
-            // 
-            this.Column10.FillWeight = 85.06741F;
-            this.Column10.HeaderText = "Thành tiền";
-            this.Column10.Name = "Column10";
-            this.Column10.Width = 77;
-            // 
-            // Column11
-            // 
-            this.Column11.FillWeight = 77.34766F;
-            this.Column11.HeaderText = "Mã nhân viên";
-            this.Column11.Name = "Column11";
-            this.Column11.Width = 89;
-            // 
-            // Column12
-            // 
-            this.Column12.FillWeight = 70.64101F;
-            this.Column12.HeaderText = "Mã khách hàng";
-            this.Column12.Name = "Column12";
-            this.Column12.Width = 98;
-            // 
-            // Column13
-            // 
-            this.Column13.FillWeight = 64.8145F;
-            this.Column13.HeaderText = "Mã sản phẩm";
-            this.Column13.Name = "Column13";
-            this.Column13.Width = 88;
-            // 
-            // Column14
-            // 
-            this.Column14.FillWeight = 59.75262F;
-            this.Column14.HeaderText = "Đơn giá gốc";
-            this.Column14.Name = "Column14";
-            this.Column14.Width = 67;
-            // 
-            // Column15
-            // 
-            this.Column15.FillWeight = 55.35503F;
-            this.Column15.HeaderText = "Đơn vị tính";
-            this.Column15.Name = "Column15";
-            this.Column15.Width = 78;
-            // 
-            // Column16
-            // 
-            this.Column16.FillWeight = 51.53455F;
-            this.Column16.HeaderText = "Chất liệu";
-            this.Column16.Name = "Column16";
-            this.Column16.Width = 68;
-            // 
-            // Column17
-            // 
-            this.Column17.HeaderText = "Tình trạng";
-            this.Column17.Name = "Column17";
-            this.Column17.Width = 74;
-            // 
             // groupBoxCTHD
             // 
             this.groupBoxCTHD.BackColor = System.Drawing.Color.White;
+            this.groupBoxCTHD.Controls.Add(this.labelThanhtien);
+            this.groupBoxCTHD.Controls.Add(this.labelTien);
             this.groupBoxCTHD.Controls.Add(this.buttonThoat);
             this.groupBoxCTHD.Controls.Add(this.buttonReset);
             this.groupBoxCTHD.Controls.Add(this.labelThanhToan);
@@ -648,7 +546,7 @@ namespace HKD_ClothesShop.Forms
             // picAnhSP
             // 
             this.picAnhSP.Image = global::HKD_ClothesShop.Properties.Resources.HKD_icon;
-            this.picAnhSP.Location = new System.Drawing.Point(19, 276);
+            this.picAnhSP.Location = new System.Drawing.Point(19, 308);
             this.picAnhSP.Name = "picAnhSP";
             this.picAnhSP.Size = new System.Drawing.Size(150, 150);
             this.picAnhSP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -698,7 +596,7 @@ namespace HKD_ClothesShop.Forms
             this.txtKM.Name = "txtKM";
             this.txtKM.Size = new System.Drawing.Size(121, 27);
             this.txtKM.TabIndex = 38;
-            this.txtKM.TextChanged += new System.EventHandler(this.txtKM_TextChanged);
+            this.txtKM.TextChanged += new System.EventHandler(this.txtSLMua_TextChanged);
             // 
             // label9
             // 
@@ -986,6 +884,130 @@ namespace HKD_ClothesShop.Forms
             this.label1.TabIndex = 36;
             this.label1.Text = "QUẦY TÍNH TIỀN 💵💵💵";
             // 
+            // Column9
+            // 
+            this.Column9.FillWeight = 183.727F;
+            this.Column9.HeaderText = "📸Ảnh sản phẩm mua";
+            this.Column9.Name = "Column9";
+            this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Column9.Width = 105;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.FillWeight = 163.0598F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "📜Số hóa đơn";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.FillWeight = 145.1049F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "👦Tên nhân viên";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 86;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.FillWeight = 129.5062F;
+            this.dataGridViewTextBoxColumn3.HeaderText = "🧓Tên khách hàng";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 91;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.FillWeight = 115.9546F;
+            this.dataGridViewTextBoxColumn4.HeaderText = "🐱‍💻Tên sản phẩm";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 79;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.FillWeight = 104.1814F;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Số lượng mua";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 89;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.FillWeight = 93.95325F;
+            this.dataGridViewTextBoxColumn6.HeaderText = "💲Giá bán";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 70;
+            // 
+            // Column10
+            // 
+            this.Column10.FillWeight = 85.06741F;
+            this.Column10.HeaderText = "💵Thành tiền";
+            this.Column10.Name = "Column10";
+            this.Column10.Width = 87;
+            // 
+            // Column11
+            // 
+            this.Column11.FillWeight = 77.34766F;
+            this.Column11.HeaderText = "Mã nhân viên";
+            this.Column11.Name = "Column11";
+            this.Column11.Width = 89;
+            // 
+            // Column12
+            // 
+            this.Column12.FillWeight = 70.64101F;
+            this.Column12.HeaderText = "Mã khách hàng";
+            this.Column12.Name = "Column12";
+            this.Column12.Width = 98;
+            // 
+            // Column13
+            // 
+            this.Column13.FillWeight = 64.8145F;
+            this.Column13.HeaderText = "Mã sản phẩm";
+            this.Column13.Name = "Column13";
+            this.Column13.Width = 88;
+            // 
+            // Column14
+            // 
+            this.Column14.FillWeight = 59.75262F;
+            this.Column14.HeaderText = "Đơn giá gốc";
+            this.Column14.Name = "Column14";
+            this.Column14.Width = 67;
+            // 
+            // Column15
+            // 
+            this.Column15.FillWeight = 55.35503F;
+            this.Column15.HeaderText = "Đơn vị tính";
+            this.Column15.Name = "Column15";
+            this.Column15.Width = 78;
+            // 
+            // Column16
+            // 
+            this.Column16.FillWeight = 51.53455F;
+            this.Column16.HeaderText = "Chất liệu";
+            this.Column16.Name = "Column16";
+            this.Column16.Width = 68;
+            // 
+            // Column17
+            // 
+            this.Column17.HeaderText = "Tình trạng";
+            this.Column17.Name = "Column17";
+            this.Column17.Width = 74;
+            // 
+            // labelTien
+            // 
+            this.labelTien.AutoSize = true;
+            this.labelTien.Location = new System.Drawing.Point(16, 264);
+            this.labelTien.Name = "labelTien";
+            this.labelTien.Size = new System.Drawing.Size(103, 19);
+            this.labelTien.TabIndex = 65;
+            this.labelTien.Text = "👉Thành tiền";
+            // 
+            // labelThanhtien
+            // 
+            this.labelThanhtien.AutoSize = true;
+            this.labelThanhtien.Location = new System.Drawing.Point(150, 264);
+            this.labelThanhtien.Name = "labelThanhtien";
+            this.labelThanhtien.Size = new System.Drawing.Size(86, 19);
+            this.labelThanhtien.TabIndex = 66;
+            this.labelThanhtien.Text = "Thành tiền";
+            // 
             // frmTaoHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1071,21 +1093,6 @@ namespace HKD_ClothesShop.Forms
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox picAnhSP;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewImageColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
         private System.Windows.Forms.Label labelThanhToan;
         private System.Windows.Forms.Button buttonThoat;
         private System.Windows.Forms.Button buttonReset;
@@ -1102,5 +1109,22 @@ namespace HKD_ClothesShop.Forms
         private System.Windows.Forms.Button buttonHuyT;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewImageColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
+        private System.Windows.Forms.Label labelThanhtien;
+        private System.Windows.Forms.Label labelTien;
     }
 }

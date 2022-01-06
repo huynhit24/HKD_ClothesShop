@@ -39,7 +39,7 @@ namespace HKD_ClothesShop.Forms
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmThanhToan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Thanh toán hóa đơn";
+            this.Text = "Thanh toán hóa đơn 💵💵💵";
             this.ResumeLayout(false);
 
         }

@@ -30,71 +30,72 @@ namespace HKD_ClothesShop.Forms
         private void InitializeComponent()
         {
             this.panelThayDoiMatKhau = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.labelSLHDThang = new System.Windows.Forms.Label();
+            this.labelSLHDNow = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.labelSLMHThang = new System.Windows.Forms.Label();
+            this.labelSLMHNow = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.labelDTThang = new System.Windows.Forms.Label();
+            this.labelDTNow = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.labelSLKHThang = new System.Windows.Forms.Label();
+            this.labelSLKHNow = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
+            this.labelTSLMHBan = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label21 = new System.Windows.Forms.Label();
+            this.labelLSP = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.labelTienKHNoThang = new System.Windows.Forms.Label();
+            this.labelTienKHNoNow = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label29 = new System.Windows.Forms.Label();
+            this.labelDTYear = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.Button();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panelThayDoiMatKhau.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelThayDoiMatKhau
             // 
             this.panelThayDoiMatKhau.BackColor = System.Drawing.Color.YellowGreen;
             this.panelThayDoiMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelThayDoiMatKhau.Controls.Add(this.label4);
-            this.panelThayDoiMatKhau.Controls.Add(this.label3);
+            this.panelThayDoiMatKhau.Controls.Add(this.labelSLHDThang);
+            this.panelThayDoiMatKhau.Controls.Add(this.labelSLHDNow);
             this.panelThayDoiMatKhau.Controls.Add(this.label2);
             this.panelThayDoiMatKhau.Controls.Add(this.label1);
             this.panelThayDoiMatKhau.Controls.Add(this.pictureBox1);
@@ -104,15 +105,25 @@ namespace HKD_ClothesShop.Forms
             this.panelThayDoiMatKhau.Size = new System.Drawing.Size(271, 127);
             this.panelThayDoiMatKhau.TabIndex = 2;
             // 
-            // label1
+            // labelSLHDThang
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 19);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Hóa đơn (tháng)";
+            this.labelSLHDThang.AutoSize = true;
+            this.labelSLHDThang.Font = new System.Drawing.Font("Roboto Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSLHDThang.Location = new System.Drawing.Point(17, 53);
+            this.labelSLHDThang.Name = "labelSLHDThang";
+            this.labelSLHDThang.Size = new System.Drawing.Size(29, 33);
+            this.labelSLHDThang.TabIndex = 4;
+            this.labelSLHDThang.Text = "9";
+            // 
+            // labelSLHDNow
+            // 
+            this.labelSLHDNow.AutoSize = true;
+            this.labelSLHDNow.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSLHDNow.Location = new System.Drawing.Point(97, 95);
+            this.labelSLHDNow.Name = "labelSLHDNow";
+            this.labelSLHDNow.Size = new System.Drawing.Size(17, 19);
+            this.labelSLHDNow.TabIndex = 3;
+            this.labelSLHDNow.Text = "9";
             // 
             // label2
             // 
@@ -124,32 +135,31 @@ namespace HKD_ClothesShop.Forms
             this.label2.TabIndex = 2;
             this.label2.Text = "Hôm nay: ";
             // 
-            // label3
+            // label1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(97, 95);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(17, 19);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "9";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(17, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(115, 19);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Hóa đơn (tháng)";
             // 
-            // label4
+            // pictureBox1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Roboto Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(17, 53);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 33);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "9";
+            this.pictureBox1.Image = global::HKD_ClothesShop.Properties.Resources.tao_phieu_theo_yc;
+            this.pictureBox1.Location = new System.Drawing.Point(214, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumOrchid;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.labelSLMHThang);
+            this.panel1.Controls.Add(this.labelSLMHNow);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.pictureBox2);
@@ -159,25 +169,25 @@ namespace HKD_ClothesShop.Forms
             this.panel1.Size = new System.Drawing.Size(274, 127);
             this.panel1.TabIndex = 3;
             // 
-            // label5
+            // labelSLMHThang
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Roboto Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(17, 53);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 33);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "2";
+            this.labelSLMHThang.AutoSize = true;
+            this.labelSLMHThang.Font = new System.Drawing.Font("Roboto Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSLMHThang.Location = new System.Drawing.Point(17, 53);
+            this.labelSLMHThang.Name = "labelSLMHThang";
+            this.labelSLMHThang.Size = new System.Drawing.Size(29, 33);
+            this.labelSLMHThang.TabIndex = 4;
+            this.labelSLMHThang.Text = "2";
             // 
-            // label6
+            // labelSLMHNow
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(97, 95);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(17, 19);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "2";
+            this.labelSLMHNow.AutoSize = true;
+            this.labelSLMHNow.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSLMHNow.Location = new System.Drawing.Point(97, 95);
+            this.labelSLMHNow.Name = "labelSLMHNow";
+            this.labelSLMHNow.Size = new System.Drawing.Size(17, 19);
+            this.labelSLMHNow.TabIndex = 3;
+            this.labelSLMHNow.Text = "2";
             // 
             // label7
             // 
@@ -199,12 +209,21 @@ namespace HKD_ClothesShop.Forms
             this.label8.TabIndex = 1;
             this.label8.Text = "Mặt hàng (tháng)";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::HKD_ClothesShop.Properties.Resources.hang_ton_kho;
+            this.pictureBox2.Location = new System.Drawing.Point(217, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Red;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.labelDTThang);
+            this.panel2.Controls.Add(this.labelDTNow);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.pictureBox3);
@@ -214,25 +233,25 @@ namespace HKD_ClothesShop.Forms
             this.panel2.Size = new System.Drawing.Size(297, 127);
             this.panel2.TabIndex = 4;
             // 
-            // label9
+            // labelDTThang
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Roboto Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(17, 53);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(99, 33);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "190000";
+            this.labelDTThang.AutoSize = true;
+            this.labelDTThang.Font = new System.Drawing.Font("Roboto Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDTThang.Location = new System.Drawing.Point(17, 53);
+            this.labelDTThang.Name = "labelDTThang";
+            this.labelDTThang.Size = new System.Drawing.Size(99, 33);
+            this.labelDTThang.TabIndex = 4;
+            this.labelDTThang.Text = "190000";
             // 
-            // label10
+            // labelDTNow
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(97, 95);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(57, 19);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "190000";
+            this.labelDTNow.AutoSize = true;
+            this.labelDTNow.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDTNow.Location = new System.Drawing.Point(97, 95);
+            this.labelDTNow.Name = "labelDTNow";
+            this.labelDTNow.Size = new System.Drawing.Size(57, 19);
+            this.labelDTNow.TabIndex = 3;
+            this.labelDTNow.Text = "190000";
             // 
             // label11
             // 
@@ -254,12 +273,21 @@ namespace HKD_ClothesShop.Forms
             this.label12.TabIndex = 1;
             this.label12.Text = "Doanh số (tháng)";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::HKD_ClothesShop.Properties.Resources.doanh_thu;
+            this.pictureBox3.Location = new System.Drawing.Point(242, 4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.label14);
+            this.panel3.Controls.Add(this.labelSLKHThang);
+            this.panel3.Controls.Add(this.labelSLKHNow);
             this.panel3.Controls.Add(this.label15);
             this.panel3.Controls.Add(this.label16);
             this.panel3.Controls.Add(this.pictureBox4);
@@ -269,25 +297,25 @@ namespace HKD_ClothesShop.Forms
             this.panel3.Size = new System.Drawing.Size(272, 127);
             this.panel3.TabIndex = 5;
             // 
-            // label13
+            // labelSLKHThang
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Roboto Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(17, 53);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(29, 33);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "2";
+            this.labelSLKHThang.AutoSize = true;
+            this.labelSLKHThang.Font = new System.Drawing.Font("Roboto Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSLKHThang.Location = new System.Drawing.Point(17, 53);
+            this.labelSLKHThang.Name = "labelSLKHThang";
+            this.labelSLKHThang.Size = new System.Drawing.Size(29, 33);
+            this.labelSLKHThang.TabIndex = 4;
+            this.labelSLKHThang.Text = "2";
             // 
-            // label14
+            // labelSLKHNow
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(97, 95);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(17, 19);
-            this.label14.TabIndex = 3;
-            this.label14.Text = "2";
+            this.labelSLKHNow.AutoSize = true;
+            this.labelSLKHNow.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSLKHNow.Location = new System.Drawing.Point(97, 95);
+            this.labelSLKHNow.Name = "labelSLKHNow";
+            this.labelSLKHNow.Size = new System.Drawing.Size(17, 19);
+            this.labelSLKHNow.TabIndex = 3;
+            this.labelSLKHNow.Text = "2";
             // 
             // label15
             // 
@@ -309,11 +337,20 @@ namespace HKD_ClothesShop.Forms
             this.label16.TabIndex = 1;
             this.label16.Text = "Khách hàng (tháng)";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::HKD_ClothesShop.Properties.Resources.khach_hang_ds;
+            this.pictureBox4.Location = new System.Drawing.Point(215, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Goldenrod;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Controls.Add(this.label17);
+            this.panel4.Controls.Add(this.labelTSLMHBan);
             this.panel4.Controls.Add(this.label20);
             this.panel4.ForeColor = System.Drawing.Color.White;
             this.panel4.Location = new System.Drawing.Point(65, 145);
@@ -321,15 +358,15 @@ namespace HKD_ClothesShop.Forms
             this.panel4.Size = new System.Drawing.Size(272, 89);
             this.panel4.TabIndex = 6;
             // 
-            // label17
+            // labelTSLMHBan
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Roboto Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(17, 34);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(57, 33);
-            this.label17.TabIndex = 4;
-            this.label17.Text = "100";
+            this.labelTSLMHBan.AutoSize = true;
+            this.labelTSLMHBan.Font = new System.Drawing.Font("Roboto Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTSLMHBan.Location = new System.Drawing.Point(17, 34);
+            this.labelTSLMHBan.Name = "labelTSLMHBan";
+            this.labelTSLMHBan.Size = new System.Drawing.Size(57, 33);
+            this.labelTSLMHBan.TabIndex = 4;
+            this.labelTSLMHBan.Text = "100";
             // 
             // label20
             // 
@@ -345,7 +382,7 @@ namespace HKD_ClothesShop.Forms
             // 
             this.panel5.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel5.Controls.Add(this.label21);
+            this.panel5.Controls.Add(this.labelLSP);
             this.panel5.Controls.Add(this.label24);
             this.panel5.ForeColor = System.Drawing.Color.White;
             this.panel5.Location = new System.Drawing.Point(343, 145);
@@ -353,15 +390,15 @@ namespace HKD_ClothesShop.Forms
             this.panel5.Size = new System.Drawing.Size(272, 89);
             this.panel5.TabIndex = 7;
             // 
-            // label21
+            // labelLSP
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Roboto Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(17, 34);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(29, 33);
-            this.label21.TabIndex = 4;
-            this.label21.Text = "4";
+            this.labelLSP.AutoSize = true;
+            this.labelLSP.Font = new System.Drawing.Font("Roboto Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLSP.Location = new System.Drawing.Point(17, 34);
+            this.labelLSP.Name = "labelLSP";
+            this.labelLSP.Size = new System.Drawing.Size(29, 33);
+            this.labelLSP.TabIndex = 4;
+            this.labelLSP.Text = "4";
             // 
             // label24
             // 
@@ -377,8 +414,8 @@ namespace HKD_ClothesShop.Forms
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel6.Controls.Add(this.label19);
-            this.panel6.Controls.Add(this.label18);
+            this.panel6.Controls.Add(this.labelTienKHNoThang);
+            this.panel6.Controls.Add(this.labelTienKHNoNow);
             this.panel6.Controls.Add(this.label25);
             this.panel6.Controls.Add(this.label28);
             this.panel6.Controls.Add(this.pictureBox7);
@@ -387,6 +424,26 @@ namespace HKD_ClothesShop.Forms
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(272, 89);
             this.panel6.TabIndex = 8;
+            // 
+            // labelTienKHNoThang
+            // 
+            this.labelTienKHNoThang.AutoSize = true;
+            this.labelTienKHNoThang.Font = new System.Drawing.Font("Roboto Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTienKHNoThang.Location = new System.Drawing.Point(17, 34);
+            this.labelTienKHNoThang.Name = "labelTienKHNoThang";
+            this.labelTienKHNoThang.Size = new System.Drawing.Size(29, 33);
+            this.labelTienKHNoThang.TabIndex = 6;
+            this.labelTienKHNoThang.Text = "0";
+            // 
+            // labelTienKHNoNow
+            // 
+            this.labelTienKHNoNow.AutoSize = true;
+            this.labelTienKHNoNow.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTienKHNoNow.Location = new System.Drawing.Point(119, 66);
+            this.labelTienKHNoNow.Name = "labelTienKHNoNow";
+            this.labelTienKHNoNow.Size = new System.Drawing.Size(17, 19);
+            this.labelTienKHNoNow.TabIndex = 5;
+            this.labelTienKHNoNow.Text = "0";
             // 
             // label25
             // 
@@ -408,11 +465,20 @@ namespace HKD_ClothesShop.Forms
             this.label28.TabIndex = 1;
             this.label28.Text = "Tiền khách nợ (tháng):";
             // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = global::HKD_ClothesShop.Properties.Resources.tao_hoa_don;
+            this.pictureBox7.Location = new System.Drawing.Point(215, 3);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox7.TabIndex = 0;
+            this.pictureBox7.TabStop = false;
+            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.DarkViolet;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel7.Controls.Add(this.label29);
+            this.panel7.Controls.Add(this.labelDTYear);
             this.panel7.Controls.Add(this.label32);
             this.panel7.Controls.Add(this.pictureBox8);
             this.panel7.ForeColor = System.Drawing.Color.White;
@@ -421,15 +487,15 @@ namespace HKD_ClothesShop.Forms
             this.panel7.Size = new System.Drawing.Size(297, 89);
             this.panel7.TabIndex = 9;
             // 
-            // label29
+            // labelDTYear
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(17, 53);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(57, 19);
-            this.label29.TabIndex = 4;
-            this.label29.Text = "190000";
+            this.labelDTYear.AutoSize = true;
+            this.labelDTYear.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDTYear.Location = new System.Drawing.Point(17, 53);
+            this.labelDTYear.Name = "labelDTYear";
+            this.labelDTYear.Size = new System.Drawing.Size(57, 19);
+            this.labelDTYear.TabIndex = 4;
+            this.labelDTYear.Text = "190000";
             // 
             // label32
             // 
@@ -440,6 +506,16 @@ namespace HKD_ClothesShop.Forms
             this.label32.Size = new System.Drawing.Size(111, 19);
             this.label32.TabIndex = 1;
             this.label32.Text = "Doanh số (năm)";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = global::HKD_ClothesShop.Properties.Resources.tong_doanh_thu;
+            this.pictureBox8.Location = new System.Drawing.Point(241, 3);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(49, 49);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 0;
+            this.pictureBox8.TabStop = false;
             // 
             // button3
             // 
@@ -487,61 +563,6 @@ namespace HKD_ClothesShop.Forms
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = global::HKD_ClothesShop.Properties.Resources.tong_doanh_thu;
-            this.pictureBox8.Location = new System.Drawing.Point(241, 3);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(49, 49);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 0;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::HKD_ClothesShop.Properties.Resources.tao_hoa_don;
-            this.pictureBox7.Location = new System.Drawing.Point(215, 3);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox7.TabIndex = 0;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::HKD_ClothesShop.Properties.Resources.khach_hang_ds;
-            this.pictureBox4.Location = new System.Drawing.Point(215, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::HKD_ClothesShop.Properties.Resources.doanh_thu;
-            this.pictureBox3.Location = new System.Drawing.Point(242, 4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::HKD_ClothesShop.Properties.Resources.hang_ton_kho;
-            this.pictureBox2.Location = new System.Drawing.Point(217, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::HKD_ClothesShop.Properties.Resources.tao_phieu_theo_yc;
-            this.pictureBox1.Location = new System.Drawing.Point(214, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.White;
@@ -555,31 +576,19 @@ namespace HKD_ClothesShop.Forms
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // label18
+            // dateTimePicker1
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(119, 66);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(17, 19);
-            this.label18.TabIndex = 5;
-            this.label18.Text = "0";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Roboto Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(17, 34);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(29, 33);
-            this.label19.TabIndex = 6;
-            this.label19.Text = "0";
+            this.dateTimePicker1.Location = new System.Drawing.Point(963, 467);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(229, 20);
+            this.dateTimePicker1.TabIndex = 13;
             // 
             // frmThongKeBaoCao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1209, 634);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -598,26 +607,26 @@ namespace HKD_ClothesShop.Forms
             this.Load += new System.EventHandler(this.frmThongKeBaoCao_Load);
             this.panelThayDoiMatKhau.ResumeLayout(false);
             this.panelThayDoiMatKhau.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -628,45 +637,46 @@ namespace HKD_ClothesShop.Forms
         private System.Windows.Forms.Panel panelThayDoiMatKhau;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelSLHDThang;
+        private System.Windows.Forms.Label labelSLHDNow;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelSLMHThang;
+        private System.Windows.Forms.Label labelSLMHNow;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label labelDTThang;
+        private System.Windows.Forms.Label labelDTNow;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label labelSLKHThang;
+        private System.Windows.Forms.Label labelSLKHNow;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label labelTSLMHBan;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label labelLSP;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label labelDTYear;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label labelTienKHNoThang;
+        private System.Windows.Forms.Label labelTienKHNoNow;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
