@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using HKD_ClothesShop.Modal;
 
 namespace HKD_ClothesShop.Forms
@@ -26,7 +27,31 @@ namespace HKD_ClothesShop.Forms
 
         private void frmThongKeBaoCao_Load(object sender, EventArgs e)
         {
+            QLBanHangHKDEntities db = new QLBanHangHKDEntities();
             ThongKeThangVaHomNay();
+            chartDoanhThu.Series["DoanhThu"].Points.AddXY("1", "20000000");
+            chartDoanhThu.Series["DoanhThu"].Points.AddXY("2", "0");
+            chartDoanhThu.Series["DoanhThu"].Points.AddXY("3", "0");
+            chartDoanhThu.Series["DoanhThu"].Points.AddXY("4", "0");
+            chartDoanhThu.Series["DoanhThu"].Points.AddXY("5", "0");
+            chartDoanhThu.Series["DoanhThu"].Points.AddXY("6", "0");
+            chartDoanhThu.Series["DoanhThu"].Points.AddXY("7", "0");
+            chartDoanhThu.Series["DoanhThu"].Points.AddXY("8", "0");
+            chartDoanhThu.Series["DoanhThu"].Points.AddXY("9", "0");
+            chartDoanhThu.Series["DoanhThu"].Points.AddXY("10", "0");
+            chartDoanhThu.Series["DoanhThu"].Points.AddXY("11", "0");
+            chartDoanhThu.Series["DoanhThu"].Points.AddXY("12", "0");
+
+            chartSLBan.DataSource = db.SanPhams.ToList();
+
+            chartSLBan.Series["SanPham"].XValueMember = "TenSanPham";
+            chartSLBan.Series["SanPham"].XValueType = ChartValueType.String;
+            chartSLBan.Series["SanPham"].YValueMembers = "DonGia";
+            chartSLBan.Series["SanPham"].YValueType = ChartValueType.Double;
+
+
+
+
         }
 
         private void ThongKeThangVaHomNay()
@@ -134,6 +159,28 @@ namespace HKD_ClothesShop.Forms
                 SLMHBanNow = db.ChiTietHoaDons.GroupBy(x => x.MaSanPham).Select(x => x.FirstOrDefault()).Count();
 
                 labelSLMHNow.Text = Convert.ToString(SLMHBanNow);
+
+                //Tính doanh thu tháng, ngày
+                decimal DTThang = 0;
+                foreach (var item in listCTHoaDon)
+                {
+                    if (item.HoaDon.NgayLap.ToString("MM/yyyy") == DateTime.Now.ToString("MM/yyyy"))
+                    {
+                        DTThang += item.SoLuongMua * item.DonGiaBan;
+                    }
+                }
+                labelDTThang.Text = Convert.ToString(DTThang.ToString("0.00"));
+                decimal DTNow = 0;
+                foreach (var item in listCTHoaDon)
+                {
+                    if (item.HoaDon.NgayLap.ToString("dd/MM/yyyy") == DateTime.Now.ToString("dd/MM/yyyy"))
+                    {
+                        DTNow += item.SoLuongMua * item.DonGiaBan;
+                    }
+                }
+                labelDTNow.Text = Convert.ToString(DTNow.ToString("0.00"));
+
+
             }
             catch(Exception ex)
             {

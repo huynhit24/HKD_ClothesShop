@@ -29,6 +29,14 @@ namespace HKD_ClothesShop.Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.panelThayDoiMatKhau = new System.Windows.Forms.Panel();
             this.labelSLHDThang = new System.Windows.Forms.Label();
             this.labelSLHDNow = new System.Windows.Forms.Label();
@@ -54,9 +62,12 @@ namespace HKD_ClothesShop.Forms
             this.label16 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.labelTSLMHBanNow = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.labelTSLMHBanThang = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.labelLSP = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -73,10 +84,9 @@ namespace HKD_ClothesShop.Forms
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.labelTSLMHBanNow = new System.Windows.Forms.Label();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.chartDoanhThu = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartSLBan = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panelThayDoiMatKhau.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -87,11 +97,13 @@ namespace HKD_ClothesShop.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDoanhThu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartSLBan)).BeginInit();
             this.SuspendLayout();
             // 
             // panelThayDoiMatKhau
@@ -364,6 +376,26 @@ namespace HKD_ClothesShop.Forms
             this.panel4.Size = new System.Drawing.Size(272, 89);
             this.panel4.TabIndex = 6;
             // 
+            // labelTSLMHBanNow
+            // 
+            this.labelTSLMHBanNow.AutoSize = true;
+            this.labelTSLMHBanNow.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTSLMHBanNow.Location = new System.Drawing.Point(83, 66);
+            this.labelTSLMHBanNow.Name = "labelTSLMHBanNow";
+            this.labelTSLMHBanNow.Size = new System.Drawing.Size(17, 19);
+            this.labelTSLMHBanNow.TabIndex = 6;
+            this.labelTSLMHBanNow.Text = "0";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(3, 66);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 19);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Hôm nay: ";
+            // 
             // labelTSLMHBanThang
             // 
             this.labelTSLMHBanThang.AutoSize = true;
@@ -396,6 +428,15 @@ namespace HKD_ClothesShop.Forms
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(272, 89);
             this.panel5.TabIndex = 7;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::HKD_ClothesShop.Properties.Resources.phieu_nhap_kho;
+            this.pictureBox5.Location = new System.Drawing.Point(214, 3);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox5.TabIndex = 5;
+            this.pictureBox5.TabStop = false;
             // 
             // labelLSP
             // 
@@ -587,49 +628,63 @@ namespace HKD_ClothesShop.Forms
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // dateTimePicker1
+            // monthCalendar1
             // 
-            this.dateTimePicker1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dateTimePicker1.Location = new System.Drawing.Point(963, 467);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(229, 20);
-            this.dateTimePicker1.TabIndex = 13;
+            this.monthCalendar1.Location = new System.Drawing.Point(963, 462);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 14;
             // 
-            // pictureBox5
+            // chartDoanhThu
             // 
-            this.pictureBox5.Image = global::HKD_ClothesShop.Properties.Resources.phieu_nhap_kho;
-            this.pictureBox5.Location = new System.Drawing.Point(214, 3);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox5.TabIndex = 5;
-            this.pictureBox5.TabStop = false;
+            chartArea1.Name = "ChartArea1";
+            this.chartDoanhThu.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartDoanhThu.Legends.Add(legend1);
+            this.chartDoanhThu.Location = new System.Drawing.Point(65, 255);
+            this.chartDoanhThu.Name = "chartDoanhThu";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "DoanhThu";
+            this.chartDoanhThu.Series.Add(series1);
+            this.chartDoanhThu.Size = new System.Drawing.Size(434, 367);
+            this.chartDoanhThu.TabIndex = 15;
+            this.chartDoanhThu.Text = "Thống kê doanh số tháng";
+            title1.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.ForeColor = System.Drawing.Color.LimeGreen;
+            title1.Name = "Title1";
+            title1.Text = "Biểu đồ doanh thu theo tháng";
+            this.chartDoanhThu.Titles.Add(title1);
             // 
-            // label3
+            // chartSLBan
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 66);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 19);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Hôm nay: ";
-            // 
-            // labelTSLMHBanNow
-            // 
-            this.labelTSLMHBanNow.AutoSize = true;
-            this.labelTSLMHBanNow.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTSLMHBanNow.Location = new System.Drawing.Point(83, 66);
-            this.labelTSLMHBanNow.Name = "labelTSLMHBanNow";
-            this.labelTSLMHBanNow.Size = new System.Drawing.Size(17, 19);
-            this.labelTSLMHBanNow.TabIndex = 6;
-            this.labelTSLMHBanNow.Text = "0";
+            chartArea2.Name = "ChartArea1";
+            this.chartSLBan.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartSLBan.Legends.Add(legend2);
+            this.chartSLBan.Location = new System.Drawing.Point(505, 255);
+            this.chartSLBan.Name = "chartSLBan";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Legend = "Legend1";
+            series2.Name = "SanPham";
+            this.chartSLBan.Series.Add(series2);
+            this.chartSLBan.Size = new System.Drawing.Size(446, 367);
+            this.chartSLBan.TabIndex = 16;
+            this.chartSLBan.Text = "Cơ cấu SL sản phẩm bán";
+            title2.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title2.ForeColor = System.Drawing.Color.Red;
+            title2.Name = "Title1";
+            title2.Text = "Cơ cấu SL sản phẩm bán";
+            this.chartSLBan.Titles.Add(title2);
             // 
             // frmThongKeBaoCao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1209, 634);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.chartSLBan);
+            this.Controls.Add(this.chartDoanhThu);
+            this.Controls.Add(this.monthCalendar1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -662,13 +717,15 @@ namespace HKD_ClothesShop.Forms
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDoanhThu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartSLBan)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -719,9 +776,11 @@ namespace HKD_ClothesShop.Forms
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label labelTienKHNoThang;
         private System.Windows.Forms.Label labelTienKHNoNow;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label labelTSLMHBanNow;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartDoanhThu;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartSLBan;
     }
 }

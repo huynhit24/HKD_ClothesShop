@@ -919,8 +919,29 @@ namespace HKD_ClothesShop.Forms
             cmbTinhTrang.Visible = true;
             cbStatus.Visible = true;
             groupBoxTTHD.Text = "Thông tin hóa đơn ✍";
+
+        }
+
+        private void buttonThanhToanKhach_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmThanhToan());
+            
         }
         //---------------------------------------Hóa đơn---------------------------------------
 
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.Controls.Add(childForm);
+            this.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
     }
 }

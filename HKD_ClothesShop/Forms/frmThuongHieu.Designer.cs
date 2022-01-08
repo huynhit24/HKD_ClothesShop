@@ -31,6 +31,18 @@ namespace HKD_ClothesShop.Forms
         {
             this.btnClose = new System.Windows.Forms.Button();
             this.groupBoxNV = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonLuuS = new System.Windows.Forms.Button();
+            this.buttonHuyS = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.panelThem = new System.Windows.Forms.Panel();
+            this.btnCreate = new System.Windows.Forms.Button();
+            this.panelLuuHuy = new System.Windows.Forms.Panel();
+            this.buttonLuuT = new System.Windows.Forms.Button();
+            this.buttonHuyT = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             this.btnChonLogo = new System.Windows.Forms.Button();
             this.picLogo = new System.Windows.Forms.PictureBox();
             this.cbStatus = new System.Windows.Forms.CheckBox();
@@ -51,25 +63,13 @@ namespace HKD_ClothesShop.Forms
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnHidden = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.buttonLuuS = new System.Windows.Forms.Button();
-            this.buttonHuyS = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.panelThem = new System.Windows.Forms.Panel();
-            this.btnCreate = new System.Windows.Forms.Button();
-            this.panelLuuHuy = new System.Windows.Forms.Panel();
-            this.buttonLuuT = new System.Windows.Forms.Button();
-            this.buttonHuyT = new System.Windows.Forms.Button();
-            this.btnReset = new System.Windows.Forms.Button();
             this.groupBoxNV.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvThuongHieu)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelThem.SuspendLayout();
             this.panelLuuHuy.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvThuongHieu)).BeginInit();
             this.SuspendLayout();
             // 
             // btnClose
@@ -107,188 +107,6 @@ namespace HKD_ClothesShop.Forms
             this.groupBoxNV.TabIndex = 6;
             this.groupBoxNV.TabStop = false;
             this.groupBoxNV.Text = "Nhập thông tin nhân viên";
-            // 
-            // btnChonLogo
-            // 
-            this.btnChonLogo.BackColor = System.Drawing.Color.Lime;
-            this.btnChonLogo.FlatAppearance.BorderSize = 0;
-            this.btnChonLogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChonLogo.Location = new System.Drawing.Point(201, 282);
-            this.btnChonLogo.Name = "btnChonLogo";
-            this.btnChonLogo.Size = new System.Drawing.Size(91, 29);
-            this.btnChonLogo.TabIndex = 28;
-            this.btnChonLogo.Text = "Chọn logo";
-            this.btnChonLogo.UseVisualStyleBackColor = false;
-            this.btnChonLogo.Click += new System.EventHandler(this.btnChonLogo_Click);
-            // 
-            // picLogo
-            // 
-            this.picLogo.Image = global::HKD_ClothesShop.Properties.Resources.HKD_icon;
-            this.picLogo.Location = new System.Drawing.Point(6, 207);
-            this.picLogo.Name = "picLogo";
-            this.picLogo.Size = new System.Drawing.Size(180, 180);
-            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picLogo.TabIndex = 27;
-            this.picLogo.TabStop = false;
-            // 
-            // cbStatus
-            // 
-            this.cbStatus.AutoSize = true;
-            this.cbStatus.Location = new System.Drawing.Point(232, 388);
-            this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(136, 23);
-            this.cbStatus.TabIndex = 16;
-            this.cbStatus.Text = "Không sử dụng";
-            this.cbStatus.UseVisualStyleBackColor = true;
-            // 
-            // labelSDT
-            // 
-            this.labelSDT.AutoSize = true;
-            this.labelSDT.Location = new System.Drawing.Point(16, 156);
-            this.labelSDT.Name = "labelSDT";
-            this.labelSDT.Size = new System.Drawing.Size(39, 19);
-            this.labelSDT.TabIndex = 10;
-            this.labelSDT.Text = "SĐT";
-            // 
-            // labelDiachi
-            // 
-            this.labelDiachi.AutoSize = true;
-            this.labelDiachi.Location = new System.Drawing.Point(16, 109);
-            this.labelDiachi.Name = "labelDiachi";
-            this.labelDiachi.Size = new System.Drawing.Size(58, 19);
-            this.labelDiachi.TabIndex = 9;
-            this.labelDiachi.Text = "Địa chỉ";
-            // 
-            // labelTenTH
-            // 
-            this.labelTenTH.AutoSize = true;
-            this.labelTenTH.Location = new System.Drawing.Point(16, 70);
-            this.labelTenTH.Name = "labelTenTH";
-            this.labelTenTH.Size = new System.Drawing.Size(126, 19);
-            this.labelTenTH.TabIndex = 8;
-            this.labelTenTH.Text = "Tên thương hiệu";
-            // 
-            // labelMTH
-            // 
-            this.labelMTH.AutoSize = true;
-            this.labelMTH.Location = new System.Drawing.Point(16, 31);
-            this.labelMTH.Name = "labelMTH";
-            this.labelMTH.Size = new System.Drawing.Size(122, 19);
-            this.labelMTH.TabIndex = 7;
-            this.labelMTH.Text = "Mã thương hiệu";
-            // 
-            // txtSDT
-            // 
-            this.txtSDT.Location = new System.Drawing.Point(154, 156);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(203, 27);
-            this.txtSDT.TabIndex = 3;
-            // 
-            // txtDiaChi
-            // 
-            this.txtDiaChi.Location = new System.Drawing.Point(154, 109);
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(203, 27);
-            this.txtDiaChi.TabIndex = 2;
-            // 
-            // txtTenTH
-            // 
-            this.txtTenTH.Location = new System.Drawing.Point(154, 70);
-            this.txtTenTH.Name = "txtTenTH";
-            this.txtTenTH.Size = new System.Drawing.Size(203, 27);
-            this.txtTenTH.TabIndex = 1;
-            // 
-            // txtMTH
-            // 
-            this.txtMTH.Location = new System.Drawing.Point(154, 31);
-            this.txtMTH.Name = "txtMTH";
-            this.txtMTH.Size = new System.Drawing.Size(203, 27);
-            this.txtMTH.TabIndex = 0;
-            // 
-            // dgvThuongHieu
-            // 
-            this.dgvThuongHieu.AllowUserToAddRows = false;
-            this.dgvThuongHieu.AllowUserToDeleteRows = false;
-            this.dgvThuongHieu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvThuongHieu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvThuongHieu.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
-            this.dgvThuongHieu.BackgroundColor = System.Drawing.Color.White;
-            this.dgvThuongHieu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvThuongHieu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
-            this.dgvThuongHieu.GridColor = System.Drawing.Color.Gold;
-            this.dgvThuongHieu.Location = new System.Drawing.Point(403, 72);
-            this.dgvThuongHieu.Name = "dgvThuongHieu";
-            this.dgvThuongHieu.Size = new System.Drawing.Size(789, 664);
-            this.dgvThuongHieu.TabIndex = 7;
-            this.dgvThuongHieu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThuongHieu_CellClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Logo";
-            this.Column1.Name = "Column1";
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Mã thương hiệu";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Tên thương hiệu";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Địa chỉ";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "SĐT";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Trạng thái";
-            this.Column6.Name = "Column6";
-            // 
-            // btnHidden
-            // 
-            this.btnHidden.BackColor = System.Drawing.Color.GreenYellow;
-            this.btnHidden.FlatAppearance.BorderSize = 0;
-            this.btnHidden.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHidden.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHidden.ForeColor = System.Drawing.Color.Red;
-            this.btnHidden.Location = new System.Drawing.Point(403, 38);
-            this.btnHidden.Name = "btnHidden";
-            this.btnHidden.Size = new System.Drawing.Size(83, 28);
-            this.btnHidden.TabIndex = 11;
-            this.btnHidden.Text = "Ẩn";
-            this.btnHidden.UseVisualStyleBackColor = false;
-            this.btnHidden.Click += new System.EventHandler(this.btnHidden_Click);
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label7.Location = new System.Drawing.Point(646, 15);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(352, 33);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "DANH SÁCH THƯƠNG HIỆU";
             // 
             // panel1
             // 
@@ -472,6 +290,188 @@ namespace HKD_ClothesShop.Forms
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
+            // btnChonLogo
+            // 
+            this.btnChonLogo.BackColor = System.Drawing.Color.Lime;
+            this.btnChonLogo.FlatAppearance.BorderSize = 0;
+            this.btnChonLogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChonLogo.Location = new System.Drawing.Point(201, 282);
+            this.btnChonLogo.Name = "btnChonLogo";
+            this.btnChonLogo.Size = new System.Drawing.Size(91, 29);
+            this.btnChonLogo.TabIndex = 28;
+            this.btnChonLogo.Text = "Chọn logo";
+            this.btnChonLogo.UseVisualStyleBackColor = false;
+            this.btnChonLogo.Click += new System.EventHandler(this.btnChonLogo_Click);
+            // 
+            // picLogo
+            // 
+            this.picLogo.Image = global::HKD_ClothesShop.Properties.Resources.HKD_icon;
+            this.picLogo.Location = new System.Drawing.Point(6, 207);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(180, 180);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogo.TabIndex = 27;
+            this.picLogo.TabStop = false;
+            // 
+            // cbStatus
+            // 
+            this.cbStatus.AutoSize = true;
+            this.cbStatus.Location = new System.Drawing.Point(232, 388);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(136, 23);
+            this.cbStatus.TabIndex = 16;
+            this.cbStatus.Text = "Không sử dụng";
+            this.cbStatus.UseVisualStyleBackColor = true;
+            // 
+            // labelSDT
+            // 
+            this.labelSDT.AutoSize = true;
+            this.labelSDT.Location = new System.Drawing.Point(16, 156);
+            this.labelSDT.Name = "labelSDT";
+            this.labelSDT.Size = new System.Drawing.Size(39, 19);
+            this.labelSDT.TabIndex = 10;
+            this.labelSDT.Text = "SĐT";
+            // 
+            // labelDiachi
+            // 
+            this.labelDiachi.AutoSize = true;
+            this.labelDiachi.Location = new System.Drawing.Point(16, 109);
+            this.labelDiachi.Name = "labelDiachi";
+            this.labelDiachi.Size = new System.Drawing.Size(58, 19);
+            this.labelDiachi.TabIndex = 9;
+            this.labelDiachi.Text = "Địa chỉ";
+            // 
+            // labelTenTH
+            // 
+            this.labelTenTH.AutoSize = true;
+            this.labelTenTH.Location = new System.Drawing.Point(16, 70);
+            this.labelTenTH.Name = "labelTenTH";
+            this.labelTenTH.Size = new System.Drawing.Size(126, 19);
+            this.labelTenTH.TabIndex = 8;
+            this.labelTenTH.Text = "Tên thương hiệu";
+            // 
+            // labelMTH
+            // 
+            this.labelMTH.AutoSize = true;
+            this.labelMTH.Location = new System.Drawing.Point(16, 31);
+            this.labelMTH.Name = "labelMTH";
+            this.labelMTH.Size = new System.Drawing.Size(122, 19);
+            this.labelMTH.TabIndex = 7;
+            this.labelMTH.Text = "Mã thương hiệu";
+            // 
+            // txtSDT
+            // 
+            this.txtSDT.Location = new System.Drawing.Point(154, 156);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(203, 27);
+            this.txtSDT.TabIndex = 3;
+            // 
+            // txtDiaChi
+            // 
+            this.txtDiaChi.Location = new System.Drawing.Point(154, 109);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(203, 27);
+            this.txtDiaChi.TabIndex = 2;
+            // 
+            // txtTenTH
+            // 
+            this.txtTenTH.Location = new System.Drawing.Point(154, 70);
+            this.txtTenTH.Name = "txtTenTH";
+            this.txtTenTH.Size = new System.Drawing.Size(203, 27);
+            this.txtTenTH.TabIndex = 1;
+            // 
+            // txtMTH
+            // 
+            this.txtMTH.Location = new System.Drawing.Point(154, 31);
+            this.txtMTH.Name = "txtMTH";
+            this.txtMTH.Size = new System.Drawing.Size(203, 27);
+            this.txtMTH.TabIndex = 0;
+            // 
+            // dgvThuongHieu
+            // 
+            this.dgvThuongHieu.AllowUserToAddRows = false;
+            this.dgvThuongHieu.AllowUserToDeleteRows = false;
+            this.dgvThuongHieu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvThuongHieu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvThuongHieu.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dgvThuongHieu.BackgroundColor = System.Drawing.Color.White;
+            this.dgvThuongHieu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvThuongHieu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
+            this.dgvThuongHieu.GridColor = System.Drawing.Color.Gold;
+            this.dgvThuongHieu.Location = new System.Drawing.Point(403, 72);
+            this.dgvThuongHieu.Name = "dgvThuongHieu";
+            this.dgvThuongHieu.Size = new System.Drawing.Size(772, 778);
+            this.dgvThuongHieu.TabIndex = 7;
+            this.dgvThuongHieu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThuongHieu_CellClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Logo";
+            this.Column1.Name = "Column1";
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Mã thương hiệu";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Tên thương hiệu";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Địa chỉ";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "SĐT";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Trạng thái";
+            this.Column6.Name = "Column6";
+            // 
+            // btnHidden
+            // 
+            this.btnHidden.BackColor = System.Drawing.Color.GreenYellow;
+            this.btnHidden.FlatAppearance.BorderSize = 0;
+            this.btnHidden.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHidden.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHidden.ForeColor = System.Drawing.Color.Red;
+            this.btnHidden.Location = new System.Drawing.Point(403, 38);
+            this.btnHidden.Name = "btnHidden";
+            this.btnHidden.Size = new System.Drawing.Size(83, 28);
+            this.btnHidden.TabIndex = 11;
+            this.btnHidden.Text = "Ẩn";
+            this.btnHidden.UseVisualStyleBackColor = false;
+            this.btnHidden.Click += new System.EventHandler(this.btnHidden_Click);
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label7.Location = new System.Drawing.Point(646, 15);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(352, 33);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "DANH SÁCH THƯƠNG HIỆU";
+            // 
             // frmThuongHieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -490,12 +490,12 @@ namespace HKD_ClothesShop.Forms
             this.Load += new System.EventHandler(this.frmThuongHieu_Load);
             this.groupBoxNV.ResumeLayout(false);
             this.groupBoxNV.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvThuongHieu)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panelThem.ResumeLayout(false);
             this.panelLuuHuy.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvThuongHieu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
