@@ -31,23 +31,20 @@ namespace HKD_ClothesShop.Forms
         {
             this.btnClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvCTHD = new System.Windows.Forms.DataGridView();
-            this.Column9 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCTHD)).BeginInit();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnClose
@@ -70,153 +67,173 @@ namespace HKD_ClothesShop.Forms
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(277, 9);
+            this.label1.Location = new System.Drawing.Point(174, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(675, 38);
+            this.label1.Size = new System.Drawing.Size(349, 76);
             this.label1.TabIndex = 37;
-            this.label1.Text = "TÍNH TIỀN, THỐI TIỀN KHÁCH HÀNG 💵💵💵";
+            this.label1.Text = "TÍNH TIỀN, THỐI TIỀN \r\nKHÁCH HÀNG 💵💵💵";
             // 
-            // dgvCTHD
+            // label2
             // 
-            this.dgvCTHD.AllowUserToAddRows = false;
-            this.dgvCTHD.AllowUserToDeleteRows = false;
-            this.dgvCTHD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.dgvCTHD.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.dgvCTHD.BackgroundColor = System.Drawing.Color.White;
-            this.dgvCTHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCTHD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column9,
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.Column10,
-            this.Column11,
-            this.Column12,
-            this.Column13,
-            this.Column14,
-            this.Column15,
-            this.Column16,
-            this.Column17});
-            this.dgvCTHD.Location = new System.Drawing.Point(12, 72);
-            this.dgvCTHD.Name = "dgvCTHD";
-            this.dgvCTHD.Size = new System.Drawing.Size(777, 500);
-            this.dgvCTHD.TabIndex = 38;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 99);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(151, 33);
+            this.label2.TabIndex = 38;
+            this.label2.Text = "Thanh toán";
             // 
-            // Column9
+            // label3
             // 
-            this.Column9.FillWeight = 183.727F;
-            this.Column9.HeaderText = "📸Ảnh sản phẩm mua";
-            this.Column9.Name = "Column9";
-            this.Column9.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Column9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Column9.Width = 105;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(13, 189);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(144, 33);
+            this.label3.TabIndex = 39;
+            this.label3.Text = "Khách đưa";
             // 
-            // dataGridViewTextBoxColumn1
+            // label4
             // 
-            this.dataGridViewTextBoxColumn1.FillWeight = 163.0598F;
-            this.dataGridViewTextBoxColumn1.HeaderText = "📜Số hóa đơn";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.Width = 75;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(13, 392);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(157, 33);
+            this.label4.TabIndex = 40;
+            this.label4.Text = "Tiền thối lại";
             // 
-            // dataGridViewTextBoxColumn2
+            // textBox1
             // 
-            this.dataGridViewTextBoxColumn2.FillWeight = 145.1049F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "👦Tên nhân viên";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 86;
+            this.textBox1.Location = new System.Drawing.Point(170, 99);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(535, 48);
+            this.textBox1.TabIndex = 41;
             // 
-            // dataGridViewTextBoxColumn3
+            // button1
             // 
-            this.dataGridViewTextBoxColumn3.FillWeight = 129.5062F;
-            this.dataGridViewTextBoxColumn3.HeaderText = "🧓Tên khách hàng";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 91;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(170, 180);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(115, 57);
+            this.button1.TabIndex = 42;
+            this.button1.Text = "50.000";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewTextBoxColumn4
+            // button2
             // 
-            this.dataGridViewTextBoxColumn4.FillWeight = 115.9546F;
-            this.dataGridViewTextBoxColumn4.HeaderText = "🐱‍💻Tên sản phẩm";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 79;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(309, 180);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(119, 57);
+            this.button2.TabIndex = 43;
+            this.button2.Text = "100.000";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewTextBoxColumn5
+            // button3
             // 
-            this.dataGridViewTextBoxColumn5.FillWeight = 104.1814F;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Số lượng mua";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.Width = 89;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(449, 180);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(122, 57);
+            this.button3.TabIndex = 44;
+            this.button3.Text = "200.000";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // dataGridViewTextBoxColumn6
+            // button4
             // 
-            this.dataGridViewTextBoxColumn6.FillWeight = 93.95325F;
-            this.dataGridViewTextBoxColumn6.HeaderText = "💲Giá bán";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.Width = 70;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(589, 180);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(116, 57);
+            this.button4.TabIndex = 45;
+            this.button4.Text = "500.000";
+            this.button4.UseVisualStyleBackColor = true;
             // 
-            // Column10
+            // button5
             // 
-            this.Column10.FillWeight = 85.06741F;
-            this.Column10.HeaderText = "💵Thành tiền";
-            this.Column10.Name = "Column10";
-            this.Column10.Width = 87;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(170, 257);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(258, 57);
+            this.button5.TabIndex = 46;
+            this.button5.Text = "50.000";
+            this.button5.UseVisualStyleBackColor = true;
             // 
-            // Column11
+            // button6
             // 
-            this.Column11.FillWeight = 77.34766F;
-            this.Column11.HeaderText = "Mã nhân viên";
-            this.Column11.Name = "Column11";
-            this.Column11.Width = 89;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(447, 257);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(258, 57);
+            this.button6.TabIndex = 47;
+            this.button6.Text = "50.000";
+            this.button6.UseVisualStyleBackColor = true;
             // 
-            // Column12
+            // textBox2
             // 
-            this.Column12.FillWeight = 70.64101F;
-            this.Column12.HeaderText = "Mã khách hàng";
-            this.Column12.Name = "Column12";
-            this.Column12.Width = 98;
+            this.textBox2.Location = new System.Drawing.Point(170, 331);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(535, 48);
+            this.textBox2.TabIndex = 48;
             // 
-            // Column13
+            // textBox3
             // 
-            this.Column13.FillWeight = 64.8145F;
-            this.Column13.HeaderText = "Mã sản phẩm";
-            this.Column13.Name = "Column13";
-            this.Column13.Width = 88;
+            this.textBox3.Location = new System.Drawing.Point(170, 392);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(535, 48);
+            this.textBox3.TabIndex = 49;
             // 
-            // Column14
+            // button7
             // 
-            this.Column14.FillWeight = 59.75262F;
-            this.Column14.HeaderText = "Đơn giá gốc";
-            this.Column14.Name = "Column14";
-            this.Column14.Width = 67;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(170, 461);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(258, 57);
+            this.button7.TabIndex = 50;
+            this.button7.Text = "Hủy";
+            this.button7.UseVisualStyleBackColor = true;
             // 
-            // Column15
+            // button8
             // 
-            this.Column15.FillWeight = 55.35503F;
-            this.Column15.HeaderText = "Đơn vị tính";
-            this.Column15.Name = "Column15";
-            this.Column15.Width = 78;
-            // 
-            // Column16
-            // 
-            this.Column16.FillWeight = 51.53455F;
-            this.Column16.HeaderText = "Chất liệu";
-            this.Column16.Name = "Column16";
-            this.Column16.Width = 68;
-            // 
-            // Column17
-            // 
-            this.Column17.HeaderText = "Tình trạng";
-            this.Column17.Name = "Column17";
-            this.Column17.Width = 74;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(447, 461);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(258, 57);
+            this.button8.TabIndex = 51;
+            this.button8.Text = "Đồng ý";
+            this.button8.UseVisualStyleBackColor = true;
             // 
             // frmThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1193, 595);
-            this.Controls.Add(this.dgvCTHD);
+            this.ClientSize = new System.Drawing.Size(717, 530);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClose);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -224,7 +241,6 @@ namespace HKD_ClothesShop.Forms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Thanh toán hóa đơn 💵💵💵";
             this.Load += new System.EventHandler(this.frmThanhToan_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCTHD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,21 +250,19 @@ namespace HKD_ClothesShop.Forms
 
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvCTHD;
-        private System.Windows.Forms.DataGridViewImageColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
     }
 }

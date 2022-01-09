@@ -100,6 +100,9 @@ namespace HKD_ClothesShop.Forms
         {
             try
             {
+                tabPageCTHD.Parent = null;
+                tabHoaDon.Parent = tabChiTietHoaDon;
+                tabPageAllCTHD.Parent = tabChiTietHoaDon;
                 QLBanHangHKDEntities db = new QLBanHangHKDEntities();
                 List<HoaDon> listHoaDon = db.HoaDons.ToList();
                 List<ChiTietHoaDon> listCTHoaDon = db.ChiTietHoaDons.ToList();
@@ -112,9 +115,12 @@ namespace HKD_ClothesShop.Forms
                 FillNhanVienCombobox(listNhanVien);
                 FillKhachHangCombobox(listKhachHang);
 
-                BindGridCTHD(listCTHoaDon);
+                /*BindGridCTHD(listCTHoaDon);
                 FillSHDCombobox(listHoaDon);
-                FillMSPCombobox(listSanPham);
+                FillMSPCombobox(listSanPham);*/
+
+                BindGridAllCTHD(listCTHoaDon);
+
 
                 foreach (var item in listSanPham)
                 {
@@ -454,6 +460,26 @@ namespace HKD_ClothesShop.Forms
 
         }
 
+        private void HideGridCTHD(List<ChiTietHoaDon> listCTHoaDon)
+        {
+            try
+            {
+                using (var db = new QLBanHangHKDEntities())
+                {
+                    if (txtSHD.Text != "")
+                    {
+                        var search = (from ct in db.ChiTietHoaDons
+                                      where ct.SoHoaDon.ToString().ToLower().Contains(txtSHD.Text.ToString().ToLower())
+                                      select ct).ToList();
+                        BindGridCTHD(search);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Xảy ra lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void buttonThem_Click(object sender, EventArgs e)
         {
             try
@@ -517,16 +543,17 @@ namespace HKD_ClothesShop.Forms
             {
                 using (var db = new QLBanHangHKDEntities())
                 {
+                    List<ChiTietHoaDon> listCTHoaDon = db.ChiTietHoaDons.ToList();
                     int index = dgvHoaDon.CurrentCell.RowIndex;
                     DataGridViewRow row = dgvCTHD.Rows[index];
                     string stemp = row.Cells[0].Value.ToString();
                     string temp = row.Cells[1].Value.ToString();
-                    var dacdiem = db.ChiTietHoaDons.FirstOrDefault(p => p.SoHoaDon == txtSHD.Text && p.MaSanPham == comboBoxMSP.Text /*&& p.MaNhanVien == cmbMNV.Text && p.MaKhachHang == cmbMKH.Text*/);
+                    var dacdiem = db.ChiTietHoaDons.FirstOrDefault(p => p.SoHoaDon == comboBoxSHD.Text && p.MaSanPham == comboBoxMSP.Text /*&& p.MaNhanVien == cmbMNV.Text && p.MaKhachHang == cmbMKH.Text*/);
                     //var khachhang = db.KhachHangs.FirstOrDefault(p => p.MaKhachHang == txtMKH.Text);
                     if (dacdiem != null)
                     {
                         // kiểm tra dữ liệu lưu vào ở các Textbox
-                        bool isValidated = isValidateDataCTHD();
+                        bool isValidated = isValidateDataCTHDUpdate();
                         if (isValidated)// dữ liệu được xác thực đúng thỏa database
                         {
                             //dacdiem.SoHoaDon = comboBoxSHD.Text;
@@ -539,7 +566,8 @@ namespace HKD_ClothesShop.Forms
                             {
 
                                 db.SaveChanges();
-                                frmTaoHoaDon_Load(sender, e);
+                                //frmTaoHoaDon_Load(sender, e);
+                                HideGridCTHD(listCTHoaDon);
                                 MessageBox.Show($"Cập nhật thông tin Chi tiết Hóa đơn {dacdiem.SoHoaDon}, {dacdiem.MaSanPham} thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 Xoatt();
                             }
@@ -562,13 +590,18 @@ namespace HKD_ClothesShop.Forms
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Lỗi Sửa TT Chi tiết Hóa đơn (có thể do trùng mã khác trong CSDL)! - Mời bạn thử lại", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                frmTaoHoaDon_Load(sender, e);
+                //frmTaoHoaDon_Load(sender, e);
             }
         }
 
         private bool isValidateDataCTHD()
         {
             return KiemTra_BlankEmpty_CTHD() == true && KiemTra_Limited_SLM_CTHD() == true && KiemTra_SLM_HopLe_CTHD() == true;
+        }
+
+        private bool isValidateDataCTHDUpdate()
+        {
+            return KiemTra_BlankEmpty_CTHD() == true;
         }
 
         private void ThongBaoLoiDataInputCTHD()
@@ -828,7 +861,10 @@ namespace HKD_ClothesShop.Forms
 
         private void buttonThoat_Click(object sender, EventArgs e)
         {
-            this.Close();
+            ///this.Close();
+            tabPageCTHD.Parent = null;
+            tabHoaDon.Parent = tabChiTietHoaDon;
+            tabPageAllCTHD.Parent = tabChiTietHoaDon;
         }
 
         private void buttonReset_Click(object sender, EventArgs e)
@@ -924,8 +960,8 @@ namespace HKD_ClothesShop.Forms
 
         private void buttonThanhToanKhach_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmThanhToan());
-            
+            //openChildForm(new frmThanhToan());
+            new frmThanhToan().ShowDialog();
         }
         //---------------------------------------Hóa đơn---------------------------------------
 
@@ -942,6 +978,124 @@ namespace HKD_ClothesShop.Forms
             this.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        private void BindGridAllCTHD(List<ChiTietHoaDon> listCTHoaDon)
+        {
+            try
+            {
+                dgvAllCTHD.Rows.Clear();
+                foreach (var item in listCTHoaDon)
+                {
+                    int index = dgvAllCTHD.Rows.Add();
+                    dgvAllCTHD.Rows[index].Cells[0].Value = item.SanPham.AnhBiaSP; //Ảnh sản phẩm mua
+                    dgvAllCTHD.Rows[index].Cells[1].Value = item.SoHoaDon; // Số hóa đơn
+                    dgvAllCTHD.Rows[index].Cells[2].Value = item.HoaDon.NhanVienBanHang.HoTen; // Tên nhân viên
+                    dgvAllCTHD.Rows[index].Cells[3].Value = item.HoaDon.KhachHang.HoTen; // Tên khách hàng
+                    dgvAllCTHD.Rows[index].Cells[4].Value = item.SanPham.TenSanPham; // Tên sản phẩm
+                    dgvAllCTHD.Rows[index].Cells[5].Value = item.SoLuongMua; // Số lượng mua
+                    dgvAllCTHD.Rows[index].Cells[6].Value = item.DonGiaBan; // Đơn giá bán
+                    dgvAllCTHD.Rows[index].Cells[7].Value = item.SoLuongMua * item.DonGiaBan; // Thành tiền
+                    dgvAllCTHD.Rows[index].Cells[8].Value = item.HoaDon.MaNhanVien; // Mã nhân viên
+                    dgvAllCTHD.Rows[index].Cells[9].Value = item.HoaDon.MaKhachHang; // Mã khách hàng
+                    dgvAllCTHD.Rows[index].Cells[10].Value = item.MaSanPham; // Mã sản phẩm
+                    dgvAllCTHD.Rows[index].Cells[11].Value = item.SanPham.DonGia; // Đơn giá gốc
+                    dgvAllCTHD.Rows[index].Cells[12].Value = item.SanPham.DonViTinh; // Đợn vị tính
+                    dgvAllCTHD.Rows[index].Cells[13].Value = item.SanPham.ChatLieu; // Chất liệu
+                    //dgvCTHD.Rows[index].Cells[14].Value = item.HoaDon.TinhTrang; // Tình trạng
+
+                    if (item.HoaDon.TinhTrang == "T")
+                    {
+                        dgvAllCTHD.Rows[index].Cells[14].Value = "Đã thanh toán";
+                    }
+                    else
+                    {
+                        if (item.HoaDon.TinhTrang == "C")
+                        {
+                            dgvAllCTHD.Rows[index].Cells[14].Value = "Chưa thanh toán";
+                        }
+                        else
+                        {
+                            dgvAllCTHD.Rows[index].Cells[14].Value = "Ghi nợ";
+                        }
+                        //dgvHoaDon.Rows[index].DefaultCellStyle.BackColor = Color.GreenYellow;
+                    }
+                    /*if (item.Status == true)
+                    {
+                        dgvCTHD.Rows[index].Cells[5].Value = "Còn sử dụng";
+                    }
+                    else
+                    {
+                        dgvCTHD.Rows[index].Cells[5].Value = "Không sử dụng";
+                        dgvCTHD.Rows[index].DefaultCellStyle.BackColor = Color.GreenYellow;
+                    }
+                    dgvCTHD.Rows[index].Cells[6].Value = item.KhachHang.HoTen;
+                    dgvCTHD.Rows[index].Cells[7].Value = item.NhanVienBanHang.HoTen;*/
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Xảy ra lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void dgvHoaDon_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            QLBanHangHKDEntities db = new QLBanHangHKDEntities();
+            List<ChiTietHoaDon> listCTHoaDon = db.ChiTietHoaDons.ToList();
+            List<HoaDon> listHoaDon = db.HoaDons.ToList();
+            List<SanPham> listSanPham = db.SanPhams.ToList();
+            tabPageCTHD.Parent = tabChiTietHoaDon;
+            tabHoaDon.Parent = null;
+            tabPageAllCTHD.Parent = null;
+            HideGridCTHD(listCTHoaDon);
+            //BindGridCTHD(listCTHoaDon);
+            FillSHDCombobox(listHoaDon);
+            FillMSPCombobox(listSanPham);
+
+
+        }
+
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
+        {
+            QLBanHangHKDEntities db = new QLBanHangHKDEntities();
+            List<ChiTietHoaDon> listCTHoaDon = db.ChiTietHoaDons.ToList();
+            /*List<HoaDon> listHoaDon = db.HoaDons.ToList();
+            List<SanPham> listSanPham = db.SanPhams.ToList();*/
+            /*tabPageCTHD.Parent = tabChiTietHoaDon;
+            tabHoaDon.Parent = null;
+            tabPageAllCTHD.Parent = null;*/
+            SearchGridCTHD(listCTHoaDon);
+            //BindGridCTHD(listCTHoaDon);
+            /*FillSHDCombobox(listHoaDon);
+            FillMSPCombobox(listSanPham);*/
+        }
+
+        private void SearchGridCTHD(List<ChiTietHoaDon> listCTHoaDon)
+        {
+            try
+            {
+                using (var db = new QLBanHangHKDEntities())
+                {
+                    if (textBoxSearch.Text != "")
+                    {
+                        var search = (from ct in db.ChiTietHoaDons
+                                      where ct.SoHoaDon.ToString().ToLower() == textBoxSearch.Text.ToString().ToLower()
+                                      select ct).ToList();
+                        BindGridCTHD(search);
+                    }
+                    else
+                    {
+                        BindGridCTHD(listCTHoaDon);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Xảy ra lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

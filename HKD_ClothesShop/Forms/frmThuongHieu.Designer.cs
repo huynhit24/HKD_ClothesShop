@@ -408,7 +408,7 @@ namespace HKD_ClothesShop.Forms
             this.dgvThuongHieu.GridColor = System.Drawing.Color.Gold;
             this.dgvThuongHieu.Location = new System.Drawing.Point(403, 72);
             this.dgvThuongHieu.Name = "dgvThuongHieu";
-            this.dgvThuongHieu.Size = new System.Drawing.Size(772, 778);
+            this.dgvThuongHieu.Size = new System.Drawing.Size(755, 652);
             this.dgvThuongHieu.TabIndex = 7;
             this.dgvThuongHieu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThuongHieu_CellClick);
             // 

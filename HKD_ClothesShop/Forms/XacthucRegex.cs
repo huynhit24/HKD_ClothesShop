@@ -8,6 +8,7 @@ namespace HKD_ClothesShop.Forms
 {
     class XacthucRegex
     {
+        public static string Regex_Decimal = @"^[+-]?([0-9]+\.?[0-9]*|\.[0-9]+)$";
         public static string Regex_Number = @"^\d+$";
         public static string Regex_Size = @" ^[A-Za-z0-9]+$";
         public static string Regex_Color = @"(^[A-Za-z]+(\s[A-Za-z]+)|^[A-Za-z]+)$";

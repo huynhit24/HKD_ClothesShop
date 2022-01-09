@@ -23,14 +23,14 @@ namespace HKD_ClothesShop.Forms
         private void FillLoaiCombobox(List<LoaiSanPham> listLoai)
         {
             this.cmbLSP.DataSource = listLoai;
-            this.cmbLSP.DisplayMember = "MaLoaiSP";
+            this.cmbLSP.DisplayMember = "TenLoaiSP";
             this.cmbLSP.ValueMember = "MaLoaiSP";
         }
 
         private void FillThuongHieuCombobox(List<ThuongHieu> listThuongHieu)
         {
             this.cmbMTH.DataSource = listThuongHieu;
-            this.cmbMTH.DisplayMember = "MaThuongHieu";
+            this.cmbMTH.DisplayMember = "TenThuongHieu";
             this.cmbMTH.ValueMember = "MaThuongHieu";
         }
 
@@ -60,6 +60,9 @@ namespace HKD_ClothesShop.Forms
                     dgvSanPham.Rows[index].Cells[10].Value = "Không sử dụng";
                     dgvSanPham.Rows[index].DefaultCellStyle.BackColor = Color.GreenYellow;
                 }
+                dgvSanPham.Rows[index].Cells[11].Value = item.LoaiSanPham.TenLoaiSP;
+                dgvSanPham.Rows[index].Cells[12].Value = item.ThuongHieu.TenThuongHieu;
+
             }
         }
         private void btnClose_Click(object sender, EventArgs e)
@@ -194,8 +197,8 @@ namespace HKD_ClothesShop.Forms
                         {
                             //sanpham.MaSanPham = txtMSP.Text;
                             sanpham.TenSanPham = txtTenSP.Text;
-                            sanpham.MaLoaiSP = cmbLSP.SelectedItem.ToString();
-                            sanpham.MaThuongHieu = cmbMTH.SelectedItem.ToString();
+                            sanpham.MaLoaiSP = cmbLSP.SelectedValue.ToString();
+                            sanpham.MaThuongHieu = cmbMTH.SelectedValue.ToString();
                             sanpham.NgayCapNhat = dtpDayUpdate.Value;
                             sanpham.DonViTinh = cmbDVT.SelectedItem.ToString();
                             sanpham.DonGia = Convert.ToDecimal(txtDonGia.Text);
@@ -295,7 +298,7 @@ namespace HKD_ClothesShop.Forms
             }
             if (KiemTra_Limited_DonGia() == false)
             {
-                MessageBox.Show("Đơn giá không quá 10 số - Mời nhập lại!", "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                MessageBox.Show("Đơn giá không quá 15 số - Mời nhập lại!", "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
                 return;
             }
             if (KiemTra_DonGia_HopLe() == false)
@@ -382,7 +385,7 @@ namespace HKD_ClothesShop.Forms
 
         private bool KiemTra_Limited_DonGia()
         {
-            if (txtDonGia.Text.Length <= 10)
+            if (txtDonGia.Text.Length <= 15)
             {
                 return true;
             }
@@ -394,9 +397,11 @@ namespace HKD_ClothesShop.Forms
 
         private bool KiemTra_DonGia_HopLe()
         {
-            Regex reg = new Regex(XacthucRegex.Regex_Number);
+            Regex reg = new Regex(XacthucRegex.Regex_Decimal);
+            Regex regNum = new Regex(XacthucRegex.Regex_Number);
             Match mat = reg.Match(txtDonGia.Text);
-            if (mat.Success)
+            Match matNum = regNum.Match(txtDonGia.Text);
+            if (mat.Success || matNum.Success)
             {
                 return true;
             }
@@ -481,26 +486,28 @@ namespace HKD_ClothesShop.Forms
                     cmbDVT.SelectedItem = row.Cells[3].Value.ToString();
                     txtDonGia.Text = row.Cells[4].Value.ToString();
                     txtChatLieu.Text = row.Cells[5].Value.ToString();
-                    cmbLSP.SelectedItem = row.Cells[6].Value.ToString();
+                    /*cmbLSP.SelectedItem = row.Cells[6].Value.ToString();
                     foreach (var i in context.SanPhams)
                     {
-                        if (row.Cells[6].Value.ToString() == cmbLSP.SelectedItem.ToString())
+                        if (row.Cells[11].Value.ToString() == cmbLSP.SelectedItem.ToString())
                         {
                             lbLSP.Text = cmbLSP.SelectedItem.ToString();
                             break;
                         }
-                    }
+                    }*/
+                    cmbLSP.Text = row.Cells[11].Value.ToString();
+                    cmbMTH.Text = row.Cells[12].Value.ToString();
                     //lbLSP.Text = cmbLSP.Text.ToString();
-                    cmbMTH.SelectedItem = row.Cells[7].Value.ToString();
+                    /*cmbMTH.SelectedItem = row.Cells[7].Value.ToString();
                     //lbMTH.Text = cmbMTH.Se.ToString();
                     foreach (var i in context.SanPhams)
                     {
-                        if (row.Cells[7].Value.ToString() == cmbMTH.SelectedItem.ToString())
+                        if (row.Cells[12].Value.ToString() == cmbMTH.SelectedItem.ToString())
                         {
                             lbMTH.Text = cmbMTH.SelectedItem.ToString();
                             break;
                         }
-                    }
+                    }*/
                     QLBanHangHKDEntities db = new QLBanHangHKDEntities();
                     foreach (var i in db.SanPhams)
                     {

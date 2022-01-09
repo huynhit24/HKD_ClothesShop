@@ -78,6 +78,8 @@ namespace HKD_ClothesShop.Forms
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnHidden = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBoxSP.SuspendLayout();
@@ -533,6 +535,7 @@ namespace HKD_ClothesShop.Forms
             this.dgvSanPham.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvSanPham.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.dgvSanPham.BackgroundColor = System.Drawing.Color.White;
+            this.dgvSanPham.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dgvSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSanPham.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -545,11 +548,13 @@ namespace HKD_ClothesShop.Forms
             this.Column8,
             this.Column9,
             this.Column10,
-            this.Column11});
+            this.Column11,
+            this.Column12,
+            this.Column13});
             this.dgvSanPham.GridColor = System.Drawing.Color.White;
             this.dgvSanPham.Location = new System.Drawing.Point(410, 108);
             this.dgvSanPham.Name = "dgvSanPham";
-            this.dgvSanPham.Size = new System.Drawing.Size(787, 935);
+            this.dgvSanPham.Size = new System.Drawing.Size(777, 1356);
             this.dgvSanPham.TabIndex = 3;
             this.dgvSanPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSanPham_CellClick);
             // 
@@ -631,6 +636,18 @@ namespace HKD_ClothesShop.Forms
             this.Column11.HeaderText = "Trạng thái";
             this.Column11.Name = "Column11";
             this.Column11.Width = 74;
+            // 
+            // Column12
+            // 
+            this.Column12.HeaderText = "Tên Loại Sản Phẩm";
+            this.Column12.Name = "Column12";
+            this.Column12.Width = 91;
+            // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "Tên Thương Hiệu";
+            this.Column13.Name = "Column13";
+            this.Column13.Width = 106;
             // 
             // btnHidden
             // 
@@ -716,17 +733,6 @@ namespace HKD_ClothesShop.Forms
         private System.Windows.Forms.Label labelMaLoaiSP;
         private System.Windows.Forms.ComboBox cmbDVT;
         private System.Windows.Forms.Button btnHidden;
-        private System.Windows.Forms.DataGridViewImageColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label lbMTH;
         private System.Windows.Forms.Label lbLSP;
@@ -742,5 +748,18 @@ namespace HKD_ClothesShop.Forms
         private System.Windows.Forms.Button buttonLuuT;
         private System.Windows.Forms.Button buttonHuyT;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.DataGridViewImageColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
     }
 }
