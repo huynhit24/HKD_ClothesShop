@@ -53,7 +53,6 @@ namespace HKD_ClothesShop.Forms
             this.cbStatus = new System.Windows.Forms.CheckBox();
             this.lbMNV = new System.Windows.Forms.Label();
             this.lbSHD = new System.Windows.Forms.Label();
-            this.txtSHD = new System.Windows.Forms.TextBox();
             this.tabChiTietHoaDon = new System.Windows.Forms.TabControl();
             this.tabHoaDon = new System.Windows.Forms.TabPage();
             this.btnHidden = new System.Windows.Forms.Button();
@@ -104,12 +103,13 @@ namespace HKD_ClothesShop.Forms
             this.label5 = new System.Windows.Forms.Label();
             this.comboBoxMSP = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBoxSHD = new System.Windows.Forms.ComboBox();
             this.buttonSua = new System.Windows.Forms.Button();
             this.buttonThem = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.tabPageAllCTHD = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.dgvAllCTHD = new System.Windows.Forms.DataGridView();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -126,9 +126,9 @@ namespace HKD_ClothesShop.Forms
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxSearch = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtSHD = new System.Windows.Forms.TextBox();
+            this.labelSHD = new System.Windows.Forms.Label();
             this.groupBoxTTHD.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -463,13 +463,6 @@ namespace HKD_ClothesShop.Forms
             this.lbSHD.TabIndex = 7;
             this.lbSHD.Text = "👉Số hóa đơn";
             // 
-            // txtSHD
-            // 
-            this.txtSHD.Location = new System.Drawing.Point(165, 31);
-            this.txtSHD.Name = "txtSHD";
-            this.txtSHD.Size = new System.Drawing.Size(203, 27);
-            this.txtSHD.TabIndex = 0;
-            // 
             // tabChiTietHoaDon
             // 
             this.tabChiTietHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -773,6 +766,7 @@ namespace HKD_ClothesShop.Forms
             // groupBoxCTHD
             // 
             this.groupBoxCTHD.BackColor = System.Drawing.Color.White;
+            this.groupBoxCTHD.Controls.Add(this.labelSHD);
             this.groupBoxCTHD.Controls.Add(this.labelThanhtien);
             this.groupBoxCTHD.Controls.Add(this.labelTien);
             this.groupBoxCTHD.Controls.Add(this.buttonThoat);
@@ -790,7 +784,6 @@ namespace HKD_ClothesShop.Forms
             this.groupBoxCTHD.Controls.Add(this.label5);
             this.groupBoxCTHD.Controls.Add(this.comboBoxMSP);
             this.groupBoxCTHD.Controls.Add(this.label8);
-            this.groupBoxCTHD.Controls.Add(this.comboBoxSHD);
             this.groupBoxCTHD.Controls.Add(this.buttonSua);
             this.groupBoxCTHD.Controls.Add(this.buttonThem);
             this.groupBoxCTHD.Controls.Add(this.label11);
@@ -810,6 +803,7 @@ namespace HKD_ClothesShop.Forms
             this.labelThanhtien.Size = new System.Drawing.Size(86, 19);
             this.labelThanhtien.TabIndex = 66;
             this.labelThanhtien.Text = "Thành tiền";
+            this.labelThanhtien.TextChanged += new System.EventHandler(this.txtSLMua_TextChanged);
             // 
             // labelTien
             // 
@@ -905,7 +899,7 @@ namespace HKD_ClothesShop.Forms
             this.labelGiaGoc.Size = new System.Drawing.Size(63, 19);
             this.labelGiaGoc.TabIndex = 42;
             this.labelGiaGoc.Text = "Giá gốc";
-            this.labelGiaGoc.TextChanged += new System.EventHandler(this.labelGiaGoc_TextChanged);
+            this.labelGiaGoc.TextChanged += new System.EventHandler(this.txtSLMua_TextChanged);
             // 
             // label13
             // 
@@ -924,6 +918,7 @@ namespace HKD_ClothesShop.Forms
             this.labelDGB.Size = new System.Drawing.Size(95, 19);
             this.labelDGB.TabIndex = 40;
             this.labelDGB.Text = "Đơn giá bán";
+            this.labelDGB.TextChanged += new System.EventHandler(this.txtSLMua_TextChanged);
             // 
             // label10
             // 
@@ -973,8 +968,9 @@ namespace HKD_ClothesShop.Forms
             this.comboBoxMSP.FormattingEnabled = true;
             this.comboBoxMSP.Location = new System.Drawing.Point(154, 74);
             this.comboBoxMSP.Name = "comboBoxMSP";
-            this.comboBoxMSP.Size = new System.Drawing.Size(121, 27);
+            this.comboBoxMSP.Size = new System.Drawing.Size(203, 27);
             this.comboBoxMSP.TabIndex = 34;
+            this.comboBoxMSP.SelectedIndexChanged += new System.EventHandler(this.txtSLMua_TextChanged);
             this.comboBoxMSP.TextChanged += new System.EventHandler(this.comboBoxMSP_TextChanged);
             // 
             // label8
@@ -985,14 +981,6 @@ namespace HKD_ClothesShop.Forms
             this.label8.Size = new System.Drawing.Size(124, 19);
             this.label8.TabIndex = 33;
             this.label8.Text = "👉Mã sản phẩm";
-            // 
-            // comboBoxSHD
-            // 
-            this.comboBoxSHD.FormattingEnabled = true;
-            this.comboBoxSHD.Location = new System.Drawing.Point(154, 28);
-            this.comboBoxSHD.Name = "comboBoxSHD";
-            this.comboBoxSHD.Size = new System.Drawing.Size(121, 27);
-            this.comboBoxSHD.TabIndex = 32;
             // 
             // buttonSua
             // 
@@ -1035,19 +1023,6 @@ namespace HKD_ClothesShop.Forms
             this.label11.TabIndex = 7;
             this.label11.Text = "👉Số hóa đơn";
             // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label1.Location = new System.Drawing.Point(469, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(384, 38);
-            this.label1.TabIndex = 36;
-            this.label1.Text = "QUẦY TÍNH TIỀN 💵💵💵";
-            // 
             // tabPageAllCTHD
             // 
             this.tabPageAllCTHD.Controls.Add(this.label3);
@@ -1061,6 +1036,35 @@ namespace HKD_ClothesShop.Forms
             this.tabPageAllCTHD.TabIndex = 2;
             this.tabPageAllCTHD.Text = "💵Danh sách chi tiết hóa đơn tất cả khách hàng";
             this.tabPageAllCTHD.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(480, 25);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(99, 30);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "(nhập SHĐ or \r\ntên khách hàng)";
+            // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.Location = new System.Drawing.Point(193, 25);
+            this.textBoxSearch.Multiline = true;
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(281, 33);
+            this.textBoxSearch.TabIndex = 11;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(24, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(147, 23);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "Tìm CT hóa đơn";
             // 
             // dgvAllCTHD
             // 
@@ -1200,34 +1204,34 @@ namespace HKD_ClothesShop.Forms
             this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
             this.dataGridViewTextBoxColumn20.Width = 74;
             // 
-            // label2
+            // label1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(24, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(147, 23);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Tìm CT hóa đơn";
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label1.Location = new System.Drawing.Point(469, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(384, 38);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "QUẦY TÍNH TIỀN 💵💵💵";
             // 
-            // textBoxSearch
+            // txtSHD
             // 
-            this.textBoxSearch.Location = new System.Drawing.Point(193, 25);
-            this.textBoxSearch.Multiline = true;
-            this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(281, 33);
-            this.textBoxSearch.TabIndex = 11;
-            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
+            this.txtSHD.Location = new System.Drawing.Point(165, 31);
+            this.txtSHD.Name = "txtSHD";
+            this.txtSHD.Size = new System.Drawing.Size(203, 27);
+            this.txtSHD.TabIndex = 0;
             // 
-            // label3
+            // labelSHD
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(480, 25);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(99, 30);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "(nhập SHĐ or \r\ntên khách hàng)";
+            this.labelSHD.AutoSize = true;
+            this.labelSHD.Location = new System.Drawing.Point(150, 35);
+            this.labelSHD.Name = "labelSHD";
+            this.labelSHD.Size = new System.Drawing.Size(41, 19);
+            this.labelSHD.TabIndex = 67;
+            this.labelSHD.Text = "SHĐ";
             // 
             // frmTaoHoaDon
             // 
@@ -1277,7 +1281,6 @@ namespace HKD_ClothesShop.Forms
         private System.Windows.Forms.CheckBox cbStatus;
         private System.Windows.Forms.Label lbMNV;
         private System.Windows.Forms.Label lbSHD;
-        private System.Windows.Forms.TextBox txtSHD;
         private System.Windows.Forms.TabControl tabChiTietHoaDon;
         private System.Windows.Forms.TabPage tabHoaDon;
         private System.Windows.Forms.DataGridView dgvHoaDon;
@@ -1304,7 +1307,6 @@ namespace HKD_ClothesShop.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.ComboBox comboBoxSHD;
         private System.Windows.Forms.ComboBox comboBoxMSP;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtKM;
@@ -1370,5 +1372,7 @@ namespace HKD_ClothesShop.Forms
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtSHD;
+        private System.Windows.Forms.Label labelSHD;
     }
 }
