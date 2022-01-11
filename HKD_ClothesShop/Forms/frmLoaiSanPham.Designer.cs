@@ -31,6 +31,8 @@ namespace HKD_ClothesShop.Forms
         {
             this.btnClose = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnThoat = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.cbStatus = new System.Windows.Forms.CheckBox();
@@ -44,8 +46,6 @@ namespace HKD_ClothesShop.Forms
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.btnHidden = new System.Windows.Forms.Button();
-            this.btnThoat = new System.Windows.Forms.Button();
-            this.btnReset = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiSanPham)).BeginInit();
             this.SuspendLayout();
@@ -82,8 +82,49 @@ namespace HKD_ClothesShop.Forms
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Loại sản phẩm";
             // 
+            // btnThoat
+            // 
+            this.btnThoat.BackColor = System.Drawing.Color.Red;
+            this.btnThoat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThoat.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnThoat.FlatAppearance.BorderSize = 3;
+            this.btnThoat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnThoat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThoat.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.ForeColor = System.Drawing.Color.White;
+            this.btnThoat.Image = global::HKD_ClothesShop.Properties.Resources.cancel;
+            this.btnThoat.Location = new System.Drawing.Point(236, 246);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(124, 58);
+            this.btnThoat.TabIndex = 64;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnThoat.UseVisualStyleBackColor = false;
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReset.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnReset.FlatAppearance.BorderSize = 3;
+            this.btnReset.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnReset.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReset.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.Image = global::HKD_ClothesShop.Properties.Resources.monitor;
+            this.btnReset.Location = new System.Drawing.Point(97, 246);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(124, 58);
+            this.btnReset.TabIndex = 63;
+            this.btnReset.Text = "Reset";
+            this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // btnUpdate
             // 
+            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdate.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.btnUpdate.FlatAppearance.BorderSize = 3;
             this.btnUpdate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -101,6 +142,7 @@ namespace HKD_ClothesShop.Forms
             // 
             // btnCreate
             // 
+            this.btnCreate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCreate.FlatAppearance.BorderColor = System.Drawing.Color.Blue;
             this.btnCreate.FlatAppearance.BorderSize = 3;
             this.btnCreate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Yellow;
@@ -207,6 +249,7 @@ namespace HKD_ClothesShop.Forms
             // btnHidden
             // 
             this.btnHidden.BackColor = System.Drawing.Color.GreenYellow;
+            this.btnHidden.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHidden.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHidden.ForeColor = System.Drawing.Color.Red;
             this.btnHidden.Location = new System.Drawing.Point(410, 81);
@@ -216,44 +259,6 @@ namespace HKD_ClothesShop.Forms
             this.btnHidden.Text = "Ẩn";
             this.btnHidden.UseVisualStyleBackColor = false;
             this.btnHidden.Click += new System.EventHandler(this.btnHidden_Click);
-            // 
-            // btnThoat
-            // 
-            this.btnThoat.BackColor = System.Drawing.Color.Red;
-            this.btnThoat.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btnThoat.FlatAppearance.BorderSize = 3;
-            this.btnThoat.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnThoat.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnThoat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThoat.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.Image = global::HKD_ClothesShop.Properties.Resources.cancel;
-            this.btnThoat.Location = new System.Drawing.Point(236, 246);
-            this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(124, 58);
-            this.btnThoat.TabIndex = 64;
-            this.btnThoat.Text = "Thoát";
-            this.btnThoat.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnThoat.UseVisualStyleBackColor = false;
-            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-            // 
-            // btnReset
-            // 
-            this.btnReset.FlatAppearance.BorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnReset.FlatAppearance.BorderSize = 3;
-            this.btnReset.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnReset.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReset.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.Image = global::HKD_ClothesShop.Properties.Resources.monitor;
-            this.btnReset.Location = new System.Drawing.Point(97, 246);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(124, 58);
-            this.btnReset.TabIndex = 63;
-            this.btnReset.Text = "Reset";
-            this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // frmLoaiSanPham
             // 

@@ -247,10 +247,69 @@ namespace HKD_ClothesShop
             openChildForm(new frmTaiKhoan());
         }
 
+        // chình màu sác Theme
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            hideSubmenu();
-            openChildForm(new frmCaiDat());
+            /*hideSubmenu();
+            openChildForm(new frmCaiDat());*/
+            if (btnSettings.BackColor == Color.Honeydew)
+            {
+                this.BackColor = Color.FromArgb(13, 19, 41);
+                pictureBox1.Visible = false;
+                btnSettings.Image = Image.FromFile(@"C:\HKD_ClothesShop\HKD_ClothesShop\Assets\moon.png");
+                btnSettings.TextImageRelation = TextImageRelation.TextBeforeImage;
+
+                btnSettings.BackColor = Color.DeepSkyBlue;
+                btnSettings.ForeColor = Color.White;
+                panelMenuNgang.BackColor = Color.Black;
+                panelShopImage.BackColor = Color.Black;
+
+                btnHoaDon.ForeColor = Color.White;
+                btnTaoHoaDon.ForeColor = Color.Blue;
+                btnGhiNo.ForeColor = Color.Blue;
+                btnKho.ForeColor = Color.White;
+                btnNhapKho.ForeColor = Color.Blue;
+                btnTonKho.ForeColor = Color.Blue;
+                btnKhach.ForeColor = Color.White;
+                btnDSKH.ForeColor = Color.Blue;
+                btnNhomKH.ForeColor = Color.Blue;
+                btnThuongHieu.ForeColor = Color.White;
+                btnSanPham.ForeColor = Color.White;
+                btnDSSP.ForeColor = Color.Blue;
+                btnLoaiSP.ForeColor = Color.Blue;
+                btnReport.ForeColor = Color.White;
+                btnNhanVien.ForeColor = Color.White;
+
+            }
+            else
+            {
+                this.BackColor = Color.White;
+                pictureBox1.Visible = true;
+                btnSettings.Image = Image.FromFile(@"C:\HKD_ClothesShop\HKD_ClothesShop\Assets\sun.png");
+                btnSettings.TextImageRelation = TextImageRelation.ImageBeforeText;
+
+
+                btnSettings.BackColor = Color.Honeydew;
+                btnSettings.ForeColor = Color.Black;
+                panelMenuNgang.BackColor = Color.White;
+                panelShopImage.BackColor = Color.White;
+
+                btnHoaDon.ForeColor = Color.Black;
+                btnTaoHoaDon.ForeColor = Color.Indigo;
+                btnGhiNo.ForeColor = Color.Indigo;
+                btnKho.ForeColor = Color.Black;
+                btnNhapKho.ForeColor = Color.Indigo;
+                btnTonKho.ForeColor = Color.Indigo;
+                btnKhach.ForeColor = Color.Black;
+                btnDSKH.ForeColor = Color.Indigo;
+                btnNhomKH.ForeColor = Color.Indigo;
+                btnThuongHieu.ForeColor = Color.Black;
+                btnSanPham.ForeColor = Color.Black;
+                btnDSSP.ForeColor = Color.Indigo;
+                btnLoaiSP.ForeColor = Color.Indigo;
+                btnReport.ForeColor = Color.Black;
+                btnNhanVien.ForeColor = Color.Black;
+            }
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
@@ -311,9 +370,11 @@ namespace HKD_ClothesShop
             {
                 case "ad":
                     //ThongTinDangNhap.flag = false;
+                    labelName.Text = ThongTinDangNhap.Username;
                     break;
                 case "bh":
                     //ThongTinDangNhap.flag = false;
+                    labelName.Text = ThongTinDangNhap.Username;
                     btnTaiKhoan.Enabled = false;
                     break;
             }

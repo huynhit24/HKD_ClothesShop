@@ -125,15 +125,15 @@ namespace HKD_ClothesShop.Forms
                 {
                     using (var db = new QLBanHangHKDEntities())
                     {
-                        int index = dgvKhachHang.CurrentCell.RowIndex;
+                        /*int index = dgvKhachHang.CurrentCell.RowIndex;
                         DataGridViewRow row = dgvKhachHang.Rows[index];
-                        string temp = row.Cells[0].Value.ToString();
-                        var khachhang = db.KhachHangs.FirstOrDefault(p => p.MaKhachHang == txtMKH.Text);
+                        string temp = row.Cells[0].Value.ToString();*/
+                        var khachhang = db.KhachHangs.FirstOrDefault(p => p.MaKhachHang == txtMKH.Text.ToUpper());
                         if(khachhang == null) // chưa có khách hàng có mã này
                         {
                             var kh = new KhachHang()
                             {
-                                MaKhachHang = txtMKH.Text,
+                                MaKhachHang = txtMKH.Text.ToUpper(),
                                 HoTen = txtHoTen.Text,
                                 GioiTinh = (radNam.Checked == true && radNu.Checked == false && radKhac.Checked == false) ? "M"
                                         : (radNam.Checked == false && radNu.Checked == true && radKhac.Checked == false) ? "F"
@@ -256,8 +256,8 @@ namespace HKD_ClothesShop.Forms
                     int index = dgvKhachHang.CurrentCell.RowIndex;
                     DataGridViewRow row = dgvKhachHang.Rows[index];
                     string temp = row.Cells[0].Value.ToString();
-                    var khachhang = db.KhachHangs.FirstOrDefault(p => p.MaKhachHang == temp);
-                    //var khachhang = db.KhachHangs.FirstOrDefault(p => p.MaKhachHang == txtMKH.Text);
+                    //var khachhang = db.KhachHangs.FirstOrDefault(p => p.MaKhachHang == temp);
+                    var khachhang = db.KhachHangs.FirstOrDefault(p => p.MaKhachHang == txtMKH.Text.ToUpper());
                     if(khachhang != null)
                     {
                         // kiểm tra dữ liệu lưu vào ở các Textbox

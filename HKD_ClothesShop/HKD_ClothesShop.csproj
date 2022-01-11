@@ -499,6 +499,8 @@
     <None Include="Assets\100.000.png" />
     <None Include="Assets\200.000.png" />
     <None Include="Assets\500.000.png" />
+    <None Include="Assets\moon.png" />
+    <None Include="Assets\sun.png" />
     <Content Include="Modal\Database.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Database.Context.cs</LastGenOutput>
