@@ -29,6 +29,7 @@ namespace HKD_ClothesShop
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.panelShopImage = new System.Windows.Forms.Panel();
             this.btnFeedback = new System.Windows.Forms.Button();
@@ -63,6 +64,13 @@ namespace HKD_ClothesShop
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnTaiKhoan = new System.Windows.Forms.Button();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.taoHoaDonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.themKhachHangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.themSanPhamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.xemThongKeBaoCaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dangXuatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.themThuongHieuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelShopImage.SuspendLayout();
             this.panelSpSubmenu.SuspendLayout();
             this.panelKhachSubmenu.SuspendLayout();
@@ -71,6 +79,7 @@ namespace HKD_ClothesShop
             this.panelImageHKD.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelMenuNgang.SuspendLayout();
+            this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelShopImage
@@ -665,12 +674,75 @@ namespace HKD_ClothesShop
             this.panelChildForm.Size = new System.Drawing.Size(1225, 667);
             this.panelChildForm.TabIndex = 2;
             // 
+            // contextMenuStrip
+            // 
+            this.contextMenuStrip.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contextMenuStrip.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.contextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.taoHoaDonToolStripMenuItem,
+            this.themKhachHangToolStripMenuItem,
+            this.themThuongHieuToolStripMenuItem,
+            this.themSanPhamToolStripMenuItem,
+            this.xemThongKeBaoCaoToolStripMenuItem,
+            this.dangXuatToolStripMenuItem});
+            this.contextMenuStrip.Name = "contextMenuStrip";
+            this.contextMenuStrip.Size = new System.Drawing.Size(303, 254);
+            // 
+            // taoHoaDonToolStripMenuItem
+            // 
+            this.taoHoaDonToolStripMenuItem.Image = global::HKD_ClothesShop.Properties.Resources.invoice;
+            this.taoHoaDonToolStripMenuItem.Name = "taoHoaDonToolStripMenuItem";
+            this.taoHoaDonToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.taoHoaDonToolStripMenuItem.Size = new System.Drawing.Size(302, 38);
+            this.taoHoaDonToolStripMenuItem.Text = "Tạo hóa đơn";
+            // 
+            // themKhachHangToolStripMenuItem
+            // 
+            this.themKhachHangToolStripMenuItem.Image = global::HKD_ClothesShop.Properties.Resources.user;
+            this.themKhachHangToolStripMenuItem.Name = "themKhachHangToolStripMenuItem";
+            this.themKhachHangToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.K)));
+            this.themKhachHangToolStripMenuItem.Size = new System.Drawing.Size(302, 38);
+            this.themKhachHangToolStripMenuItem.Text = "Thêm khách hàng";
+            // 
+            // themSanPhamToolStripMenuItem
+            // 
+            this.themSanPhamToolStripMenuItem.Image = global::HKD_ClothesShop.Properties.Resources.gift;
+            this.themSanPhamToolStripMenuItem.Name = "themSanPhamToolStripMenuItem";
+            this.themSanPhamToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.themSanPhamToolStripMenuItem.Size = new System.Drawing.Size(302, 38);
+            this.themSanPhamToolStripMenuItem.Text = "Thêm sản phẩm";
+            // 
+            // xemThongKeBaoCaoToolStripMenuItem
+            // 
+            this.xemThongKeBaoCaoToolStripMenuItem.Image = global::HKD_ClothesShop.Properties.Resources.monitor;
+            this.xemThongKeBaoCaoToolStripMenuItem.Name = "xemThongKeBaoCaoToolStripMenuItem";
+            this.xemThongKeBaoCaoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.A)));
+            this.xemThongKeBaoCaoToolStripMenuItem.Size = new System.Drawing.Size(302, 38);
+            this.xemThongKeBaoCaoToolStripMenuItem.Text = "Xem thống kê, báo cáo";
+            // 
+            // dangXuatToolStripMenuItem
+            // 
+            this.dangXuatToolStripMenuItem.Image = global::HKD_ClothesShop.Properties.Resources.exit;
+            this.dangXuatToolStripMenuItem.Name = "dangXuatToolStripMenuItem";
+            this.dangXuatToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.dangXuatToolStripMenuItem.Size = new System.Drawing.Size(302, 38);
+            this.dangXuatToolStripMenuItem.Text = "Đăng xuất";
+            // 
+            // themThuongHieuToolStripMenuItem
+            // 
+            this.themThuongHieuToolStripMenuItem.Image = global::HKD_ClothesShop.Properties.Resources.webpage;
+            this.themThuongHieuToolStripMenuItem.Name = "themThuongHieuToolStripMenuItem";
+            this.themThuongHieuToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
+            this.themThuongHieuToolStripMenuItem.Size = new System.Drawing.Size(302, 38);
+            this.themThuongHieuToolStripMenuItem.Text = "Thêm thương hiệu";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1484, 761);
+            this.ContextMenuStrip = this.contextMenuStrip;
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelShopImage);
             this.Controls.Add(this.panelMenuNgang);
@@ -687,6 +759,7 @@ namespace HKD_ClothesShop
             this.panelImageHKD.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelMenuNgang.ResumeLayout(false);
+            this.contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -726,6 +799,13 @@ namespace HKD_ClothesShop
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Button btnNhomKH;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem taoHoaDonToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem themKhachHangToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem themSanPhamToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem xemThongKeBaoCaoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dangXuatToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem themThuongHieuToolStripMenuItem;
     }
 }
 

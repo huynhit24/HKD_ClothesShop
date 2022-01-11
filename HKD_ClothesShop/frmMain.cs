@@ -41,6 +41,7 @@ namespace HKD_ClothesShop
         }
 
         #region Menu, Submenu sự kiện click
+        //cho các menu con ẩn đi
         private void customizeDesing()
         {
             panelHoaDonSubmenu.Visible = false;
@@ -48,6 +49,7 @@ namespace HKD_ClothesShop
             panelKhachSubmenu.Visible = false;
             panelSpSubmenu.Visible = false;
         }
+        // nếu menu con đang mở thì tắt đi
         private void hideSubmenu()
         {
             if (panelHoaDonSubmenu.Visible == true)
@@ -75,7 +77,7 @@ namespace HKD_ClothesShop
             public static Color mau11 = Color.FromArgb(167, 128, 99);
         }
 
-
+        //khi nhấn vào 1 button ở sidebar thì có hiệu ứng cùng hiện menu con
         private void ActivateButton(Object senderBtn, Color color)
         {
             if(senderBtn != null)
@@ -93,6 +95,7 @@ namespace HKD_ClothesShop
             }
         }
 
+        //tắt button đi khổi phục trạng thái ban đầu
         private void DisableButton()
         {
             if(currentBtn != null)
@@ -103,6 +106,7 @@ namespace HKD_ClothesShop
             }
         }
 
+        //show menu con
         private void showSubmenu(Panel subMenu)
         {
             if(subMenu.Visible == false)
@@ -116,6 +120,7 @@ namespace HKD_ClothesShop
             }
         }
 
+        // 1 nùi sự kiện mở tắt các chức năng bên sidebar
         private void btnHoaDon_Click(object sender, EventArgs e)
         {
             hideSubmenu();
@@ -267,6 +272,7 @@ namespace HKD_ClothesShop
             openChildForm(new frmMenuChucNang());
         }
 
+        // sự kiện khi nhấn nút HOME thì reset đóng thất cả các Form hoạt động
         private void Reset()
         {
             DisableButton();
@@ -276,6 +282,8 @@ namespace HKD_ClothesShop
         }
         #endregion
 
+
+        // hàm này dùng để mở 1 form con trong form Main
         private Form activeForm = null;
         private void openChildForm(Form childForm)
         {
@@ -296,6 +304,7 @@ namespace HKD_ClothesShop
 
         }
 
+        // khi load form main nếu tài khoản admin thì mở thêm chức năng quản lý tài khoản
         private void frmMain_Load(object sender, EventArgs e)
         {
             switch (ThongTinDangNhap.Quyenhan)
@@ -309,5 +318,7 @@ namespace HKD_ClothesShop
                     break;
             }
         }
+
+        
     }
 }

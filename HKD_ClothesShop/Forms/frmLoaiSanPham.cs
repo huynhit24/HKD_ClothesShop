@@ -78,15 +78,15 @@ namespace HKD_ClothesShop.Forms
                     {
                         if(dgvLoaiSanPham.Rows.Count != 0)
                         {
-                            int index = dgvLoaiSanPham.CurrentCell.RowIndex;
+                            /*int index = dgvLoaiSanPham.CurrentCell.RowIndex;
                             DataGridViewRow row = dgvLoaiSanPham.Rows[index];
-                            string temp = row.Cells[0].Value.ToString();
-                            var loaisp = db.LoaiSanPhams.FirstOrDefault(p => p.MaLoaiSP == txtML.Text);
+                            string temp = row.Cells[0].Value.ToString();*/
+                            var loaisp = db.LoaiSanPhams.FirstOrDefault(p => p.MaLoaiSP == txtML.Text.ToUpper());
                             if (loaisp == null) // chưa có loại sp có mã này
                             {
                                 var lsp = new LoaiSanPham()
                                 {
-                                    MaLoaiSP = txtML.Text,
+                                    MaLoaiSP = txtML.Text.ToUpper(),
                                     TenLoaiSP = txtTenLoai.Text,
                                     Status = (cbStatus.Checked == true) ? false : true
                                 };
@@ -135,18 +135,20 @@ namespace HKD_ClothesShop.Forms
             {
                 using (var db = new QLBanHangHKDEntities())
                 {
-                    int index = dgvLoaiSanPham.CurrentCell.RowIndex;
+                    /*int index = dgvLoaiSanPham.CurrentCell.RowIndex;
                     DataGridViewRow row = dgvLoaiSanPham.Rows[index];
-                    string temp = row.Cells[0].Value.ToString();
-                    var loaisp = db.LoaiSanPhams.FirstOrDefault(p => p.MaLoaiSP == temp);
+                    string temp = row.Cells[0].Value.ToString();*/
+                    //var loaisp = db.LoaiSanPhams.FirstOrDefault(p => p.MaLoaiSP == temp);
                     //var khachhang = db.KhachHangs.FirstOrDefault(p => p.MaKhachHang == txtMKH.Text);
+                    var loaisp = db.LoaiSanPhams.FirstOrDefault(p => p.MaLoaiSP == txtML.Text.ToUpper());
+
                     if (loaisp != null)
                     {
                         // kiểm tra dữ liệu lưu vào ở các Textbox
                         bool isValidated = isValidateData();
                         if (isValidated)// dữ liệu được xác thực đúng thỏa database
                         {
-                            loaisp.MaLoaiSP = txtML.Text;
+                            //loaisp.MaLoaiSP = txtML.Text;
                             loaisp.TenLoaiSP = txtTenLoai.Text;
                             loaisp.Status = (cbStatus.Checked == true) ? false : true;
                             if (MessageBox.Show($"Bạn có muốn lưu sửa loại sản phẩm này!", "Lưu/Hủy", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)

@@ -84,6 +84,7 @@ namespace HKD_ClothesShop.Forms
 
         #endregion
 
+        //hàm băm dùng để băm mật khẩu
         public static string getStringSHA256Hash(string text)
         {
             using (var sha256 = new SHA256Managed())
@@ -92,6 +93,7 @@ namespace HKD_ClothesShop.Forms
             }
         }
 
+        // xóa thông tin Reset
         private void Xoatt()
         {
             txtUsername.Text = "";
@@ -101,6 +103,7 @@ namespace HKD_ClothesShop.Forms
             txtEmail.Text = "";
         }
 
+        // hàm thêm 1 tài khoản đăng nhập mới
         private void btnCreate_Click(object sender, EventArgs e)
         {
             try
@@ -111,9 +114,9 @@ namespace HKD_ClothesShop.Forms
                 {
                     using (var db = new QLBanHangHKDEntities())
                     {
-                        int index = dgvTaiKhoan.CurrentCell.RowIndex;
+                        /*int index = dgvTaiKhoan.CurrentCell.RowIndex;
                         DataGridViewRow row = dgvTaiKhoan.Rows[index];
-                        string temp = row.Cells[0].Value.ToString();
+                        string temp = row.Cells[0].Value.ToString();*/
                         string sha265 = getStringSHA256Hash(txtPassword.Text).ToLower();
                         var khachhang = db.ThongTinTaiKhoans.FirstOrDefault(p => p.TenDangNhap == txtUsername.Text.Trim() && p.MatKhau == sha265.Substring(0,15));
                         if (khachhang == null) // chưa có khách hàng có mã này
@@ -168,13 +171,13 @@ namespace HKD_ClothesShop.Forms
             {
                 using (var db = new QLBanHangHKDEntities())
                 {
-                    int index = dgvTaiKhoan.CurrentCell.RowIndex;
+                    /*int index = dgvTaiKhoan.CurrentCell.RowIndex;
                     DataGridViewRow row = dgvTaiKhoan.Rows[index];
                     string temp = row.Cells[0].Value.ToString();
                     string tempu = row.Cells[1].Value.ToString();
-                    string tempp = row.Cells[2].Value.ToString();
-                    //var khachhang = db.ThongTinTaiKhoans.FirstOrDefault(p => p.TenDangNhap == txtUsername.Text && p.MatKhau == txtPassword.Text);
-                    var khachhang = db.ThongTinTaiKhoans.FirstOrDefault(p => p.TenDangNhap == tempu && p.MatKhau == tempp);
+                    string tempp = row.Cells[2].Value.ToString();*/
+                    var khachhang = db.ThongTinTaiKhoans.FirstOrDefault(p => p.TenDangNhap == txtUsername.Text && p.MatKhau == txtPassword.Text);
+                    //var khachhang = db.ThongTinTaiKhoans.FirstOrDefault(p => p.TenDangNhap == tempu && p.MatKhau == tempp);
 
                     //var khachhang = db.KhachHangs.FirstOrDefault(p => p.MaKhachHang == txtMKH.Text);
                     if (khachhang != null)

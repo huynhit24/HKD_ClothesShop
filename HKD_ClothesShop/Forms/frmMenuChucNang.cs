@@ -37,6 +37,7 @@ namespace HKD_ClothesShop.Forms
             this.Close();
         }
 
+        // dùng để form con khi nhấn 1 nút ở trong menu chức năng
         private Form activeForm = null;
         private void openChildForm(Form childForm)
         {
@@ -52,7 +53,7 @@ namespace HKD_ClothesShop.Forms
             childForm.Show();
         }
 
-        
+        // 1 nùi sự kiện Click để mở form chức năng tương ứng
         private void panelXemDSKhachHang_Click(object sender, EventArgs e)
         {
             //this.Close();
@@ -167,6 +168,7 @@ namespace HKD_ClothesShop.Forms
 
         }
 
+        // kiểm tra loại tài khoản có quyền hạn gì rồi đóng mở chức năng tương ứng
         private void frmMenuChucNang_Load(object sender, EventArgs e)
         {
             switch (ThongTinDangNhap.Quyenhan)

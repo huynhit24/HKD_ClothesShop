@@ -100,16 +100,16 @@ namespace HKD_ClothesShop.Forms
                 {
                     using (var db = new QLBanHangHKDEntities())
                     {
-                        int index = dgvNhanVien.CurrentCell.RowIndex;
+                        /*int index = dgvNhanVien.CurrentCell.RowIndex;
                         DataGridViewRow row = dgvNhanVien.Rows[index];
-                        string temp = row.Cells[1].Value.ToString();
-                        var nhanvien = db.NhanVienBanHangs.FirstOrDefault(p => p.MaNhanVien == txtMNV.Text);
+                        string temp = row.Cells[1].Value.ToString();*/
+                        var nhanvien = db.NhanVienBanHangs.FirstOrDefault(p => p.MaNhanVien == txtMNV.Text.ToUpper());
                         if (nhanvien == null) // chưa có nhân viên có mã này
                         {
                             var hinhanh = (byte[])new ImageConverter().ConvertTo(picAnhNV.Image, typeof(byte[]));
                             var nv = new NhanVienBanHang()
                             {
-                                MaNhanVien = txtMNV.Text,
+                                MaNhanVien = txtMNV.Text.ToUpper(),
                                 HoTen = txtHoTen.Text,
                                 GioiTinh = (radNam.Checked == true && radNu.Checked == false && radKhac.Checked == false) ? "M"
                                         : (radNam.Checked == false && radNu.Checked == true && radKhac.Checked == false) ? "F"
@@ -166,10 +166,10 @@ namespace HKD_ClothesShop.Forms
             {
                 using (var db = new QLBanHangHKDEntities())
                 {
-                    int index = dgvNhanVien.CurrentCell.RowIndex;
+                    /*int index = dgvNhanVien.CurrentCell.RowIndex;
                     DataGridViewRow row = dgvNhanVien.Rows[index];
-                    string temp = row.Cells[1].Value.ToString();
-                    var nhanvien = db.NhanVienBanHangs.FirstOrDefault(p => p.MaNhanVien == txtMNV.Text);
+                    string temp = row.Cells[1].Value.ToString();*/
+                    var nhanvien = db.NhanVienBanHangs.FirstOrDefault(p => p.MaNhanVien == txtMNV.Text.ToUpper());
                     //var khachhang = db.KhachHangs.FirstOrDefault(p => p.MaKhachHang == txtMKH.Text);
                     if (nhanvien != null)
                     {

@@ -20,6 +20,8 @@ namespace HKD_ClothesShop.Forms
         }
 
         #region Binding dữ liệu lên các control + datagridview
+
+        // Tải dự liệu từ database lên Datagridview rồi hiển thị
         private void BindGrid(List<ThuongHieu> listThuongHieu)
         {
             dgvThuongHieu.Rows.Clear();
@@ -47,6 +49,7 @@ namespace HKD_ClothesShop.Forms
             this.Close();
         }
 
+        // hàm load Thương hiệu
         private void frmThuongHieu_Load(object sender, EventArgs e)
         {
             try
@@ -77,6 +80,8 @@ namespace HKD_ClothesShop.Forms
             txtDiaChi.Text = "";
             txtSDT.Text = "";
         }
+
+        // bắt sự kiện thêm 1 thương hiệu mới có kiểm tra dữ liệu đầu vào
         private void btnThem_Click(object sender, EventArgs e)
         {
             try
@@ -87,16 +92,16 @@ namespace HKD_ClothesShop.Forms
                 {
                     using (var db = new QLBanHangHKDEntities())
                     {
-                        int index = dgvThuongHieu.CurrentCell.RowIndex;
+                        /*int index = dgvThuongHieu.CurrentCell.RowIndex;
                         DataGridViewRow row = dgvThuongHieu.Rows[index];
-                        string temp = row.Cells[1].Value.ToString();
-                        var thuonghieu = db.ThuongHieux.FirstOrDefault(p => p.MaThuongHieu == txtMTH.Text);
+                        string temp = row.Cells[1].Value.ToString();*/
+                        var thuonghieu = db.ThuongHieux.FirstOrDefault(p => p.MaThuongHieu == txtMTH.Text.ToUpper());
                         if (thuonghieu == null) // chưa có thương hiệu có mã này
                         {
                             var hinhanh = (byte[])new ImageConverter().ConvertTo(picLogo.Image, typeof(byte[]));
                             var th = new ThuongHieu()
                             {
-                                MaThuongHieu = txtMTH.Text,
+                                MaThuongHieu = txtMTH.Text.ToUpper(),
                                 TenThuongHieu = txtTenTH.Text,
                                 DiaChi = txtDiaChi.Text,
                                 DienThoai = txtSDT.Text,
@@ -143,16 +148,17 @@ namespace HKD_ClothesShop.Forms
             }
         }
 
+        //hàm sửa thông tin thương hiệu không được phép sửa mã
         private void btnSua_Click(object sender, EventArgs e)
         {
             try
             {
                 using (var db = new QLBanHangHKDEntities())
                 {
-                    int index = dgvThuongHieu.CurrentCell.RowIndex;
+                    /*int index = dgvThuongHieu.CurrentCell.RowIndex;
                     DataGridViewRow row = dgvThuongHieu.Rows[index];
-                    string temp = row.Cells[0].Value.ToString();
-                    var thuonghieu = db.ThuongHieux.FirstOrDefault(p => p.MaThuongHieu == txtMTH.Text);
+                    string temp = row.Cells[0].Value.ToString();*/
+                    var thuonghieu = db.ThuongHieux.FirstOrDefault(p => p.MaThuongHieu == txtMTH.Text.ToUpper());
                     //var khachhang = db.KhachHangs.FirstOrDefault(p => p.MaKhachHang == txtMKH.Text);
                     if (thuonghieu != null)
                     {
@@ -161,7 +167,7 @@ namespace HKD_ClothesShop.Forms
                         if (isValidated)// dữ liệu được xác thực đúng thỏa database
                         {
                             //thuonghieu.MaThuongHieu = txtMTH.Text;
-                            thuonghieu.TenThuongHieu = txtTenTH.Text;
+                            thuonghieu.TenThuongHieu = txtTenTH.Text.ToUpper();
                             thuonghieu.DienThoai = txtSDT.Text;
                             var hinhanh = (byte[])new ImageConverter().ConvertTo(picLogo.Image, typeof(byte[]));
                             thuonghieu.Logo = hinhanh;
@@ -392,6 +398,7 @@ namespace HKD_ClothesShop.Forms
 
         #endregion
 
+        // bắt sự kiện cellclick hàng bắt kì
         private void dgvThuongHieu_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -420,6 +427,7 @@ namespace HKD_ClothesShop.Forms
             }
         }
 
+        // hàm dùng đẻ chọn 1 logo từ máy tính
         private void btnChonLogo_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFile = new OpenFileDialog();
@@ -432,6 +440,7 @@ namespace HKD_ClothesShop.Forms
             }
         }
 
+        // dùng để ẩn thông tin thương hiệu không còn sử dụng
         private void btnHidden_Click(object sender, EventArgs e)
         {
             QLBanHangHKDEntities db = new QLBanHangHKDEntities();
@@ -465,6 +474,8 @@ namespace HKD_ClothesShop.Forms
             }
         }
 
+
+        // 1 nùi sự kiện xóa tắt mở chức năng ....
         private void btnReset_Click(object sender, EventArgs e)
         {
             Xoatt();
