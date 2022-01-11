@@ -380,6 +380,41 @@ namespace HKD_ClothesShop
             }
         }
 
-        
+        private void taoHoaDonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmTaoHoaDon());
+            hideSubmenu();
+        }
+
+        private void themKhachHangToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmDSKhachHang());
+            hideSubmenu();
+        }
+
+        private void themThuongHieuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmThuongHieu());
+            hideSubmenu();
+        }
+
+        private void themSanPhamToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmNhapHang());
+            hideSubmenu();
+        }
+
+        private void xemThongKeBaoCaoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmThongKeBaoCao());
+            hideSubmenu();
+        }
+
+        private void dangXuatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            hideSubmenu();
+            this.Close();
+            new frmDangNhap().Show();
+        }
     }
 }

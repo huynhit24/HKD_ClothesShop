@@ -158,8 +158,8 @@ namespace HKD_ClothesShop.Forms
         private void Xoatt()
         {
             txtSHD.Text = "";
-            txtSLMua.Text = "";
-            txtKM.Text = "";
+            txtSLMua.Text = "0";
+            txtKM.Text = "0";
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -423,12 +423,12 @@ namespace HKD_ClothesShop.Forms
                     dgvCTHD.Rows[index].Cells[3].Value = item.HoaDon.KhachHang.HoTen; // Tên khách hàng
                     dgvCTHD.Rows[index].Cells[4].Value = item.SanPham.TenSanPham; // Tên sản phẩm
                     dgvCTHD.Rows[index].Cells[5].Value = item.SoLuongMua; // Số lượng mua
-                    dgvCTHD.Rows[index].Cells[6].Value = item.DonGiaBan; // Đơn giá bán
-                    dgvCTHD.Rows[index].Cells[7].Value = item.SoLuongMua * item.DonGiaBan; // Thành tiền
+                    dgvCTHD.Rows[index].Cells[6].Value = (ulong) item.DonGiaBan; // Đơn giá bán
+                    dgvCTHD.Rows[index].Cells[7].Value = (ulong) (item.SoLuongMua * item.DonGiaBan); // Thành tiền
                     dgvCTHD.Rows[index].Cells[8].Value = item.HoaDon.MaNhanVien; // Mã nhân viên
                     dgvCTHD.Rows[index].Cells[9].Value = item.HoaDon.MaKhachHang; // Mã khách hàng
                     dgvCTHD.Rows[index].Cells[10].Value = item.MaSanPham; // Mã sản phẩm
-                    dgvCTHD.Rows[index].Cells[11].Value = item.SanPham.DonGia; // Đơn giá gốc
+                    dgvCTHD.Rows[index].Cells[11].Value = (ulong) item.SanPham.DonGia; // Đơn giá gốc
                     dgvCTHD.Rows[index].Cells[12].Value = item.SanPham.DonViTinh; // Đợn vị tính
                     dgvCTHD.Rows[index].Cells[13].Value = item.SanPham.ChatLieu; // Chất liệu
                     //dgvCTHD.Rows[index].Cells[14].Value = item.HoaDon.TinhTrang; // Tình trạng
@@ -517,6 +517,11 @@ namespace HKD_ClothesShop.Forms
                                 db.ChiTietHoaDons.Add(dd);
                                 db.SaveChanges();
                                 frmTaoHoaDon_Load(sender, e);
+                                /*tabPageCTHD.Parent = tabChiTietHoaDon;
+                                tabHoaDon.Parent = null;
+                                tabPageAllCTHD.Parent = null;*/
+                                //HideGridCTHD();
+                                //HideGridCTHD();
                                 MessageBox.Show($"Thêm mới Chi tiết Hóa đơn {dd.SoHoaDon}, {dd.MaSanPham} thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 Xoatt();
                             }
@@ -540,6 +545,41 @@ namespace HKD_ClothesShop.Forms
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Lỗi Thêm Chi tiết Hóa đơn (có thể do trùng mã khác trong CSDL)! - Mời bạn thử lại", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                frmTaoHoaDon_Load(sender, e);
+            }
+        }
+        private void buttonXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (var db = new QLBanHangHKDEntities())
+                {
+                    var dacdiem = db.ChiTietHoaDons.FirstOrDefault(p => (p.SoHoaDon == labelSHD.Text && p.MaSanPham == comboBoxMSP.SelectedValue.ToString()) || (p.SoHoaDon == labelSHD.Text && p.MaSanPham == comboBoxMSP.SelectedValue.ToString()));
+                    if (dacdiem != null)
+                    {
+                        if (MessageBox.Show($"Bạn có chắc chắn muốn xóa cập nhật Hóa đơn {dacdiem.SoHoaDon}, {dacdiem.MaSanPham} này!", "YES/NO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            db.ChiTietHoaDons.Remove(dacdiem);
+                            db.SaveChanges();
+                            //frmTaoHoaDon_Load(sender, e);
+                            HideGridCTHD();
+                            MessageBox.Show($"Xóa mặt hàng này khỏi hóa đơn thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Xoatt();
+                        }
+                        else
+                        {
+                            Xoatt();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không tìm thấy Thông tin Chi tiết Hóa đơn cần xóa!", "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi Xóa TT Chi tiết Hóa đơn (có thể do trùng mã khác trong CSDL)! - Mời bạn thử lại", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 frmTaoHoaDon_Load(sender, e);
             }
         }
@@ -885,8 +925,8 @@ namespace HKD_ClothesShop.Forms
                             {
                                 decimal dgb = item.DonGia - (km * item.DonGia / 100);
                                 decimal thanhtien = dgb * slmua;
-                                labelDGB.Text = Convert.ToString(dgb);
-                                labelThanhtien.Text = Convert.ToString(thanhtien);
+                                labelDGB.Text = Convert.ToString( (ulong) dgb);
+                                labelThanhtien.Text = Convert.ToString( (ulong) thanhtien);
                             }
                             return;
                         }
@@ -1077,6 +1117,23 @@ namespace HKD_ClothesShop.Forms
         private void buttonThanhToanKhach_Click(object sender, EventArgs e)
         {
             //openChildForm(new frmThanhToan());
+            QLBanHangHKDEntities db = new QLBanHangHKDEntities();
+            List<HoaDon> listHoaDon = db.HoaDons.ToList();
+            List<ChiTietHoaDon> listCTHoaDon = db.ChiTietHoaDons.ToList();
+            long tien = 0;
+            foreach (var item in listHoaDon)
+            {
+                if(item.SoHoaDon == labelSHD.Text)
+                {
+                    var listHD = listCTHoaDon.Where(p => p.SoHoaDon == item.SoHoaDon).ToList();
+                    foreach(var i in listHD)
+                    {
+                        tien += (long) i.DonGiaBan * i.SoLuongMua;
+                    }
+                    break;
+                }
+            }
+            ThanhToan.TienThanhToan = tien.ToString();
             new frmThanhToan().ShowDialog();
         }
         //---------------------------------------Hóa đơn---------------------------------------
@@ -1213,5 +1270,7 @@ namespace HKD_ClothesShop.Forms
                 MessageBox.Show(ex.Message, "Xảy ra lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        
     }
 }

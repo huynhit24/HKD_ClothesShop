@@ -335,9 +335,9 @@ namespace HKD_ClothesShop
             this.labelName.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.labelName.Location = new System.Drawing.Point(117, 34);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(70, 25);
+            this.labelName.Size = new System.Drawing.Size(117, 25);
             this.labelName.TabIndex = 6;
-            this.labelName.Text = "label1";
+            this.labelName.Text = "hkdshoppe";
             // 
             // contextMenuStrip
             // 
@@ -351,7 +351,7 @@ namespace HKD_ClothesShop
             this.xemThongKeBaoCaoToolStripMenuItem,
             this.dangXuatToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(303, 232);
+            this.contextMenuStrip.Size = new System.Drawing.Size(303, 254);
             // 
             // taoHoaDonToolStripMenuItem
             // 
@@ -360,6 +360,7 @@ namespace HKD_ClothesShop
             this.taoHoaDonToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
             this.taoHoaDonToolStripMenuItem.Size = new System.Drawing.Size(302, 38);
             this.taoHoaDonToolStripMenuItem.Text = "Tạo hóa đơn";
+            this.taoHoaDonToolStripMenuItem.Click += new System.EventHandler(this.taoHoaDonToolStripMenuItem_Click);
             // 
             // themKhachHangToolStripMenuItem
             // 
@@ -368,6 +369,7 @@ namespace HKD_ClothesShop
             this.themKhachHangToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.K)));
             this.themKhachHangToolStripMenuItem.Size = new System.Drawing.Size(302, 38);
             this.themKhachHangToolStripMenuItem.Text = "Thêm khách hàng";
+            this.themKhachHangToolStripMenuItem.Click += new System.EventHandler(this.themKhachHangToolStripMenuItem_Click);
             // 
             // themThuongHieuToolStripMenuItem
             // 
@@ -376,6 +378,7 @@ namespace HKD_ClothesShop
             this.themThuongHieuToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
             this.themThuongHieuToolStripMenuItem.Size = new System.Drawing.Size(302, 38);
             this.themThuongHieuToolStripMenuItem.Text = "Thêm thương hiệu";
+            this.themThuongHieuToolStripMenuItem.Click += new System.EventHandler(this.themThuongHieuToolStripMenuItem_Click);
             // 
             // themSanPhamToolStripMenuItem
             // 
@@ -384,6 +387,7 @@ namespace HKD_ClothesShop
             this.themSanPhamToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.themSanPhamToolStripMenuItem.Size = new System.Drawing.Size(302, 38);
             this.themSanPhamToolStripMenuItem.Text = "Thêm sản phẩm";
+            this.themSanPhamToolStripMenuItem.Click += new System.EventHandler(this.themSanPhamToolStripMenuItem_Click);
             // 
             // xemThongKeBaoCaoToolStripMenuItem
             // 
@@ -392,6 +396,7 @@ namespace HKD_ClothesShop
             this.xemThongKeBaoCaoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.A)));
             this.xemThongKeBaoCaoToolStripMenuItem.Size = new System.Drawing.Size(302, 38);
             this.xemThongKeBaoCaoToolStripMenuItem.Text = "Xem thống kê, báo cáo";
+            this.xemThongKeBaoCaoToolStripMenuItem.Click += new System.EventHandler(this.xemThongKeBaoCaoToolStripMenuItem_Click);
             // 
             // dangXuatToolStripMenuItem
             // 
@@ -400,6 +405,7 @@ namespace HKD_ClothesShop
             this.dangXuatToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
             this.dangXuatToolStripMenuItem.Size = new System.Drawing.Size(302, 38);
             this.dangXuatToolStripMenuItem.Text = "Đăng xuất";
+            this.dangXuatToolStripMenuItem.Click += new System.EventHandler(this.dangXuatToolStripMenuItem_Click);
             // 
             // panelChildForm
             // 

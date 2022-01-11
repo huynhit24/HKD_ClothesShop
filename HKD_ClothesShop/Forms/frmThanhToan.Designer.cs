@@ -33,14 +33,14 @@ namespace HKD_ClothesShop.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtThanhToan = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtKhachDua = new System.Windows.Forms.TextBox();
+            this.txtTienThoi = new System.Windows.Forms.TextBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
@@ -94,15 +94,15 @@ namespace HKD_ClothesShop.Forms
             this.label4.TabIndex = 40;
             this.label4.Text = "Tiền thối lại";
             // 
-            // textBox1
+            // txtThanhToan
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(170, 99);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(305, 48);
-            this.textBox1.TabIndex = 41;
+            this.txtThanhToan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtThanhToan.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThanhToan.Location = new System.Drawing.Point(170, 99);
+            this.txtThanhToan.Multiline = true;
+            this.txtThanhToan.Name = "txtThanhToan";
+            this.txtThanhToan.Size = new System.Drawing.Size(305, 48);
+            this.txtThanhToan.TabIndex = 41;
             // 
             // button1
             // 
@@ -180,25 +180,25 @@ namespace HKD_ClothesShop.Forms
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // textBox2
+            // txtKhachDua
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(170, 398);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(305, 48);
-            this.textBox2.TabIndex = 48;
+            this.txtKhachDua.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtKhachDua.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKhachDua.Location = new System.Drawing.Point(170, 398);
+            this.txtKhachDua.Multiline = true;
+            this.txtKhachDua.Name = "txtKhachDua";
+            this.txtKhachDua.Size = new System.Drawing.Size(305, 48);
+            this.txtKhachDua.TabIndex = 48;
             // 
-            // textBox3
+            // txtTienThoi
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(170, 466);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(305, 48);
-            this.textBox3.TabIndex = 49;
+            this.txtTienThoi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTienThoi.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTienThoi.Location = new System.Drawing.Point(170, 466);
+            this.txtTienThoi.Multiline = true;
+            this.txtTienThoi.Name = "txtTienThoi";
+            this.txtTienThoi.Size = new System.Drawing.Size(305, 48);
+            this.txtTienThoi.TabIndex = 49;
             // 
             // button7
             // 
@@ -327,15 +327,15 @@ namespace HKD_ClothesShop.Forms
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtTienThoi);
+            this.Controls.Add(this.txtKhachDua);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtThanhToan);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -358,15 +358,15 @@ namespace HKD_ClothesShop.Forms
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtThanhToan;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtKhachDua;
+        private System.Windows.Forms.TextBox txtTienThoi;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;

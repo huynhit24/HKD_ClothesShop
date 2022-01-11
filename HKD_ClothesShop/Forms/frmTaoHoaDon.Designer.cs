@@ -53,6 +53,7 @@ namespace HKD_ClothesShop.Forms
             this.cbStatus = new System.Windows.Forms.CheckBox();
             this.lbMNV = new System.Windows.Forms.Label();
             this.lbSHD = new System.Windows.Forms.Label();
+            this.txtSHD = new System.Windows.Forms.TextBox();
             this.tabChiTietHoaDon = new System.Windows.Forms.TabControl();
             this.tabHoaDon = new System.Windows.Forms.TabPage();
             this.btnHidden = new System.Windows.Forms.Button();
@@ -86,6 +87,7 @@ namespace HKD_ClothesShop.Forms
             this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxCTHD = new System.Windows.Forms.GroupBox();
+            this.labelSHD = new System.Windows.Forms.Label();
             this.labelThanhtien = new System.Windows.Forms.Label();
             this.labelTien = new System.Windows.Forms.Label();
             this.buttonThoat = new System.Windows.Forms.Button();
@@ -127,8 +129,7 @@ namespace HKD_ClothesShop.Forms
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtSHD = new System.Windows.Forms.TextBox();
-            this.labelSHD = new System.Windows.Forms.Label();
+            this.buttonXoa = new System.Windows.Forms.Button();
             this.groupBoxTTHD.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -463,6 +464,13 @@ namespace HKD_ClothesShop.Forms
             this.lbSHD.TabIndex = 7;
             this.lbSHD.Text = "👉Số hóa đơn";
             // 
+            // txtSHD
+            // 
+            this.txtSHD.Location = new System.Drawing.Point(165, 31);
+            this.txtSHD.Name = "txtSHD";
+            this.txtSHD.Size = new System.Drawing.Size(203, 27);
+            this.txtSHD.TabIndex = 0;
+            // 
             // tabChiTietHoaDon
             // 
             this.tabChiTietHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -525,6 +533,8 @@ namespace HKD_ClothesShop.Forms
             // 
             this.dgvHoaDon.AllowUserToAddRows = false;
             this.dgvHoaDon.AllowUserToDeleteRows = false;
+            this.dgvHoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvHoaDon.BackgroundColor = System.Drawing.Color.White;
             this.dgvHoaDon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHoaDon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -631,6 +641,8 @@ namespace HKD_ClothesShop.Forms
             // 
             this.dgvCTHD.AllowUserToAddRows = false;
             this.dgvCTHD.AllowUserToDeleteRows = false;
+            this.dgvCTHD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCTHD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.dgvCTHD.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvCTHD.BackgroundColor = System.Drawing.Color.White;
@@ -653,7 +665,7 @@ namespace HKD_ClothesShop.Forms
             this.Column17});
             this.dgvCTHD.Location = new System.Drawing.Point(386, 80);
             this.dgvCTHD.Name = "dgvCTHD";
-            this.dgvCTHD.Size = new System.Drawing.Size(926, 640);
+            this.dgvCTHD.Size = new System.Drawing.Size(794, 640);
             this.dgvCTHD.TabIndex = 8;
             this.dgvCTHD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTHD_CellClick);
             // 
@@ -766,6 +778,7 @@ namespace HKD_ClothesShop.Forms
             // groupBoxCTHD
             // 
             this.groupBoxCTHD.BackColor = System.Drawing.Color.White;
+            this.groupBoxCTHD.Controls.Add(this.buttonXoa);
             this.groupBoxCTHD.Controls.Add(this.labelSHD);
             this.groupBoxCTHD.Controls.Add(this.labelThanhtien);
             this.groupBoxCTHD.Controls.Add(this.labelTien);
@@ -795,10 +808,19 @@ namespace HKD_ClothesShop.Forms
             this.groupBoxCTHD.TabStop = false;
             this.groupBoxCTHD.Text = "Thông tin hóa đơn ✍";
             // 
+            // labelSHD
+            // 
+            this.labelSHD.AutoSize = true;
+            this.labelSHD.Location = new System.Drawing.Point(150, 35);
+            this.labelSHD.Name = "labelSHD";
+            this.labelSHD.Size = new System.Drawing.Size(41, 19);
+            this.labelSHD.TabIndex = 67;
+            this.labelSHD.Text = "SHĐ";
+            // 
             // labelThanhtien
             // 
             this.labelThanhtien.AutoSize = true;
-            this.labelThanhtien.Location = new System.Drawing.Point(150, 264);
+            this.labelThanhtien.Location = new System.Drawing.Point(161, 264);
             this.labelThanhtien.Name = "labelThanhtien";
             this.labelThanhtien.Size = new System.Drawing.Size(86, 19);
             this.labelThanhtien.TabIndex = 66;
@@ -857,7 +879,7 @@ namespace HKD_ClothesShop.Forms
             // labelThanhToan
             // 
             this.labelThanhToan.AutoSize = true;
-            this.labelThanhToan.Location = new System.Drawing.Point(193, 478);
+            this.labelThanhToan.Location = new System.Drawing.Point(193, 425);
             this.labelThanhToan.Name = "labelThanhToan";
             this.labelThanhToan.Size = new System.Drawing.Size(164, 19);
             this.labelThanhToan.TabIndex = 45;
@@ -894,7 +916,7 @@ namespace HKD_ClothesShop.Forms
             // labelGiaGoc
             // 
             this.labelGiaGoc.AutoSize = true;
-            this.labelGiaGoc.Location = new System.Drawing.Point(150, 156);
+            this.labelGiaGoc.Location = new System.Drawing.Point(161, 156);
             this.labelGiaGoc.Name = "labelGiaGoc";
             this.labelGiaGoc.Size = new System.Drawing.Size(63, 19);
             this.labelGiaGoc.TabIndex = 42;
@@ -913,7 +935,7 @@ namespace HKD_ClothesShop.Forms
             // labelDGB
             // 
             this.labelDGB.AutoSize = true;
-            this.labelDGB.Location = new System.Drawing.Point(150, 226);
+            this.labelDGB.Location = new System.Drawing.Point(161, 226);
             this.labelDGB.Name = "labelDGB";
             this.labelDGB.Size = new System.Drawing.Size(95, 19);
             this.labelDGB.TabIndex = 40;
@@ -931,7 +953,7 @@ namespace HKD_ClothesShop.Forms
             // 
             // txtKM
             // 
-            this.txtKM.Location = new System.Drawing.Point(154, 189);
+            this.txtKM.Location = new System.Drawing.Point(165, 189);
             this.txtKM.Name = "txtKM";
             this.txtKM.Size = new System.Drawing.Size(121, 27);
             this.txtKM.TabIndex = 38;
@@ -948,7 +970,7 @@ namespace HKD_ClothesShop.Forms
             // 
             // txtSLMua
             // 
-            this.txtSLMua.Location = new System.Drawing.Point(154, 115);
+            this.txtSLMua.Location = new System.Drawing.Point(165, 115);
             this.txtSLMua.Name = "txtSLMua";
             this.txtSLMua.Size = new System.Drawing.Size(121, 27);
             this.txtSLMua.TabIndex = 36;
@@ -966,7 +988,7 @@ namespace HKD_ClothesShop.Forms
             // comboBoxMSP
             // 
             this.comboBoxMSP.FormattingEnabled = true;
-            this.comboBoxMSP.Location = new System.Drawing.Point(154, 74);
+            this.comboBoxMSP.Location = new System.Drawing.Point(165, 74);
             this.comboBoxMSP.Name = "comboBoxMSP";
             this.comboBoxMSP.Size = new System.Drawing.Size(203, 27);
             this.comboBoxMSP.TabIndex = 34;
@@ -993,7 +1015,7 @@ namespace HKD_ClothesShop.Forms
             this.buttonSua.Name = "buttonSua";
             this.buttonSua.Size = new System.Drawing.Size(113, 61);
             this.buttonSua.TabIndex = 21;
-            this.buttonSua.Text = "Sửa CTHĐ";
+            this.buttonSua.Text = "Sửa";
             this.buttonSua.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonSua.UseVisualStyleBackColor = true;
             this.buttonSua.Click += new System.EventHandler(this.buttonSua_Click);
@@ -1009,7 +1031,7 @@ namespace HKD_ClothesShop.Forms
             this.buttonThem.Name = "buttonThem";
             this.buttonThem.Size = new System.Drawing.Size(113, 64);
             this.buttonThem.TabIndex = 20;
-            this.buttonThem.Text = "Thêm vào HĐ";
+            this.buttonThem.Text = "Thêm";
             this.buttonThem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.buttonThem.UseVisualStyleBackColor = true;
             this.buttonThem.Click += new System.EventHandler(this.buttonThem_Click);
@@ -1217,21 +1239,21 @@ namespace HKD_ClothesShop.Forms
             this.label1.TabIndex = 36;
             this.label1.Text = "QUẦY TÍNH TIỀN 💵💵💵";
             // 
-            // txtSHD
+            // buttonXoa
             // 
-            this.txtSHD.Location = new System.Drawing.Point(165, 31);
-            this.txtSHD.Name = "txtSHD";
-            this.txtSHD.Size = new System.Drawing.Size(203, 27);
-            this.txtSHD.TabIndex = 0;
-            // 
-            // labelSHD
-            // 
-            this.labelSHD.AutoSize = true;
-            this.labelSHD.Location = new System.Drawing.Point(150, 35);
-            this.labelSHD.Name = "labelSHD";
-            this.labelSHD.Size = new System.Drawing.Size(41, 19);
-            this.labelSHD.TabIndex = 67;
-            this.labelSHD.Text = "SHĐ";
+            this.buttonXoa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonXoa.FlatAppearance.BorderColor = System.Drawing.Color.OliveDrab;
+            this.buttonXoa.FlatAppearance.BorderSize = 3;
+            this.buttonXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonXoa.Image = global::HKD_ClothesShop.Properties.Resources.logout;
+            this.buttonXoa.Location = new System.Drawing.Point(173, 464);
+            this.buttonXoa.Name = "buttonXoa";
+            this.buttonXoa.Size = new System.Drawing.Size(113, 61);
+            this.buttonXoa.TabIndex = 68;
+            this.buttonXoa.Text = "Xóa";
+            this.buttonXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonXoa.UseVisualStyleBackColor = true;
+            this.buttonXoa.Click += new System.EventHandler(this.buttonXoa_Click);
             // 
             // frmTaoHoaDon
             // 
@@ -1374,5 +1396,6 @@ namespace HKD_ClothesShop.Forms
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtSHD;
         private System.Windows.Forms.Label labelSHD;
+        private System.Windows.Forms.Button buttonXoa;
     }
 }

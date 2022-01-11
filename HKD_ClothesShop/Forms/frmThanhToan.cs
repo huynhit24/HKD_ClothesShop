@@ -28,6 +28,10 @@ namespace HKD_ClothesShop.Forms
         {
             QLBanHangHKDEntities db = new QLBanHangHKDEntities();
             List<ChiTietHoaDon> listCTHoaDon = db.ChiTietHoaDons.ToList();
+
+            txtThanhToan.Text = ThanhToan.TienThanhToan;
+            txtKhachDua.Text = "0";
+            txtTienThoi.Text = "0";
         }
 
        

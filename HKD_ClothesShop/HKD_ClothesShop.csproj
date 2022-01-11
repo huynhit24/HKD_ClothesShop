@@ -182,6 +182,7 @@
     <Compile Include="Forms\frmThuongHieu.Designer.cs">
       <DependentUpon>frmThuongHieu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ThanhToan.cs" />
     <Compile Include="Forms\ThongTinDangNhap.cs" />
     <Compile Include="Forms\XacthucRegex.cs" />
     <Compile Include="frmMain.cs">

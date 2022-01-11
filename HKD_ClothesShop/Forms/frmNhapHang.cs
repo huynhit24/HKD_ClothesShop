@@ -44,7 +44,7 @@ namespace HKD_ClothesShop.Forms
                 dgvSanPham.Rows[index].Cells[1].Value = item.MaSanPham;
                 dgvSanPham.Rows[index].Cells[2].Value = item.TenSanPham;
                 dgvSanPham.Rows[index].Cells[3].Value = item.DonViTinh;
-                dgvSanPham.Rows[index].Cells[4].Value = item.DonGia;
+                dgvSanPham.Rows[index].Cells[4].Value = (ulong) item.DonGia;
                 dgvSanPham.Rows[index].Cells[5].Value = item.ChatLieu;
                 dgvSanPham.Rows[index].Cells[6].Value = item.MaLoaiSP;
                 dgvSanPham.Rows[index].Cells[7].Value = item.MaThuongHieu;
@@ -115,9 +115,9 @@ namespace HKD_ClothesShop.Forms
                 {
                     using (var db = new QLBanHangHKDEntities())
                     {
-                        int index = dgvSanPham.CurrentCell.RowIndex;
+                        /*int index = dgvSanPham.CurrentCell.RowIndex;
                         DataGridViewRow row = dgvSanPham.Rows[index];
-                        string temp = row.Cells[1].Value.ToString();
+                        string temp = row.Cells[1].Value.ToString();*/
                         var sanpham = db.SanPhams.FirstOrDefault(p => p.MaSanPham == txtMSP.Text);
                         if (sanpham == null) // chưa có sản phẩm có mã này
                         {
@@ -184,9 +184,9 @@ namespace HKD_ClothesShop.Forms
             {
                 using (var db = new QLBanHangHKDEntities())
                 {
-                    int index = dgvSanPham.CurrentCell.RowIndex;
+                    /*int index = dgvSanPham.CurrentCell.RowIndex;
                     DataGridViewRow row = dgvSanPham.Rows[index];
-                    string temp = row.Cells[1].Value.ToString();
+                    string temp = row.Cells[1].Value.ToString();*/
                     var sanpham = db.SanPhams.FirstOrDefault(p => p.MaSanPham == txtMSP.Text);
                     //var khachhang = db.KhachHangs.FirstOrDefault(p => p.MaKhachHang == txtMKH.Text);
                     if (sanpham != null)
