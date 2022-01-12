@@ -33,14 +33,11 @@ namespace HKD_ClothesShop.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtThanhToan = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.txtKhachDua = new System.Windows.Forms.TextBox();
-            this.txtTienThoi = new System.Windows.Forms.TextBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
@@ -49,6 +46,9 @@ namespace HKD_ClothesShop.Forms
             this.button12 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.labelThanhtoan = new System.Windows.Forms.Label();
+            this.labelKhachdua = new System.Windows.Forms.Label();
+            this.labelTienthoi = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -93,16 +93,6 @@ namespace HKD_ClothesShop.Forms
             this.label4.Size = new System.Drawing.Size(157, 33);
             this.label4.TabIndex = 40;
             this.label4.Text = "Tiền thối lại";
-            // 
-            // txtThanhToan
-            // 
-            this.txtThanhToan.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtThanhToan.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThanhToan.Location = new System.Drawing.Point(170, 99);
-            this.txtThanhToan.Multiline = true;
-            this.txtThanhToan.Name = "txtThanhToan";
-            this.txtThanhToan.Size = new System.Drawing.Size(305, 48);
-            this.txtThanhToan.TabIndex = 41;
             // 
             // button1
             // 
@@ -179,26 +169,6 @@ namespace HKD_ClothesShop.Forms
             this.button6.Text = "Khách ghi nợ";
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = false;
-            // 
-            // txtKhachDua
-            // 
-            this.txtKhachDua.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtKhachDua.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKhachDua.Location = new System.Drawing.Point(170, 398);
-            this.txtKhachDua.Multiline = true;
-            this.txtKhachDua.Name = "txtKhachDua";
-            this.txtKhachDua.Size = new System.Drawing.Size(305, 48);
-            this.txtKhachDua.TabIndex = 48;
-            // 
-            // txtTienThoi
-            // 
-            this.txtTienThoi.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTienThoi.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTienThoi.Location = new System.Drawing.Point(170, 466);
-            this.txtTienThoi.Multiline = true;
-            this.txtTienThoi.Name = "txtTienThoi";
-            this.txtTienThoi.Size = new System.Drawing.Size(305, 48);
-            this.txtTienThoi.TabIndex = 49;
             // 
             // button7
             // 
@@ -316,26 +286,56 @@ namespace HKD_ClothesShop.Forms
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // labelThanhtoan
+            // 
+            this.labelThanhtoan.AutoSize = true;
+            this.labelThanhtoan.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelThanhtoan.Location = new System.Drawing.Point(175, 99);
+            this.labelThanhtoan.Name = "labelThanhtoan";
+            this.labelThanhtoan.Size = new System.Drawing.Size(151, 33);
+            this.labelThanhtoan.TabIndex = 56;
+            this.labelThanhtoan.Text = "Thanh toán";
+            // 
+            // labelKhachdua
+            // 
+            this.labelKhachdua.AutoSize = true;
+            this.labelKhachdua.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelKhachdua.Location = new System.Drawing.Point(175, 403);
+            this.labelKhachdua.Name = "labelKhachdua";
+            this.labelKhachdua.Size = new System.Drawing.Size(151, 33);
+            this.labelKhachdua.TabIndex = 57;
+            this.labelKhachdua.Text = "Thanh toán";
+            // 
+            // labelTienthoi
+            // 
+            this.labelTienthoi.AutoSize = true;
+            this.labelTienthoi.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTienthoi.Location = new System.Drawing.Point(175, 466);
+            this.labelTienthoi.Name = "labelTienthoi";
+            this.labelTienthoi.Size = new System.Drawing.Size(151, 33);
+            this.labelTienthoi.TabIndex = 58;
+            this.labelTienthoi.Text = "Thanh toán";
+            // 
             // frmThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(808, 601);
+            this.Controls.Add(this.labelTienthoi);
+            this.Controls.Add(this.labelKhachdua);
+            this.Controls.Add(this.labelThanhtoan);
             this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.txtTienThoi);
-            this.Controls.Add(this.txtKhachDua);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtThanhToan);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -358,20 +358,20 @@ namespace HKD_ClothesShop.Forms
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtThanhToan;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox txtKhachDua;
-        private System.Windows.Forms.TextBox txtTienThoi;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Label labelThanhtoan;
+        private System.Windows.Forms.Label labelKhachdua;
+        private System.Windows.Forms.Label labelTienthoi;
     }
 }

@@ -76,8 +76,8 @@ namespace HKD_ClothesShop.Forms
             {
                 QLBanHangHKDEntities db = new QLBanHangHKDEntities();
                 List<SanPham> listSanPham = db.SanPhams.ToList();
-                List<LoaiSanPham> listLoaiSP = db.LoaiSanPhams.ToList();
-                List<ThuongHieu> listThuongHieu = db.ThuongHieux.ToList();
+                List<LoaiSanPham> listLoaiSP = db.LoaiSanPhams.Where(P => P.Status == true).ToList();
+                List<ThuongHieu> listThuongHieu = db.ThuongHieux.Where(P => P.Status == true).ToList();
                 FillLoaiCombobox(listLoaiSP);
                 FillThuongHieuCombobox(listThuongHieu);
                 BindGrid(listSanPham);

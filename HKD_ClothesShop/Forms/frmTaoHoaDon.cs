@@ -106,9 +106,9 @@ namespace HKD_ClothesShop.Forms
                 List<HoaDon> listHoaDon = db.HoaDons.ToList();
                 List<ChiTietHoaDon> listCTHoaDon = db.ChiTietHoaDons.ToList();
 
-                List<NhanVienBanHang> listNhanVien = db.NhanVienBanHangs.ToList();
-                List<KhachHang> listKhachHang = db.KhachHangs.ToList();
-                List<SanPham> listSanPham = db.SanPhams.ToList();
+                List<NhanVienBanHang> listNhanVien = db.NhanVienBanHangs.Where(P => P.Status == true).ToList();
+                List<KhachHang> listKhachHang = db.KhachHangs.Where(P => P.Status == true).ToList();
+                List<SanPham> listSanPham = db.SanPhams.Where(P => P.TrangThai == true).ToList();
 
                 BindGrid(listHoaDon);
                 FillNhanVienCombobox(listNhanVien);
