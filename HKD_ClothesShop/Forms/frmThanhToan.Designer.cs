@@ -33,22 +33,26 @@ namespace HKD_ClothesShop.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.button50ngan = new System.Windows.Forms.Button();
+            this.button100ngan = new System.Windows.Forms.Button();
+            this.button200ngan = new System.Windows.Forms.Button();
+            this.buttonTraDu = new System.Windows.Forms.Button();
+            this.buttonHuy = new System.Windows.Forms.Button();
+            this.buttonDongy = new System.Windows.Forms.Button();
+            this.button1ngan = new System.Windows.Forms.Button();
+            this.button5ngan = new System.Windows.Forms.Button();
+            this.button10ngan = new System.Windows.Forms.Button();
+            this.button20ngan = new System.Windows.Forms.Button();
+            this.button500ngan = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.labelThanhtoan = new System.Windows.Forms.Label();
             this.labelKhachdua = new System.Windows.Forms.Label();
             this.labelTienthoi = new System.Windows.Forms.Label();
+            this.buttonClear = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnTinhTienthoi = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -58,11 +62,11 @@ namespace HKD_ClothesShop.Forms
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Roboto", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(174, 9);
+            this.label1.Location = new System.Drawing.Point(60, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(349, 76);
+            this.label1.Size = new System.Drawing.Size(683, 38);
             this.label1.TabIndex = 37;
-            this.label1.Text = "TÍNH TIỀN, THỐI TIỀN \r\nKHÁCH HÀNG 💵💵💵";
+            this.label1.Text = "TÍNH TIỀN, THỐI TIỀN  KHÁCH HÀNG 💵💵💵";
             // 
             // label2
             // 
@@ -94,192 +98,200 @@ namespace HKD_ClothesShop.Forms
             this.label4.TabIndex = 40;
             this.label4.Text = "Tiền thối lại";
             // 
-            // button1
+            // button50ngan
             // 
-            this.button1.BackColor = System.Drawing.Color.Tomato;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::HKD_ClothesShop.Properties.Resources._50_000;
-            this.button1.Location = new System.Drawing.Point(170, 250);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 57);
-            this.button1.TabIndex = 42;
-            this.button1.Text = "50.000 Đ";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button1.UseVisualStyleBackColor = false;
+            this.button50ngan.BackColor = System.Drawing.Color.Tomato;
+            this.button50ngan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button50ngan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button50ngan.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button50ngan.ForeColor = System.Drawing.Color.White;
+            this.button50ngan.Image = global::HKD_ClothesShop.Properties.Resources._50_000;
+            this.button50ngan.Location = new System.Drawing.Point(170, 250);
+            this.button50ngan.Name = "button50ngan";
+            this.button50ngan.Size = new System.Drawing.Size(146, 57);
+            this.button50ngan.TabIndex = 42;
+            this.button50ngan.Text = "50.000 Đ";
+            this.button50ngan.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button50ngan.UseVisualStyleBackColor = false;
+            this.button50ngan.Click += new System.EventHandler(this.button50ngan_Click);
             // 
-            // button2
+            // button100ngan
             // 
-            this.button2.BackColor = System.Drawing.Color.Lime;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::HKD_ClothesShop.Properties.Resources._100_000;
-            this.button2.Location = new System.Drawing.Point(322, 250);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(153, 57);
-            this.button2.TabIndex = 43;
-            this.button2.Text = "100.000 Đ";
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button2.UseVisualStyleBackColor = false;
+            this.button100ngan.BackColor = System.Drawing.Color.Lime;
+            this.button100ngan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button100ngan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button100ngan.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button100ngan.ForeColor = System.Drawing.Color.White;
+            this.button100ngan.Image = global::HKD_ClothesShop.Properties.Resources._100_000;
+            this.button100ngan.Location = new System.Drawing.Point(322, 250);
+            this.button100ngan.Name = "button100ngan";
+            this.button100ngan.Size = new System.Drawing.Size(153, 57);
+            this.button100ngan.TabIndex = 43;
+            this.button100ngan.Text = "100.000 Đ";
+            this.button100ngan.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button100ngan.UseVisualStyleBackColor = false;
+            this.button100ngan.Click += new System.EventHandler(this.button100ngan_Click);
             // 
-            // button3
+            // button200ngan
             // 
-            this.button3.BackColor = System.Drawing.Color.Orange;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = global::HKD_ClothesShop.Properties.Resources._200_000;
-            this.button3.Location = new System.Drawing.Point(481, 250);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(161, 57);
-            this.button3.TabIndex = 44;
-            this.button3.Text = "200.000 Đ";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button3.UseVisualStyleBackColor = false;
+            this.button200ngan.BackColor = System.Drawing.Color.Orange;
+            this.button200ngan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button200ngan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button200ngan.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button200ngan.ForeColor = System.Drawing.Color.White;
+            this.button200ngan.Image = global::HKD_ClothesShop.Properties.Resources._200_000;
+            this.button200ngan.Location = new System.Drawing.Point(481, 250);
+            this.button200ngan.Name = "button200ngan";
+            this.button200ngan.Size = new System.Drawing.Size(161, 57);
+            this.button200ngan.TabIndex = 44;
+            this.button200ngan.Text = "200.000 Đ";
+            this.button200ngan.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button200ngan.UseVisualStyleBackColor = false;
+            this.button200ngan.Click += new System.EventHandler(this.button200ngan_Click);
             // 
-            // button5
+            // buttonTraDu
             // 
-            this.button5.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = global::HKD_ClothesShop.Properties.Resources.accounting;
-            this.button5.Location = new System.Drawing.Point(170, 325);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(305, 57);
-            this.button5.TabIndex = 46;
-            this.button5.Text = "Thanh toán đủ";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = false;
+            this.buttonTraDu.BackColor = System.Drawing.Color.MidnightBlue;
+            this.buttonTraDu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonTraDu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonTraDu.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonTraDu.ForeColor = System.Drawing.Color.White;
+            this.buttonTraDu.Image = global::HKD_ClothesShop.Properties.Resources.accounting;
+            this.buttonTraDu.Location = new System.Drawing.Point(170, 325);
+            this.buttonTraDu.Name = "buttonTraDu";
+            this.buttonTraDu.Size = new System.Drawing.Size(305, 57);
+            this.buttonTraDu.TabIndex = 46;
+            this.buttonTraDu.Text = "Thanh toán đủ";
+            this.buttonTraDu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.buttonTraDu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonTraDu.UseVisualStyleBackColor = false;
+            this.buttonTraDu.Click += new System.EventHandler(this.buttonTraDu_Click);
             // 
-            // button6
+            // buttonHuy
             // 
-            this.button6.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Image = global::HKD_ClothesShop.Properties.Resources.don_mua_hang;
-            this.button6.Location = new System.Drawing.Point(481, 325);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(315, 57);
-            this.button6.TabIndex = 47;
-            this.button6.Text = "Khách ghi nợ";
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button6.UseVisualStyleBackColor = false;
+            this.buttonHuy.BackColor = System.Drawing.Color.Red;
+            this.buttonHuy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHuy.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonHuy.ForeColor = System.Drawing.Color.White;
+            this.buttonHuy.Location = new System.Drawing.Point(170, 532);
+            this.buttonHuy.Name = "buttonHuy";
+            this.buttonHuy.Size = new System.Drawing.Size(284, 57);
+            this.buttonHuy.TabIndex = 50;
+            this.buttonHuy.Text = "Hủy";
+            this.buttonHuy.UseVisualStyleBackColor = false;
+            this.buttonHuy.Click += new System.EventHandler(this.buttonHuy_Click);
             // 
-            // button7
+            // buttonDongy
             // 
-            this.button7.BackColor = System.Drawing.Color.Red;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(170, 532);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(259, 57);
-            this.button7.TabIndex = 50;
-            this.button7.Text = "Hủy";
-            this.button7.UseVisualStyleBackColor = false;
+            this.buttonDongy.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.buttonDongy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonDongy.FlatAppearance.BorderSize = 4;
+            this.buttonDongy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDongy.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDongy.ForeColor = System.Drawing.Color.Blue;
+            this.buttonDongy.Location = new System.Drawing.Point(460, 532);
+            this.buttonDongy.Name = "buttonDongy";
+            this.buttonDongy.Size = new System.Drawing.Size(295, 57);
+            this.buttonDongy.TabIndex = 51;
+            this.buttonDongy.Text = "Đồng ý";
+            this.buttonDongy.UseVisualStyleBackColor = false;
+            this.buttonDongy.Click += new System.EventHandler(this.buttonDongy_Click);
             // 
-            // button8
+            // button1ngan
             // 
-            this.button8.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button8.FlatAppearance.BorderSize = 4;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.Blue;
-            this.button8.Location = new System.Drawing.Point(435, 532);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(295, 57);
-            this.button8.TabIndex = 51;
-            this.button8.Text = "Đồng ý";
-            this.button8.UseVisualStyleBackColor = false;
+            this.button1ngan.BackColor = System.Drawing.Color.DarkKhaki;
+            this.button1ngan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1ngan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1ngan.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1ngan.ForeColor = System.Drawing.Color.White;
+            this.button1ngan.Image = global::HKD_ClothesShop.Properties.Resources._1_000;
+            this.button1ngan.Location = new System.Drawing.Point(170, 180);
+            this.button1ngan.Name = "button1ngan";
+            this.button1ngan.Size = new System.Drawing.Size(146, 57);
+            this.button1ngan.TabIndex = 52;
+            this.button1ngan.Text = "1.000 Đ";
+            this.button1ngan.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button1ngan.UseVisualStyleBackColor = false;
+            this.button1ngan.Click += new System.EventHandler(this.button1ngan_Click);
             // 
-            // button9
+            // button5ngan
             // 
-            this.button9.BackColor = System.Drawing.Color.DarkKhaki;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Image = global::HKD_ClothesShop.Properties.Resources._1_000;
-            this.button9.Location = new System.Drawing.Point(170, 180);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(146, 57);
-            this.button9.TabIndex = 52;
-            this.button9.Text = "1.000 Đ";
-            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button9.UseVisualStyleBackColor = false;
+            this.button5ngan.BackColor = System.Drawing.Color.Aqua;
+            this.button5ngan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5ngan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5ngan.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5ngan.ForeColor = System.Drawing.Color.White;
+            this.button5ngan.Image = global::HKD_ClothesShop.Properties.Resources._5_000;
+            this.button5ngan.Location = new System.Drawing.Point(322, 180);
+            this.button5ngan.Name = "button5ngan";
+            this.button5ngan.Size = new System.Drawing.Size(153, 57);
+            this.button5ngan.TabIndex = 53;
+            this.button5ngan.Text = "5.000 Đ";
+            this.button5ngan.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button5ngan.UseVisualStyleBackColor = false;
+            this.button5ngan.Click += new System.EventHandler(this.button5ngan_Click);
             // 
-            // button10
+            // button10ngan
             // 
-            this.button10.BackColor = System.Drawing.Color.Aqua;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Image = global::HKD_ClothesShop.Properties.Resources._5_000;
-            this.button10.Location = new System.Drawing.Point(322, 180);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(153, 57);
-            this.button10.TabIndex = 53;
-            this.button10.Text = "5.000 Đ";
-            this.button10.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button10.UseVisualStyleBackColor = false;
+            this.button10ngan.BackColor = System.Drawing.Color.Gold;
+            this.button10ngan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button10ngan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10ngan.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10ngan.ForeColor = System.Drawing.Color.White;
+            this.button10ngan.Image = global::HKD_ClothesShop.Properties.Resources._10_000;
+            this.button10ngan.Location = new System.Drawing.Point(481, 180);
+            this.button10ngan.Name = "button10ngan";
+            this.button10ngan.Size = new System.Drawing.Size(161, 57);
+            this.button10ngan.TabIndex = 54;
+            this.button10ngan.Text = "10.000 Đ";
+            this.button10ngan.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button10ngan.UseVisualStyleBackColor = false;
+            this.button10ngan.Click += new System.EventHandler(this.button10ngan_Click);
             // 
-            // button11
+            // button20ngan
             // 
-            this.button11.BackColor = System.Drawing.Color.Gold;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Image = global::HKD_ClothesShop.Properties.Resources._10_000;
-            this.button11.Location = new System.Drawing.Point(481, 180);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(161, 57);
-            this.button11.TabIndex = 54;
-            this.button11.Text = "10.000 Đ";
-            this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button11.UseVisualStyleBackColor = false;
+            this.button20ngan.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button20ngan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button20ngan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button20ngan.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button20ngan.ForeColor = System.Drawing.Color.White;
+            this.button20ngan.Image = global::HKD_ClothesShop.Properties.Resources._20_000;
+            this.button20ngan.Location = new System.Drawing.Point(648, 180);
+            this.button20ngan.Name = "button20ngan";
+            this.button20ngan.Size = new System.Drawing.Size(176, 57);
+            this.button20ngan.TabIndex = 55;
+            this.button20ngan.Text = "20.000 Đ";
+            this.button20ngan.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button20ngan.UseVisualStyleBackColor = false;
+            this.button20ngan.Click += new System.EventHandler(this.button20ngan_Click);
             // 
-            // button12
+            // button500ngan
             // 
-            this.button12.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Image = global::HKD_ClothesShop.Properties.Resources._20_000;
-            this.button12.Location = new System.Drawing.Point(648, 180);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(148, 57);
-            this.button12.TabIndex = 55;
-            this.button12.Text = "20.000 Đ";
-            this.button12.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button12.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = global::HKD_ClothesShop.Properties.Resources._500_000;
-            this.button4.Location = new System.Drawing.Point(648, 250);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(148, 57);
-            this.button4.TabIndex = 45;
-            this.button4.Text = "500.000 Đ";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button4.UseVisualStyleBackColor = false;
+            this.button500ngan.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.button500ngan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button500ngan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button500ngan.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button500ngan.ForeColor = System.Drawing.Color.White;
+            this.button500ngan.Image = global::HKD_ClothesShop.Properties.Resources._500_000;
+            this.button500ngan.Location = new System.Drawing.Point(648, 250);
+            this.button500ngan.Name = "button500ngan";
+            this.button500ngan.Size = new System.Drawing.Size(176, 57);
+            this.button500ngan.TabIndex = 45;
+            this.button500ngan.Text = "500.000 Đ";
+            this.button500ngan.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button500ngan.UseVisualStyleBackColor = false;
+            this.button500ngan.Click += new System.EventHandler(this.button500ngan_Click);
             // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.White;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btnClose.FlatAppearance.BorderSize = 2;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Image = global::HKD_ClothesShop.Properties.Resources.cancel;
-            this.btnClose.Location = new System.Drawing.Point(736, 531);
+            this.btnClose.Location = new System.Drawing.Point(761, 531);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(63, 58);
             this.btnClose.TabIndex = 1;
@@ -316,26 +328,95 @@ namespace HKD_ClothesShop.Forms
             this.labelTienthoi.TabIndex = 58;
             this.labelTienthoi.Text = "Thanh toán";
             // 
+            // buttonClear
+            // 
+            this.buttonClear.BackColor = System.Drawing.Color.Gray;
+            this.buttonClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonClear.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.buttonClear.FlatAppearance.BorderSize = 4;
+            this.buttonClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonClear.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClear.ForeColor = System.Drawing.Color.White;
+            this.buttonClear.Location = new System.Drawing.Point(481, 325);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(343, 57);
+            this.buttonClear.TabIndex = 59;
+            this.buttonClear.Text = "Clear";
+            this.buttonClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonClear.UseVisualStyleBackColor = false;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(359, 99);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(70, 33);
+            this.label5.TabIndex = 60;
+            this.label5.Text = "VNĐ";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(359, 403);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 33);
+            this.label6.TabIndex = 61;
+            this.label6.Text = "VNĐ";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(359, 466);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 33);
+            this.label7.TabIndex = 62;
+            this.label7.Text = "VNĐ";
+            // 
+            // btnTinhTienthoi
+            // 
+            this.btnTinhTienthoi.BackColor = System.Drawing.Color.White;
+            this.btnTinhTienthoi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTinhTienthoi.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.btnTinhTienthoi.FlatAppearance.BorderSize = 2;
+            this.btnTinhTienthoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTinhTienthoi.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTinhTienthoi.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnTinhTienthoi.Location = new System.Drawing.Point(460, 458);
+            this.btnTinhTienthoi.Name = "btnTinhTienthoi";
+            this.btnTinhTienthoi.Size = new System.Drawing.Size(122, 58);
+            this.btnTinhTienthoi.TabIndex = 63;
+            this.btnTinhTienthoi.Text = "Tính tiền thối";
+            this.btnTinhTienthoi.UseVisualStyleBackColor = false;
+            this.btnTinhTienthoi.Click += new System.EventHandler(this.btnTinhTienthoi_Click);
+            // 
             // frmThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(808, 601);
+            this.ClientSize = new System.Drawing.Size(836, 601);
+            this.Controls.Add(this.btnTinhTienthoi);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.labelTienthoi);
             this.Controls.Add(this.labelKhachdua);
             this.Controls.Add(this.labelThanhtoan);
-            this.Controls.Add(this.button12);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button20ngan);
+            this.Controls.Add(this.button10ngan);
+            this.Controls.Add(this.button5ngan);
+            this.Controls.Add(this.button1ngan);
+            this.Controls.Add(this.buttonDongy);
+            this.Controls.Add(this.buttonHuy);
+            this.Controls.Add(this.buttonTraDu);
+            this.Controls.Add(this.button500ngan);
+            this.Controls.Add(this.button200ngan);
+            this.Controls.Add(this.button100ngan);
+            this.Controls.Add(this.button50ngan);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -358,20 +439,24 @@ namespace HKD_ClothesShop.Forms
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button50ngan;
+        private System.Windows.Forms.Button button100ngan;
+        private System.Windows.Forms.Button button200ngan;
+        private System.Windows.Forms.Button button500ngan;
+        private System.Windows.Forms.Button buttonTraDu;
+        private System.Windows.Forms.Button buttonHuy;
+        private System.Windows.Forms.Button buttonDongy;
+        private System.Windows.Forms.Button button1ngan;
+        private System.Windows.Forms.Button button5ngan;
+        private System.Windows.Forms.Button button10ngan;
+        private System.Windows.Forms.Button button20ngan;
         private System.Windows.Forms.Label labelThanhtoan;
         private System.Windows.Forms.Label labelKhachdua;
         private System.Windows.Forms.Label labelTienthoi;
+        private System.Windows.Forms.Button buttonClear;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnTinhTienthoi;
     }
 }

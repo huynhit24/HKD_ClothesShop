@@ -8,6 +8,7 @@ namespace HKD_ClothesShop.Forms
 {
     class ThanhToan
     {
+        public static string SoHoaDon { get; set; }
         public static string TienThanhToan { get; set; }
         public static string TienKhachDua { get; set; }
         public static string TienThoiLai { get; set; }

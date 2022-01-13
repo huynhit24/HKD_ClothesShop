@@ -14,7 +14,6 @@ namespace HKD_ClothesShop.Forms
 {
     public partial class frmTaoHoaDon : Form
     {
-
         public frmTaoHoaDon()
         {
             InitializeComponent();
@@ -183,7 +182,7 @@ namespace HKD_ClothesShop.Forms
                                 MaNhanVien = cmbMNV.Text,
                                 MaKhachHang = cmbMKH.Text,
                                 NgayLap = dtpNgayLap.Value,
-                                TinhTrang = (cmbTinhTrang.Text.ToString() == "Đã thanh toán") ? "T" : (cmbTinhTrang.Text.ToString() == "Chưa thanh toán") ? "C" : "N",
+                                TinhTrang = (labelTinhTrang.Text.ToString() == "Đã thanh toán") ? "T" : (labelTinhTrang.Text.ToString() == "Chưa thanh toán") ? "C" : "N",
                                 Status = (cbStatus.Checked == true) ? false : true
                             };
                             if (MessageBox.Show($"Bạn có chắc chắn muốn thêm Hóa đơn {dd.MaKhachHang}, {dd.SoHoaDon}, {dd.MaNhanVien} này!", "YES/NO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -248,7 +247,7 @@ namespace HKD_ClothesShop.Forms
                             dacdiem.MaNhanVien = cmbMNV.Text;
                             dacdiem.MaKhachHang = cmbMKH.Text;
                             dacdiem.NgayLap = dtpNgayLap.Value;
-                            dacdiem.TinhTrang = (cmbTinhTrang.Text.ToString() == "Đã thanh toán") ? "T" : (cmbTinhTrang.Text.ToString() == "Chưa thanh toán") ? "C" : "N";
+                            dacdiem.TinhTrang = (labelTinhTrang.Text.ToString() == "Đã thanh toán") ? "T" : (labelTinhTrang.Text.ToString() == "Chưa thanh toán") ? "C" : "N";
                             dacdiem.Status = (cbStatus.Checked == true) ? false : true;
                             if (MessageBox.Show($"Bạn có chắc chắn muốn lưu cập nhật Hóa đơn {cmbMKH.Text}, {cmbMNV.Text} cho {txtSHD.Text} này!", "YES/NO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                             {
@@ -392,7 +391,7 @@ namespace HKD_ClothesShop.Forms
                             dtpNgayLap.Value = i.NgayLap;
                         }
                     }
-                    cmbTinhTrang.Text = row.Cells[4].Value.ToString();
+                    labelTinhTrang.Text = row.Cells[4].Value.ToString();
 
                     cbStatus.Checked = (row.Cells[5].Value.ToString() == "Còn sử dụng") ? false : true;
                 }
@@ -436,16 +435,19 @@ namespace HKD_ClothesShop.Forms
                     if (item.HoaDon.TinhTrang == "T")
                     {
                         dgvCTHD.Rows[index].Cells[14].Value = "Đã thanh toán";
+                        labelThanhToan.Text = "Đã thanh toán";
                     }
                     else
                     {
                         if (item.HoaDon.TinhTrang == "C")
                         {
                             dgvCTHD.Rows[index].Cells[14].Value = "Chưa thanh toán";
+                            labelThanhToan.Text = "Chưa thanh toán";
                         }
                         else
                         {
                             dgvCTHD.Rows[index].Cells[14].Value = "Ghi nợ";
+                            labelThanhToan.Text = "Ghi nợ";
                         }
                         //dgvHoaDon.Rows[index].DefaultCellStyle.BackColor = Color.GreenYellow;
                     }
@@ -491,6 +493,11 @@ namespace HKD_ClothesShop.Forms
         {
             try
             {
+                if (labelThanhToan.Text == "Đã thanh toán")
+                {
+                    MessageBox.Show($"👉 Không được phép chỉnh sửa Hóa đơn khi đã thanh toán!", "Cảnh báo ⚠❌💀", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 // kiểm tra dữ liệu nhập vào ở các Textbox
                 bool isValidated = isValidateDataCTHD();
                 if (isValidated)// dữ liệu được xác thực đúng thỏa database
@@ -552,6 +559,11 @@ namespace HKD_ClothesShop.Forms
         {
             try
             {
+                if (labelThanhToan.Text == "Đã thanh toán")
+                {
+                    MessageBox.Show($"👉 Không được phép chỉnh sửa Hóa đơn khi đã thanh toán!", "Cảnh báo ⚠❌💀", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 using (var db = new QLBanHangHKDEntities())
                 {
                     var dacdiem = db.ChiTietHoaDons.FirstOrDefault(p => (p.SoHoaDon == labelSHD.Text && p.MaSanPham == comboBoxMSP.SelectedValue.ToString()) || (p.SoHoaDon == labelSHD.Text && p.MaSanPham == comboBoxMSP.SelectedValue.ToString()));
@@ -586,8 +598,14 @@ namespace HKD_ClothesShop.Forms
 
         private void buttonSua_Click(object sender, EventArgs e)
         {
+
             try
             {
+                if(labelThanhToan.Text == "Đã thanh toán")
+                {
+                    MessageBox.Show($"👉 Không được phép chỉnh sửa Hóa đơn khi đã thanh toán!", "Cảnh báo ⚠❌💀", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 using (var db = new QLBanHangHKDEntities())
                 {
                     //List<ChiTietHoaDon> listCTHoaDon = db.ChiTietHoaDons.ToList();
@@ -630,7 +648,7 @@ namespace HKD_ClothesShop.Forms
                     }
                     else
                     {
-                        MessageBox.Show("Không tìm thấy Thông tin Chi tiết Hóa đơn cần sửa!", "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                        MessageBox.Show("Không tìm thấy Thông tin Chi tiết Hóa đơn cần sửa!", "Thông báo ⚠", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
                     }
                 }
             }
@@ -956,9 +974,7 @@ namespace HKD_ClothesShop.Forms
                     labelGiaGoc.Text = row.Cells[11].Value.ToString();
                     labelDGB.Text = row.Cells[6].Value.ToString();
                     labelThanhtien.Text = row.Cells[7].Value.ToString();
-                    labelThanhToan.Text = row.Cells[14].Value.ToString();
 
-                    
                     txtKM.Text = "";
                     /*cmbMKH.Text = row.Cells[2].Value.ToString();
                     QLBanHangHKDEntities db = new QLBanHangHKDEntities();
@@ -1092,7 +1108,7 @@ namespace HKD_ClothesShop.Forms
             cmbMNV.Visible = false;
             cmbMKH.Visible = false;
             dtpNgayLap.Visible = false;
-            cmbTinhTrang.Visible = false;
+            labelTinhTrang.Visible = false;
             cbStatus.Visible = false;
             groupBoxTTHD.Text = "";
         }
@@ -1108,7 +1124,7 @@ namespace HKD_ClothesShop.Forms
             cmbMNV.Visible = true;
             cmbMKH.Visible = true;
             dtpNgayLap.Visible = true;
-            cmbTinhTrang.Visible = true;
+            labelTinhTrang.Visible = true;
             cbStatus.Visible = true;
             groupBoxTTHD.Text = "Thông tin hóa đơn ✍";
 
@@ -1116,6 +1132,11 @@ namespace HKD_ClothesShop.Forms
 
         private void buttonThanhToanKhach_Click(object sender, EventArgs e)
         {
+            if (labelThanhToan.Text == "Đã thanh toán")
+            {
+                MessageBox.Show("Quý khách đã thanh toán hóa đơn rôì!", "Thông báo ⚠⚠⚠", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             //openChildForm(new frmThanhToan());
             QLBanHangHKDEntities db = new QLBanHangHKDEntities();
             List<HoaDon> listHoaDon = db.HoaDons.ToList();
@@ -1125,6 +1146,7 @@ namespace HKD_ClothesShop.Forms
             {
                 if(item.SoHoaDon == labelSHD.Text)
                 {
+                    ThanhToan.SoHoaDon = item.SoHoaDon;
                     var listHD = listCTHoaDon.Where(p => p.SoHoaDon == item.SoHoaDon).ToList();
                     foreach(var i in listHD)
                     {
@@ -1271,6 +1293,9 @@ namespace HKD_ClothesShop.Forms
             }
         }
 
-        
+        private void buttonLoad_Click(object sender, EventArgs e)
+        {
+            frmTaoHoaDon_Load(sender, e);
+        }
     }
 }
