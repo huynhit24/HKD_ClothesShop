@@ -153,6 +153,16 @@ namespace HKD_ClothesShop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bride_dress {
+            get {
+                object obj = ResourceManager.GetObject("bride-dress", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cancel {
             get {
                 object obj = ResourceManager.GetObject("cancel", resourceCulture);
@@ -333,6 +343,26 @@ namespace HKD_ClothesShop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap jeans {
+            get {
+                object obj = ResourceManager.GetObject("jeans", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap jogging {
+            get {
+                object obj = ResourceManager.GetObject("jogging", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap khach_hang_ds {
             get {
                 object obj = ResourceManager.GetObject("khach-hang-ds", resourceCulture);
@@ -463,6 +493,16 @@ namespace HKD_ClothesShop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap polo_shirt {
+            get {
+                object obj = ResourceManager.GetObject("polo-shirt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap repair_tools {
             get {
                 object obj = ResourceManager.GetObject("repair-tools", resourceCulture);
@@ -476,6 +516,16 @@ namespace HKD_ClothesShop.Properties {
         internal static System.Drawing.Bitmap san_pham_ds {
             get {
                 object obj = ResourceManager.GetObject("san-pham-ds", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sandals {
+            get {
+                object obj = ResourceManager.GetObject("sandals", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -506,6 +556,16 @@ namespace HKD_ClothesShop.Properties {
         internal static System.Drawing.Bitmap sign_in {
             get {
                 object obj = ResourceManager.GetObject("sign-in", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap socks {
+            get {
+                object obj = ResourceManager.GetObject("socks", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

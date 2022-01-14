@@ -391,8 +391,7 @@ namespace HKD_ClothesShop.Forms
             // 
             this.dgvThuongHieu.AllowUserToAddRows = false;
             this.dgvThuongHieu.AllowUserToDeleteRows = false;
-            this.dgvThuongHieu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvThuongHieu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvThuongHieu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvThuongHieu.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
@@ -408,7 +407,7 @@ namespace HKD_ClothesShop.Forms
             this.dgvThuongHieu.GridColor = System.Drawing.Color.Gold;
             this.dgvThuongHieu.Location = new System.Drawing.Point(403, 72);
             this.dgvThuongHieu.Name = "dgvThuongHieu";
-            this.dgvThuongHieu.Size = new System.Drawing.Size(721, 880);
+            this.dgvThuongHieu.Size = new System.Drawing.Size(704, 676);
             this.dgvThuongHieu.TabIndex = 7;
             this.dgvThuongHieu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThuongHieu_CellClick);
             // 

@@ -337,7 +337,10 @@ namespace HKD_ClothesShop
             DisableButton();
             hideSubmenu();
             leftBorderBtn.Visible = false;
-            activeForm.Close();
+            if(activeForm != null)
+            {
+                activeForm.Close();
+            }
         }
         #endregion
 

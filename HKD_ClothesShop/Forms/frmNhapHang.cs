@@ -81,6 +81,8 @@ namespace HKD_ClothesShop.Forms
                 FillLoaiCombobox(listLoaiSP);
                 FillThuongHieuCombobox(listThuongHieu);
                 BindGrid(listSanPham);
+                ThongKeSL();
+
                 Tat();
                 buttonLuuT.Visible = false;
                 buttonHuyT.Visible = false;
@@ -107,8 +109,8 @@ namespace HKD_ClothesShop.Forms
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            /*try
-            {*/
+            try
+            {
                 // kiểm tra dữ liệu nhập vào ở các Textbox
                 bool isValidated = isValidateData();
                 if (isValidated)// dữ liệu được xác thực đúng thỏa database
@@ -121,20 +123,19 @@ namespace HKD_ClothesShop.Forms
                         var sanpham = db.SanPhams.FirstOrDefault(p => p.MaSanPham == txtMSP.Text);
                         if (sanpham == null) // chưa có sản phẩm có mã này
                         {
-
                             Image pictemp = picAnhSP.Image;
                             var hinhanh = (byte[])new ImageConverter().ConvertTo(pictemp, typeof(byte[]));
                             var sp = new SanPham()
                             {
                                 MaSanPham = txtMSP.Text,
-                                MaLoaiSP = cmbLSP.Text.ToString(),
-                                MaThuongHieu = cmbMTH.Text.ToString(),
+                                MaLoaiSP = cmbLSP.SelectedValue.ToString(),
+                                MaThuongHieu = cmbMTH.SelectedValue.ToString(),
                                 TenSanPham = txtTenSP.Text,
                                 DonGia = Convert.ToDecimal(txtDonGia.Text),
                                 DonViTinh = cmbDVT.Text,
                                 NgayCapNhat = dtpDayUpdate.Value,
                                 ChatLieu = txtChatLieu.Text,
-                                MoTa = txtMoTa.Text ?? null,
+                                MoTa = txtMoTa.Text,
                                 AnhBiaSP = hinhanh,
                                 TrangThai = (cbStatus.Checked == true) ? false : true
                             };
@@ -170,12 +171,12 @@ namespace HKD_ClothesShop.Forms
                     ThongBaoLoiDataInput();
                 }
 
-            /*}
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Lỗi Thêm Sản phẩm (có thể do trùng mã khác trong CSDL)! - Mời bạn thử lại", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 frmNhapHang_Load(sender, e);
-            }*/
+            }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -655,6 +656,87 @@ namespace HKD_ClothesShop.Forms
             btnChonAnh.Visible = true;
             cbStatus.Visible = true;
             groupBoxSP.Text = "Nhập thông tin sản phẩm";
+        }
+
+        //THỐNG KÊ SỐ LƯỢNG CHUNG TỪNG LOẠI SẢN PHẨM
+        private void ThongKeSL()
+        {
+            QLBanHangHKDEntities db = new QLBanHangHKDEntities();
+            List<SanPham> list = db.SanPhams.ToList();
+
+            string ao = "Áo";
+            string quan = "Quần";
+            string giay = "Giày";
+            string dep = "Dép";
+            string vay = "Váy";
+            string vo = "Vớ";
+            string tat = "Tất";
+
+            // đếm số lượng áo
+            int soAo = 0;
+            foreach (var item in list)
+            {
+                if (item.TenSanPham.ToLower().Contains(ao.ToLower()) == true)
+                {
+                    soAo++;
+                }
+            }
+            TKSoAo.Text = soAo.ToString();
+
+            // đếm số lượng quần
+            int soQuan = 0;
+            foreach (var item in list)
+            {
+                if (item.TenSanPham.ToLower().Contains(quan.ToLower()) == true)
+                {
+                    soQuan++;
+                }
+            }
+            TKSoQuan.Text = soQuan.ToString();
+
+            // đếm số lượng giày
+            int soGiay = 0;
+            foreach (var item in list)
+            {
+                if (item.TenSanPham.ToLower().Contains(giay.ToLower()) == true)
+                {
+                    soGiay++;
+                }
+            }
+            TKSoGiay.Text = soGiay.ToString();
+
+            // đếm số lượng dép
+            int soDep = 0;
+            foreach (var item in list)
+            {
+                if (item.TenSanPham.ToLower().Contains(dep.ToLower()) == true)
+                {
+                    soDep++;
+                }
+            }
+            TKSoDep.Text = soDep.ToString();
+
+            // đếm số lượng dép
+            int soVay = 0;
+            foreach (var item in list)
+            {
+                if (item.TenSanPham.ToLower().Contains(vay.ToLower()) == true)
+                {
+                    soVay++;
+                }
+            }
+            TKSoVay.Text = soVay.ToString();
+
+            // đếm số lượng vớ tất
+            int soTatVo = 0;
+            foreach (var item in list)
+            {
+                if (item.TenSanPham.ToLower().Contains(tat.ToLower()) == true || item.TenSanPham.ToLower().Contains(vo.ToLower()) == true)
+                {
+                    soTatVo++;
+                }
+            }
+            TKSoTatVo.Text = soTatVo.ToString();
         }
     }
 }

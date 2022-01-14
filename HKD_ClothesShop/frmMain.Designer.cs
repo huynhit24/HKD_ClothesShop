@@ -161,6 +161,7 @@ namespace HKD_ClothesShop
             this.btnNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNhanVien.FlatAppearance.BorderSize = 0;
             this.btnNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNhanVien.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNhanVien.ForeColor = System.Drawing.Color.Black;
             this.btnNhanVien.Image = global::HKD_ClothesShop.Properties.Resources.waiter;
             this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -223,6 +224,7 @@ namespace HKD_ClothesShop
             this.btnReport.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnReport.FlatAppearance.BorderSize = 0;
             this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReport.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReport.ForeColor = System.Drawing.Color.Black;
             this.btnReport.Image = global::HKD_ClothesShop.Properties.Resources.webpage;
             this.btnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -290,6 +292,7 @@ namespace HKD_ClothesShop
             this.btnSanPham.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSanPham.FlatAppearance.BorderSize = 0;
             this.btnSanPham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSanPham.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSanPham.ForeColor = System.Drawing.Color.Black;
             this.btnSanPham.Image = global::HKD_ClothesShop.Properties.Resources.search;
             this.btnSanPham.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -310,6 +313,7 @@ namespace HKD_ClothesShop
             this.btnThuongHieu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnThuongHieu.FlatAppearance.BorderSize = 0;
             this.btnThuongHieu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThuongHieu.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThuongHieu.ForeColor = System.Drawing.Color.Black;
             this.btnThuongHieu.Image = global::HKD_ClothesShop.Properties.Resources.supplier;
             this.btnThuongHieu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -378,6 +382,7 @@ namespace HKD_ClothesShop
             this.btnKhach.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnKhach.FlatAppearance.BorderSize = 0;
             this.btnKhach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKhach.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhach.ForeColor = System.Drawing.Color.Black;
             this.btnKhach.Image = global::HKD_ClothesShop.Properties.Resources.user;
             this.btnKhach.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -394,7 +399,7 @@ namespace HKD_ClothesShop
             // 
             // panelKhoSubmenu
             // 
-            this.panelKhoSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
+            this.panelKhoSubmenu.BackColor = System.Drawing.Color.White;
             this.panelKhoSubmenu.Controls.Add(this.btnTonKho);
             this.panelKhoSubmenu.Controls.Add(this.btnNhapKho);
             this.panelKhoSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
@@ -434,7 +439,7 @@ namespace HKD_ClothesShop
             this.btnNhapKho.Padding = new System.Windows.Forms.Padding(64, 0, 0, 0);
             this.btnNhapKho.Size = new System.Drawing.Size(234, 36);
             this.btnNhapKho.TabIndex = 0;
-            this.btnNhapKho.Text = "Nhập hàng";
+            this.btnNhapKho.Text = "Thêm sản phẩm";
             this.btnNhapKho.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNhapKho.UseVisualStyleBackColor = false;
             this.btnNhapKho.Click += new System.EventHandler(this.btnNhapKho_Click);
@@ -445,6 +450,7 @@ namespace HKD_ClothesShop
             this.btnKho.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnKho.FlatAppearance.BorderSize = 0;
             this.btnKho.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKho.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKho.ForeColor = System.Drawing.Color.Black;
             this.btnKho.Image = global::HKD_ClothesShop.Properties.Resources.warehouse;
             this.btnKho.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -453,7 +459,7 @@ namespace HKD_ClothesShop
             this.btnKho.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
             this.btnKho.Size = new System.Drawing.Size(234, 40);
             this.btnKho.TabIndex = 4;
-            this.btnKho.Text = "Nhập hàng mới";
+            this.btnKho.Text = "Thêm SP mới";
             this.btnKho.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKho.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnKho.UseVisualStyleBackColor = true;
@@ -514,6 +520,7 @@ namespace HKD_ClothesShop
             this.btnHoaDon.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHoaDon.FlatAppearance.BorderSize = 0;
             this.btnHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHoaDon.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHoaDon.ForeColor = System.Drawing.Color.Black;
             this.btnHoaDon.Image = global::HKD_ClothesShop.Properties.Resources.invoice;
             this.btnHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

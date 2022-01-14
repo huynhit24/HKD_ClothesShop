@@ -101,10 +101,11 @@ namespace HKD_ClothesShop.Forms
                 tabPageCTHD.Parent = null;
                 tabHoaDon.Parent = tabChiTietHoaDon;
                 tabPageAllCTHD.Parent = tabChiTietHoaDon;
+                tabPageSLSizeColor.Parent = null;
                 QLBanHangHKDEntities db = new QLBanHangHKDEntities();
                 List<HoaDon> listHoaDon = db.HoaDons.ToList();
                 List<ChiTietHoaDon> listCTHoaDon = db.ChiTietHoaDons.ToList();
-
+                List<DacDiem_SanPham> listCTDacDiem = db.DacDiem_SanPham.ToList();
                 List<NhanVienBanHang> listNhanVien = db.NhanVienBanHangs.Where(P => P.Status == true).ToList();
                 List<KhachHang> listKhachHang = db.KhachHangs.Where(P => P.Status == true).ToList();
                 List<SanPham> listSanPham = db.SanPhams.Where(P => P.TrangThai == true).ToList();
@@ -112,34 +113,9 @@ namespace HKD_ClothesShop.Forms
                 BindGrid(listHoaDon);
                 FillNhanVienCombobox(listNhanVien);
                 FillKhachHangCombobox(listKhachHang);
+
                 BindGridAllCTHD(listCTHoaDon);
 
-
-                /*BindGridCTHD(listCTHoaDon);
-                FillSHDCombobox(listHoaDon);
-                FillMSPCombobox(listSanPham);*/
-
-
-
-                /*foreach (var item in comboBoxMSP.ValueMember)
-                {
-                    if (item.ToString() == comboBoxMSP.SelectedValue.ToString())
-                    {
-                        labelGiaGoc.Text = db.ChiTietHoaDons.FirstOrDefault(p => p.SoHoaDon == txtSHD.Text && p.MaSanPham == comboBoxMSP.SelectedValue.ToString()).ToString();
-                        labelDGB.Text = labelGiaGoc.Text;
-                        break;
-                    }
-                }*/
-
-                /*foreach (var item in listSanPham)
-                {
-                    if (item.MaSanPham.ToString() == comboBoxMSP.Text.ToString())
-                    {
-                        labelGiaGoc.Text = item.DonGia.ToString("0.00");
-                        labelDGB.Text = item.DonGia.ToString("0.00");
-                        break;
-                    }
-                }*/
                 Tat();
                 buttonLuuT.Visible = false;
                 buttonHuyT.Visible = false;
@@ -157,8 +133,7 @@ namespace HKD_ClothesShop.Forms
         private void Xoatt()
         {
             txtSHD.Text = "";
-            txtSLMua.Text = "0";
-            txtKM.Text = "0";
+            labelSLMua.Text = "0";
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -170,12 +145,13 @@ namespace HKD_ClothesShop.Forms
                 {
                     using (var db = new QLBanHangHKDEntities())
                     {
-                        int index = dgvHoaDon.CurrentCell.RowIndex;
+                        /*int index = dgvHoaDon.CurrentCell.RowIndex;
                         DataGridViewRow row = dgvHoaDon.Rows[index];
-                        string temp = row.Cells[1].Value.ToString();
+                        string temp = row.Cells[1].Value.ToString();*/
                         var hoadon = db.HoaDons.FirstOrDefault(p => p.SoHoaDon == txtSHD.Text /*&& p.MaNhanVien == cmbMNV.Text && p.MaKhachHang == cmbMKH.Text*/);
                         if (hoadon == null) // chưa có đặc diểm có size + color này
                         {
+                            
                             var dd = new HoaDon()
                             {
                                 SoHoaDon = txtSHD.Text,
@@ -231,10 +207,10 @@ namespace HKD_ClothesShop.Forms
             {
                 using (var db = new QLBanHangHKDEntities())
                 {
-                    int index = dgvHoaDon.CurrentCell.RowIndex;
+                    /*int index = dgvHoaDon.CurrentCell.RowIndex;
                     DataGridViewRow row = dgvHoaDon.Rows[index];
                     string stemp = row.Cells[0].Value.ToString();
-                    string temp = row.Cells[1].Value.ToString();
+                    string temp = row.Cells[1].Value.ToString();*/
                     var dacdiem = db.HoaDons.FirstOrDefault(p => p.SoHoaDon == txtSHD.Text /*&& p.MaNhanVien == cmbMNV.Text && p.MaKhachHang == cmbMKH.Text*/);
                     //var khachhang = db.KhachHangs.FirstOrDefault(p => p.MaKhachHang == txtMKH.Text);
                     if (dacdiem != null)
@@ -243,6 +219,7 @@ namespace HKD_ClothesShop.Forms
                         bool isValidated = isValidateData();
                         if (isValidated)// dữ liệu được xác thực đúng thỏa database
                         {
+                           
                             dacdiem.SoHoaDon = txtSHD.Text;
                             dacdiem.MaNhanVien = cmbMNV.Text;
                             dacdiem.MaKhachHang = cmbMKH.Text;
@@ -407,7 +384,7 @@ namespace HKD_ClothesShop.Forms
         }
 
         //-----------------------------------------Chi tiết hóa đơn------------------------------------------------------
-
+        public static string size = "M";
         private void BindGridCTHD(List<ChiTietHoaDon> listCTHoaDon)
         {
             try
@@ -431,6 +408,8 @@ namespace HKD_ClothesShop.Forms
                     dgvCTHD.Rows[index].Cells[12].Value = item.SanPham.DonViTinh; // Đợn vị tính
                     dgvCTHD.Rows[index].Cells[13].Value = item.SanPham.ChatLieu; // Chất liệu
                     //dgvCTHD.Rows[index].Cells[14].Value = item.HoaDon.TinhTrang; // Tình trạng
+                    dgvCTHD.Rows[index].Cells[15].Value = size.ToString(); // Chất liệu
+
 
                     if (item.HoaDon.TinhTrang == "T")
                     {
@@ -514,7 +493,7 @@ namespace HKD_ClothesShop.Forms
                             {
                                 SoHoaDon = labelSHD.Text,
                                 MaSanPham = comboBoxMSP.SelectedValue.ToString(),
-                                SoLuongMua = Convert.ToInt32(txtSLMua.Text),
+                                SoLuongMua = Convert.ToInt32(labelSLMua.Text),
                                 DonGiaBan = Convert.ToDecimal(labelDGB.Text)
                                 /*TinhTrang = (cmbTinhTrang.Text.ToString() == "Đã thanh toán") ? "T" : (cmbTinhTrang.Text.ToString() == "Chưa thanh toán") ? "C" : "N",
                                 Status = (cbStatus.Checked == true) ? false : true*/
@@ -622,7 +601,7 @@ namespace HKD_ClothesShop.Forms
                         {
                             //dacdiem.SoHoaDon = comboBoxSHD.Text;
                             //dacdiem.MaSanPham = comboBoxMSP.Text;
-                            dacdiem.SoLuongMua = Convert.ToInt32(txtSLMua.Text);
+                            dacdiem.SoLuongMua = Convert.ToInt32(labelSLMua.Text);
                             
                             dacdiem.DonGiaBan = Convert.ToDecimal(labelDGB.Text);
                             /* dacdiem.TinhTrang = (cmbTinhTrang.Text.ToString() == "Đã thanh toán") ? "T" : (cmbTinhTrang.Text.ToString() == "Chưa thanh toán") ? "C" : "N";
@@ -680,7 +659,7 @@ namespace HKD_ClothesShop.Forms
 
         private bool KiemTra_BlankEmpty_CTHD()
         {
-            if (txtSLMua.Text != "")
+            if (labelSLMua.Text != "")
             {
                 return true;
             }
@@ -691,9 +670,8 @@ namespace HKD_ClothesShop.Forms
         }
         private bool KiemTra_Limited_SLM_CTHD()
         {
-            int temp = Convert.ToInt32(txtSLMua.Text);
-            double per = Convert.ToDouble(txtKM.Text);
-            if (temp >= 1 && per >= 0 && per <= 50)
+            int temp = Convert.ToInt32(labelSLMua.Text);
+            if (temp >= 1)
             {
                 return true;
             }
@@ -706,9 +684,8 @@ namespace HKD_ClothesShop.Forms
         private bool KiemTra_SLM_HopLe_CTHD()
         {
             Regex reg = new Regex(XacthucRegex.Regex_Number);
-            Match mat = reg.Match(txtSLMua.Text);
-            Match matKM = reg.Match(txtKM.Text);
-            if (mat.Success && matKM.Success)
+            Match mat = reg.Match(labelSLMua.Text);
+            if (mat.Success)
             {
                 return true;
             }
@@ -724,6 +701,8 @@ namespace HKD_ClothesShop.Forms
             {
                 QLBanHangHKDEntities db = new QLBanHangHKDEntities();
                 List<SanPham> listSanPham = db.SanPhams.ToList();
+                List<DacDiem_SanPham> listCTDacDiem = db.DacDiem_SanPham.ToList();
+
                 foreach (var item in listSanPham)
                 {
                     if (item.MaSanPham.ToString() == comboBoxMSP.SelectedValue.ToString())
@@ -731,78 +710,30 @@ namespace HKD_ClothesShop.Forms
                         labelGiaGoc.Text = item.DonGia.ToString("0.00");
                         labelDGB.Text = item.DonGia.ToString("0.00");
                         labelThanhtien.Text = "0.00";
-                        txtSLMua.Text = "0";
-                        txtKM.Text = "0";
+                        labelSLMua.Text = "0";
                         try
                         {
                             int slmua = 0;
-                            int km = 0;
-                            /*
-                            Regex reg = new Regex(XacthucRegex.Regex_Number);
-                            Match mat = reg.Match(txtSLMua.Text);
-                            Match matKM = reg.Match(txtKM.Text);
-                            if (mat.Success && matKM.Success)
-                            {
-                                slmua = Convert.ToInt32(txtSLMua.Text);
-                                km = Convert.ToInt32(txtKM.Text);
-                            }
-                            else
-                            {
-                                MessageBox.Show("Số lượng mua + Khuyến mãi khuyến mãi phải là số nguyên không âm!","Cảnh báo ⚠",MessageBoxButtons.RetryCancel,MessageBoxIcon.Warning);
-                            }
-                            */
-
-                            if (txtSLMua.Text == "" && txtKM.Text != "")
+                            if (labelSLMua.Text == "")
                             {
                                 slmua = 0;
-                                Regex reg = new Regex(XacthucRegex.Regex_Number);
-                                Match matKM = reg.Match(txtKM.Text);
-                                if (matKM.Success)
-                                {
-                                    km = Convert.ToInt32(txtKM.Text);
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Số lượng mua + Khuyến mãi khuyến mãi phải là số nguyên không âm!", "Cảnh báo ⚠", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
-                                }
                             }
-                            if (txtKM.Text == "" && txtSLMua.Text != "")
+                            if (labelSLMua.Text != "")
                             {
                                 Regex reg = new Regex(XacthucRegex.Regex_Number);
-                                Match mat = reg.Match(txtSLMua.Text);
+                                Match mat = reg.Match(labelSLMua.Text);
                                 if (mat.Success)
                                 {
-                                    slmua = Convert.ToInt32(txtSLMua.Text);
+                                    slmua = Convert.ToInt32(labelSLMua.Text);
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Số lượng mua + Khuyến mãi khuyến mãi phải là số nguyên không âm!", "Cảnh báo ⚠", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
-                                }
-                                km = 0;
-                            }
-                            if (txtKM.Text != "" && txtSLMua.Text != "")
-                            {
-                                Regex reg = new Regex(XacthucRegex.Regex_Number);
-                                Match mat = reg.Match(txtSLMua.Text);
-                                Match matKM = reg.Match(txtKM.Text);
-                                if (mat.Success && matKM.Success)
-                                {
-                                    slmua = Convert.ToInt32(txtSLMua.Text);
-                                    km = Convert.ToInt32(txtKM.Text);
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Số lượng mua + Khuyến mãi khuyến mãi phải là số nguyên không âm!", "Cảnh báo ⚠", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                                    MessageBox.Show("Số lượng mua phải là số nguyên không âm!", "Cảnh báo ⚠", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
                                 }
                             }
-                            if (txtKM.Text == "" && txtSLMua.Text == "")
+                            if (slmua < 0)
                             {
-                                slmua = 0;
-                                km = 0;
-                            }
-                            if (km < 0 || km > 100 || slmua < 0)
-                            {
-                                MessageBox.Show("👉 0% <= Khuyến mãi <= 100%\n\n👉 Số lượng mua >= 0", "Cảnh cáo ❌❌❌!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                MessageBox.Show("👉 Số lượng mua >= 0", "Cảnh cáo ❌❌❌!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             }
                             else
                             {
@@ -810,21 +741,12 @@ namespace HKD_ClothesShop.Forms
                                 //List<SanPham> listSanPham = db.SanPhams.ToList();
                                 foreach (var i in listSanPham)
                                 {
-                                    if (i.MaSanPham.ToString() == comboBoxMSP.Text.ToString())
+                                    if (i.MaSanPham.ToString() == comboBoxMSP.SelectedValue.ToString())
                                     {
-                                        if (km == 0)
-                                        {
-                                            labelDGB.Text = Convert.ToString(i.DonGia);
-                                            labelThanhtien.Text = Convert.ToString(i.DonGia * slmua);
-                                        }
-                                        else
-                                        {
-                                            decimal dgb = i.DonGia - (km * i.DonGia / 100);
-                                            decimal thanhtien = dgb * slmua;
-                                            labelDGB.Text = Convert.ToString(dgb);
-                                            labelThanhtien.Text = Convert.ToString(thanhtien);
-                                        }
-                                        return;
+                                        decimal dgb = i.DonGia;
+                                        decimal thanhtien = dgb * slmua;
+                                        labelDGB.Text = Convert.ToString(dgb);
+                                        labelThanhtien.Text = Convert.ToString(thanhtien);
                                     }
                                 }
                             }
@@ -849,73 +771,45 @@ namespace HKD_ClothesShop.Forms
             try
             {
                 int slmua = 0;
-                int km = 0;
-                /*
-                Regex reg = new Regex(XacthucRegex.Regex_Number);
-                Match mat = reg.Match(txtSLMua.Text);
-                Match matKM = reg.Match(txtKM.Text);
-                if (mat.Success && matKM.Success)
-                {
-                    slmua = Convert.ToInt32(txtSLMua.Text);
-                    km = Convert.ToInt32(txtKM.Text);
-                }
-                else
-                {
-                    MessageBox.Show("Số lượng mua + Khuyến mãi khuyến mãi phải là số nguyên không âm!","Cảnh báo ⚠",MessageBoxButtons.RetryCancel,MessageBoxIcon.Warning);
-                }
-                */
                 
-                if(txtSLMua.Text == "" && txtKM.Text != "")
+                
+                if(labelSLMua.Text == "")
                 {
                     slmua = 0;
-                    Regex reg = new Regex(XacthucRegex.Regex_Number);
-                    Match matKM = reg.Match(txtKM.Text);
-                    if (matKM.Success)
-                    {
-                        km = Convert.ToInt32(txtKM.Text);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Số lượng mua + Khuyến mãi khuyến mãi phải là số nguyên không âm!", "Cảnh báo ⚠", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
-                    }
+                    
                 }
-                if (txtKM.Text == "" && txtSLMua.Text != "")
+                if (labelSLMua.Text != "")
                 {
                     Regex reg = new Regex(XacthucRegex.Regex_Number);
-                    Match mat = reg.Match(txtSLMua.Text);
+                    Match mat = reg.Match(labelSLMua.Text);
                     if (mat.Success)
                     {
-                        slmua = Convert.ToInt32(txtSLMua.Text);
+                        slmua = Convert.ToInt32(labelSLMua.Text);
                     }
                     else
                     {
                         MessageBox.Show("Số lượng mua + Khuyến mãi khuyến mãi phải là số nguyên không âm!", "Cảnh báo ⚠", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
                     }
-                    km = 0;
                 }
-                if (txtKM.Text != "" && txtSLMua.Text != "")
+                if (labelSLMua.Text != "")
                 {
                     Regex reg = new Regex(XacthucRegex.Regex_Number);
-                    Match mat = reg.Match(txtSLMua.Text);
-                    Match matKM = reg.Match(txtKM.Text);
-                    if (mat.Success && matKM.Success)
+                    Match mat = reg.Match(labelSLMua.Text);
+               
+                    if (mat.Success)
                     {
-                        slmua = Convert.ToInt32(txtSLMua.Text);
-                        km = Convert.ToInt32(txtKM.Text);
+                        slmua = Convert.ToInt32(labelSLMua.Text);
+                 
                     }
                     else
                     {
                         MessageBox.Show("Số lượng mua + Khuyến mãi khuyến mãi phải là số nguyên không âm!", "Cảnh báo ⚠", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
                     }
                 }
-                if (txtKM.Text == "" && txtSLMua.Text == "")
+                
+                if (slmua < 0)
                 {
-                    slmua = 0;
-                    km = 0;
-                }
-                if (km < 0 || km > 100 || slmua < 0)
-                {
-                    MessageBox.Show("👉 0% <= Khuyến mãi <= 100%\n\n👉 Số lượng mua >= 0", "Cảnh cáo ❌❌❌!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("👉 Số lượng mua >= 0", "Cảnh cáo ❌❌❌!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
@@ -934,18 +828,10 @@ namespace HKD_ClothesShop.Forms
                         }
                         if (item.MaSanPham.ToString() == temp.ToString())
                         {
-                            if (km == 0)
-                            {
-                                labelDGB.Text = Convert.ToString(item.DonGia);
-                                labelThanhtien.Text = Convert.ToString(item.DonGia * slmua);
-                            }
-                            else
-                            {
-                                decimal dgb = item.DonGia - (km * item.DonGia / 100);
-                                decimal thanhtien = dgb * slmua;
-                                labelDGB.Text = Convert.ToString( (ulong) dgb);
-                                labelThanhtien.Text = Convert.ToString( (ulong) thanhtien);
-                            }
+                            decimal dgb = item.DonGia;
+                            decimal thanhtien = dgb * slmua;
+                            labelDGB.Text = Convert.ToString((ulong)dgb);
+                            labelThanhtien.Text = Convert.ToString((ulong)thanhtien);
                             return;
                         }
                     }
@@ -970,24 +856,10 @@ namespace HKD_ClothesShop.Forms
                     picAnhSP.Image = logo;
                     labelSHD.Text = row.Cells[1].Value.ToString();
                     comboBoxMSP.Text = row.Cells[4].Value.ToString();
-                    txtSLMua.Text = row.Cells[5].Value.ToString();
-                    labelGiaGoc.Text = row.Cells[11].Value.ToString();
+                    labelSLMua.Text = row.Cells[5].Value.ToString();
+                    labelGiaGoc.Text = row.Cells[12].Value.ToString();
                     labelDGB.Text = row.Cells[6].Value.ToString();
                     labelThanhtien.Text = row.Cells[7].Value.ToString();
-
-                    txtKM.Text = "";
-                    /*cmbMKH.Text = row.Cells[2].Value.ToString();
-                    QLBanHangHKDEntities db = new QLBanHangHKDEntities();
-                    foreach (var i in db.HoaDons)
-                    {
-                        if (row.Cells[3].Value.ToString() == i.NgayLap.ToString("dd/MM/yyyy"))
-                        {
-                            dtpNgayLap.Value = i.NgayLap;
-                        }
-                    }
-                    cmbTinhTrang.Text = row.Cells[4].Value.ToString();
-
-                    cbStatus.Checked = (row.Cells[5].Value.ToString() == "Còn sử dụng") ? false : true;*/
                 }
                 else
                 {
@@ -1296,6 +1168,266 @@ namespace HKD_ClothesShop.Forms
         private void buttonLoad_Click(object sender, EventArgs e)
         {
             frmTaoHoaDon_Load(sender, e);
+        }
+        //--------------------------------------------Chọn-số-lượng-tính-tiền
+        private void dgvCTHD_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tabPageCTHD.Parent = null;
+            tabPageSLSizeColor.Parent = tabChiTietHoaDon;
+            try
+            {
+                using (var db = new QLBanHangHKDEntities())
+                {
+                    List<DacDiem_SanPham> listDDSP = db.DacDiem_SanPham.ToList();
+                    BindGridCT(listDDSP);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Xảy ra lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        //---------------------------------------------------------------------------------
+        
+
+        #region Thêm, sửa đặc điểm
+        //hàm xóa thông tin
+        private void Clear()
+        {
+            txtSLSP.Text = "";
+
+            cmbSize.Text = "Chọn size";
+            cmbColor.Text = "Chọn màu";
+           
+        }
+       
+        #endregion
+        //-------------------------------------Chi tiết đặc điểm-------------------------------------------
+
+
+        /*private void FillSizeCombobox(List<DacDiem> listDacDiem)
+        {
+            this.cmbSize.DataSource = listDacDiem;
+            this.cmbSize.ValueMember = "Size";
+            this.cmbSize.DisplayMember = "Size";
+
+        }*/
+
+        /*private void FillColorCombobox(List<DacDiem> listDacDiem)
+        {
+            this.cmbColor.DataSource = listDacDiem;
+            this.cmbColor.ValueMember = "Color";
+            this.cmbColor.DisplayMember = "Color";
+        }*/
+
+        private void BindGridCT(List<DacDiem_SanPham> listDDSP)
+        {
+            dgvCTDD.Rows.Clear();
+            foreach (var item in listDDSP)
+            {
+                int index = dgvCTDD.Rows.Add();
+                dgvCTDD.Rows[index].Cells[0].Value = item.MaSanPham;
+                dgvCTDD.Rows[index].Cells[1].Value = item.SanPham.TenSanPham;
+                dgvCTDD.Rows[index].Cells[2].Value = item.Size;
+                dgvCTDD.Rows[index].Cells[3].Value = item.Color;
+                dgvCTDD.Rows[index].Cells[4].Value = item.SoLuong;
+            }
+        }
+
+        private void btnThemCT_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // kiểm tra dữ liệu nhập vào ở các Textbox
+                bool isValidated = isValidateDataCT();
+                if (isValidated)// dữ liệu được xác thực đúng thỏa database
+                {
+                    using (var db = new QLBanHangHKDEntities())
+                    {
+                        var dacdiem = db.DacDiem_SanPham.FirstOrDefault(p => p.MaSanPham == labelMSP.Text && p.Size == cmbSize.Text && p.Color == cmbColor.Text);
+                        if (dacdiem == null) // chưa có đặc diểm có size + color này
+                        {
+                            var dd = new DacDiem_SanPham()
+                            {
+                                MaSanPham = labelMSP.Text,
+                                Size = cmbSize.Text,
+                                Color = cmbColor.Text,
+                                //Status = (cbStatus.Checked == true) ? false : true
+                            };
+                            if (MessageBox.Show($"Bạn có chắc chắn muốn thêm CT đặc điểm sản phẩm {dd.MaSanPham}, {dd.Size}, {dd.Color} này!", "YES/NO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                                db.DacDiem_SanPham.Add(dd);
+                                db.SaveChanges();
+                                MessageBox.Show($"Thêm mới CT Đặc điểm sản phẩm {dd.MaSanPham}, {dd.Size}, {dd.Color} thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Xoatt();
+                            }
+                            else
+                            {
+                                Xoatt();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show($"Chi tiết Đặc điểm sản phẩm {labelMSP.Text}, {cmbSize.Text}, {cmbColor.Text} này đã tồn tại rồi!", "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                        }
+                    }
+                }
+                else
+                {
+                    ThongBaoLoiDataInputCT();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi Thêm  (có thể do trùng mã khác trong CSDL)! - Mời bạn thử lại", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+            }
+        }
+
+        private void btnSuaCT_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (var db = new QLBanHangHKDEntities())
+                {
+                    var dacdiem = db.DacDiem_SanPham.FirstOrDefault(p => p.MaSanPham == labelMSP.Text && p.Size == cmbSize.Text && p.Color == cmbColor.Text);
+                    //var khachhang = db.KhachHangs.FirstOrDefault(p => p.MaKhachHang == txtMKH.Text);
+                    if (dacdiem != null)
+                    {
+                        // kiểm tra dữ liệu lưu vào ở các Textbox
+                        bool isValidated = isValidateDataCT();
+                        if (isValidated)// dữ liệu được xác thực đúng thỏa database
+                        {
+                            //dacdiem.MaSanPham = cmbMaSP.Text;
+                            dacdiem.Size = cmbSize.Text;
+                            dacdiem.Color = cmbColor.Text;
+                            dacdiem.SoLuong = Convert.ToInt32(txtSLSP.Text);
+                            //dacdiem.Status = (cbStatus.Checked == true) ? false : true;
+                            if (MessageBox.Show($"Bạn có chắc chắn muốn lưu cập nhật Đặc điểm sản phẩm {cmbSize.Text}, {cmbColor.Text} cho {labelMSP.Text} này!", "YES/NO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+
+                                db.SaveChanges();
+                             
+                                MessageBox.Show($"Cập nhật thông tin Đặc điểm sản phẩm {cmbSize.Text}, {cmbColor.Text} cho {labelMSP.Text} thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Xoatt();
+                            }
+                            else
+                            {
+                                Xoatt();
+                            }
+                        }
+                        else
+                        {
+                            ThongBaoLoiDataInputCT();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không tìm thấy Thông tin Đặc điểm cần sửa!", "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi Sửa TT Đặc điểm (có thể do trùng mã khác trong CSDL)! - Mời bạn thử lại", MessageBoxButtons.OK, MessageBoxIcon.Information);
+             
+            }
+        }
+
+        private bool isValidateDataCT()
+        {
+            return KiemTra_BlankEmptyCT();
+        }
+
+        private void ThongBaoLoiDataInputCT()
+        {
+            if (KiemTra_BlankEmptyCT() == false)
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin Đặc điểm Sản phẩm!", "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                return;
+            }
+        }
+
+        private bool KiemTra_BlankEmptyCT()
+        {
+            if (txtSLSP.Text != "")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private void dgvCTDD_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (dgvCTDD.Rows.Count != 0)
+                {
+                    DataGridViewRow row = dgvCTDD.Rows[dgvCTDD.CurrentCell.RowIndex];
+                    QLBanHangHKDEntities context = new QLBanHangHKDEntities();
+                    labelMSP.Text = row.Cells[0].Value.ToString();
+                    cmbSize.Text = row.Cells[1].Value.ToString();
+                    cmbColor.Text = row.Cells[2].Value.ToString();
+                    txtSLSP.Text = row.Cells[3].Value.ToString();
+                    //cbStatus.Checked = (row.Cells[3].Value.ToString() == "Còn sử dụng") ? false : true;
+                }
+                else
+                {
+                    MessageBox.Show("Không có dữ liệu để chọn!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnAn_Click(object sender, EventArgs e)
+        {
+            QLBanHangHKDEntities db = new QLBanHangHKDEntities();
+            List<DacDiem_SanPham> listDacDiem = db.DacDiem_SanPham.ToList();
+            if (btnHidden.Text == "Ẩn")
+            {
+                foreach (DataGridViewRow item in dgvCTDD.Rows)
+                {
+                    if (item.DefaultCellStyle.BackColor == Color.GreenYellow)
+                    {
+                        item.Visible = false;
+                    }
+                }
+                btnHidden.Text = "Hiện";
+                btnHidden.BackColor = Color.Blue;
+                btnHidden.ForeColor = Color.Yellow;
+            }
+            else
+            {
+
+                foreach (DataGridViewRow item in dgvCTDD.Rows)
+                {
+                    if (item.DefaultCellStyle.BackColor == Color.GreenYellow)
+                    {
+                        item.Visible = true;
+                    }
+                }
+                btnHidden.Text = "Ẩn";
+                btnHidden.BackColor = Color.GreenYellow;
+                btnHidden.ForeColor = Color.Red;
+            }
+        }
+
+        private void buttonClearCT_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonThoatCT_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
