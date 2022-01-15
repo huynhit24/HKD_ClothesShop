@@ -106,6 +106,7 @@ namespace HKD_ClothesShop.Forms
                 List<HoaDon> listHoaDon = db.HoaDons.ToList();
                 List<ChiTietHoaDon> listCTHoaDon = db.ChiTietHoaDons.ToList();
                 List<DacDiem_SanPham> listCTDacDiem = db.DacDiem_SanPham.ToList();
+
                 List<NhanVienBanHang> listNhanVien = db.NhanVienBanHangs.Where(P => P.Status == true).ToList();
                 List<KhachHang> listKhachHang = db.KhachHangs.Where(P => P.Status == true).ToList();
                 List<SanPham> listSanPham = db.SanPhams.Where(P => P.TrangThai == true).ToList();
@@ -113,6 +114,7 @@ namespace HKD_ClothesShop.Forms
                 BindGrid(listHoaDon);
                 FillNhanVienCombobox(listNhanVien);
                 FillKhachHangCombobox(listKhachHang);
+                //FillMSPCombobox(listSanPham);
 
                 BindGridAllCTHD(listCTHoaDon);
 
@@ -1113,7 +1115,7 @@ namespace HKD_ClothesShop.Forms
             QLBanHangHKDEntities db = new QLBanHangHKDEntities();
             List<ChiTietHoaDon> listCTHoaDon = db.ChiTietHoaDons.ToList();
             //List<HoaDon> listHoaDon = db.HoaDons.ToList();
-            List<SanPham> listSanPham = db.SanPhams.ToList();
+            List<SanPham> listSanPham = db.SanPhams.Where(P => P.TrangThai == true).ToList();
             tabPageCTHD.Parent = tabChiTietHoaDon;
             tabHoaDon.Parent = null;
             tabPageAllCTHD.Parent = null;

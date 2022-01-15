@@ -625,8 +625,49 @@ namespace HKD_ClothesShop.Forms
             List<NhanVienBanHang> list = db.NhanVienBanHangs.ToList();
 
             int countSoNV = 0;
-            countSoNV = list.Count();
+            countSoNV = list.Where(p => p.Status == true).Count();
             TKSoNV.Text = countSoNV.ToString();
+        }
+
+        private void btnSearchKH_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                QLBanHangHKDEntities db = new QLBanHangHKDEntities();
+                List<NhanVienBanHang> list = db.NhanVienBanHangs.ToList();
+                List<NhanVienBanHang> listtemp = new List<NhanVienBanHang>();
+                foreach (var item in list)
+                {
+                    bool check = item.MaNhanVien.ToLower().Contains(txtSearchNV.Text.ToLower()) == true
+                              || item.HoTen.ToLower().Contains(txtSearchNV.Text.ToLower()) == true
+                              || item.SDT.ToLower().Contains(txtSearchNV.Text.ToLower()) == true
+                              || item.Email.ToLower().Contains(txtSearchNV.Text.ToLower()) == true;
+                    if (check == true)
+                    {
+                        listtemp.Add(item);
+                    }
+                }
+                if (listtemp != null)
+                {
+                    BindGrid(listtemp);
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                frmNhanVienShop_Load(sender, e);
+            }
+        }
+
+        private void lbClear_Click(object sender, EventArgs e)
+        {
+            txtSearchNV.Text = "";
+        }
+
+        private void btnLoadData_Click(object sender, EventArgs e)
+        {
+            frmNhanVienShop_Load(sender, e);
         }
     }
 }

@@ -72,6 +72,8 @@ namespace HKD_ClothesShop.Forms
             this.btnSearchKH = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.TKSoKH = new System.Windows.Forms.Label();
+            this.btnLoadData = new System.Windows.Forms.Button();
+            this.lbClear = new System.Windows.Forms.Label();
             this.groupBoxDSKH.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -85,6 +87,7 @@ namespace HKD_ClothesShop.Forms
             this.groupBoxDSKH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBoxDSKH.BackColor = System.Drawing.Color.White;
+            this.groupBoxDSKH.Controls.Add(this.btnLoadData);
             this.groupBoxDSKH.Controls.Add(this.panel1);
             this.groupBoxDSKH.Controls.Add(this.panelThem);
             this.groupBoxDSKH.Controls.Add(this.radKhac);
@@ -500,7 +503,7 @@ namespace HKD_ClothesShop.Forms
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(822, 53);
+            this.label7.Location = new System.Drawing.Point(822, 44);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 19);
             this.label7.TabIndex = 7;
@@ -509,7 +512,7 @@ namespace HKD_ClothesShop.Forms
             // txtSearchKH
             // 
             this.txtSearchKH.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchKH.Location = new System.Drawing.Point(905, 53);
+            this.txtSearchKH.Location = new System.Drawing.Point(905, 41);
             this.txtSearchKH.Multiline = true;
             this.txtSearchKH.Name = "txtSearchKH";
             this.txtSearchKH.Size = new System.Drawing.Size(219, 34);
@@ -580,6 +583,35 @@ namespace HKD_ClothesShop.Forms
             this.TKSoKH.TabIndex = 38;
             this.TKSoKH.Text = "KH";
             // 
+            // btnLoadData
+            // 
+            this.btnLoadData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLoadData.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoadData.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnLoadData.FlatAppearance.BorderSize = 3;
+            this.btnLoadData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoadData.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoadData.Location = new System.Drawing.Point(20, 487);
+            this.btnLoadData.Name = "btnLoadData";
+            this.btnLoadData.Size = new System.Drawing.Size(61, 50);
+            this.btnLoadData.TabIndex = 77;
+            this.btnLoadData.Text = "Load";
+            this.btnLoadData.UseVisualStyleBackColor = true;
+            this.btnLoadData.Click += new System.EventHandler(this.btnLoadData_Click);
+            // 
+            // lbClear
+            // 
+            this.lbClear.AutoSize = true;
+            this.lbClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbClear.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbClear.ForeColor = System.Drawing.Color.Blue;
+            this.lbClear.Location = new System.Drawing.Point(852, 72);
+            this.lbClear.Name = "lbClear";
+            this.lbClear.Size = new System.Drawing.Size(47, 19);
+            this.lbClear.TabIndex = 40;
+            this.lbClear.Text = "Clear";
+            this.lbClear.Click += new System.EventHandler(this.lbClear_Click);
+            // 
             // frmDSKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -587,6 +619,7 @@ namespace HKD_ClothesShop.Forms
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1228, 638);
+            this.Controls.Add(this.lbClear);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.TKSoKH);
             this.Controls.Add(this.btnSearchKH);
@@ -658,5 +691,7 @@ namespace HKD_ClothesShop.Forms
         private System.Windows.Forms.Button btnSearchKH;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label TKSoKH;
+        private System.Windows.Forms.Button btnLoadData;
+        private System.Windows.Forms.Label lbClear;
     }
 }

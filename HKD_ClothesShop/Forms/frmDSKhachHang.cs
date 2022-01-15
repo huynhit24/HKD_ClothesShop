@@ -721,8 +721,18 @@ namespace HKD_ClothesShop.Forms
             List<KhachHang> list = db.KhachHangs.ToList();
 
             int countSoKH = 0;
-            countSoKH = list.Count();
+            countSoKH = list.Where(p => p.Status == true).Count();
             TKSoKH.Text = countSoKH.ToString();
+        }
+
+        private void btnLoadData_Click(object sender, EventArgs e)
+        {
+            frmDSKhachHang_Load(sender, e);
+        }
+
+        private void lbClear_Click(object sender, EventArgs e)
+        {
+            txtSearchKH.Text = "";
         }
     }
 }

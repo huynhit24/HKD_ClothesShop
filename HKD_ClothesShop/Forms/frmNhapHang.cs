@@ -747,7 +747,7 @@ namespace HKD_ClothesShop.Forms
             TKSoTatVo.Text = soTatVo.ToString();
 
             int countSoSP = 0;
-            countSoSP =  list.Count();
+            countSoSP =  list.Where(p => p.TrangThai == true).Count();
             TKSoSP.Text = countSoSP.ToString();
         }
 
@@ -760,7 +760,12 @@ namespace HKD_ClothesShop.Forms
                 List<SanPham> listtemp = new List<SanPham>();
                 foreach (var item in list)
                 {
-                    bool check = item.MaSanPham.ToLower().Contains(txtSearchSP.Text.ToLower()) == true;
+                    bool check = item.MaSanPham.ToLower().Contains(txtSearchSP.Text.ToLower()) == true
+                              || item.MaThuongHieu.ToLower().Contains(comboBoxTH.SelectedValue.ToString().ToLower()) == true
+                              || item.MaThuongHieu.ToLower().Contains(comboBoxTH.SelectedValue.ToString().ToLower()) == true
+                              || item.ThuongHieu.TenThuongHieu.ToLower().Contains(comboBoxTH.SelectedValue.ToString().ToLower()) == true
+                              || item.LoaiSanPham.TenLoaiSP.ToLower().Contains(comboBoxTH.SelectedValue.ToString().ToLower()) == true
+                              || item.ChatLieu.ToLower().Contains(comboBoxTH.SelectedValue.ToString().ToLower()) == true;
                     if (check == true)
                     {
                         listtemp.Add(item);
