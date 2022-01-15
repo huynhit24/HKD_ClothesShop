@@ -25,6 +25,10 @@ namespace HKD_ClothesShop.Forms
             this.cmbLSP.DataSource = listLoai;
             this.cmbLSP.DisplayMember = "TenLoaiSP";
             this.cmbLSP.ValueMember = "MaLoaiSP";
+
+            this.comboBoxLSP.DataSource = listLoai;
+            this.comboBoxLSP.DisplayMember = "TenLoaiSP";
+            this.comboBoxLSP.ValueMember = "MaLoaiSP";
         }
 
         private void FillThuongHieuCombobox(List<ThuongHieu> listThuongHieu)
@@ -32,6 +36,10 @@ namespace HKD_ClothesShop.Forms
             this.cmbMTH.DataSource = listThuongHieu;
             this.cmbMTH.DisplayMember = "TenThuongHieu";
             this.cmbMTH.ValueMember = "MaThuongHieu";
+
+            this.comboBoxTH.DataSource = listThuongHieu;
+            this.comboBoxTH.DisplayMember = "TenThuongHieu";
+            this.comboBoxTH.ValueMember = "MaThuongHieu";
         }
 
         private void BindGrid(List<SanPham> listSanPham)
@@ -737,6 +745,112 @@ namespace HKD_ClothesShop.Forms
                 }
             }
             TKSoTatVo.Text = soTatVo.ToString();
+
+            int countSoSP = 0;
+            countSoSP =  list.Count();
+            TKSoSP.Text = countSoSP.ToString();
+        }
+
+        private void btnSearchSP_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                QLBanHangHKDEntities db = new QLBanHangHKDEntities();
+                List<SanPham> list = db.SanPhams.ToList();
+                List<SanPham> listtemp = new List<SanPham>();
+                foreach (var item in list)
+                {
+                    bool check = item.MaSanPham.ToLower().Contains(txtSearchSP.Text.ToLower()) == true;
+                    if (check == true)
+                    {
+                        listtemp.Add(item);
+                    }
+                }
+                if (listtemp != null)
+                {
+                    BindGrid(listtemp);
+                    return;
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                frmNhapHang_Load(sender, e);
+            }
+        }
+
+        private void btnLoadData_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmNhapHang_Load(sender, e);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                frmNhapHang_Load(sender, e);
+            }
+        }
+
+        private void lbClearSearch_Click(object sender, EventArgs e)
+        {
+            txtSearchSP.Text = "";
+        }
+
+        private void btnFilterLSP_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                QLBanHangHKDEntities db = new QLBanHangHKDEntities();
+                List<SanPham> list = db.SanPhams.ToList();
+                List<SanPham> listtemp = new List<SanPham>();
+                foreach (var item in list)
+                {
+                    bool check = item.MaLoaiSP.ToLower().Contains(comboBoxLSP.SelectedValue.ToString().ToLower()) == true;
+                    if (check == true)
+                    {
+                        listtemp.Add(item);
+                    }
+                }
+                if (listtemp != null)
+                {
+                    BindGrid(listtemp);
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                frmNhapHang_Load(sender, e);
+            }
+        }
+
+        private void btnFilterTH_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                QLBanHangHKDEntities db = new QLBanHangHKDEntities();
+                List<SanPham> list = db.SanPhams.ToList();
+                List<SanPham> listtemp = new List<SanPham>();
+                foreach (var item in list)
+                {
+                    bool check = item.MaThuongHieu.ToLower().Contains(comboBoxTH.SelectedValue.ToString().ToLower()) == true;
+                    if (check == true)
+                    {
+                        listtemp.Add(item);
+                    }
+                }
+                if (listtemp != null)
+                {
+                    BindGrid(listtemp);
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                frmNhapHang_Load(sender, e);
+            }
         }
     }
 }

@@ -65,6 +65,8 @@ namespace HKD_ClothesShop.Forms
                 QLBanHangHKDEntities db = new QLBanHangHKDEntities();
                 List<NhanVienBanHang> listNhanVien = db.NhanVienBanHangs.ToList();
                 BindGrid(listNhanVien);
+                ThongKeNV();
+
                 Tat();
                 radNam.Checked = true;
                 buttonLuuT.Visible = false;
@@ -615,6 +617,16 @@ namespace HKD_ClothesShop.Forms
             radKhac.Visible = true;
             cbStatus.Visible = true;
             groupBoxNVShop.Text = "Nhập thông tin sản phẩm";
+        }
+
+        private void ThongKeNV()
+        {
+            QLBanHangHKDEntities db = new QLBanHangHKDEntities();
+            List<NhanVienBanHang> list = db.NhanVienBanHangs.ToList();
+
+            int countSoNV = 0;
+            countSoNV = list.Count();
+            TKSoNV.Text = countSoNV.ToString();
         }
     }
 }

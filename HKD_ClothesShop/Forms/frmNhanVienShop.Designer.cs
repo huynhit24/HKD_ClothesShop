@@ -70,6 +70,8 @@ namespace HKD_ClothesShop.Forms
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.btnHidden = new System.Windows.Forms.Button();
+            this.TKSoNV = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBoxNVShop.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -451,8 +453,7 @@ namespace HKD_ClothesShop.Forms
             // 
             this.dgvNhanVien.AllowUserToAddRows = false;
             this.dgvNhanVien.AllowUserToDeleteRows = false;
-            this.dgvNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvNhanVien.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
@@ -471,7 +472,7 @@ namespace HKD_ClothesShop.Forms
             this.dgvNhanVien.GridColor = System.Drawing.Color.GreenYellow;
             this.dgvNhanVien.Location = new System.Drawing.Point(406, 101);
             this.dgvNhanVien.Name = "dgvNhanVien";
-            this.dgvNhanVien.Size = new System.Drawing.Size(774, 1045);
+            this.dgvNhanVien.Size = new System.Drawing.Size(757, 692);
             this.dgvNhanVien.TabIndex = 6;
             this.dgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellClick);
             // 
@@ -563,6 +564,29 @@ namespace HKD_ClothesShop.Forms
             this.btnHidden.UseVisualStyleBackColor = false;
             this.btnHidden.Click += new System.EventHandler(this.btnHidden_Click);
             // 
+            // TKSoNV
+            // 
+            this.TKSoNV.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TKSoNV.AutoSize = true;
+            this.TKSoNV.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TKSoNV.ForeColor = System.Drawing.Color.MediumSeaGreen;
+            this.TKSoNV.Location = new System.Drawing.Point(1009, 55);
+            this.TKSoNV.Name = "TKSoNV";
+            this.TKSoNV.Size = new System.Drawing.Size(52, 33);
+            this.TKSoNV.TabIndex = 35;
+            this.TKSoNV.Text = "NV";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(1057, 66);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(81, 19);
+            this.label9.TabIndex = 36;
+            this.label9.Text = "Nhân viên";
+            // 
             // frmNhanVienShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -570,6 +594,8 @@ namespace HKD_ClothesShop.Forms
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1243, 634);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.TKSoNV);
             this.Controls.Add(this.btnHidden);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dgvNhanVien);
@@ -635,5 +661,7 @@ namespace HKD_ClothesShop.Forms
         private System.Windows.Forms.Button buttonLuuT;
         private System.Windows.Forms.Button buttonHuyT;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Label TKSoNV;
+        private System.Windows.Forms.Label label9;
     }
 }

@@ -59,6 +59,8 @@ namespace HKD_ClothesShop.Forms
                 QLBanHangHKDEntities db = new QLBanHangHKDEntities();
                 List<KhachHang> listKhachHang = db.KhachHangs.ToList();
                 BindGrid(listKhachHang);
+                ThongKeKH();
+
                 Tat();
                 radNam.Checked = true;
                 buttonLuuT.Visible = false;
@@ -680,6 +682,47 @@ namespace HKD_ClothesShop.Forms
             btnCreate.FlatAppearance.BorderColor = Color.Blue;
             btnCreate.Enabled = true;
             btnUpdate.Enabled = true;
+        }
+
+        private void btnSearchKH_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                QLBanHangHKDEntities db = new QLBanHangHKDEntities();
+                List<KhachHang> list = db.KhachHangs.ToList();
+                List<KhachHang> listtemp = new List<KhachHang>();
+                foreach (var item in list)
+                {
+                    bool check = item.MaKhachHang.ToLower().Contains(txtSearchKH.Text.ToLower()) == true
+                              || item.HoTen.ToLower().Contains(txtSearchKH.Text.ToLower()) == true
+                              || item.SDT.ToLower().Contains(txtSearchKH.Text.ToLower()) == true
+                              || item.Email.ToLower().Contains(txtSearchKH.Text.ToLower()) == true ;
+                    if (check == true)
+                    {
+                        listtemp.Add(item);
+                    }
+                }
+                if (listtemp != null)
+                {
+                    BindGrid(listtemp);
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                frmDSKhachHang_Load(sender, e);
+            }
+        }
+
+        private void ThongKeKH()
+        {
+            QLBanHangHKDEntities db = new QLBanHangHKDEntities();
+            List<KhachHang> list = db.KhachHangs.ToList();
+
+            int countSoKH = 0;
+            countSoKH = list.Count();
+            TKSoKH.Text = countSoKH.ToString();
         }
     }
 }
