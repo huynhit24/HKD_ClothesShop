@@ -575,7 +575,7 @@ namespace HKD_ClothesShop.Forms
             this.dgvSanPham.GridColor = System.Drawing.Color.White;
             this.dgvSanPham.Location = new System.Drawing.Point(410, 163);
             this.dgvSanPham.Name = "dgvSanPham";
-            this.dgvSanPham.Size = new System.Drawing.Size(573, 869);
+            this.dgvSanPham.Size = new System.Drawing.Size(556, 869);
             this.dgvSanPham.TabIndex = 3;
             this.dgvSanPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSanPham_CellClick);
             // 
@@ -922,7 +922,7 @@ namespace HKD_ClothesShop.Forms
             this.TKSoSP.AutoSize = true;
             this.TKSoSP.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TKSoSP.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.TKSoSP.Location = new System.Drawing.Point(999, 351);
+            this.TKSoSP.Location = new System.Drawing.Point(982, 351);
             this.TKSoSP.Name = "TKSoSP";
             this.TKSoSP.Size = new System.Drawing.Size(49, 33);
             this.TKSoSP.TabIndex = 34;
@@ -933,7 +933,7 @@ namespace HKD_ClothesShop.Forms
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(1001, 395);
+            this.label9.Location = new System.Drawing.Point(984, 395);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(72, 19);
             this.label9.TabIndex = 35;
@@ -961,7 +961,7 @@ namespace HKD_ClothesShop.Forms
             this.btnLoadData.FlatAppearance.BorderSize = 3;
             this.btnLoadData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoadData.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoadData.Location = new System.Drawing.Point(1005, 441);
+            this.btnLoadData.Location = new System.Drawing.Point(988, 441);
             this.btnLoadData.Name = "btnLoadData";
             this.btnLoadData.Size = new System.Drawing.Size(104, 50);
             this.btnLoadData.TabIndex = 76;
@@ -986,7 +986,7 @@ namespace HKD_ClothesShop.Forms
             this.comboBoxLSP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxLSP.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxLSP.FormattingEnabled = true;
-            this.comboBoxLSP.Location = new System.Drawing.Point(1005, 167);
+            this.comboBoxLSP.Location = new System.Drawing.Point(988, 167);
             this.comboBoxLSP.Name = "comboBoxLSP";
             this.comboBoxLSP.Size = new System.Drawing.Size(160, 23);
             this.comboBoxLSP.TabIndex = 78;
@@ -996,7 +996,7 @@ namespace HKD_ClothesShop.Forms
             this.comboBoxTH.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxTH.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxTH.FormattingEnabled = true;
-            this.comboBoxTH.Location = new System.Drawing.Point(1005, 248);
+            this.comboBoxTH.Location = new System.Drawing.Point(988, 248);
             this.comboBoxTH.Name = "comboBoxTH";
             this.comboBoxTH.Size = new System.Drawing.Size(160, 23);
             this.comboBoxTH.TabIndex = 79;
@@ -1009,7 +1009,7 @@ namespace HKD_ClothesShop.Forms
             this.btnFilterLSP.FlatAppearance.BorderSize = 3;
             this.btnFilterLSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFilterLSP.Image = global::HKD_ClothesShop.Properties.Resources.tim_kiem_hang;
-            this.btnFilterLSP.Location = new System.Drawing.Point(1005, 203);
+            this.btnFilterLSP.Location = new System.Drawing.Point(988, 203);
             this.btnFilterLSP.Name = "btnFilterLSP";
             this.btnFilterLSP.Size = new System.Drawing.Size(30, 30);
             this.btnFilterLSP.TabIndex = 80;
@@ -1024,7 +1024,7 @@ namespace HKD_ClothesShop.Forms
             this.btnFilterTH.FlatAppearance.BorderSize = 3;
             this.btnFilterTH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFilterTH.Image = global::HKD_ClothesShop.Properties.Resources.tim_kiem_hang;
-            this.btnFilterTH.Location = new System.Drawing.Point(1005, 284);
+            this.btnFilterTH.Location = new System.Drawing.Point(988, 284);
             this.btnFilterTH.Name = "btnFilterTH";
             this.btnFilterTH.Size = new System.Drawing.Size(30, 30);
             this.btnFilterTH.TabIndex = 81;

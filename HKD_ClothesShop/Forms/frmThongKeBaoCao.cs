@@ -66,6 +66,8 @@ namespace HKD_ClothesShop.Forms
                 List<KhachHang> listKhachHang = db.KhachHangs.ToList();
                 List<SanPham> listSanPham = db.SanPhams.ToList();
                 List<LoaiSanPham> listLoaiSanPham = db.LoaiSanPhams.ToList();
+                List<DacDiem_SanPham> listDDSP = db.DacDiem_SanPham.ToList();
+
 
                 // thống kê số lượng hóa đơn theo tháng, ngày hiện tại dùng foreach về sau LINQ hết
                 int SLHDThang = 0;
@@ -179,6 +181,14 @@ namespace HKD_ClothesShop.Forms
                     }
                 }
                 labelDTNow.Text = Convert.ToString(DTNow.ToString("0.00"));
+
+                // đếm tổng số lượng hàng trong kho
+                int TSHKho = 0;
+                foreach (var item in listDDSP)
+                {
+                    TSHKho += item.SoLuong;
+                }
+                labelTSHKho.Text = Convert.ToString(TSHKho);
 
 
             }

@@ -17,7 +17,7 @@ namespace HKD_ClothesShop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new /*frmDangNhap()*/frmMain());
+            Application.Run(new frmDangNhap()/*frmMain()*/);
         }
     }
 }

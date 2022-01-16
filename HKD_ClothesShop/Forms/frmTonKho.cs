@@ -34,7 +34,7 @@ namespace HKD_ClothesShop.Forms
                 QLBanHangHKDEntities db = new QLBanHangHKDEntities();
                 List<DacDiem> listDacDiem = db.DacDiems.ToList();
                 List<SanPham> listSanPham = db.SanPhams.ToList();
-                List<DacDiem_SanPham> listDDSP = db.DacDiem_SanPham.ToList();
+                List<DacDiem_SanPham> listDDSP = db.DacDiem_SanPham.Where(P => P.SanPham.TrangThai == true).ToList();
 
    
                 BindGridCT(listDDSP);
@@ -125,6 +125,7 @@ namespace HKD_ClothesShop.Forms
                                 MaSanPham = cmbMaSP.SelectedValue.ToString(),
                                 Size = cmbSize.Text,
                                 Color = cmbColor.Text,
+                                SoLuong = Convert.ToInt32(txtSLSP.Text)
                                 //Status = (cbStatus.Checked == true) ? false : true
                             };
                             if (MessageBox.Show($"Bạn có chắc chắn muốn thêm CT đặc điểm sản phẩm {dd.MaSanPham}, {dd.Size}, {dd.Color} này!", "YES/NO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -142,7 +143,11 @@ namespace HKD_ClothesShop.Forms
                         }
                         else
                         {
-                            MessageBox.Show($"Chi tiết Đặc điểm sản phẩm {cmbMaSP.Text}, {cmbSize.Text}, {cmbColor.Text} này đã tồn tại rồi!", "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                            dacdiem.SoLuong = Convert.ToInt32(txtSLSP.Text);
+                            db.SaveChanges();
+                            frmTonKho_Load(sender, e);
+                            MessageBox.Show($"Cập nhật số lượng sản phẩm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Xoatt();
                         }
                     }
                 }
@@ -211,7 +216,7 @@ namespace HKD_ClothesShop.Forms
 
         private bool isValidateDataCT()
         {
-            return KiemTra_BlankEmptyCT();
+            return KiemTra_BlankEmptyCT() == true && KiemTra_Limited_SLM_CTHD() == true && KiemTra_SLM_HopLe_CTHD() == true;
         }
 
         private void ThongBaoLoiDataInputCT()
@@ -221,11 +226,48 @@ namespace HKD_ClothesShop.Forms
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin Đặc điểm Sản phẩm!", "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
                 return;
             }
+            if (KiemTra_Limited_SLM_CTHD() == false)
+            {
+                MessageBox.Show("Số lượng tồn phải 0 <= x <= 100 (vì shop nhỏ) và là số nguyên!", "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                return;
+            }
+            if (KiemTra_SLM_HopLe_CTHD() == false)
+            {
+                MessageBox.Show("Số lượng tồn không hợp lệ!", "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                return;
+            }
         }
 
         private bool KiemTra_BlankEmptyCT()
         {
             if (txtSLSP.Text != "")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private bool KiemTra_Limited_SLM_CTHD()
+        {
+            int temp = Convert.ToInt32(txtSLSP.Text);
+            if (temp >= 0 && temp <= 100)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private bool KiemTra_SLM_HopLe_CTHD()
+        {
+            Regex reg = new Regex(XacthucRegex.Regex_Number);
+            Match mat = reg.Match(txtSLSP.Text);
+            if (mat.Success)
             {
                 return true;
             }

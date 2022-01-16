@@ -15,6 +15,8 @@ namespace HKD_ClothesShop.Forms
 {
     public partial class frmTaiKhoan : Form
     {
+        public static string usernameacc;
+        public static string passwordacc;
         public frmTaiKhoan()
         {
             InitializeComponent();
@@ -118,8 +120,8 @@ namespace HKD_ClothesShop.Forms
                         DataGridViewRow row = dgvTaiKhoan.Rows[index];
                         string temp = row.Cells[0].Value.ToString();*/
                         string sha265 = getStringSHA256Hash(txtPassword.Text).ToLower();
-                        var khachhang = db.ThongTinTaiKhoans.FirstOrDefault(p => p.TenDangNhap == txtUsername.Text.Trim() && p.MatKhau == sha265.Substring(0,15));
-                        if (khachhang == null) // chưa có khách hàng có mã này
+                        var acc = db.ThongTinTaiKhoans.FirstOrDefault(p => p.TenDangNhap == txtUsername.Text.Trim() && p.MatKhau == sha265.Substring(0,15));
+                        if (acc == null) // chưa có khách hàng có mã này
                         {
                             
                             var kh = new ThongTinTaiKhoan()
@@ -130,7 +132,6 @@ namespace HKD_ClothesShop.Forms
                                 SDT = txtSDT.Text,
                                 Email = txtEmail.Text,
                                 VaiTroID = (cmbVaiTro.Text  == "Admin") ? "ad" : "bh"
-                                //Status = (cbStatus.Checked == true) ? false : true
                             };
                             if (MessageBox.Show($"Bạn có chắc chắn muốn thêm Tài khoản có họ tên {txtHoTen.Text} này!", "YES/NO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                             {
@@ -176,28 +177,58 @@ namespace HKD_ClothesShop.Forms
                     string temp = row.Cells[0].Value.ToString();
                     string tempu = row.Cells[1].Value.ToString();
                     string tempp = row.Cells[2].Value.ToString();*/
-                    var khachhang = db.ThongTinTaiKhoans.FirstOrDefault(p => p.TenDangNhap == txtUsername.Text && p.MatKhau == txtPassword.Text);
+                    ThongTinTaiKhoan khachhang = db.ThongTinTaiKhoans.FirstOrDefault(p => p.TenDangNhap == usernameacc && p.MatKhau == passwordacc);
                     //var khachhang = db.ThongTinTaiKhoans.FirstOrDefault(p => p.TenDangNhap == tempu && p.MatKhau == tempp);
 
                     //var khachhang = db.KhachHangs.FirstOrDefault(p => p.MaKhachHang == txtMKH.Text);
+                    bool flag = false;
                     if (khachhang != null)
                     {
+                        flag = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không tìm thấy Thông tin Tài khoản cần sửa!", "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                    }
+
+                    if(flag == true)
+                    {
+                       
                         // kiểm tra dữ liệu lưu vào ở các Textbox
                         bool isValidated = isValidateDataUpdate();
                         if (isValidated)// dữ liệu được xác thực đúng thỏa database
                         {
-                            //khachhang.TenDangNhap = txtUsername.Text;
+                            ThongTinTaiKhoan acctemp = khachhang;
+                            db.ThongTinTaiKhoans.Remove(khachhang);
+                            db.SaveChanges();
+                            /*//khachhang.TenDangNhap = txtUsername.Text;
                             khachhang.HoTen = txtHoTen.Text;
-                            /*khachhang.GioiTinh = (radNam.Checked == true *//*&& radNu.Checked == false && radKhac.Checked == false*//*) ? "M"
-                                                : (*//*radNam.Checked == false &&*//* radNu.Checked == true *//*&& radKhac.Checked == false*//*) ? "F"
-                                                : "O";*/
                             //khachhang.MatKhau = txtPassword.Text;
                             khachhang.SDT = txtSDT.Text;
                             khachhang.Email = txtEmail.Text;
                             khachhang.VaiTroID = (cmbVaiTro.Text == "Admin") ? "ad" : "bh";
-                            //khachhang.Status = (cbStatus.Checked == true) ? false : true;
                             if (MessageBox.Show($"Bạn có chắc chắn muốn lưu cập nhật tài khoản có họ tên {txtHoTen.Text} này!", "YES/NO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                             {
+                                db.SaveChanges();
+                                frmTaiKhoan_Load(sender, e);
+                                MessageBox.Show($"Cập nhật thông tin Tài khoản {txtHoTen.Text} thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                Xoatt();
+                            }
+                            else
+                            {
+                                Xoatt();
+                            }*/
+
+                            acctemp.TenDangNhap = txtUsername.Text;
+                            acctemp.HoTen = txtHoTen.Text;
+                            
+                            acctemp.MatKhau = getStringSHA256Hash(txtPassword.Text).ToLower().Substring(0, 15);
+                            acctemp.SDT = txtSDT.Text;
+                            acctemp.Email = txtEmail.Text;
+                            acctemp.VaiTroID = (cmbVaiTro.Text == "Admin") ? "ad" : "bh";
+                            if (MessageBox.Show($"Bạn có chắc chắn muốn lưu cập nhật tài khoản có họ tên {txtHoTen.Text} này!", "YES/NO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                                db.ThongTinTaiKhoans.Add(acctemp);
                                 db.SaveChanges();
                                 frmTaiKhoan_Load(sender, e);
                                 MessageBox.Show($"Cập nhật thông tin Tài khoản {txtHoTen.Text} thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -212,10 +243,6 @@ namespace HKD_ClothesShop.Forms
                         {
                             ThongBaoLoiDataInput();
                         }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Không tìm thấy Thông tin Tài khoản cần sửa!", "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
                     }
                 }
             }
@@ -242,9 +269,9 @@ namespace HKD_ClothesShop.Forms
         private bool isValidateDataUpdate()
         {
             return KiemTra_BlankEmpty() == true
-                   //&& KiemTra_Limited_Username() == true && KiemTra_Username_HopLe() == true
+                   && KiemTra_Limited_Username() == true && KiemTra_Username_HopLe() == true
                    && KiemTra_Limited_HoTen() == true && KiemTra_HoTen_HopLe() == true
-                   //&& KiemTra_Limited_Pass() == true && KiemTra_Pass_HopLe() == true 
+                   && KiemTra_Limited_Pass() == true && KiemTra_Pass_HopLe() == true 
                    && KiemTra_Limited_SDT() == true
                    && KiemTra_SDT_HopLe() == true && KiemTra_Limited_Email() == true
                    && KiemTra_Email_HopLe() == true;
@@ -279,7 +306,7 @@ namespace HKD_ClothesShop.Forms
             }
             if (KiemTra_Limited_Pass() == false)
             {
-                MessageBox.Show("Password phải đủ 8 kí tự - Mời nhập lại!", "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                MessageBox.Show("⚠1. Password phải đủ 8 kí tự (vì pass sẽ bị băm)!\n⚠2. Đổi tên thì phải đổi pass để an toàn hơn cho Account!\n⚠2. Đổi quyền thì phải đổi password để an toàn hơn cho tài khoản!\n\n⚠Mời nhập lại!", "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
                 return;
             }
             if (KiemTra_Pass_HopLe() == false)
@@ -337,7 +364,7 @@ namespace HKD_ClothesShop.Forms
         private bool KiemTra_Username_HopLe()
         {
             Regex reg = new Regex(XacthucRegex.Regex_ID);
-            Match mat = reg.Match(txtUsername.Text);
+            Match mat = reg.Match(txtUsername.Text.Trim());
             if (mat.Success)
             {
                 return true;
@@ -389,7 +416,7 @@ namespace HKD_ClothesShop.Forms
         private bool KiemTra_Pass_HopLe()
         {
             Regex reg = new Regex(XacthucRegex.Regex_Password);
-            Match mat = reg.Match(txtPassword.Text);
+            Match mat = reg.Match(txtPassword.Text.Trim());
             if (mat.Success)
             {
                 return true;
@@ -454,39 +481,6 @@ namespace HKD_ClothesShop.Forms
 
         #endregion
 
-        private void btnHidden_Click(object sender, EventArgs e)
-        {
-            QLBanHangHKDEntities db = new QLBanHangHKDEntities();
-            List<ThongTinTaiKhoan> listAcc = db.ThongTinTaiKhoans.ToList();
-            if (btnHidden.Text == "Ẩn")
-            {
-                foreach (DataGridViewRow item in dgvTaiKhoan.Rows)
-                {
-                    if (item.DefaultCellStyle.BackColor == Color.Black)
-                    {
-                        item.Visible = false;
-                    }
-                }
-                btnHidden.Text = "Hiện";
-                btnHidden.BackColor = Color.Blue;
-                btnHidden.ForeColor = Color.Yellow;
-            }
-            else
-            {
-
-                foreach (DataGridViewRow item in dgvTaiKhoan.Rows)
-                {
-                    if (item.DefaultCellStyle.BackColor == Color.Black)
-                    {
-                        item.Visible = true;
-                    }
-                }
-                btnHidden.Text = "Ẩn";
-                btnHidden.BackColor = Color.GreenYellow;
-                btnHidden.ForeColor = Color.Red;
-            }
-        }
-
         private void dgvTaiKhoan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -495,6 +489,8 @@ namespace HKD_ClothesShop.Forms
                 {
                     DataGridViewRow row = dgvTaiKhoan.Rows[dgvTaiKhoan.CurrentCell.RowIndex];
                     QLBanHangHKDEntities context = new QLBanHangHKDEntities();
+                    usernameacc = row.Cells[1].Value.ToString();
+                    passwordacc = row.Cells[2].Value.ToString();
 
                     txtHoTen.Text = row.Cells[0].Value.ToString();
                     txtUsername.Text = row.Cells[1].Value.ToString();
@@ -522,6 +518,42 @@ namespace HKD_ClothesShop.Forms
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (var db = new QLBanHangHKDEntities())
+                {
+                    //string pass = getStringSHA256Hash(txtPassword.Text).ToLower();
+                    var acc = db.ThongTinTaiKhoans.FirstOrDefault(p => (p.TenDangNhap == txtUsername.Text && p.MatKhau == txtPassword.Text));
+                    if (acc != null)
+                    {
+                        if (MessageBox.Show($"Bạn có chắc chắn muốn xóa tài khoản {txtHoTen.Text} này!", "YES/NO", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            db.ThongTinTaiKhoans.Remove(acc);
+                            db.SaveChanges();
+                            frmTaiKhoan_Load(sender, e);
+                            MessageBox.Show($"Xóa mặt tài khoản đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Xoatt();
+                        }
+                        else
+                        {
+                            Xoatt();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không tìm thấy Thông tin Tài khoản cần xóa!", "Thông báo", MessageBoxButtons.RetryCancel, MessageBoxIcon.Warning);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Lỗi Xóa tài khoản đăng nhập (có thể do trùng mã khác trong CSDL)! - Mời bạn thử lại", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                frmTaiKhoan_Load(sender, e);
+            }
         }
     }
 }

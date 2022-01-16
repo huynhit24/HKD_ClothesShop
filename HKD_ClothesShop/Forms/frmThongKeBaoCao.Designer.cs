@@ -77,7 +77,7 @@ namespace HKD_ClothesShop.Forms
             this.label28 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.labelDTYear = new System.Windows.Forms.Label();
+            this.labelTSHKho = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -526,7 +526,7 @@ namespace HKD_ClothesShop.Forms
             // 
             this.panel7.BackColor = System.Drawing.Color.DarkViolet;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel7.Controls.Add(this.labelDTYear);
+            this.panel7.Controls.Add(this.labelTSHKho);
             this.panel7.Controls.Add(this.label32);
             this.panel7.Controls.Add(this.pictureBox8);
             this.panel7.ForeColor = System.Drawing.Color.White;
@@ -535,15 +535,15 @@ namespace HKD_ClothesShop.Forms
             this.panel7.Size = new System.Drawing.Size(297, 89);
             this.panel7.TabIndex = 9;
             // 
-            // labelDTYear
+            // labelTSHKho
             // 
-            this.labelDTYear.AutoSize = true;
-            this.labelDTYear.Font = new System.Drawing.Font("Roboto Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDTYear.Location = new System.Drawing.Point(5, 34);
-            this.labelDTYear.Name = "labelDTYear";
-            this.labelDTYear.Size = new System.Drawing.Size(29, 33);
-            this.labelDTYear.TabIndex = 4;
-            this.labelDTYear.Text = "0";
+            this.labelTSHKho.AutoSize = true;
+            this.labelTSHKho.Font = new System.Drawing.Font("Roboto Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTSHKho.Location = new System.Drawing.Point(5, 34);
+            this.labelTSHKho.Name = "labelTSHKho";
+            this.labelTSHKho.Size = new System.Drawing.Size(29, 33);
+            this.labelTSHKho.TabIndex = 4;
+            this.labelTSHKho.Text = "0";
             // 
             // label32
             // 
@@ -551,9 +551,9 @@ namespace HKD_ClothesShop.Forms
             this.label32.Font = new System.Drawing.Font("Roboto Condensed", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.Location = new System.Drawing.Point(3, 3);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(111, 19);
+            this.label32.Size = new System.Drawing.Size(161, 19);
             this.label32.TabIndex = 1;
-            this.label32.Text = "Doanh số (năm)";
+            this.label32.Text = "Tống số hàng trong kho";
             // 
             // pictureBox8
             // 
@@ -768,7 +768,7 @@ namespace HKD_ClothesShop.Forms
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label labelDTYear;
+        private System.Windows.Forms.Label labelTSHKho;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Button button1;

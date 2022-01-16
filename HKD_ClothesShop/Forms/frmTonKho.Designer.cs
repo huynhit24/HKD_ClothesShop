@@ -92,9 +92,10 @@ namespace HKD_ClothesShop.Forms
             // 
             this.dgvCTDD.AllowUserToAddRows = false;
             this.dgvCTDD.AllowUserToDeleteRows = false;
-            this.dgvCTDD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvCTDD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvCTDD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCTDD.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.dgvCTDD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCTDD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column4,
@@ -104,7 +105,7 @@ namespace HKD_ClothesShop.Forms
             this.Column8});
             this.dgvCTDD.Location = new System.Drawing.Point(207, 44);
             this.dgvCTDD.Name = "dgvCTDD";
-            this.dgvCTDD.Size = new System.Drawing.Size(994, 575);
+            this.dgvCTDD.Size = new System.Drawing.Size(956, 553);
             this.dgvCTDD.TabIndex = 34;
             this.dgvCTDD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTDD_CellClick);
             // 
@@ -196,11 +197,11 @@ namespace HKD_ClothesShop.Forms
             this.btnThemCT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemCT.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemCT.Image = global::HKD_ClothesShop.Properties.Resources.create;
-            this.btnThemCT.Location = new System.Drawing.Point(21, 269);
+            this.btnThemCT.Location = new System.Drawing.Point(21, 255);
             this.btnThemCT.Name = "btnThemCT";
-            this.btnThemCT.Size = new System.Drawing.Size(124, 48);
+            this.btnThemCT.Size = new System.Drawing.Size(124, 62);
             this.btnThemCT.TabIndex = 52;
-            this.btnThemCT.Text = "Thêm";
+            this.btnThemCT.Text = "Thêm\r\n/Sửa";
             this.btnThemCT.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnThemCT.UseVisualStyleBackColor = true;
             this.btnThemCT.Click += new System.EventHandler(this.btnThemCT_Click);
@@ -209,9 +210,9 @@ namespace HKD_ClothesShop.Forms
             // 
             this.cmbMaSP.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMaSP.FormattingEnabled = true;
-            this.cmbMaSP.Location = new System.Drawing.Point(21, 25);
+            this.cmbMaSP.Location = new System.Drawing.Point(6, 22);
             this.cmbMaSP.Name = "cmbMaSP";
-            this.cmbMaSP.Size = new System.Drawing.Size(129, 27);
+            this.cmbMaSP.Size = new System.Drawing.Size(171, 27);
             this.cmbMaSP.TabIndex = 51;
             // 
             // btnSuaCT
@@ -228,6 +229,7 @@ namespace HKD_ClothesShop.Forms
             this.btnSuaCT.Text = "Sửa";
             this.btnSuaCT.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnSuaCT.UseVisualStyleBackColor = true;
+            this.btnSuaCT.Visible = false;
             this.btnSuaCT.Click += new System.EventHandler(this.btnSuaCT_Click);
             // 
             // cmbColor
@@ -241,16 +243,16 @@ namespace HKD_ClothesShop.Forms
             "Yellow",
             "Orange",
             "Pink",
-            "Gray",
             "Red",
             "Black",
             "Brown",
             "Beige",
             "Violet",
-            "Purple"});
-            this.cmbColor.Location = new System.Drawing.Point(21, 130);
+            "Purple",
+            "Gray"});
+            this.cmbColor.Location = new System.Drawing.Point(6, 130);
             this.cmbColor.Name = "cmbColor";
-            this.cmbColor.Size = new System.Drawing.Size(129, 27);
+            this.cmbColor.Size = new System.Drawing.Size(171, 27);
             this.cmbColor.TabIndex = 50;
             this.cmbColor.Text = "Chọn màu";
             // 
@@ -282,9 +284,9 @@ namespace HKD_ClothesShop.Forms
             "L",
             "XL",
             "XXL"});
-            this.cmbSize.Location = new System.Drawing.Point(21, 76);
+            this.cmbSize.Location = new System.Drawing.Point(6, 74);
             this.cmbSize.Name = "cmbSize";
-            this.cmbSize.Size = new System.Drawing.Size(129, 27);
+            this.cmbSize.Size = new System.Drawing.Size(171, 27);
             this.cmbSize.TabIndex = 46;
             this.cmbSize.Text = "Chọn size";
             // 
