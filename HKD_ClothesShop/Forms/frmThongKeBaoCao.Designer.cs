@@ -640,19 +640,19 @@ namespace HKD_ClothesShop.Forms
             this.chartDoanhThu.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartDoanhThu.Legends.Add(legend1);
-            this.chartDoanhThu.Location = new System.Drawing.Point(65, 255);
+            this.chartDoanhThu.Location = new System.Drawing.Point(12, 255);
             this.chartDoanhThu.Name = "chartDoanhThu";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "DoanhThu";
             this.chartDoanhThu.Series.Add(series1);
-            this.chartDoanhThu.Size = new System.Drawing.Size(434, 367);
+            this.chartDoanhThu.Size = new System.Drawing.Size(487, 367);
             this.chartDoanhThu.TabIndex = 15;
-            this.chartDoanhThu.Text = "Thống kê doanh số tháng";
+            this.chartDoanhThu.Text = "Thống kê doanh số tháng năm hiện tại";
             title1.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             title1.ForeColor = System.Drawing.Color.LimeGreen;
             title1.Name = "Title1";
-            title1.Text = "Biểu đồ doanh thu theo tháng";
+            title1.Text = "Biểu đồ doanh thu theo tháng năm 2022";
             this.chartDoanhThu.Titles.Add(title1);
             // 
             // chartSLBan

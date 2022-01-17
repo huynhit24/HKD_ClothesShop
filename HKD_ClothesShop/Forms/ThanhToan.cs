@@ -12,7 +12,7 @@ namespace HKD_ClothesShop.Forms
         public static string TienThanhToan { get; set; }
         public static string TienKhachDua { get; set; }
         public static string TienThoiLai { get; set; }
-
+        public static int SoLuongMua { get; set; }
 
     }
 }

@@ -27,33 +27,150 @@ namespace HKD_ClothesShop.Forms
 
         private void frmThongKeBaoCao_Load(object sender, EventArgs e)
         {
-            QLBanHangHKDEntities db = new QLBanHangHKDEntities();
+            BieuDoDoanhThuNamHienTai();
             ThongKeThangVaHomNay();
-            chartDoanhThu.Series["DoanhThu"].Points.AddXY("1", "20000000");
-            chartDoanhThu.Series["DoanhThu"].Points.AddXY("2", "0");
-            chartDoanhThu.Series["DoanhThu"].Points.AddXY("3", "0");
-            chartDoanhThu.Series["DoanhThu"].Points.AddXY("4", "0");
-            chartDoanhThu.Series["DoanhThu"].Points.AddXY("5", "0");
-            chartDoanhThu.Series["DoanhThu"].Points.AddXY("6", "0");
-            chartDoanhThu.Series["DoanhThu"].Points.AddXY("7", "0");
-            chartDoanhThu.Series["DoanhThu"].Points.AddXY("8", "0");
-            chartDoanhThu.Series["DoanhThu"].Points.AddXY("9", "0");
-            chartDoanhThu.Series["DoanhThu"].Points.AddXY("10", "0");
-            chartDoanhThu.Series["DoanhThu"].Points.AddXY("11", "0");
-            chartDoanhThu.Series["DoanhThu"].Points.AddXY("12", "0");
 
-            chartSLBan.DataSource = db.SanPhams.ToList();
-
-            chartSLBan.Series["SanPham"].XValueMember = "TenSanPham";
-            chartSLBan.Series["SanPham"].XValueType = ChartValueType.String;
-            chartSLBan.Series["SanPham"].YValueMembers = "DonGia";
-            chartSLBan.Series["SanPham"].YValueType = ChartValueType.Double;
-
-
+            
 
 
         }
+        private void BieuDoDoanhThuNamHienTai()
+        {
+            try
+            {
+                QLBanHangHKDEntities db = new QLBanHangHKDEntities();
+                List<ChiTietHoaDon> listCTHoaDon = db.ChiTietHoaDons.ToList();
+                List<int> listDTMon = new List<int>();
 
+                //Tính doanh thu tháng, ngày
+                decimal DTThang1 = 0;
+                foreach (var item in listCTHoaDon)
+                {
+                    if (item.HoaDon.NgayLap.ToString("MM/yyyy") == "01/2022")
+                    {
+                        DTThang1 += item.SoLuongMua * item.DonGiaBan;
+                    }
+                }
+
+                decimal DTThang2 = 0;
+                foreach (var item in listCTHoaDon)
+                {
+                    if (item.HoaDon.NgayLap.ToString("MM/yyyy") == "02/2022")
+                    {
+                        DTThang2 += item.SoLuongMua * item.DonGiaBan;
+                    }
+                }
+                decimal DTThang3 = 0;
+                foreach (var item in listCTHoaDon)
+                {
+                    if (item.HoaDon.NgayLap.ToString("MM/yyyy") == "03/2022")
+                    {
+                        DTThang3 += item.SoLuongMua * item.DonGiaBan;
+                    }
+                }
+                decimal DTThang4 = 0;
+                foreach (var item in listCTHoaDon)
+                {
+                    if (item.HoaDon.NgayLap.ToString("MM/yyyy") == "04/2022")
+                    {
+                        DTThang1 += item.SoLuongMua * item.DonGiaBan;
+                    }
+                }
+                decimal DTThang5 = 0;
+                foreach (var item in listCTHoaDon)
+                {
+                    if (item.HoaDon.NgayLap.ToString("MM/yyyy") == "05/2022")
+                    {
+                        DTThang1 += item.SoLuongMua * item.DonGiaBan;
+                    }
+                }
+                decimal DTThang6 = 0;
+                foreach (var item in listCTHoaDon)
+                {
+                    if (item.HoaDon.NgayLap.ToString("MM/yyyy") == "06/2022")
+                    {
+                        DTThang6 += item.SoLuongMua * item.DonGiaBan;
+                    }
+                }
+                decimal DTThang7 = 0;
+                foreach (var item in listCTHoaDon)
+                {
+                    if (item.HoaDon.NgayLap.ToString("MM/yyyy") == "07/2022")
+                    {
+                        DTThang7 += item.SoLuongMua * item.DonGiaBan;
+                    }
+                }
+                decimal DTThang8 = 0;
+                foreach (var item in listCTHoaDon)
+                {
+                    if (item.HoaDon.NgayLap.ToString("MM/yyyy") == "08/2022")
+                    {
+                        DTThang8 += item.SoLuongMua * item.DonGiaBan;
+                    }
+                }
+                decimal DTThang9 = 0;
+                foreach (var item in listCTHoaDon)
+                {
+                    if (item.HoaDon.NgayLap.ToString("MM/yyyy") == "09/2022")
+                    {
+                        DTThang9 += item.SoLuongMua * item.DonGiaBan;
+                    }
+                }
+                decimal DTThang10 = 0;
+                foreach (var item in listCTHoaDon)
+                {
+                    if (item.HoaDon.NgayLap.ToString("MM/yyyy") == "10/2022")
+                    {
+                        DTThang10 += item.SoLuongMua * item.DonGiaBan;
+                    }
+                }
+                decimal DTThang11 = 0;
+                foreach (var item in listCTHoaDon)
+                {
+                    if (item.HoaDon.NgayLap.ToString("MM/yyyy") == "11/2022")
+                    {
+                        DTThang11 += item.SoLuongMua * item.DonGiaBan;
+                    }
+                }
+                decimal DTThang12 = 0;
+                foreach (var item in listCTHoaDon)
+                {
+                    if (item.HoaDon.NgayLap.ToString("MM/yyyy") == "12/2022")
+                    {
+                        DTThang12 += item.SoLuongMua * item.DonGiaBan;
+                    }
+                }
+
+                chartDoanhThu.Series["DoanhThu"].Points.AddXY("1", DTThang1.ToString());
+                chartDoanhThu.Series["DoanhThu"].Points.AddXY("2", DTThang2.ToString());
+                chartDoanhThu.Series["DoanhThu"].Points.AddXY("3", DTThang3.ToString());
+                chartDoanhThu.Series["DoanhThu"].Points.AddXY("4", DTThang4.ToString());
+                chartDoanhThu.Series["DoanhThu"].Points.AddXY("5", DTThang5.ToString());
+                chartDoanhThu.Series["DoanhThu"].Points.AddXY("6", DTThang6.ToString());
+                chartDoanhThu.Series["DoanhThu"].Points.AddXY("7", DTThang7.ToString());
+                chartDoanhThu.Series["DoanhThu"].Points.AddXY("8", DTThang8.ToString());
+                chartDoanhThu.Series["DoanhThu"].Points.AddXY("9", DTThang9.ToString());
+                chartDoanhThu.Series["DoanhThu"].Points.AddXY("10", DTThang10.ToString());
+                chartDoanhThu.Series["DoanhThu"].Points.AddXY("11", DTThang11.ToString());
+                chartDoanhThu.Series["DoanhThu"].Points.AddXY("12", DTThang12.ToString());
+
+                chartSLBan.DataSource = db.ChiTietHoaDons.ToList();
+
+                /*chartSLBan.Series["SanPham"].XValueMember = "TenSanPham";
+                chartSLBan.Series["SanPham"].XValueType = ChartValueType.String;
+                chartSLBan.Series["SanPham"].YValueMembers = "DonGia";
+                chartSLBan.Series["SanPham"].YValueType = ChartValueType.Double;*/
+
+                chartSLBan.Series["SanPham"].XValueMember = "MaSanPham";
+                chartSLBan.Series["SanPham"].XValueType = ChartValueType.String;
+                chartSLBan.Series["SanPham"].YValueMembers = "SoLuongMua";
+                chartSLBan.Series["SanPham"].YValueType = ChartValueType.Double;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         private void ThongKeThangVaHomNay()
         {
             try
@@ -100,6 +217,7 @@ namespace HKD_ClothesShop.Forms
                     }
                 }
                 labelSLKHThang.Text = Convert.ToString(SLKHThang);
+
                 int SLKHNow = 0;
                 foreach (var item in db.KhachHangs)
                 {
