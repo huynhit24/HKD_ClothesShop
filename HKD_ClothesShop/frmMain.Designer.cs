@@ -73,6 +73,7 @@ namespace HKD_ClothesShop
             this.xemThongKeBaoCaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dangXuatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.buttonExcel = new System.Windows.Forms.Button();
             this.panelShopImage.SuspendLayout();
             this.panelSpSubmenu.SuspendLayout();
             this.panelKhachSubmenu.SuspendLayout();
@@ -559,6 +560,7 @@ namespace HKD_ClothesShop
             this.panelMenuNgang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelMenuNgang.BackColor = System.Drawing.Color.White;
+            this.panelMenuNgang.Controls.Add(this.buttonExcel);
             this.panelMenuNgang.Controls.Add(this.labelName);
             this.panelMenuNgang.Controls.Add(this.pictureBox2);
             this.panelMenuNgang.Controls.Add(this.btnMenu);
@@ -777,6 +779,23 @@ namespace HKD_ClothesShop
             this.panelChildForm.Size = new System.Drawing.Size(1225, 667);
             this.panelChildForm.TabIndex = 2;
             // 
+            // buttonExcel
+            // 
+            this.buttonExcel.BackColor = System.Drawing.Color.ForestGreen;
+            this.buttonExcel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonExcel.FlatAppearance.BorderColor = System.Drawing.Color.OliveDrab;
+            this.buttonExcel.FlatAppearance.BorderSize = 3;
+            this.buttonExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonExcel.ForeColor = System.Drawing.Color.White;
+            this.buttonExcel.Image = global::HKD_ClothesShop.Properties.Resources.logout;
+            this.buttonExcel.Location = new System.Drawing.Point(379, 23);
+            this.buttonExcel.Name = "buttonExcel";
+            this.buttonExcel.Size = new System.Drawing.Size(113, 42);
+            this.buttonExcel.TabIndex = 75;
+            this.buttonExcel.Text = "Excel";
+            this.buttonExcel.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.buttonExcel.UseVisualStyleBackColor = false;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -852,6 +871,7 @@ namespace HKD_ClothesShop
         private System.Windows.Forms.ToolStripMenuItem themThuongHieuToolStripMenuItem;
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button buttonExcel;
     }
 }
 
